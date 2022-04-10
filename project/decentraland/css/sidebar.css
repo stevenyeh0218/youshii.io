@@ -1,0 +1,121 @@
+.sidebar {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 240px;
+    height: 100%;
+    max-height: 100%;
+    background: #385c24 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.sidebar .user-info {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 16px;
+    height: 151px;
+    color: #dddddd;
+}
+
+.sidebar .user-info .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #263238;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sidebar .nav-bar {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background: #5b8149 !important;
+    padding-top: 16px;
+}
+
+.sidebar .nav-bar .nav_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 159px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 16px 40px;
+    margin: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-bar .nav_link:hover {
+    background: #78ab60;
+}
+
+.sidebar .nav-bar .nav_link .icon {
+    color: #3c632e;
+    font-size: 24px;
+    margin-right: 32px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-bar .nav_link:hover > .icon {
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.sidebar .colophon {
+    position: absolute;
+    color: #ddd;
+    text-align: center;
+    font-size: 14px;
+    padding: 25px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}

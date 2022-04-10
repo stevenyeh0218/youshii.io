@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>land</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <!--    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <div class="main">
+        <div class="contain">
+            <header class="head-bar">
+                <div class="head-item">
+                    <div class="head-title">Home</div>
+                    <div class="search_user">
+                        <button class="fa fa-search searchBtn"></button>
+                        <input placeholder="username" type="text" required="">
+                    </div>
+                </div>
+            </header>
+            <div class="sidebar">
+                <header class="user-info">
+                    <i class="fa fa-user icon"></i>
+                    <div class="user-email">Member@example.com</div>
+                </header>
+                <nav class="nav-bar">
+                    <a class="nav_link" href="#">
+                        <i class="fa fa-home icon" role="presentation"></i>Home
+                    </a>
+                    <a class="nav_link" href="#">
+                        <i class="fa fa-home icon" role="presentation"></i>Home
+                    </a>
+                    <a class="nav_link" href="#">
+                        <i class="fa fa-home icon" role="presentation"></i>Home
+                    </a>
+                    <a class="nav_link" href="#">
+                        <i class="fa fa-home icon" role="presentation"></i>Home
+                    </a>
+                </nav>
+                <div class="colophon">
+                    Copyright Blocksfuture © 2017
+                </div>
+            </div>
+            <div class="display-content">
+                <div class="display">
+                    <div class="canvas">
+                        <div class="">
+                            <table>
+                                <thead>
+                                    <th width="20%">
+                                        <i class="fa fa-user iconStyle"></i>Name
+                                    </th>
+                                    <th width="35%">
+                                        <i class="fa fa-money iconStyle"></i>%數
+                                    </th>
+                                    <th width="40%">
+                                        <i class="fa fa-calendar iconStyle"></i>expiration date
+                                    </th>
+                                    <th width="5%"></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>XXXX</td>
+                                        <td>XXXX</td>
+                                        <td>XXXX</td>
+                                        <td class="detail_link"><a href="detail.html" class="fa fa-align-right iconStyle"></a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fa fa-plus btnStyle fab">
+        <div class="newPage_content">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i class="fa fa-user iconStyle"></i>
+                            <input placeholder="Name" type="text" required="">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-money iconStyle"></i>
+                            <input placeholder="%數" type="text" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-calendar iconStyle"></i>
+                            <input placeholder="expiration date" type="text" required="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btnStyle">確認</button>
+
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>-->
+<script>
+    $(function() {
+        $(".sidebar .item").hide();
+        $(".list-detail").find(".btnStyle").click(function() {
+            if ($('.sidebar').hasClass('showSidebar')) {
+                $(".sidebar").removeClass('showSidebar');
+                $(".sidebar .item").fadeOut("fast");
+                $(".list").removeClass('movelist');
+                $(".list-detail .btnStyle").removeClass('fa-angle-right').addClass('fa-angle-left');
+            } else {
+                $(".sidebar").addClass('showSidebar');
+                $(".sidebar .item").fadeIn("fast");
+                $(".list").addClass('movelist');
+                $(".list-detail .btnStyle").removeClass('fa-angle-left').addClass('fa-angle-right');
+            }
+        });
+
+        //Variables
+        var overlay = $("#overlay"),
+            fab = $(".fab"),
+            cancel = $("#cancel"),
+            submit = $("#submit");
+
+        //fab click
+        fab.on('click', openFAB);
+        overlay.on('click', closeFAB);
+        cancel.on('click', closeFAB);
+
+        function openFAB(event) {
+            if (event) event.preventDefault();
+            fab.addClass('active');
+            overlay.addClass('dark-overlay');
+
+        }
+
+        function closeFAB(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            }
+
+            fab.removeClass('active');
+            overlay.removeClass('dark-overlay');
+
+        }
+    });
+</script>
+
+</html>
