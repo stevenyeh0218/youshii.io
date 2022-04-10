@@ -1,0 +1,28 @@
+/* @media (min-width: 1366px) */
+@media only screen and (min-width: 1367px){
+
+	.f-nav .logo{  
+		-webkit-transform: scale(0.5) translate(-59.5em, -3.5em);
+		   -moz-transform: scale(0.5) translate(-59.5em, -3.5em);
+		     -o-transform: scale(0.5) translate(-59.5em, -3.5em);
+		        transform: scale(0.5) translate(-59.5em, -3.5em);
+	}		
+	.login-form{{
+		right: 18.9em;
+	}
+}
+
+/* @media (min-width: 768px) and (max-width: 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* @media (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+				
+}
+
+/* @media (min-width: 480px) and (max-width: 767px) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}

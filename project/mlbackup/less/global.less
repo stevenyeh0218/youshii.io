@@ -1,0 +1,592 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** 全域 最新優惠 *****/
+        #myanLife_discount {
+            .common_content {
+                .common_item {
+
+                    .imgView {}
+                }
+            }
+        }
+
+        /***** Top Ten  *****/
+        #myanLife_hot_ten {
+            background: transparent;
+            margin-top: 100px;
+
+            .common_header {
+                &::before {}
+            }
+        }
+
+        /***** 深入探索 *****/
+        #myanLife_explore_in_depth {
+            background: rgb(@grayBg);
+            padding-bottom: 50px;
+
+            .explore_in_depth_header {
+                .flexbox(row, center, center);
+                font-size: @fontSize + 10;
+                font-weight: bold;
+                padding: 45px 0;
+
+                & h2 {
+                    letter-spacing: 3px;
+                    margin: 0 24px;
+                }
+
+                .default {
+                    position: relative;
+
+                    &>span {
+                        display: none;
+                    }
+
+                    .icon {
+                        color: rgb(@mainColor);
+                        .rotate(45deg);
+                    }
+                }
+            }
+
+            .explore_in_depth_content {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                width: 80%;
+                margin: auto;
+                column-gap: 24px;
+                row-gap: 24px;
+
+                .explore_in_depth_item {
+                    .link-default;
+                    .ease(.2s);
+
+                    .imgView {
+                        border-radius: 10px 10px 0 0;
+                        overflow: hidden;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            .ease(.75s);
+                        }
+                    }
+
+                    .information {
+                        background: rgb(@mainColor);
+                        color: rgb(@white);
+                        display: grid;
+                        grid-template-columns: repeat(2, auto);
+                        justify-content: space-between;
+                        border-radius: 0 0 10px 10px;
+                        font-size: @fontSize - 4;
+                        margin-top: 10px;
+                        overflow: hidden;
+
+                        .info_header {
+                            display: grid;
+                            grid-template-columns: repeat(1, auto);
+                            align-items: baseline;
+                            word-break: break-all;
+                            padding: 8px;
+
+                            & h2 {
+                                font-size: @fontSize;
+                                font-weight: bold;
+                                .lineClamp(1);
+                            }
+
+                            .location {
+                                .flexbox(row, baseline, flex-start);
+                                margin-bottom: 5px;
+
+                                .icon {
+                                    margin-right: 10px;
+                                }
+
+                                &>div {
+                                    .lineClamp(1);
+                                }
+                            }
+
+                            .merchant_name {
+                                font-size: @fontSize - 2;
+                                cursor: pointer;
+                                .lineClamp(1);
+                                .ease(.2s);
+
+                                &:hover {
+                                    color: rgb(@fontColor);
+                                }
+                            }
+                        }
+
+                        .info_evaluation {
+                            display: grid;
+                            grid-template-columns: repeat(1, auto);
+                            align-items: center;
+                            background: rgb(243, 125, 4);
+                            padding: 8px;
+                            .ease(.2s);
+
+                            .evaluation {
+                                .flexbox(row, center, center);
+                                font-size: @fontSize + 6;
+                                font-weight: bold;
+
+                                &>div {}
+
+                                .icon {
+                                    color: rgb(@mainColorHover);
+                                    font-size: @fontSize;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .coupon_download {
+                                .flexbox(column, center, center);
+                                margin-top: 15px;
+
+                                &>div {}
+
+                                .icon {
+                                    margin-bottom: 5px;
+                                }
+                            }
+
+                            &:hover {
+                                background: rgb(236, 104, 0);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .imgView {
+
+                            & img {
+                                .transform(rotate(3deg) scale(1.1));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /***** 熱門活動住宿*****/
+        #myanLife_hot_active_location {
+            margin-top: 100px;
+            padding-bottom: 50px;
+
+            .common_header {
+                position: relative;
+                .flexbox(row, center, flex-start);
+                width: 80%;
+                font-size: @fontSize + 10;
+                font-weight: bold;
+                margin: auto;
+
+                &::before {
+                    content: "";
+                    background: rgb(@mainColor);
+                    position: absolute;
+                    width: 9vw;
+                    height: 100%;
+                    left: -13%;
+                }
+
+                & h2 {
+                    margin-right: 15px;
+                    letter-spacing: 3px;
+                }
+            }
+
+            .common_content {
+                display: grid;
+                grid-template-columns: repeat(5, auto);
+                margin: auto;
+                margin-top: 50px;
+                width: 80%;
+                column-gap: 24px;
+                row-gap: 24px;
+
+                .common_item {
+                    display: block;
+                    width: 284px;
+                    color: @fontColor;
+                    font-size: @fontSize - 4;
+                    .link-default;
+                    .ease(.2s);
+
+                    .imgView {
+                        position: relative;
+                        height: 268px;
+                        border-radius: 10px;
+                        overflow: hidden;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            .ease(.75s);
+                        }
+
+                        .coupon_download {
+                            .flexbox(row, center, center);
+                            .couponBg;
+                            position: absolute;
+                            width: 100%;
+                            height: 40px;
+                            color: rgb(@white);
+                            font-size: @fontSize;
+                            bottom: 0;
+                            z-index: 3;
+                            .ease(.2s);
+
+                            &>div {}
+
+                            .icon {
+                                margin-left: 5px;
+                            }
+
+                            &:hover {
+                                height: 50px;
+                            }
+                        }
+
+                        .data {
+                            .flexbox(row, center, center);
+                            letter-spacing: 3px;
+                            line-height: 1.2em;
+                            position: absolute;
+                            height: 85%;
+                            background: rgba(@black, .7);
+                            z-index: 1;
+                            top: -100%;
+                            padding: 0 15px;
+                            color: rgb(@white);
+                            .ease(.5s);
+
+                            .data_info {
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
+                                display: -webkit-box;
+                                white-space: normal;
+                                word-break: break-all;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    .information {
+                        position: relative;
+                        padding: 5px;
+
+                        .info_header {
+                            .flexbox(row, baseline, space-between);
+                            font-size: @fontSize + 2;
+                            margin-bottom: 12px;
+
+                            & h2 {
+                                letter-spacing: 3px;
+                                font-weight: bold;
+                                .lineClamp(1);
+                            }
+
+                            .evaluation {
+                                .flexbox(row, center, center);
+
+                                &>div {
+                                    color: rgb(@mainColor);
+                                    font-size: @fontSize * 2 - 4;
+                                    font-weight: bold;
+                                }
+
+                                .icon {
+                                    color: rgb(@mainColorHover);
+                                    margin-left: 5px;
+                                    font-size: @fontSize + 6;
+                                }
+                            }
+                        }
+
+                        .location {
+                            display: flex;
+                            align-items: baseline;
+                            margin-bottom: 10px;
+                            word-break: break-all;
+
+                            .icon {
+                                margin-right: 10px;
+                            }
+
+                            &>div {
+                                .lineClamp(1);
+                            }
+                        }
+
+                        .merchant_name {
+                            font-size: @fontSize - 2;
+                            cursor: pointer;
+                            margin-top: 12px;
+                            .lineClamp(1);
+                            .ease(.2s);
+
+                            &:hover {
+                                color: rgb(@mainColor);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .imgView {
+                            & img {
+                                .transform(rotate(3deg) scale(1.1));
+                            }
+
+                            .data {
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /***** 網友都在看 *****/
+        #myanLife_recently {
+            position: relative;
+            margin-top: 100px;
+            padding-bottom: 100px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                background: rgb(@white);
+                width: 100%;
+                height: 350px;
+                bottom: 0;
+            }
+
+            .common_header {
+                position: relative;
+                .flexbox(row, center, flex-start);
+                width: 80%;
+                font-size: @fontSize + 10;
+                margin: auto;
+
+                &::before {
+                    content: "";
+                    background: rgb(@mainColor);
+                    position: absolute;
+                    width: 9vw;
+                    height: 100%;
+                    left: -13%;
+                }
+
+                & h2 {
+                    .lineClamp(1);
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                }
+            }
+
+            .common_content {
+                display: flex;
+                width: 80%;
+                margin: auto;
+                margin-top: 50px;
+
+                .common_item {
+                    display: block;
+                    width: 284px;
+                    font-size: @fontSize - 4;
+                    color: @fontColor;
+                    background: rgb(@white);
+                    border-radius: 0 0 10px 10px;
+                    .link-default;
+                    .ease(.2s);
+
+                    &:hover {
+                        .imgView {
+                            & img {
+                                .transform(rotate(3deg) scale(1.1));
+                            }
+
+                            .data {
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    .imgView {
+                        position: relative;
+                        height: 268px;
+                        border-radius: 10px;
+                        overflow: hidden;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            .ease(.75s);
+                        }
+
+                        .coupon_download {
+                            .flexbox(row, center, center);
+                            .couponBg;
+                            position: absolute;
+                            width: 100%;
+                            height: 40px;
+                            color: rgb(@white);
+                            font-size: @fontSize;
+                            bottom: 0;
+                            z-index: 3;
+                            .ease(.2s);
+
+                            &>div {}
+
+                            .icon {
+                                margin-left: 10px;
+                            }
+
+                            &:hover {
+                                height: 50px;
+                            }
+                        }
+
+                        .data {
+                            .flexbox(row, center, center);
+                            letter-spacing: 3px;
+                            line-height: 1.2em;
+                            position: absolute;
+                            height: 85%;
+                            background: rgba(@black, .7);
+                            z-index: 1;
+                            top: -100%;
+                            padding: 0 15px;
+                            color: rgb(@white);
+                            .ease(.5s);
+
+                            .data_info {
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
+                                display: -webkit-box;
+                                white-space: normal;
+                                word-break: break-all;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    .information {
+                        position: relative;
+                        padding: 12px 0;
+                        border-radius: 0 0 10px 10px;
+
+                        .info_header {
+                            .flexbox(row, baseline, space-between);
+                            font-size: @fontSize + 2;
+                            font-weight: bold;
+                            margin-bottom: 15px;
+
+                            & h2 {
+                                letter-spacing: 3px;
+                                .lineClamp(1);
+                            }
+
+                            .evaluation {
+                                .flexbox(row, center, center);
+
+                                &>div {
+                                    color: rgb(@mainColor);
+                                    font-size: @fontSize * 2 - 4;
+                                    font-weight: bold;
+                                }
+
+                                .icon {
+                                    color: rgb(@mainColorHover);
+                                    margin-left: 5px;
+                                    font-size: @fontSize + 6;
+                                }
+                            }
+                        }
+
+                        .location {
+                            display: flex;
+                            align-items: baseline;
+                            margin-bottom: 10px;
+                            word-break: break-all;
+
+                            .icon {
+                                margin-right: 10px;
+                            }
+
+                            &>div {
+                                .lineClamp(1);
+                            }
+                        }
+
+                        .merchant_name {
+                            font-size: @fontSize - 2;
+                            cursor: pointer;
+                            margin-top: 12px;
+                            .ease(.2s);
+
+                            &:hover {
+                                color: rgb(@mainColor);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-theme {
+                position: relative;
+
+                .owl-nav {
+
+                    .owl-prev {
+                        position: absolute;
+                        background: rgba(0, 0, 0, .5);
+                        width: 70px;
+                        color: rgb(@white);
+                        font-size: @fontSize * 2;
+                        border: 0;
+                        border-radius: 5px;
+                        margin: 0;
+                        top: 0;
+                        bottom: 0;
+                        left: -80px;
+                        z-index: 10;
+                        .ease(.2s);
+
+                        &:hover {
+                            background: rgba(@black, .9);
+                        }
+                    }
+
+                    .owl-next {
+                        .owl-prev;
+                        left: auto;
+                        right: -80px;
+                    }
+
+                    .disabled {
+                        opacity: 0;
+                    }
+                }
+
+                .owl-dots {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

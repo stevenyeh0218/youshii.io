@@ -1,0 +1,780 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 達人分享 *****/
+                .blog_management {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .blog_management_contain {
+                        background: rgb(@white);
+                        height: 422px;
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        overflow: hidden;
+                        .ease(.2s);
+
+                        .blog_tabs_list {
+                            .flexbox(row, center, flex-start);
+                            color: rgb(@adminColor);
+                            font-weight: bold;
+                            border-bottom: 1px solid rgb(@adminColor);
+                            margin-bottom: 24px;
+                            padding-bottom: 24px;
+
+                            .blog_tabs_item {
+                                position: relative;
+                                cursor: pointer;
+                                margin-right: 24px;
+                                .ease(.2s);
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover {
+                                    color: rgb(@mainColor);
+                                }
+                            }
+
+                            .active {
+                                color: rgb(@mainColor);
+                            }
+                        }
+
+                        .main {
+                            position: relative;
+                            font-size: @fontSize - 4;
+
+                            .blog_list_content {
+                                position: absolute;
+                                width: 100%;
+                                .hide;
+                                .ease(.2s);
+
+                                .func_list {
+                                    .flexbox(row, center, space-between);
+                                    margin-bottom: 12px;
+                                    padding: 0 24px;
+
+                                    .func_item {
+                                        .flexbox(row, center, flex-start);
+                                        .link-default;
+                                        color: rgb(@adminColor);
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .icon {
+                                            margin-right: 4px;
+                                        }
+
+                                        .delete_all_btn {
+                                            cursor: pointer;
+                                            margin-left: 24px;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+
+                                        .preview_btn {
+                                            cursor: pointer;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .preview_box {
+                                            .flexbox(row, center, center);
+                                            display: none;
+                                            background: rgba(@black, .85);
+                                            position: fixed;
+                                            width: 100%;
+                                            top: 0;
+                                            bottom: 0;
+                                            z-index: 99;
+                                            height: 100%;
+                                            left: 0;
+                                            right: 0;
+
+                                            .icon {
+                                                position: absolute;
+                                                color: rgb(@white);
+                                                cursor: pointer;
+                                                font-size: @fontSize + 6;
+                                                top: 6%;
+                                                right: 9%;
+                                                .ease(.2s);
+
+                                                &:hover {
+                                                    color: rgb(@mainColor);
+                                                }
+                                            }
+
+                                            &>embed {
+                                                background: rgb(@white);
+                                                width: 80%;
+                                                height: 80%;
+                                                .hide;
+                                                .scale(0);
+                                                .ease(.2s);
+                                            }
+                                        }
+
+                                        .op_box {
+
+                                            &>embed {
+                                                background: rgb(@white);
+                                                width: 80%;
+                                                height: 80%;
+                                                .scale(1);
+                                                .show;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .preview_list {
+                                    .flexbox(row, center, flex-end);
+                                }
+
+                                .blog_item {
+                                    .flexbox(row, center, space-between);
+                                    flex-wrap: wrap;
+                                    color: @fontColor;
+                                    cursor: pointer;
+                                    padding: 24px;
+                                    .link-default;
+                                    .ease(.2s);
+
+                                    .blog_info {
+                                        .flexbox(row, center, flex-start);
+                                        width: 100%;
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+                                        }
+
+                                        .blog_cell {
+                                            .flexbox(row, flex-start, flex-start);
+                                            flex: 1;
+                                            margin-right: 12px;
+                                            line-height: 1.3em;
+                                            letter-spacing: 1px;
+
+                                            .star_counter {
+                                                margin-left: 5px;
+                                            }
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+                                        }
+
+                                        .blog_img {
+                                            flex: 0.5;
+                                            overflow: hidden;
+
+                                            & img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        .blog_title {
+                                            .lineClamp(3);
+                                        }
+
+                                        .passenger_message {
+                                            display: none !important;
+                                            position: relative;
+                                            .flexbox(row, center, flex-start);
+                                            color: rgb(@adminColor);
+                                            .link-default;
+                                            .ease(.2s);
+
+                                            .hint_icon {
+                                                position: absolute;
+                                                font-size: @fontSize - 10;
+                                                color: rgb(@mlRed);
+                                                top: 0;
+                                                right: -10px;
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+
+                                    .blog_func {
+                                        .flexbox(row, center, flex-end);
+                                        width: 100%;
+                                        margin-top: 12px;
+                                        padding-top: 12px;
+
+                                        .blog_cell {
+                                            color: @fontColor;
+                                            cursor: pointer;
+                                            margin-right: 24px;
+                                            .link-default;
+                                            .ease(.2s);
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+
+                                            .preview_box {
+                                                .flexbox(row, center, center);
+                                                display: none;
+                                                background: rgba(@black, .85);
+                                                position: fixed;
+                                                width: 100%;
+                                                top: 0;
+                                                bottom: 0;
+                                                z-index: 99;
+                                                height: 100%;
+                                                left: 0;
+                                                right: 0;
+
+                                                .icon {
+                                                    position: absolute;
+                                                    color: rgb(@white);
+                                                    cursor: pointer;
+                                                    font-size: @fontSize + 6;
+                                                    top: 6%;
+                                                    right: 9%;
+                                                    .ease(.2s);
+
+                                                    &:hover {
+                                                        color: rgb(@mainColor);
+                                                    }
+                                                }
+
+                                                &>embed {
+                                                    background: rgb(@white);
+                                                    width: 80%;
+                                                    height: 80%;
+                                                    .hide;
+                                                    .scale(0);
+                                                    .ease(.2s);
+                                                }
+                                            }
+
+                                            .op_box {
+
+                                                &>embed {
+                                                    background: rgb(@white);
+                                                    width: 80%;
+                                                    height: 80%;
+                                                    .scale(1);
+                                                    .show;
+                                                }
+                                            }
+                                        }
+
+                                        .put_on_btn {
+                                            margin-right: 48px !important;
+
+                                            .switch_input {
+                                                display: none;
+
+                                                &:checked {
+                                                    &+.switch_label {
+                                                        .switch_style {
+                                                            &:before {
+                                                                background: rgb(@mainColor);
+                                                            }
+
+                                                            &:after {
+                                                                background: rgb(@white);
+                                                                -ms-transform: translate(80%, -50%);
+                                                                -webkit-transform: translate(80%, -50%);
+                                                                transform: translate(80%, -50%);
+                                                            }
+                                                        }
+
+                                                        .toggle--on {
+                                                            display: inline-block;
+                                                        }
+
+                                                        .toggle--off {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .switch_label {
+                                                .flexbox(row, center, center);
+                                                position: relative;
+                                                cursor: pointer;
+                                                color: rgb(@mlRed);
+
+                                                .switch_style {
+
+                                                    &:before,
+                                                    &:after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        margin: 0;
+                                                        outline: 0;
+                                                        top: 50%;
+                                                        -ms-transform: translate(0, -50%);
+                                                        -webkit-transform: translate(0, -50%);
+                                                        transform: translate(0, -50%);
+                                                        .ease(.2s);
+                                                    }
+
+                                                    &:before {
+                                                        background: rgb(@adminColor);
+                                                        border-radius: 8px;
+                                                        width: 34px;
+                                                        height: 14px;
+                                                        right: -30px;
+                                                    }
+
+                                                    &:after {
+                                                        background: rgb(@white);
+                                                        border-radius: 50%;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                                        right: -15px;
+                                                    }
+                                                }
+
+                                                .toggle--on {
+                                                    display: none;
+                                                    margin-right: 12px;
+                                                }
+
+                                                .toggle--off {
+                                                    display: inline-block;
+                                                    margin-right: 12px;
+                                                }
+
+                                            }
+
+                                        }
+
+                                        .edit_btn {
+                                            color: @fontColor;
+                                            border: 1px solid @fontColor;
+                                            border-radius: 7px;
+                                            padding: 7px;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                                border: 1px solid rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .preview_btn {
+                                            .edit_btn;
+                                        }
+
+                                        .delete_btn {
+                                            cursor: pointer;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        position: relative;
+                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                                        z-index: 2;
+                                    }
+                                }
+
+                                .close_blog_item {
+                                    .hide;
+                                    .translateX(120%);
+                                }
+                            }
+
+                            .blogger_intro_content {
+
+                                .intro_content {
+                                    .flexbox(column, center, center);
+
+                                    .input_list {
+                                        .flexbox(column, flex-start, flex-start);
+                                        width: 100%;
+                                        font-weight: bold;
+                                        margin-bottom: 24px;
+
+                                        .common_item {
+                                            .flexbox(row, center, flex-start);
+                                            width: 100%;
+                                            margin-bottom: 24px;
+
+                                            &:last-child {
+                                                margin-bottom: 0;
+                                            }
+
+                                            .des {
+                                                margin-right: 12px;
+
+                                                &>small {
+                                                    color: rgb(@mlRed);
+                                                }
+                                            }
+
+                                            .input_style {
+                                                background: transparent;
+                                                box-sizing: border-box;
+                                                flex: 1;
+                                                width: 100%;
+                                                border: 1px solid rgb(@adminColor);
+                                                border-radius: 5px;
+                                                padding: 8px 6px;
+                                                .ease(.2s);
+
+                                                &:focus,
+                                                &:active {
+                                                    border: 1px solid rgb(@mainColor);
+                                                }
+                                            }
+
+                                            .upload_btn {
+
+                                                .inputfile {
+                                                    width: 0.1px;
+                                                    height: 0.1px;
+                                                    .hide;
+                                                    position: absolute;
+                                                    z-index: -1;
+
+                                                    & label {
+                                                        .link-default;
+                                                    }
+
+                                                    &+label {
+                                                        display: inline-block;
+                                                        max-width: 100%;
+                                                        cursor: pointer;
+                                                        font-size: @fontSize - 2;
+                                                        text-overflow: ellipsis;
+                                                        white-space: nowrap;
+                                                        margin-top: 6px;
+                                                        overflow: hidden;
+
+                                                        &>span {
+                                                            color: rgb(@mlRed);
+                                                        }
+
+                                                        &>svg {
+                                                            margin-left: 5px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .cover_photo_item {
+                                            flex-wrap: wrap;
+
+                                            .preview_img {
+                                                width: 100%;
+                                                margin-top: 12px;
+
+                                                & h3 {
+                                                    color: #999;
+                                                    font-size: @fontSize - 6;
+                                                    margin-bottom: 8px;
+                                                }
+
+                                                & img {
+                                                    width: 50%;
+                                                    height: 100%;
+                                                }
+                                            }
+                                        }
+
+                                        .editor_item {
+                                            .flexbox(column, flex-start, flex-start);
+
+                                            .des {
+                                                margin-right: 0;
+                                                margin-bottom: 12px;
+                                            }
+
+                                            .ck.ck-editor {
+                                                min-width: 100%;
+                                                max-width: 100%;
+                                            }
+
+                                            .ck-editor__editable {
+                                                min-height: 200px;
+                                            }
+                                        }
+                                    }
+
+                                    .btn_group {
+                                        .flexbox(row, center, center);
+
+                                        .btn_style {
+                                            background: @fontColor;
+                                            border: 0;
+                                            border-radius: 5px;
+                                            color: rgb(@white);
+                                            padding: 7px 18px;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .active {
+                                .show;
+                            }
+                        }
+                    }
+
+                    .edit_contain {
+                        height: auto;
+
+                        .main {
+
+                            .edit_content {
+                                .flexbox(column, center, center);
+
+                                .input_list {
+                                    .flexbox(column, flex-start, flex-start);
+                                    width: 100%;
+                                    font-weight: bold;
+                                    margin-bottom: 24px;
+
+                                    .common_item {
+                                        .flexbox(row, center, flex-start);
+                                        width: 100%;
+                                        margin-bottom: 24px;
+
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+
+                                        .des {
+                                            margin-right: 12px;
+
+                                            &>small {
+                                                color: rgb(@mlRed);
+                                            }
+                                        }
+
+                                        .input_style {
+                                            background: transparent;
+                                            box-sizing: border-box;
+                                            flex: 1;
+                                            width: 100%;
+                                            border: 1px solid rgb(@adminColor);
+                                            border-radius: 5px;
+                                            padding: 8px 6px;
+                                            .ease(.2s);
+
+                                            &:focus,
+                                            &:active {
+                                                border: 1px solid rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .upload_btn {
+
+                                            .inputfile {
+                                                width: 0.1px;
+                                                height: 0.1px;
+                                                .hide;
+                                                position: absolute;
+                                                z-index: -1;
+
+                                                & label {
+                                                    .link-default;
+                                                }
+
+                                                &+label {
+                                                    display: inline-block;
+                                                    max-width: 100%;
+                                                    cursor: pointer;
+                                                    font-size: @fontSize - 2;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                    margin-top: 6px;
+                                                    overflow: hidden;
+
+                                                    &>span {
+                                                        color: rgb(@mlRed);
+                                                    }
+
+                                                    &>svg {
+                                                        margin-left: 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .radio_content {
+                                            .flexbox(row, center, flex-start);
+                                            flex: 1;
+
+                                            & fieldset {
+                                                .flexbox(row, center, center);
+                                                position: relative;
+                                                width: 65px;
+                                                .material_radio;
+
+                                                & input[type="radio"] {
+                                                    &+label {
+
+                                                        &::before,
+                                                        &::after {
+                                                            bottom: 7px;
+                                                        }
+                                                    }
+
+                                                    &:checked {
+                                                        &+label {
+                                                            &::before {
+                                                                width: 14px;
+                                                                height: 14px;
+                                                            }
+
+                                                            &::after {
+                                                                width: 6px;
+                                                                height: 6px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .cover_photo_item {
+                                        flex-wrap: wrap;
+
+                                        .preview_img {
+                                            width: 100%;
+                                            margin-top: 12px;
+
+                                            & h3 {
+                                                color: #999;
+                                                font-size: @fontSize - 6;
+                                                margin-bottom: 8px;
+                                            }
+
+                                            & img {
+                                                width: 50%;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .editor_item {
+                                        .flexbox(column, flex-start, flex-start);
+
+                                        .des {
+                                            margin-right: 0;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .ck.ck-editor {
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                        }
+
+                                        .ck-editor__editable {
+                                            min-height: 200px;
+                                        }
+                                    }
+                                }
+
+                                .btn_group {
+                                    .flexbox(row, center, center);
+
+                                    .btn_style {
+                                        background: @fontColor;
+                                        border: 0;
+                                        border-radius: 5px;
+                                        color: rgb(@white);
+                                        padding: 7px 18px;
+                                        .ease(.2s);
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    .cancel_btn {
+                                        cursor: pointer;
+                                        margin-right: 12px;
+                                        padding: 9.5px 18px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

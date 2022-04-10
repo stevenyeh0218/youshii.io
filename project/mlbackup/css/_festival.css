@@ -1,0 +1,410 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+.couponBg {
+  background: #ffbd27;
+  background: -moz-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: -webkit-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: linear-gradient(to bottom, #ffbd27 0%, #ff6d00 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd27', endColorstr='#ff6d00', GradientType=0);
+}
+.material_checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.material_checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+.material_checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.material_checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+.material_checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.material_radio input[type="radio"] {
+  display: none;
+}
+.material_radio input[type="radio"] + label {
+  cursor: pointer;
+}
+.material_radio input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+.material_radio input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+#fesitval #wrapper {
+  /***** 最新優惠 *****/
+  /***** 為您精挑細選 *****/
+  /***** Top ten *****/
+  /***** 達人分享 *****/
+  /***** 熱門其他活動 *****/
+  /***** 深入探索 *****/
+  /***** 熱門活動住宿*****/
+  /***** 網友都在看 *****/
+  /***** 熱門活動 *****/
+  /***** ML 推薦 *****/
+  /***** 新進達人推薦 *****/
+  /***** 商家酷碰券 *****/
+}
+#fesitval #wrapper #myanLife_discount .common_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_discount .common_content .common_item .imgView {
+  border: 5px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_featured .featured_header .default {
+  position: relative;
+}
+#fesitval #wrapper #myanLife_featured .featured_header .default > span {
+  display: block;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+#fesitval #wrapper #myanLife_featured .featured_header .default .icon {
+  color: rgb(216, 35, 22);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#fesitval #wrapper #myanLife_hot_ten .common_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_hot_ten .common_content .common_item .imgView {
+  border: 5px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_hot_ten .common_content .common_item .imgView {
+  border: none;
+}
+#fesitval #wrapper #myanLife_blog .blog_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_other .other_item .other_item_header .default {
+  position: relative;
+  margin-right: 15px;
+}
+#fesitval #wrapper #myanLife_other .other_item .other_item_header .default > span {
+  display: block;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+#fesitval #wrapper #myanLife_other .other_item .other_item_header .default .icon {
+  color: rgb(216, 35, 22);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#fesitval #wrapper #myanLife_other .other_item:nth-child(2) .other_item_header {
+  border-bottom: 3px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_other .other_item:nth-child(2) .other_item_header .default .icon {
+  color: rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_other .other_item:nth-child(3) .other_item_header {
+  border-bottom: 3px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_other .other_item:nth-child(3) .other_item_header .default .icon {
+  color: rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_explore_in_depth .explore_in_depth_header .default {
+  position: relative;
+}
+#fesitval #wrapper #myanLife_explore_in_depth .explore_in_depth_header .default > span {
+  display: block;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+#fesitval #wrapper #myanLife_explore_in_depth .explore_in_depth_header .default .icon {
+  color: rgb(216, 35, 22);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#fesitval #wrapper #myanLife_hot_active_location .common_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_hot_active_location .common_content .common_item .imgView {
+  border: 5px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_hot_active_location .common_content .common_item .imgView {
+  border: none;
+}
+#fesitval #wrapper #myanLife_recently .common_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_recently .common_content .common_item .imgView {
+  border: 5px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_recently .common_content .common_item .imgView {
+  border: none;
+}
+#fesitval #wrapper #myanLife_hot_active .common_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_hot_active .common_content .common_item .imgView {
+  border: 5px solid rgb(216, 35, 22);
+}
+#fesitval #wrapper #myanLife_hot_active .common_content .common_item .imgView {
+  border: none;
+}
+#fesitval #wrapper #myanLife_recommend .recommend_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_recommend .recommend_header::before {
+  content: "";
+  background: url(../images/red-firecracker.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 9vw;
+  height: 100%;
+  left: -13%;
+}
+#fesitval #wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default {
+  position: relative;
+}
+#fesitval #wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default > span {
+  display: block;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+#fesitval #wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default .icon {
+  color: rgb(216, 35, 22);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

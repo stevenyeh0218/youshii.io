@@ -1,0 +1,135 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** 六大選單 Nav 開關 *****/
+        #m_list_Navigation_switch {
+            display: none;
+            color: rgb(@black);
+            position: fixed;
+            top: 18px;
+            right: 50px;
+            z-index: 11;
+            cursor: pointer;
+            .ease(.2s);
+        }
+
+        .m_list_close {
+            right: 15px !important;
+            color: rgb(@white) !important;
+            z-index: 99999 !important;
+        }
+
+        /***** 六大選單 Nav  *****/
+        #myanLife_list_Navigation {
+            position: fixed;
+            top: 5px;
+            left: 24px;
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            width: 50%;
+            margin: auto;
+            padding: 0;
+            z-index: 3;
+
+            .item {
+                .flexbox(row, center, space-between);
+                border-bottom: 3px solid rgb(@mlBlue);
+                font-size: @fontSize - 4;
+                margin-right: 24px;
+                color: @fontColor;
+                height: 35px;
+                .link-default;
+                .ease(.2s);
+
+                .icon {
+                    .flexbox(row, center, center);
+                    background: rgb(@mlBlue);
+                    width: 14px;
+                    height: 14px;
+                    color: rgb(@white);
+                    padding: 8px;
+                    border-radius: 50%;
+                    .ease(.2s);
+                }
+
+                &:hover {
+                    color: rgb(@mlBlue);
+
+                    .icon {
+                        border-radius: 0;
+                    }
+                }
+
+                &>div {
+                    margin: auto;
+                    margin-left: 8px;
+                }
+
+                &:nth-child(2) {
+                    border-bottom: 4px solid rgb(@mainColor);
+
+                    .icon {
+                        background: rgb(@mainColor);
+                    }
+
+                    &:hover {
+                        color: rgb(@mainColor);
+                    }
+                }
+
+                &:nth-child(3) {
+                    border-bottom: 4px solid rgb(@mlGreen);
+
+                    .icon {
+                        background: rgb(@mlGreen);
+                    }
+
+                    &:hover {
+                        color: rgb(@mlGreen);
+                    }
+                }
+
+                &:nth-child(4) {
+                    border-bottom: 4px solid rgb(@mlPink);
+
+                    .icon {
+                        background: rgb(@mlPink);
+                    }
+
+                    &:hover {
+                        color: rgb(@mlPink);
+                    }
+                }
+
+                &:nth-child(5) {
+                    border-bottom: 4px solid rgb(@mlGreenDark);
+
+                    .icon {
+                        background: rgb(@mlGreenDark);
+                    }
+
+                    &:hover {
+                        color: rgb(@mlGreenDark);
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 4px solid rgb(@mlRed);
+                    margin: 0;
+
+                    .icon {
+                        background: rgb(@mlRed);
+                    }
+
+                    &:hover {
+                        color: rgb(@mlRed);
+                    }
+                }
+            }
+        }
+    }
+}

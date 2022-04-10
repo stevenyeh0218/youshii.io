@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="zh-Hant-TW" ontouchmove>
+
+<head>
+    <meta charset="utf-8">
+    <title>trustme自動化儲值網站</title>
+    <meta property="og:title" content="trustme自動化儲值網站" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="trustme自動化儲值網站" />
+    <meta property="og:description" content="trustme自動化儲值網站" />
+    <meta itemprop="name" content="trustme自動化儲值網站">
+    <meta itemprop="description" content="trustme自動化儲值網站">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="trustme自動化儲值網站" />
+    <meta name="keywords" content="trustme自動化儲值網站" />
+    <meta name="DC.Publisher" content="trustme自動化儲值網站" />
+    <meta name="DC.Description" content="trustme自動化儲值網站" />
+    <meta name="DC.Type" content="blog" />
+
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="./script/css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./script/css/popup.css">
+    <link rel="stylesheet" href="./script/css/mediaQuery.css">
+</head>
+
+<body onclick>
+    <div id="loginWindow">
+        <div class="wrapper">
+            <header>
+                <div class="title">登入</div>
+                <div class="closeBtn closeLoginWindowBtn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </header>
+            <div class="main">
+                <div class="switchLoginType">
+                    <div class="item normalLogin active">
+                        手機登入
+                    </div>
+                    <div class="item appScanLogin">
+                        APP掃描
+                    </div>
+                </div>
+                <div id="formWrapper">
+                    <form id="normalForm">
+                        <div class="internationalTel">
+                            <div class="item">
+                                <div class="title">手機</div>
+                                <sub>請輸入TrustMe APP 註冊時的手機號。</sub>
+                            </div>
+                            <div class="inputList">
+                                <input type="tel" id="mobile-number" placeholder="e.g. +1 702 123 4567" required>
+                                <input type="text" placeholder="手機號碼" required>
+                            </div>
+                        </div>
+                        <div class="pswd">
+                            <div class="title">密碼</div>
+                            <div class="item">
+                                <input type="password" class="password" placeholder="請輸入密碼" required>
+                                <i class="openPswd far fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="remind">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>記住帳號</span>
+                            </label>
+                            <a href="#" class="forgetBtn">忘記密碼?</a>
+                        </div>
+                        <div class=""></div>
+                        <button type="submit">登入</button>
+                    </form>
+                    <div id="appScanForm">
+                        <img src="./image/qrcode.png">
+                        <div class="item">
+                            <div class="cell">「QR Code掃描」功能</div>
+                            <div class="cell">至TrustMe APP 我的頁面顶部</div>
+                            <div class="cell point">* 登入後即代表您同意TrustMe 服務條款 及 隱私權政策</div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="des">還沒有TrustMe帳號?</div>
+                    <div class="regBtn">立即註冊</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+<script src="./vendor/html5.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./script/js/comon.js"></script>
+
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        offset: 20
+    });
+
+</script>
+
+
+</html>

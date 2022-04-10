@@ -1,0 +1,633 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.inline-flex {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+body {
+  /* RegisterWindow */
+  /* RegisterWindow end */
+  /* LoginWindow */
+  /* LoginWindow end */
+}
+body #registerWindow {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #registerWindow .wrapper {
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #registerWindow .wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+body #registerWindow .wrapper header .closeBtn {
+  cursor: pointer;
+}
+body #registerWindow .wrapper header .closeBtn .line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #registerWindow .wrapper header .closeBtn .line:first-child {
+  -webkit-transform: rotate(45deg) translate(-1px, 0px);
+  -moz-transform: rotate(45deg) translate(-1px, 0px);
+  -o-transform: rotate(45deg) translate(-1px, 0px);
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+body #registerWindow .wrapper header .closeBtn .line:last-child {
+  -webkit-transform: rotate(-45deg) translate(1px, -2px);
+  -moz-transform: rotate(-45deg) translate(1px, -2px);
+  -o-transform: rotate(-45deg) translate(1px, -2px);
+  transform: rotate(-45deg) translate(1px, -2px);
+}
+body #registerWindow .wrapper header .closeBtn:hover .line {
+  background: #ffa200;
+}
+body #registerWindow .wrapper .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+body #registerWindow .wrapper .main h2 {
+  margin: 25px 0;
+}
+body #registerWindow .wrapper .main .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+body #registerWindow .wrapper .main .list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 10px;
+  width: 210px;
+  padding: 12px 0;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #registerWindow .wrapper .main .list .item .icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+body #registerWindow .wrapper .main .list .item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+body #registerWindow .wrapper footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  padding: 30px 0;
+}
+body #registerWindow .wrapper footer .des {
+  margin-right: 25px;
+}
+body #registerWindow .wrapper footer .loginBtn {
+  color: #ffa200;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #registerWindow .wrapper footer .loginBtn:hover {
+  color: #57b5ce;
+}
+body .popupRegisterWindow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 99 !important;
+}
+body .popupRegisterWindow .wrapper {
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+body #loginWindow {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper {
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+body #loginWindow .wrapper header .closeBtn {
+  cursor: pointer;
+}
+body #loginWindow .wrapper header .closeBtn .line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper header .closeBtn .line:first-child {
+  -webkit-transform: rotate(45deg) translate(-1px, 0px);
+  -moz-transform: rotate(45deg) translate(-1px, 0px);
+  -o-transform: rotate(45deg) translate(-1px, 0px);
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+body #loginWindow .wrapper header .closeBtn .line:last-child {
+  -webkit-transform: rotate(-45deg) translate(1px, -2px);
+  -moz-transform: rotate(-45deg) translate(1px, -2px);
+  -o-transform: rotate(-45deg) translate(1px, -2px);
+  transform: rotate(-45deg) translate(1px, -2px);
+}
+body #loginWindow .wrapper header .closeBtn:hover .line {
+  background: #ffa200;
+}
+body #loginWindow .wrapper .main {
+  font-size: 16px;
+  padding: 20px;
+  overflow: hidden;
+}
+body #loginWindow .wrapper .main .switchLoginType {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+body #loginWindow .wrapper .main .switchLoginType .item {
+  border: 1px solid #57b5ce;
+  width: 190px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  padding: 14px 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main .switchLoginType .item:hover {
+  background: #57b5ce;
+  color: #fff;
+}
+body #loginWindow .wrapper .main .switchLoginType .active {
+  background: #57b5ce;
+  color: #fff;
+}
+body #loginWindow .wrapper .main #formWrapper {
+  position: relative;
+  height: 338px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel {
+  margin-bottom: 25px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .item sub {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #f00;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .inputList {
+  display: flex;
+  align-items: center;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .inputList > input {
+  background: -webkit-linear-gradient(top, rgba(87, 181, 206, 0) 95%, #57b5ce 4%);
+  background: linear-gradient(to bottom, rgba(87, 181, 206, 0) 95%, #57b5ce 4%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+  text-indent: 10px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .inputList > input:focus {
+  background-size: 100% 100%;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .internationalTel .inputList > input:first-child {
+  width: 50%;
+  margin-right: 10px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd {
+  margin-bottom: 25px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .title {
+  margin-bottom: 10px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .item {
+  position: relative;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .item > input {
+  background: -webkit-linear-gradient(top, rgba(87, 181, 206, 0) 95%, #57b5ce 4%);
+  background: linear-gradient(to bottom, rgba(87, 181, 206, 0) 95%, #57b5ce 4%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+  text-indent: 10px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .item > input:focus {
+  background-size: 460px 100%;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .item .openPswd {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .pswd .item .openPswd:hover {
+  color: #ffa200;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind label > input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  text-decoration: none;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind label > input:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind label > input:checked:before {
+  height: 50%;
+  border: 1px solid #57b5ce;
+  border-top: 0;
+  border-right: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind .forgetBtn {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm .remind .forgetBtn:hover {
+  color: #ffa200;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm > button {
+  background: #57b5ce;
+  width: 100%;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #normalForm > button:hover {
+  background: #ffa200;
+}
+body #loginWindow .wrapper .main #formWrapper .normalFormActive {
+  -webkit-transform: translateX(-100%) !important;
+  -moz-transform: translateX(-100%) !important;
+  -o-transform: translateX(-100%) !important;
+  transform: translateX(-100%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+body #loginWindow .wrapper .main #formWrapper #appScanForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 25px;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main #formWrapper #appScanForm .item .cell {
+  margin-top: 10px;
+}
+body #loginWindow .wrapper .main #formWrapper #appScanForm .item .point {
+  color: #57b5ce;
+  font-size: 14px;
+  margin-top: 25px;
+}
+body #loginWindow .wrapper .main .appScanFormActive {
+  -webkit-transform: translateX(0) !important;
+  -moz-transform: translateX(0) !important;
+  -o-transform: translateX(0) !important;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+body #loginWindow .wrapper .main footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+body #loginWindow .wrapper .main footer .des {
+  margin-right: 25px;
+}
+body #loginWindow .wrapper .main footer .regBtn {
+  color: #ffa200;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #loginWindow .wrapper .main footer .regBtn:hover {
+  color: #57b5ce;
+}
+body .popupLoginWindow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 99 !important;
+}
+body .popupLoginWindow .wrapper {
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

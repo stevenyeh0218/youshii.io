@@ -1,0 +1,1095 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 酷碰卷管理 *****/
+                .m_coupon_management {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .m_coupon_management_contain {
+                        background: rgb(@white);
+                        height: 422px;
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        overflow: hidden;
+                        .ease(.2s);
+
+                        .m_coupon_tabs_list {
+                            .flexbox(row, center, flex-start);
+                            color: rgb(@adminColor);
+                            font-weight: bold;
+                            border-bottom: 1px solid rgb(@adminColor);
+                            margin-bottom: 24px;
+                            padding-bottom: 24px;
+
+                            .m_coupon_tabs_item {
+                                position: relative;
+                                cursor: pointer;
+                                margin-right: 24px;
+                                .ease(.2s);
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover {
+                                    color: rgb(@mainColor);
+                                }
+                            }
+
+                            .active {
+                                color: rgb(@mainColor);
+                            }
+                        }
+
+                        .main {
+                            position: relative;
+                            font-size: @fontSize - 4;
+
+                            .m_coupon_list_content {
+                                position: absolute;
+                                width: 100%;
+                                .hide;
+                                .ease(.2s);
+
+                                .func_list {
+                                    .flexbox(row, center, space-between);
+                                    margin-bottom: 12px;
+                                    padding: 0 24px;
+
+                                    .func_item {
+                                        .flexbox(row, center, flex-start);
+                                        color: rgb(@adminColor);
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .delete_all_btn {
+                                            cursor: pointer;
+                                            margin-left: 24px;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+
+                                    &>a {
+                                        .link-default;
+                                        .ease(.2s);
+
+                                        &>.icon {
+                                            margin-right: 5px;
+                                        }
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+                                }
+
+                                .m_coupon_item {
+                                    .flexbox(row, baseline, space-between);
+                                    flex-wrap: wrap;
+                                    position: relative;
+                                    color: @fontColor;
+                                    padding: 24px;
+                                    .link-default;
+                                    .ease(.2s);
+
+                                    .m_coupon_info {
+                                        .flexbox(row, flex-start, center);
+                                        width: 100%;
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+                                        }
+
+                                        .m_coupon_img {
+                                            flex: 0.5;
+                                            overflow: hidden;
+
+                                            & img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        .m_coupon_cell_list {
+                                            .flexbox(column, baseline, flex-start);
+                                            flex: 1;
+                                            margin-left: 24px;
+
+                                            .m_coupon_cell {
+                                                .flexbox(row, baseline, flex-start);
+                                                line-height: 1.3em;
+                                                margin-bottom: 24px;
+                                                margin-right: 12px;
+
+                                                &:last-child {
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+
+                                            .m_coupon_cuisine {
+                                                .icon {
+                                                    margin-right: 3px;
+                                                }
+
+                                            }
+
+                                            .m_coupon_location {
+                                                .m_coupon_cuisine;
+                                            }
+
+                                            .m_coupon_hotel_level_type {
+                                                .m_coupon_cuisine;
+                                            }
+                                        }
+                                    }
+
+                                    .m_coupon_func {
+                                        position: absolute;
+                                        top: 24px;
+                                        right: 24px;
+
+                                        .m_coupon_cell {
+                                            cursor: pointer;
+                                            margin-right: 24px;
+                                            .ease(.2s);
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .delete_btn {
+                                            cursor: pointer;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+
+                                    .m_coupon_value {
+                                        .flexbox(row, center, flex-end);
+                                        width: 100%;
+                                        border-bottom: 1px solid rgb(@adminColor);
+                                        font-size: @fontSize - 2;
+                                        font-weight: bold;
+                                        margin-top: 12px;
+
+                                        .m_coupon_discount {}
+                                    }
+
+                                    .m_coupon_func_bottom {
+                                        .flexbox(row, center, flex-end);
+                                        width: 100%;
+                                        font-weight: bold;
+                                        margin-top: 24px;
+
+                                        .audit_status {
+                                            display: none;
+                                            background: rgb(@mainColor);
+                                            border-radius: 10px;
+                                            color: rgb(@white);
+                                            margin-right: 24px;
+                                            padding: 7px;
+                                        }
+
+                                        .audit_failed {
+                                            background: rgb(@mlRed);
+                                        }
+
+                                        .audit_passed {
+                                            background: rgb(@mlGreen);
+                                        }
+
+                                        .m_coupon_cell {
+                                            .preview_box {
+                                                .flexbox(row, center, center);
+                                                display: none;
+                                                background: rgba(@black, .85);
+                                                position: fixed;
+                                                width: 100%;
+                                                top: 0;
+                                                bottom: 0;
+                                                z-index: 99;
+                                                height: 100%;
+                                                left: 0;
+                                                right: 0;
+
+                                                .icon {
+                                                    position: absolute;
+                                                    color: rgb(@white);
+                                                    cursor: pointer;
+                                                    font-size: @fontSize + 6;
+                                                    top: 6%;
+                                                    right: 9%;
+                                                    .ease(.2s);
+
+                                                    &:hover {
+                                                        color: rgb(@mainColor);
+                                                    }
+                                                }
+
+                                                &>embed {
+                                                    background: rgb(@white);
+                                                    width: 80%;
+                                                    height: 80%;
+                                                    .hide;
+                                                    .scale(0);
+                                                    .ease(.2s);
+                                                }
+                                            }
+
+                                            .op_box {
+
+                                                &>embed {
+                                                    background: rgb(@white);
+                                                    width: 80%;
+                                                    height: 80%;
+                                                    .scale(1);
+                                                    .show;
+                                                }
+                                            }
+                                        }
+
+                                        .put_on_btn {
+                                            margin-right: 48px !important;
+
+                                            .switch_input {
+                                                display: none;
+
+                                                &:checked {
+                                                    &+.switch_label {
+                                                        .switch_style {
+                                                            &:before {
+                                                                background: rgb(@mainColor);
+                                                            }
+
+                                                            &:after {
+                                                                background: rgb(@white);
+                                                                -ms-transform: translate(80%, -50%);
+                                                                -webkit-transform: translate(80%, -50%);
+                                                                transform: translate(80%, -50%);
+                                                            }
+                                                        }
+
+                                                        .toggle--on {
+                                                            display: inline-block;
+                                                        }
+
+                                                        .toggle--off {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .switch_label {
+                                                position: relative;
+                                                cursor: pointer;
+                                                color: rgb(@mlRed);
+
+
+
+                                                .switch_style {
+
+                                                    &:before,
+                                                    &:after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        margin: 0;
+                                                        outline: 0;
+                                                        top: 50%;
+                                                        -ms-transform: translate(0, -50%);
+                                                        -webkit-transform: translate(0, -50%);
+                                                        transform: translate(0, -50%);
+                                                        .ease(.2s);
+                                                    }
+
+                                                    &:before {
+                                                        background: rgb(@adminColor);
+                                                        border-radius: 8px;
+                                                        width: 34px;
+                                                        height: 14px;
+                                                        right: -30px;
+                                                    }
+
+                                                    &:after {
+                                                        background: rgb(@white);
+                                                        border-radius: 50%;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                                        right: -15px;
+                                                    }
+                                                }
+
+                                                .toggle--on {
+                                                    display: none;
+                                                    margin-right: 12px;
+                                                }
+
+                                                .toggle--off {
+                                                    display: inline-block;
+                                                    margin-right: 12px;
+                                                }
+
+                                            }
+
+                                        }
+
+                                        .edit_btn {
+                                            border: 1px solid @fontColor;
+                                            border-radius: 10px;
+                                            color: @fontColor;
+                                            cursor: pointer;
+                                            padding: 7px;
+                                            .link-default;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                border-color: rgb(@mainColor);
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .preview_btn {
+                                            .edit_btn;
+                                            margin-right: 24px;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        position: relative;
+                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                                        z-index: 2;
+                                    }
+                                }
+
+                                .close_m_coupon_item {
+                                    .hide;
+                                    .translateX(120%);
+                                }
+                            }
+
+                            .active {
+                                .show;
+                            }
+                        }
+                    }
+
+                    .edit_contain {
+                        height: auto;
+
+                        .main {
+                            .form_anchor {
+                                .flexbox(row, center, flex-start);
+                                color: rgb(@adminColor);
+                                margin-bottom: 24px;
+
+                                .anchor_item {
+                                    cursor: pointer;
+                                    margin-right: 24px;
+                                    .ease(.2s);
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+
+                                    &:hover {
+                                        color: rgb(@mainColor);
+                                    }
+                                }
+
+                                .active {
+                                    color: rgb(@mainColor);
+                                }
+                            }
+
+                            .fixed_form_anchor {
+                                .flexbox(column, center, center);
+                                position: fixed;
+                                background: rgba(@white, .8);
+                                padding: 24px;
+                                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                                right: 5%;
+                                z-index: 10;
+
+                                .anchor_item {
+                                    margin-right: 0;
+                                    margin-bottom: 24px;
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .edit_content {
+                                .flexbox(column, flex-start, flex-start);
+
+                                .input_list {
+                                    .flexbox(column, flex-start, flex-start);
+                                    width: 100%;
+                                    font-weight: bold;
+                                    margin-bottom: 24px;
+
+                                    .common_item {
+                                        .flexbox(row, center, flex-start);
+                                        width: 50%;
+                                        margin-bottom: 24px;
+
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+
+                                        .des {
+                                            margin-right: 12px;
+                                            white-space: nowrap;
+
+                                            &>small {
+                                                font-size: @fontSize - 6;
+                                                color: rgb(@mlRed);
+                                                margin-left: 5px;
+                                            }
+                                        }
+
+                                        .input_style {
+                                            background: transparent;
+                                            box-sizing: border-box;
+                                            flex: 1;
+                                            width: 100%;
+                                            border: 1px solid rgb(@adminColor);
+                                            border-radius: 5px;
+                                            padding: 8px 6px;
+                                            .ease(.2s);
+
+                                            &:focus,
+                                            &:active {
+                                                border: 1px solid rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .select_style {
+                                            .input_style;
+                                        }
+
+                                        .upload_btn {
+
+                                            .inputfile {
+                                                width: 0.1px;
+                                                height: 0.1px;
+                                                .hide;
+                                                position: absolute;
+                                                z-index: -1;
+
+                                                & label {
+                                                    .link-default;
+                                                }
+
+                                                &+label {
+                                                    display: inline-block;
+                                                    max-width: 100%;
+                                                    cursor: pointer;
+                                                    font-size: @fontSize - 2;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                    margin-top: 6px;
+                                                    overflow: hidden;
+
+                                                    &>span {
+                                                        color: rgb(@mlRed);
+                                                    }
+
+                                                    &>svg {
+                                                        margin-left: 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .radio_content {
+                                            .flexbox(row, center, flex-start);
+                                            flex: 1;
+
+                                            & fieldset {
+                                                .flexbox(row, center, center);
+                                                position: relative;
+                                                width: 90px;
+                                                .material_radio;
+
+                                                & input[type="radio"] {
+                                                    &+label {
+
+                                                        &::before,
+                                                        &::after {
+                                                            bottom: 7px;
+                                                        }
+                                                    }
+
+                                                    &:checked {
+                                                        &+label {
+                                                            &::before {
+                                                                width: 14px;
+                                                                height: 14px;
+                                                            }
+
+                                                            &::after {
+                                                                width: 6px;
+                                                                height: 6px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .cover_photo_item {
+                                        .flexbox(row, center, flex-start) !important;
+                                        flex-wrap: wrap;
+
+                                        .des {
+                                            margin-bottom: 0 !important;
+                                        }
+
+                                        .preview_img {
+                                            width: 100%;
+                                            margin-top: 12px;
+
+                                            & h3 {
+                                                color: #999;
+                                                font-size: @fontSize - 6;
+                                                margin-bottom: 8px;
+                                            }
+
+                                            & img {
+                                                width: 50%;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .traveler_item {
+                                        & button[type="button"] {
+                                            border: 0;
+                                            background: transparent;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        & input[type="text"] {
+                                            border: 0;
+                                            background: transparent;
+                                        }
+                                    }
+
+                                    .travelDate_item {
+                                        .traveler_item;
+                                    }
+
+                                    .area_item {
+                                        .select_style {
+                                            margin-right: 10px;
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+                                        }
+
+                                        .hide_select {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .date_item {
+                                        .date_input_contain {
+                                            .flexbox(row, center, flex-start);
+
+                                            .date_input_item {
+                                                position: relative;
+                                            }
+
+                                            &>span {
+                                                margin: auto 12px;
+                                            }
+                                        }
+                                    }
+
+                                    .editor_item {
+                                        .flexbox(column, flex-start, flex-start);
+
+                                        .des {
+                                            margin-right: 0;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .ck.ck-editor {
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                        }
+
+                                        .ck-editor__editable {
+                                            min-height: 200px;
+                                        }
+                                    }
+
+                                    .preview_item {
+                                        .flexbox(column, flex-start, flex-start);
+
+                                        .canvas {
+                                            background: transparent;
+                                            position: relative;
+                                            width: 100%;
+                                            height: 338px;
+                                            border: 1px solid @fontColor;
+                                            margin-top: 12px;
+                                            overflow: hidden;
+
+                                            .m_coupon_bg {
+                                                background: url("../../static/images/coupon_admin_bg.png") no-repeat center center transparent;
+                                                background-size: cover;
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+
+                                            .main {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                color: rgb(@black);
+                                                width: 100%;
+                                                height: 100%;
+
+                                                .m_coupon_title {
+                                                    position: absolute;
+                                                    font-size: 0.9vw;
+                                                    font-weight: bold;
+                                                    bottom: 42%;
+                                                    left: 11%;
+                                                }
+
+                                                .m_coupon_info {
+                                                    position: absolute;
+                                                    left: 28%;
+                                                    width: 72%;
+                                                    height: 100%;
+
+                                                    .market_title {
+                                                        font-size: @fontSize + 6;
+                                                        font-weight: bold;
+                                                        color: rgb(216, 35, 22);
+                                                        margin-top: 24px;
+                                                        margin-bottom: 18px;
+                                                        .lineClamp(1);
+                                                    }
+
+                                                    .value {
+                                                        font-size: @fontSize * 3;
+                                                        border-top: 5px dotted rgb(@mlRed);
+                                                        border-bottom: 5px dotted rgb(@mlRed);
+                                                        margin-right: 50px;
+                                                        line-height: 2.3em;
+                                                        font-weight: normal;
+                                                        .lineClamp(1);
+                                                    }
+
+                                                    .how_to_use {
+                                                        font-size: @fontSize - 6;
+                                                        margin-top: 12px;
+                                                        margin-right: 95px;
+                                                        line-height: 1.2em;
+                                                        letter-spacing: 1px;
+
+                                                        .item {
+                                                            .flexbox(row, baseline, flex-start);
+                                                            flex-wrap: wrap;
+                                                            margin-bottom: 5px;
+
+                                                            .data {
+                                                                .lineClamp(2);
+                                                            }
+
+                                                            &:last-child {
+                                                                margin-bottom: 0;
+                                                            }
+                                                        }
+
+                                                        .way_item {
+                                                            .way_data {
+                                                                .flexbox(row, baseline, flex-start);
+
+                                                                .used_value {
+                                                                    position: relative;
+
+                                                                    &:first-child {
+                                                                        margin-right: 8px;
+
+                                                                        &:after {
+                                                                            content: ",";
+                                                                            position: absolute;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .myanlife_logo {
+                                                        position: absolute;
+                                                        width: 50px;
+                                                        bottom: 24px;
+                                                        right: 24px;
+
+                                                        & img {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                .plan_description {
+                                    width: 100%;
+                                    margin-top: 24px;
+                                    padding-top: 48px;
+                                    border-top: 1px solid @fontColor;
+
+                                    &>h3 {
+                                        font-size: @fontSize;
+                                        margin-bottom: 24px;
+
+                                        &>small {
+                                            font-size: @fontSize - 6;
+                                            color: rgb(@mlRed);
+                                            margin-left: 10px;
+                                        }
+                                    }
+
+                                    .common_item {
+                                        .flexbox(column, flex-start, flex-start);
+                                        width: 50%;
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            margin-bottom: 12px;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .ck.ck-editor {
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                        }
+
+                                        .ck-editor__editable {
+                                            min-height: 200px;
+                                        }
+
+                                        .common_cell {
+                                            .flexbox(row, baseline, flex-start);
+                                            flex-wrap: wrap;
+                                            width: 96.8%;
+                                            margin: 0 24px;
+                                            .transform-origin(top);
+                                            .ease(.2s);
+
+                                            .label--checkbox {
+                                                margin-right: 24px;
+
+                                                &:last-child {
+                                                    margin-right: 24px;
+                                                }
+                                            }
+                                        }
+
+                                        .close_cell {
+                                            height: 0;
+                                            .hide;
+                                            .scaleY(0);
+                                        }
+
+                                        .time_cell {
+                                            .flexbox(row, center, flex-start);
+
+                                            .time_input_contain {
+                                                .flexbox(row, center, flex-start);
+
+                                                .time_input_item {
+                                                    position: relative;
+                                                }
+
+                                                &>span {
+                                                    margin: 0 12px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .manual {
+                                        .des {
+                                            margin-right: 0;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .common_cell {
+                                            .transform-origin(top);
+                                            .ease(.2s);
+
+                                            .input_style {
+                                                border: none;
+                                                border-bottom: 1px solid rgb(@adminColor);
+                                                border-radius: 0;
+
+                                                &:focus,
+                                                &:active {
+                                                    border: none;
+                                                    border-bottom: 1px solid rgb(@mainColor);
+                                                }
+                                            }
+
+                                            .close_input_style {
+                                                width: 0;
+                                                flex: 0;
+                                                border: 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+
+                                    .supplementary_note {
+                                        .des {
+                                            margin-right: 0;
+                                            margin-bottom: 12px;
+                                        }
+                                    }
+                                }
+
+                                .consumer_notice {
+                                    width: 100%;
+                                    margin-top: 24px;
+                                    padding-top: 48px;
+                                    border-top: 1px solid @fontColor;
+
+                                    &>h3 {
+                                        font-size: @fontSize;
+                                        margin-bottom: 24px;
+
+                                        &>small {
+                                            font-size: @fontSize - 6;
+                                            color: rgb(@mlRed);
+                                            margin-left: 10px;
+                                        }
+                                    }
+
+                                    .common_item {
+                                        .flexbox(column, flex-start, flex-start);
+                                        width: 50%;
+
+                                        .des {
+                                            margin-right: 0;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            margin-bottom: 12px;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+
+                                        .ck.ck-editor {
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                        }
+
+                                        .ck-editor__editable {
+                                            min-height: 200px;
+                                        }
+
+                                        .common_cell {
+                                            .flexbox(row, baseline, flex-start);
+                                            flex-wrap: wrap;
+                                            width: 96.8%;
+                                            margin: 0 24px;
+                                            .transform-origin(top);
+                                            .ease(.2s);
+
+                                            .label--checkbox {
+                                                margin-right: 24px;
+
+                                                &:last-child {
+                                                    margin-right: 24px;
+                                                }
+                                            }
+
+                                            .input_style {
+                                                border: none;
+                                                border-bottom: 1px solid rgb(@adminColor);
+                                                border-radius: 0;
+
+                                                &:focus,
+                                                &:active {
+                                                    border: none;
+                                                    border-bottom: 1px solid rgb(@mainColor);
+                                                }
+                                            }
+
+                                            .close_input_style {
+                                                width: 0;
+                                                flex: 0;
+                                                border: 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                .transportation {
+                                    .consumer_notice;
+                                }
+
+                                .used {
+                                    .consumer_notice;
+                                }
+
+                                .cancellation_policy {
+                                    .consumer_notice;
+
+                                    .common_item {
+
+                                        .disabled {
+                                            color: #999;
+                                            cursor: not-allowed;
+
+                                            .checkbox {
+                                                cursor: not-allowed;
+
+                                                &:before {
+                                                    border-color: #999;
+                                                }
+
+                                                &:after {
+                                                    background: #999;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn_group {
+                                    .flexbox(row, center, center);
+                                    width: 100%;
+
+                                    .btn_style {
+                                        background: @fontColor;
+                                        border: 0;
+                                        border-radius: 5px;
+                                        color: rgb(@white);
+                                        padding: 7px 18px;
+                                        .ease(.2s);
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    .cancel_btn {
+                                        cursor: pointer;
+                                        margin-right: 12px;
+                                        padding: 9.5px 18px;
+                                    }
+
+                                    .check_btn {
+                                        .cancel_btn;
+                                        margin-left: 12px;
+                                        margin-right: 0;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

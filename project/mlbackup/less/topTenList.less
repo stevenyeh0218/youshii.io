@@ -1,0 +1,402 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 管理員-精挑細選 *****/
+                .admin_ad {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .admin_management_contain {
+                        .main {
+                            .input_list {
+                                .common_item {
+
+                                    .key_point {
+                                        font-size: @fontSize - 6;
+                                        color: rgb(@mlRed);
+                                        margin-top: 8px;
+                                        line-height: 1.3em;
+                                    }
+                                }
+                            }
+
+                            .admin_list_content {
+                                .admin_item {
+                                    .admin_func {
+                                        .topTen_btn {
+                                            .flexbox(row, center, center);
+                                            margin-right: 48px !important;
+
+                                            .switch_input {
+                                                display: none;
+
+                                                &:checked {
+                                                    &+.switch_label {
+
+                                                        .switch_style {
+                                                            &:before {
+                                                                background: rgb(@mainColor);
+                                                            }
+
+                                                            &:after {
+                                                                background: rgb(@white);
+                                                                -ms-transform: translate(80%, -50%);
+                                                                -webkit-transform: translate(80%, -50%);
+                                                                transform: translate(80%, -50%);
+                                                            }
+                                                        }
+
+                                                        &:before {
+                                                            background: rgb(@mainColor);
+                                                        }
+
+                                                        .toggle--on {
+                                                            display: inline-block;
+                                                        }
+
+                                                        .toggle--off {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .switch_label {
+                                                position: relative;
+                                                color: rgb(@mlRed);
+                                                cursor: pointer;
+
+
+                                                .switch_style {
+
+                                                    &:before,
+                                                    &:after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        margin: 0;
+                                                        outline: 0;
+                                                        top: 50%;
+                                                        -ms-transform: translate(0, -50%);
+                                                        -webkit-transform: translate(0, -50%);
+                                                        transform: translate(0, -50%);
+                                                        .ease(.2s);
+                                                    }
+
+                                                    &:before {
+                                                        background: rgb(@adminColor);
+                                                        border-radius: 8px;
+                                                        width: 34px;
+                                                        height: 14px;
+                                                        right: -30px;
+                                                    }
+
+                                                    &:after {
+                                                        background: #ccc;
+                                                        border-radius: 50%;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                                        right: -15px;
+                                                    }
+                                                }
+
+                                                .toggle--on {
+                                                    display: none;
+                                                    margin-right: 12px;
+                                                }
+
+                                                .toggle--off {
+                                                    display: inline-block;
+                                                    margin-right: 12px;
+                                                }
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .sort_cell {
+                                        .num {
+                                            .ease(.2s);
+                                        }
+
+                                        .num_active {
+                                            padding: 0 12px;
+                                            border: 1px solid rgb(@mainColor);
+                                        }
+                                    }
+                                }
+
+                                .topTen_func_list {
+                                    .func_item_right {
+                                        .func_cell {
+                                            .flexbox(row, center, flex-start);
+                                            color: rgb(@adminColor);
+                                            margin-right: 24px;
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+                                        }
+
+                                        &>a {
+                                            .link-default;
+                                            .ease(.2s);
+
+                                            &>.icon {
+                                                margin-right: 5px;
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .edit_contain {
+                        background: rgb(@white);
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+
+                        .main {
+                            .flexbox(column, center, center);
+
+                            .input_list {
+                                .flexbox(row, baseline, space-between);
+                                flex-wrap: wrap;
+                                width: 100%;
+                                font-weight: bold;
+                                margin-bottom: 24px;
+
+                                .common_item {
+                                    .flexbox(column, flex-start, flex-start);
+                                    width: 100%;
+                                    margin-bottom: 24px;
+
+                                    .des {
+                                        margin-bottom: 5px;
+
+                                        &>small {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .input_style {
+                                        background: transparent;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        border: 1px solid rgb(@adminColor);
+                                        border-radius: 5px;
+                                        padding: 8px 6px;
+                                        .ease(.2s);
+
+                                        &:focus,
+                                        &:active {
+                                            border: 1px solid rgb(@mainColor);
+                                        }
+
+                                        &:read-only {
+                                            border: 1px solid #eee;
+                                        }
+                                    }
+
+                                    .select_style {
+                                        .input_style;
+
+                                        &:disabled {
+                                            -moz-appearance: none;
+                                            /* Firefox */
+                                            -webkit-appearance: none;
+                                            /* Safari and Chrome */
+                                            appearance: none;
+                                            border: 1px solid #eee;
+                                        }
+                                    }
+
+                                    .text_style {
+                                        .input_style;
+                                        min-height: 200px;
+                                        resize: vertical;
+                                    }
+
+                                    .key_point {
+                                        font-size: @fontSize - 6;
+                                        color: rgb(@mlRed);
+                                        margin-top: 8px;
+                                        line-height: 1.3em;
+                                    }
+
+                                    .img_check {
+                                        & img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .editor_item {
+                                    .flexbox(column, flex-start, flex-start);
+
+                                    .des {
+                                        margin-right: 0;
+                                        margin-bottom: 12px;
+                                    }
+
+                                    .ck.ck-editor {
+                                        min-width: 100%;
+                                        max-width: 100%;
+                                    }
+
+                                    .ck-editor__editable {
+                                        min-height: 200px;
+                                    }
+                                }
+                            }
+
+                            .btn_group {
+                                .flexbox(row, center, center);
+
+                                .btn_style {
+                                    background: @fontColor;
+                                    border: 0;
+                                    border-radius: 5px;
+                                    color: rgb(@white);
+                                    padding: 7px 18px;
+                                    .ease(.2s);
+
+                                    &:hover {
+                                        color: rgb(@mainColor);
+                                    }
+                                }
+
+                                .cancel_btn {
+                                    cursor: pointer;
+                                    margin-right: 12px;
+                                    padding: 9.5px 18px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .topTen_edit_contain {
+                        .main {
+                            .input_list {
+                                .common_item {
+                                    width: 32%;
+                                }
+
+
+
+                                .topTen_btn {
+
+                                    min-width: 80px;
+
+                                    .switch_input {
+                                        display: none;
+
+                                        &:checked {
+                                            &+.switch_label {
+                                                &:before {
+                                                    background: rgb(@mainColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                    -ms-transform: translate(80%, -50%);
+                                                    -webkit-transform: translate(80%, -50%);
+                                                    transform: translate(80%, -50%);
+                                                }
+
+                                                .toggle--on {
+                                                    display: inline-block;
+                                                }
+
+                                                .toggle--off {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .switch_label {
+                                        position: relative;
+                                        color: rgb(@mlRed);
+                                        cursor: pointer;
+
+                                        &:before,
+                                        &:after {
+                                            content: "";
+                                            position: absolute;
+                                            margin: 0;
+                                            outline: 0;
+                                            top: 50%;
+                                            -ms-transform: translate(0, -50%);
+                                            -webkit-transform: translate(0, -50%);
+                                            transform: translate(0, -50%);
+                                            .ease(.2s);
+                                        }
+
+                                        &:before {
+                                            background: rgb(@adminColor);
+                                            border-radius: 8px;
+                                            width: 34px;
+                                            height: 14px;
+                                            left: 50px;
+                                        }
+
+                                        &:after {
+                                            background: #ccc;
+                                            border-radius: 50%;
+                                            width: 20px;
+                                            height: 20px;
+                                            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                            left: 50px;
+                                        }
+
+                                        .toggle--on {
+                                            display: none;
+                                        }
+
+                                        .toggle--off {
+                                            display: inline-block;
+                                        }
+
+                                    }
+
+                                }
+
+                                .address_item {
+                                    width: 100%;
+                                }
+
+                                .company_data_item,
+                                .business_content_item {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

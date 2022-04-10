@@ -1,0 +1,221 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** MyanLife 在做些什麼? *****/
+        #myanlife_do {
+            .flexbox(column, center, center);
+            width: 80%;
+            margin: auto;
+            margin-top: 80px;
+
+            & h2 {
+                font-size: @fontSize + 6;
+                font-weight: bold;
+                margin-bottom: 50px;
+            }
+
+            .doing_list {
+                .flexbox(row, baseline, center);
+                flex-wrap: wrap;
+
+                .doing_item {
+                    display: flex;
+                    flex-direction: column;
+                    width: 48%;
+                    margin-right: 24px;
+                    margin-bottom: 24px;
+
+                    & header {
+                        position: relative;
+                        .flexbox(row, flex-end, flex-start);
+                        margin-bottom: 12px;
+
+                        & img {
+                            border: 1px solid rgb(@fontColor);
+                            border-radius: 50%;
+                            padding: 10px;
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        & h3 {
+                            flex: 1;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: @fontSize + 2;
+                            padding: 15px;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            background: @fontColor;
+                            width: calc(100% - 40px);
+                            height: 1px;
+                            right: 0;
+                        }
+                    }
+
+                    .info {
+                        font-size: @fontSize - 2;
+                        letter-spacing: 3px;
+                        line-height: 1.3em;
+                        margin-left: 80px;
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        margin-bottom: 0;
+                    }
+
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+
+                .myanlife_red {
+                    & header {
+                        color: rgb(@mlRed);
+
+                        & img {
+                            border: 1px solid rgb(@mlRed);
+                        }
+
+                        &:after {
+                            background: rgb(@mlRed);
+                        }
+                    }
+                }
+
+                .myanlife_yellow {
+                    & header {
+                        color: rgb(@mainColor);
+
+                        & img {
+                            border: 1px solid rgb(@mainColor);
+                        }
+
+                        &:after {
+                            background: rgb(@mainColor);
+                        }
+                    }
+                }
+
+                .myanLife_blue {
+                    & header {
+                        color: rgb(@mlBlue);
+
+                        & img {
+                            border: 1px solid rgb(@mlBlue);
+                        }
+
+                        &:after {
+                            background: rgb(@mlBlue);
+                        }
+                    }
+                }
+
+                .myanlife_green {
+                    & header {
+                        color: rgb(@mlGreen);
+
+                        & img {
+                            border: 1px solid rgb(@mlGreen);
+                        }
+
+                        &:after {
+                            background: rgb(@mlGreen);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        /***** MyanLife 價值 *****/
+        #myanlife_value {
+            .flexbox(column, center, center);
+            width: 80%;
+            margin: 100px auto;
+
+            & h2 {
+                font-size: @fontSize + 6;
+                font-weight: bold;
+            }
+
+            & sub {
+                margin-bottom: 50px;
+                margin-bottom: 50px;
+                margin-top: 12px;
+                font-size: @fontSize - 4;
+                font-weight: bold;
+                color: rgb(@mlRed);
+            }
+
+            .value_list {
+                .flexbox(column, flex-start, flex-start);
+
+                .value_item {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: @fontSize - 2;
+                    margin-bottom: 50px;
+
+                    & header {
+                        position: relative;
+                        .flexbox(row, center, flex-start);
+                        font-size: @fontSize + 2;
+                        margin-bottom: 12px;
+
+                        .icon {
+                            font-size: @fontSize;
+                        }
+
+                        & h3 {
+                            font-weight: bold;
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .info {
+                        letter-spacing: 3px;
+                        line-height: 1.3em;
+                        margin-left: 32px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .myanlife_red {
+                    & header {
+                        color: rgb(@mlRed);
+                    }
+                }
+
+                .myanlife_yellow {
+                    & header {
+                        color: rgb(@mainColor);
+                    }
+                }
+
+                .myanLife_blue {
+                    & header {
+                        color: rgb(@mlBlue);
+                    }
+                }
+
+                .myanlife_green {
+                    & header {
+                        color: rgb(@mlGreen);
+                    }
+                }
+            }
+        }
+    }
+}

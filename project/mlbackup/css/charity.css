@@ -1,0 +1,1381 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+.couponBg {
+  background: #ffbd27;
+  background: -moz-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: -webkit-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: linear-gradient(to bottom, #ffbd27 0%, #ff6d00 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd27', endColorstr='#ff6d00', GradientType=0);
+}
+.material_checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.material_checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+.material_checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.material_checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+.material_checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.material_radio input[type="radio"] {
+  display: none;
+}
+.material_radio input[type="radio"] + label {
+  cursor: pointer;
+}
+.material_radio input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+.material_radio input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+body #wrapper {
+  /***** 公益活動首頁  *****/
+  /***** 公益活動詳細  *****/
+}
+body #wrapper #myanLife_charity_result {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 80%;
+  margin: 100px auto;
+  margin-top: 50px;
+}
+body #wrapper #myanLife_charity_result .charity_info {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  margin-bottom: 50px;
+}
+body #wrapper #myanLife_charity_result .charity_info > div > span {
+  color: rgb(216, 35, 22);
+}
+body #wrapper #myanLife_charity_result .charity_info > div > span:nth-child(2) {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity_result .charity_info > div > span:last-child {
+  color: rgb(108, 187, 90);
+}
+body #wrapper #myanLife_charity_result .charity_result {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: end;
+  -moz-align-items: end;
+  -ms-align-items: end;
+  -o-align-items: end;
+  align-items: end;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content {
+  width: 79%;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  height: 240px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #363636;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .charity_image {
+  width: 320px;
+  height: 100%;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .charity_image img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 24px;
+  color: #363636;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information .charity_header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baselin;
+  -moz-align-items: baselin;
+  -ms-align-items: baselin;
+  -o-align-items: baselin;
+  align-items: baselin;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information .charity_header .charity_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information .charity_header .charity_active_time {
+  margin-bottom: 12px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information .charity_header .charity_join_date > time {
+  margin-left: 5px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item .information .data {
+  letter-spacing: 3px;
+  line-height: 1.2em;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item:last-child {
+  margin: 0;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .charity_item:hover .charity_image img {
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+  transform: rotate(3deg) scale(1.1);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .notfound {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .notfound .imgView {
+  width: 150px;
+  margin-right: 24px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .notfound .imgView img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .notfound .description {
+  line-height: 1.5em;
+  font-size: 24px;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .notfound .description > div .result_data {
+  color: rgb(216, 35, 22);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li {
+  color: #363636;
+  border-radius: 3px;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li > a,
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li > span {
+  color: #363636;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li:hover {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li:hover > a,
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul li:hover > span {
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul .active {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul .active > a,
+body #wrapper #myanLife_charity_result .charity_result .charity_content .charity_list .pagination ul .active > span {
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_charity_result .charity_result .m_sidebar_switch {
+  display: none;
+  background: rgb(247, 247, 247);
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 15px 0;
+  font-size: 16px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  width: 292px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .sidebar_item {
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .sidebar_item:last-child {
+  margin: 0;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .advertise_item {
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .advertise_item img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify {
+  font-size: 14px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify h2 {
+  font-size: 18px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item {
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 18px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_header .display_btn {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_header .display_btn:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 24px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox:last-child {
+  margin-bottom: 0;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .label--checkbox:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item .classify_item_list .active {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .classify_list .classify_item:last-child {
+  margin: 0;
+}
+body #wrapper #myanLife_charity_result .charity_result .sidebar .classify .undisplay_list {
+  display: none !important;
+}
+body #wrapper #myanLife_charity {
+  margin: 100px auto;
+}
+body #wrapper #myanLife_charity .author_article {
+  background: rgb(247, 247, 247);
+  width: 78.4%;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+body #wrapper #myanLife_charity .author_article .article_header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: 1px solid #363636;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 12px;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .article_recommend_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .article_recommend_list .charity_active_time {
+  margin-right: 12px;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .article_recommend_list .author {
+  margin-left: 12px;
+  text-decoration: none;
+  outline: none;
+  color: #363636;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .article_recommend_list .author > span {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .article_recommend_list .author:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  font-size: 24px;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item {
+  cursor: pointer;
+  margin-right: 12px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item:first-child {
+  color: #4267b2;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item:nth-child(2) {
+  color: #00b900;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item:nth-child(3) {
+  color: #1AAD19;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item:last-child {
+  color: #59267c;
+  margin-right: 0;
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_list_item:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+body #wrapper #myanLife_charity .author_article .article_header .article_recommend .sharing_social_list .social_btn {
+  display: none;
+  background: rgb(70, 211, 205);
+  color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_article .article_content .data {
+  letter-spacing: 4px;
+  line-height: 1.3em;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .charity_album_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 25px;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .charity_album_list .album_item {
+  display: none;
+  width: 24%;
+  height: 100%;
+  margin: 3px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .charity_album_list .album_item img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .charity_album_list .album_item:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .album_more {
+  width: 80%;
+  margin-top: 0;
+  text-align: center;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .album_more > .icon {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_article .article_content .charity_album .album_more > .icon:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity .author_recommend {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities {
+  width: 48%;
+  margin-right: 24px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article {
+  background: rgb(247, 247, 247);
+  width: 49%;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #363636;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .imgView {
+  height: 235px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .imgView img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_header {
+  padding: 15px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_header .recent_activities_title {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_header .recent_activities_recommend {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 12px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_header .recent_activities_recommend .recent_activities_recommend_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_content {
+  font-size: 14px;
+  padding: 15px;
+  padding-top: 0;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article .recent_activities_content .data {
+  letter-spacing: 4px;
+  line-height: 1.3em;
+  text-align: justify;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .recent_activities_list .recent_activities_article:hover {
+  color: rgb(255, 189, 39);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme {
+  position: relative;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme .owl-stage-outer .owl-stage .owl-item {
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme .owl-dots span {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: #363636;
+  border-radius: 0;
+  width: 20px;
+  height: 5px;
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme .owl-dots span:hover {
+  background: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity .author_recommend .recent_activities .owl-theme .active span {
+  background: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation {
+  width: 48%;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article {
+  background: rgb(247, 247, 247);
+  width: 49%;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #363636;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .imgView {
+  height: 235px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .imgView img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_header {
+  padding: 15px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_header .past_participation_title {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_header .past_participation_recommend {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 12px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_header .past_participation_recommend .past_participation_recommend_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_content {
+  font-size: 14px;
+  padding: 15px;
+  padding-top: 0;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article .past_participation_content .data {
+  letter-spacing: 4px;
+  line-height: 1.3em;
+  text-align: justify;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .past_participation_list .past_participation_article:hover {
+  color: rgb(255, 189, 39);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme {
+  position: relative;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme .owl-stage-outer .owl-stage .owl-item {
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme .owl-dots span {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: #363636;
+  border-radius: 0;
+  width: 20px;
+  height: 5px;
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme .owl-dots span:hover {
+  background: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_charity .author_recommend .past_participation .owl-theme .active span {
+  background: rgb(255, 189, 39);
+}

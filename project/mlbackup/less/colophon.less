@@ -1,0 +1,163 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+    #wrapper {
+
+        /***** 版權 *****/
+        #colophon {
+            background: rgb(@grayBg);
+            padding-top: 50px;
+
+            .colophon_sitemap {
+                .flexbox(row, baseline, flex-start);
+                padding: 0 10%;
+
+                .colophon_item {
+                    width: 25%;
+                    margin-right: 24px;
+
+                    & h2 {
+                        font-size: @fontSize;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        margin-bottom: 30px;
+                    }
+
+                    .list {
+                        .flexbox(column, flex-start, flex-start);
+                        flex-wrap: wrap;
+
+                        .item {
+                            font-size: @fontSize - 4;
+                            color: rgb(@fontColor);
+                            letter-spacing: 3px;
+                            margin-bottom: 15px;
+                            .link-default;
+                            .ease(.2s);
+
+                            &:hover {
+                                color: rgb(@mainColor);
+                            }
+
+                            .icon {
+                                margin-right: 10px;
+                            }
+
+                            & img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        width: 50%;
+                        margin-right: 0;
+                    }
+                }
+
+                .app_item {
+                    .list {
+                        .item {
+                            & img {
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+
+                .sponsor_item {
+                    .list {
+                        .flexbox(row, flex-start, flex-start);
+
+                        .item {
+                            width: 125px;
+                            margin-right: 15px;
+
+                            &:last-child {
+                                margin-bottom: 15;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .copy_rights {
+                background: #222222;
+                .flexbox(column, center, space-between);
+                color: rgb(@white);
+                font-size: @fontSize - 4;
+                margin-top: 50px;
+                padding: 15px 10%;
+
+                .copy_rights_top {
+                    .flexbox(row, center, space-between);
+                    width: 100%;
+
+                    .privacy {}
+
+                    .social_list {
+                        .flexbox(row, center, center);
+
+                        .item {
+                            color: rgb(@white);
+                            font-size: @fontSize * 2 - 4;
+                            margin: auto 10px;
+                            .ease(.2s);
+                            .link-default;
+
+                            & img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &:first-child {
+                                color: @fb;
+                            }
+
+                            &:nth-child(2) {
+                                color: @line;
+                            }
+
+                            &:last-child {
+                                .flexbox(row, center, center);
+                                width: 28px;
+                                height: 28px;
+                            }
+
+                            &:hover {
+                                .scale(1.1);
+                            }
+                        }
+                    }
+
+                }
+
+                .copy_rights_bottom {
+                    .flexbox(row, center, flex-start);
+                    width: 100%;
+                    margin-top: 12px;
+
+                    .item {
+                        .flexbox(row, baseline, flex-start);
+
+                        .icon {
+                            margin-right: 5px;
+                        }
+
+                        &:first-child {
+                            margin-right: 24px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,515 @@
+/* banner */
+#insidePage-banner {
+    position: relative;
+    width: 100%;
+    margin-top: 90px;
+}
+
+#insidePage-banner:before {
+    background: url('../image/inside-banner-1.png') no-repeat center center transparent;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.lesson-banner:before {
+    background: url('../image/inside-banner-2.png') no-repeat center center transparent !important;
+}
+
+.result-banner:before {
+    background: url('../image/inside-banner-3.png') no-repeat center center transparent !important;
+}
+
+.contact-banner:before {
+    background: url('../image/inside-banner-4.png') no-repeat center center transparent !important;
+}
+
+.location-banner:before {
+    background: url('../image/inside-banner-4.png') no-repeat center center transparent !important;
+}
+
+
+#insidePage-banner .sub-title {
+    padding-top: 218px;
+    padding-bottom: 100px;
+    letter-spacing: .3rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#insidePage-banner .sub-title h2 {
+    font-size: 1.5rem;
+}
+
+
+#insidePage-banner .sub-title .des {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
+
+/* banner end */
+
+/* common style */
+#introduce-layout {
+    background: #f3f3f9;
+}
+
+#introduce-layout .introduce {}
+
+#introduce-layout .introduce h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#introduce-layout .introduce .des {
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+    line-height: 2em;
+    padding-bottom: 4%;
+}
+
+#introduce-layout .introduce .des .cell {}
+
+#introduce-layout .introduce .link {
+    padding-bottom: 2%;
+}
+
+#introduce-layout .introduce .link .item {
+    color: #555;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.lesson-layout .introduce .link .item {
+    margin-bottom: 40px;
+}
+
+#introduce-layout .introduce .link .item img {
+    width: 100%;
+    height: 100%;
+}
+
+#introduce-layout .introduce .link .item h4 {
+    font-size: 1.34rem;
+    margin: .5rem auto;
+}
+
+.lesson-layout .introduce .link .item h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#introduce-layout .introduce .link .item .des {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    min-height: 160px;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+#introduce-layout .introduce .link .item .icon {
+    display: block;
+    color: #df8222;
+    padding-bottom: 10px;
+    text-align: right;
+    border-bottom: 1px solid #555;
+}
+
+#introduce-layout .introduce .link .item:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#introduce-layout .introduce .link .item:hover .icon {
+    border: 0;
+}
+
+/* common style end*/
+
+/* 團隊 */
+#member-layout {
+    margin-bottom: 40px;
+}
+
+#member-layout h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#member-layout .member-table {}
+
+#member-layout .member-table .item {
+    background: #f4f3ef;
+    max-width: 32.333333%;
+    min-height: 582px;
+    text-align: center;
+}
+
+#member-layout .member-table .item img {
+    width: 60%;
+    height: 100%;
+}
+
+#member-layout .member-table .item .name {
+    font-size: 1.3rem;
+    border-top: 1px solid #555;
+    text-align: left;
+    padding: 15px 0;
+}
+
+#member-layout .member-table .item .intro {
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 2em;
+    margin-bottom: 15px;
+}
+
+#member-layout .member-table .item .intro .cell .icon {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* 團隊 end */
+
+/* default by 機器人課程優勢 & 機器人對未來的應用領域*/
+#default-layout {
+    background: #f3f3f9;
+}
+
+#default-layout .default {}
+
+#default-layout .default h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#default-layout .default .des {
+    width: 45%;
+    text-align: left;
+    font-weight: 500;
+    line-height: 2em;
+    margin: auto;
+    padding-bottom: 4%;
+}
+
+#default-layout .default .des .cell {}
+
+#default-layout .default .default-table {
+    padding-bottom: 2%;
+}
+
+#default-layout .default .default-table .item {
+    height: 45vh;
+    margin-bottom: 40px;
+}
+
+#default-layout .default .default-table .item img {
+    width: 100%;
+    height: 73%;
+}
+
+#default-layout .default .default-table .item h4 {
+    font-size: 1.34rem;
+    margin: .5rem auto;
+}
+
+#default-layout .default .default-table .item .des {
+    background: #fff;
+    width: 100%;
+    border: 3px solid #df862a;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px;
+}
+
+/* default by 機器人課程優勢 & 機器人對未來的應用領域 end */
+
+/* 教學剪影、參展影片、學生獲獎紀錄 */
+
+#result-layout {
+    background: #f4f4f5;
+}
+
+#result-layout .photo-table h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    margin: 0;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#result-layout .record-table {
+    margin: 40px 0;
+}
+
+#result-layout .record-table h2 {
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.9rem;
+    font-weight: bold;
+    border-left: 1px solid #555;
+    padding: 0 10px;
+}
+
+#result-layout .record-table .record-list {
+    font-size: 1.04rem;
+    font-weight: 500;
+    line-height: 2em;
+}
+
+/* 教學剪影、參展影片、學生獲獎紀錄 end */
+
+/* 聯絡我們 */
+#contact-layout {
+    margin-top: 100px;
+}
+
+#contact-layout input,
+#contact-layout select,
+#contact-layout textarea {
+    border-color: #555;
+}
+
+#contact-layout .inputState,
+#contact-layout .question {
+    margin-top: 20px;
+}
+
+#contact-layout .question {
+    min-height: 200px;
+}
+
+#contact-layout input:focus,
+#contact-layout select:focus,
+#contact-layout textarea:focus {
+    border-color: #e8861d;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#contact-layout .contact-table {
+    padding: 2.5% 15px;
+}
+
+#contact-layout .contact-table h4 {
+    margin-bottom: 40px;
+}
+
+#contact-layout .contact-table .item {
+    font-weight: 500;
+    line-height: 2.5em;
+}
+
+#contact-layout .contact-table .item > i {
+    width: 24px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#contact-layout .contact-table .item .des {
+    margin-left: 20px;
+}
+
+#join-layout .join-table {
+    margin-top: 80px;
+}
+
+
+#join-layout .join-table img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 聯絡我們 end */
+
+/* 海外據點 */
+
+#map-layout {
+    background: #f4f4f5;
+    margin-top: 40px;
+}
+
+#map-layout h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#map-layout .map-table {}
+
+#map-layout .map-table .item {
+    min-height: 350px;
+    margin-bottom: 50px;
+}
+
+#map-layout .map-table .item h4 {
+    margin: 15px 0;
+}
+
+#map-layout .map-table .item .des {
+    font-weight: 500;
+    word-break: keep-all;
+}
+
+#map-layout .map-table .item .remark {
+    font-weight: 500;
+    padding-bottom: 30px;
+    word-break: keep-all;
+    border-bottom: 1px solid #555;
+}
+
+.golbal-location {
+    margin-top: 0 !important;
+}
+
+/* 海外據點 end */
+
+/* 重複頁面 */
+#detail-layout {
+    background: #f3f3f9;
+}
+
+#detail-layout .detail {
+    padding-bottom: 20px;
+}
+
+#detail-layout .detail h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#detail-layout .detail .des {
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+    line-height: 2em;
+    padding-bottom: 4%;
+}
+
+#detail-layout .detail .des .time {
+    margin-top: 20px;
+}
+
+#detail-layout .detail .attention li {
+    list-style: disc;
+    text-align: justify;
+}
+
+#detail-layout .detail .btn-style {
+    display: block;
+    background: #e8861d;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: normal;
+    width: 200px;
+    margin: auto;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+
+#detail-layout .detail .flow .item {
+    margin-top: 80px;
+}
+
+#detail-layout .detail .flow .item .cell {
+    position: relative;
+    background: #106ab2;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#detail-layout .detail .flow .item .cell .icon {
+    position: absolute;
+    color: #106ab2;
+    font-size: 3rem;
+    right: -32%;
+}
+
+#detail-layout .detail .flow .item .des {
+    width: 100%;
+    margin: auto;
+    min-height: 256px;
+    text-align: justify:;
+    font-weight: 500;
+    line-height: 2em;
+    margin-top: 0;
+    padding-bottom: 4%;
+}
+
+#active-layout {
+    background: #f4f3ef;
+    padding-bottom: 40px;
+}
+
+#active-layout .detail {
+    padding-bottom: 20px;
+}
+
+#active-layout .active h2 {
+    font-size: 1.9rem;
+    font-weight: bold !important;
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+#active-layout #active-slideshow {
+    height: 81.5%;
+}
+
+#active-layout #active-slideshow .carousel-inner,
+#active-layout #active-slideshow .carousel-inner .carousel-item,
+#active-layout #active-slideshow .carousel-inner .carousel-item img {
+    height: 100%;
+}
+
+
+/* 重複頁面 end */

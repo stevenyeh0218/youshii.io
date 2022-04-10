@@ -1,0 +1,485 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** MyanLife 加入我們 *****/
+        #myanlife_join {
+            .flexbox(column, center, center);
+            width: 50%;
+            margin: auto;
+            margin-top: 80px;
+
+            .intro {
+                text-align: center;
+                margin-bottom: 50px;
+
+                & h2 {
+                    font-size: @fontSize + 6;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                }
+
+                & small {
+                    display: block;
+                    font-size: @fontSize - 6;
+                    color: rgb(@mlRed);
+                    margin-bottom: 8px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .jobs_title {
+                    .flexbox(row, center, space-between);
+                    font-size: 14px;
+
+                    .item {
+                        margin-right: 24px;
+
+                        &:last-child {
+                            margin-right: 0
+                        }
+                    }
+                }
+            }
+
+            .recruit_form {
+                width: 100%;
+                font-size: @fontSize - 2;
+                margin-bottom: 50px;
+
+                .recruit_search_input {
+                    .flexbox(row, center, space-between);
+                    font-size: @fontSize - 4;
+                    margin-bottom: 24px;
+
+                    .input_style {
+                        box-sizing: border-box;
+                        width: 100%;
+                        margin-right: 24px;
+                        padding: 10px 6px;
+                        border-radius: 5px;
+                        border: 1px solid @fontColor;
+                        .ease(.2s);
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            border: 1px solid rgb(@mainColor);
+                        }
+                    }
+
+                    .select_style {
+                        .input_style;
+                        width: 20%;
+                    }
+
+
+                    .recruit_search_btn {
+                        background: @fontColor;
+                        border: 0;
+                        color: rgb(@white);
+                        width: 120px;
+                        padding: 11px;
+                        margin: auto;
+                        border-radius: 5px;
+                        .ease(.2s);
+
+                        &:hover {
+                            background: rgb(@mainColor);
+                        }
+                    }
+                }
+
+                .recruit_list {
+                    .recruit_item {
+                        .flexbox(row, center, space-between);
+                        color: @fontColor;
+                        border-bottom: 1px solid @fontColor;
+                        margin-bottom: 24px;
+                        padding-top: 24px;
+                        padding-bottom: 40px;
+                        .link-default;
+                        .ease(.2s);
+
+                        .recruit_cell {
+                            flex: 1;
+                        }
+
+                        .link_cell {
+                            .flexbox(row, center, space-between);
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &:hover {
+                            color: rgb(@mainColor);
+                        }
+                    }
+
+                    .recruit_title {
+                        .recruit_item;
+                        color: #999;
+                        padding-bottom: 24px;
+
+                        &:hover {
+                            color: #999;
+                        }
+                    }
+                }
+
+                .pagination {
+                    margin: 24px 0 50px 0;
+
+                    & ul {
+                        .flexbox(row, center, center);
+
+
+                        & li {
+                            color: @fontColor;
+                            border-radius: 3px;
+                            margin: 0 5px;
+                            cursor: pointer;
+                            .ease(.2s);
+
+                            &>a,
+                            &>span {
+                                color: @fontColor;
+                                padding: 5px;
+                                border-radius: 3px;
+                                .link-default;
+                                .ease(.2s);
+                            }
+
+
+                            &:hover {
+
+                                &>a,
+                                &>span {
+                                    background: rgb(@mainColor);
+                                    color: rgb(@white);
+                                }
+                            }
+                        }
+
+                        .active {
+
+                            &>a,
+                            &>span {
+                                background: rgb(@mainColor);
+                                color: rgb(@white);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /***** MyanLife 找夥伴 *****/
+        #myanlife_partner {
+            .flexbox(column, center, center);
+            margin-top: 80px;
+
+            & h2 {
+                font-size: @fontSize + 6;
+                font-weight: bold;
+                margin-bottom: 24px;
+            }
+
+            .partner_item {
+                .flexbox(row, center, space-between);
+                background: #edf2f6;
+                width: 100%;
+
+                .partner_item_img {
+                    width: 50%;
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .partner_item_des {
+                    margin: auto;
+
+                    .des {
+                        margin-bottom: 24px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .merchant_intro {
+                .flexbox(row-reverse, center, space-between);
+            }
+        }
+
+        /***** MyanLife 職位說明 *****/
+        #myanlife_jobs {
+            .flexbox(column, center, center);
+            width: 80%;
+            margin: 80px auto;
+
+            .intro {
+                text-align: center;
+                margin-bottom: 50px;
+
+                & h2 {
+                    font-size: @fontSize + 6;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                }
+
+
+                & small {
+                    display: block;
+                    font-size: @fontSize - 6;
+                    color: rgb(@mlRed);
+                    margin-bottom: 8px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .jobs_title {
+                    .flexbox(row, center, space-between);
+                    font-size: 14px;
+
+                    .item {
+                        margin-right: 24px;
+
+                        &:last-child {
+                            margin-right: 0
+                        }
+                    }
+                }
+            }
+
+            .jobs_detail_contain {
+                .flexbox(row, baseline, space-between);
+                font-size: @fontSize - 2;
+
+                .jobs_intro {
+                    flex: 1;
+                    margin-right: 24px;
+
+                    .item {
+                        margin-bottom: 50px;
+
+                        &>h3 {
+                            font-weight: bold;
+                            margin-bottom: 50px;
+                        }
+
+                        .des {
+                            line-height: 1.5em;
+                        }
+
+                        &>ul {
+                            line-height: 1.5em;
+
+                            &>li {
+                                list-style: disc;
+                                margin-left: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .jobs_apply_contain {
+                    width: 292px;
+                    letter-spacing: 1px;
+
+                    .jobs_apply {
+                        .flexbox(column, center, center);
+
+                        .jobs_apply_btn {
+                            background: rgb(@gray);
+                            border-radius: 5px;
+                            color: rgb(@white);
+                            width: 100%;
+                            font-size: @fontSize;
+                            font-weight: bold;
+                            padding: 24px 0;
+                            text-align: center;
+                            .link-default;
+                            .ease(.2s);
+
+                            &:hover {
+                                background: rgb(@mainColor);
+                            }
+                        }
+
+                        .jobs_share {
+                            width: 100%;
+                            margin-bottom: 24px;
+                            text-align: center;
+
+                            & h3 {
+                                margin: 24px auto;
+                            }
+
+                            .jobs_share_list {
+                                .jobs_share_item {
+                                    display: inline-block;
+                                    color: @fontColor;
+                                    font-size: @fontSize;
+                                    margin-right: 24px;
+                                    .link-default;
+                                    .ease(.2s);
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+
+                                    &:hover {
+                                        .scale(1.2);
+                                    }
+                                }
+
+                                .jobs_share_fb {
+                                    color: @fb;
+                                }
+
+                                .jobs_share_line {
+                                    color: @line;
+                                }
+
+                                .jobs_share_wx {
+                                    color: @vx;
+                                }
+
+                                .jobs_share_viber {
+                                    color: @viber;
+                                }
+                            }
+                        }
+                    }
+
+                    .fixed_jobs_apply {
+                        position: fixed;
+                        width: 292px;
+                        border-radius: 5px;
+                        top: 10%;
+                        box-shadow: 0 3px 6px rgba(@black, 0.16), 0 3px 6px rgba(@black, 0.23);
+                    }
+
+                    .fixed_bottom {
+                        position: relative;
+                        width: 292px;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+
+
+            .resume_form {
+                .flexbox(column, center, center);
+                width: 100%;
+                font-size: @fontSize - 2;
+                margin-bottom: 50px;
+
+                .inputContainer {
+                    width: 100%;
+
+                    .input_item {
+                        margin-bottom: 24px;
+
+                        .des {
+                            margin-bottom: 12px;
+
+                            .hint_style {
+                                color: rgb(@mlRed);
+                            }
+                        }
+
+                        .input_style {
+                            background: rgb(@grayBg);
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 10px 6px;
+                            border-radius: 5px;
+                            border: 1px solid @fontColor;
+                            .ease(.2s);
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                border: 1px solid rgb(@mainColor);
+                            }
+                        }
+
+                        .select_style {
+                            .input_style;
+                        }
+
+                        .textarea_style {
+                            .input_style;
+                            min-height: 250px;
+                            resize: vertical;
+                        }
+
+                        .upload_btn {
+                            .inputfile {
+                                width: 0.1px;
+                                height: 0.1px;
+                                .hide;
+                                position: absolute;
+                                z-index: -1;
+
+                                & label {
+                                    .link-default;
+                                }
+
+                                &+label {
+                                    max-width: 80%;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    margin-top: 6px;
+
+                                    &>svg {
+                                        margin-right: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn_style {
+                    background: rgb(@mainColor);
+                    border: 0;
+                    color: rgb(@white);
+                    width: 120px;
+                    height: 30px;
+                    margin: auto;
+                    border-radius: 5px;
+                    margin-top: 24px;
+                    .ease(.2s);
+
+                    &:hover {
+                        background: rgb(@mainColorHover);
+                    }
+                }
+            }
+        }
+    }
+}

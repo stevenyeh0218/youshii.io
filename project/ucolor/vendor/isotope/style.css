@@ -1,0 +1,114 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Verdana, Arial, 'Microsoft JhengHei' ;
+}
+
+/* ---- button ---- */
+h1{
+  margin: 0 0 20px;
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.filters {
+  max-width: 1000px;
+  margin: 25px auto 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: Verdana, Arial, 'Microsoft JhengHei' ;
+  font-weight: bold;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #eee;
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #337ab7;
+  border: 1px solid #337ab7;
+}
+
+.button.is-checked {
+  color: #fff;
+  
+}
+
+.button:active {
+  
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 7px;
+  margin: 0 8px 12px 0;
+
+}
+
+
+
+/* ---- isotope ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* character */
+
+.character {
+  width: 112px;
+  height: 112px;
+  margin: 3px;
+  float: left;
+}
+
+
+/* ---- rwd ---- */
+@media screen and (max-width: 600px) {
+    
+.character, .character img {
+  width: 80px;
+  height: 80px;
+  margin: 3px;
+}
+
+.grid {
+  padding: 5px;
+}
+h1{
+  font-size: 20px;
+}
+    
+}
+

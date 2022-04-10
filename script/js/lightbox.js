@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".design_inner").lightGallery()});

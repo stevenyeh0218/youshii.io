@@ -1,0 +1,752 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+.couponBg {
+  background: #ffbd27;
+  background: -moz-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: -webkit-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: linear-gradient(to bottom, #ffbd27 0%, #ff6d00 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd27', endColorstr='#ff6d00', GradientType=0);
+}
+.material_checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.material_checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+.material_checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.material_checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+.material_checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.material_radio input[type="radio"] {
+  display: none;
+}
+.material_radio input[type="radio"] + label {
+  cursor: pointer;
+}
+.material_radio input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+.material_radio input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+body .merchant_wrapper {
+  /***** 商家酷碰券 *****/
+}
+body .merchant_wrapper .myanLife_logo {
+  position: fixed;
+  width: 50px;
+  top: 5px;
+  left: 24px;
+  z-index: 3;
+}
+body .merchant_wrapper .myanLife_logo img {
+  width: 100%;
+  height: 100%;
+}
+body .merchant_wrapper .merchant_header {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 24px;
+  right: 0 !important;
+  top: 0 !important;
+}
+body .merchant_wrapper .merchant_banner {
+  min-height: 430px !important;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: #999;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 24px 0;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_img {
+  background: rgb(255, 255, 255);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-right: 24px;
+  overflow: hidden;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex: 0.15;
+  padding: 0 24px;
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info .info_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info .info_item .evaluation_value {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info .info_item .evaluation_value > div {
+  color: rgb(255, 189, 39);
+  font-size: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info .info_item .evaluation_value .icon {
+  color: rgb(255, 234, 0);
+  font-size: 18px;
+  margin-left: 5px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_info .info_item:last-child {
+  margin-bottom: 0;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about {
+  flex: 0.6;
+  margin-left: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about .merchant_about_content {
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 1.1px;
+  line-height: 1.2em;
+  height: 150px;
+  overflow-y: scroll;
+  /* Works on Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 189, 39) transparent;
+  /* Works on Chrome, Edge, and Safari */
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about .merchant_about_content::-webkit-scrollbar {
+  width: 5px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about .merchant_about_content::-webkit-scrollbar-track {
+  background: transparent;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_about .merchant_about_content::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 189, 39);
+  border-radius: 20px;
+  border: none;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_album {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_album > a {
+  margin-right: 24px;
+  margin-left: 0;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_album > a img {
+  width: 100%;
+  height: 100%;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_content .merchant_album > a:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon {
+  margin: 80px 0;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default {
+  position: relative;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default > span {
+  display: none;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header .default .icon {
+  color: rgb(255, 189, 39);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_header h2 {
+  letter-spacing: 3px;
+  margin: 0 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: rgb(247, 247, 247);
+  width: 100%;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul .coupon_item_tab {
+  width: 15%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 21px 10px;
+  text-align: center;
+  color: #363636;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul .coupon_item_tab .amount {
+  margin-left: 24px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul .coupon_item_tab:hover {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul .mixitup-control-active {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content > ul .mixitup-control-active:hover {
+  color: #363636;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item {
+  background: rgb(247, 247, 247);
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .imgView {
+  position: relative;
+  height: 230px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .imgView img {
+  width: 100%;
+  height: 100%;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information {
+  color: #363636;
+  padding: 15px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .info_header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .info_header h2 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+  letter-spacing: 3px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .info_header .evaluation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .info_header .evaluation > div {
+  color: rgb(255, 189, 39);
+  font-size: 26px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .info_header .evaluation .icon {
+  color: rgb(255, 234, 0);
+  margin-left: 5px;
+  font-size: 18px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .location {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .location .icon {
+  margin-right: 10px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .merchant_name {
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .merchant_name:hover {
+  color: rgb(255, 189, 39);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .information .data {
+  line-height: 1.2em;
+  letter-spacing: 2px;
+  margin: 24px auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+  display: none;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .coupon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid #363636;
+  width: 93%;
+  font-size: 16px;
+  margin: auto;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .coupon .coupon_download {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  font-weight: bold;
+  color: rgb(255, 189, 39);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .coupon .coupon_download .icon {
+  margin-left: 10px;
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .coupon .coupon_download:hover {
+  color: rgb(255, 234, 0);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item .coupon .coupon_value {
+  color: rgb(216, 35, 22);
+}
+body .merchant_wrapper #myanLife_merchant .merchant_coupon .merchant_coupon_content .coupon_item_list .coupon_item:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

@@ -1,0 +1,144 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #filter_windows {
+        .flexbox(row, center, center);
+        display: none;
+        background: rgba(@black, .5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+
+        .windows_content {
+            background: rgba(@grayBg);
+            border-radius: 5px;
+            padding: 12px;
+            .scale(0);
+            .hide;
+            .ease(.2s);
+
+            &>header {
+                text-align: center;
+                border-bottom: 1px solid @fontColor;
+                padding-bottom: 12px;
+                margin-bottom: 12px;
+            }
+
+            .flilter_list {
+                .flexbox(column, flex-start, flex-start);
+                margin-bottom: 12px;
+
+                .filter_item {
+                    .flexbox(row, center, flex-start);
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 12px;
+
+                    &>h3 {}
+
+                    .label--checkbox {
+                        .material_checkbox;
+                        margin-right: 12px;
+                        .ease(.2s);
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        &:hover {
+                            color: rgb(@mainColor);
+                        }
+                    }
+
+                    .input_style,
+                    .select_style {
+                        background: transparent;
+                        box-sizing: border-box;
+                        flex: 1;
+                        width: 100%;
+                        border: 1px solid @fontColor;
+                        border-radius: 5px;
+                        padding: 4px;
+                        .ease(.2s);
+
+                        &:focus,
+                        &:active {
+                            border: 1px solid rgb(@mainColor);
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .area_item {
+                    .select_style {
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .hide_select {
+                        display: none;
+                    }
+                }
+
+                .date_item {
+                    .date_input_contain {
+                        .flexbox(row, center, flex-start);
+
+                        .date_input_item {
+                            position: relative;
+                        }
+
+                        &>span {
+                            margin: auto 12px;
+                        }
+                    }
+                }
+            }
+
+            .btn_group {
+                .flexbox(row, center, center);
+                width: 100%;
+
+                .btn_style {
+                    background: @fontColor;
+                    border: 0;
+                    border-radius: 5px;
+                    color: rgb(@white);
+                    cursor: pointer;
+                    padding: 7px 18px;
+                    .link-default;
+                    .ease(.2s);
+
+                    &:hover {
+                        background: rgb(@mainColor);
+                        color: rgb(@white);
+                    }
+                }
+
+                .cancel_btn {
+                    margin-right: 12px;
+                }
+
+            }
+        }
+    }
+
+    .op_filter_w {
+        .windows_content {
+            .scale(1) !important;
+            .show !important;
+
+        }
+    }
+}

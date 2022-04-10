@@ -1,0 +1,1272 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+.couponBg {
+  background: #ffbd27;
+  background: -moz-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: -webkit-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: linear-gradient(to bottom, #ffbd27 0%, #ff6d00 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd27', endColorstr='#ff6d00', GradientType=0);
+}
+.material_checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.material_checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+.material_checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.material_checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+.material_checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.material_radio input[type="radio"] {
+  display: none;
+}
+.material_radio input[type="radio"] + label {
+  cursor: pointer;
+}
+.material_radio input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+.material_radio input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+body #wrapper {
+  /***** 選單詳細頁 *****/
+}
+body #wrapper #myanLife_detail_content {
+  width: 80%;
+  margin: 100px auto;
+}
+body #wrapper #myanLife_detail_content .prod_overview {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #363636;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info {
+  flex: 1;
+  margin-right: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .hotel_level_type {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .hotel_level_type .icon {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .hotel_level_type .star_rate {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .cuisine {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .cuisine .icon {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .location {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .location .icon {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .location .area {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .merchant_name {
+  display: block;
+  color: #363636;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .merchant_name:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .article_img {
+  width: 80%;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .article_img img {
+  width: 100%;
+  height: 100%;
+}
+body #wrapper #myanLife_detail_content .prod_overview .prod_info .data {
+  line-height: 1.3em;
+  letter-spacing: 3px;
+  text-align: justify;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon {
+  width: 292px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar {
+  background: rgb(247, 247, 247);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 25px 15px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .evaluation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .evaluation > div {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .evaluation .evaluation_counter {
+  font-size: 16px;
+  color: rgb(255, 234, 0);
+  margin-left: 3px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .evaluation .download_amount {
+  color: #363636;
+  font-size: 16px;
+  margin-left: 10px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .evaluation .download_amount .counter {
+  margin-right: 2px;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .coupon_download {
+  background: rgb(255, 189, 39);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .download_bar .coupon_download:hover {
+  background: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .fixed_download_bar {
+  position: fixed;
+  width: 262px;
+  top: 410px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_detail_content .prod_overview .product_coupon .fixed_bottom {
+  position: absolute;
+  box-shadow: none;
+}
+body #wrapper #myanLife_detail_content .prod_option {
+  display: flex;
+  justify-content: space-between;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list {
+  flex: 1;
+  width: 100%;
+  margin-right: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #363636;
+  border-radius: 0;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item:last-child {
+  border-bottom: 0;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol {
+  list-style: initial;
+  margin-left: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li {
+  line-height: 1.5em;
+  margin-top: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li h3 {
+  font-weight: bold;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .data {
+  line-height: 1.3em;
+  letter-spacing: 3px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li ol {
+  list-style: none;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li ol li {
+  position: relative;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li ol li h4 {
+  font-weight: bold;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li ol li .data {
+  line-height: 1.3em;
+  letter-spacing: 3px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li ol li:before {
+  content: '-';
+  position: absolute;
+  left: -15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .cost_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .cost_list .include {
+  width: 48%;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .cost_list .include li:before {
+  content: 'o';
+  position: absolute;
+  left: -15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .cost_list .not_include {
+  width: 48%;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol li .cost_list .not_include li:before {
+  content: 'x';
+  position: absolute;
+  left: -15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol .business_time .time_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol .business_time .time_list .time_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol .business_time .time_list .time_item:last-child {
+  margin-bottom: 0;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item ol .business_time .time_list .time_item .days {
+  margin-right: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .option_item > .data {
+  margin-top: 24px;
+  line-height: 1.3em;
+  letter-spacing: 3px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .transportation h2 {
+  margin-bottom: 30px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .transportation #loc_map {
+  width: 100%;
+  height: 450px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation h2 {
+  margin-bottom: 30px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .evaluation {
+  display: flex;
+  border-radius: 0;
+  border-bottom: 1px solid #363636;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .evaluation .evaluation_value {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: rgb(255, 189, 39);
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .evaluation .amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .evaluation .amount .star_counter {
+  font-size: 24px;
+  color: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment {
+  border-radius: 0;
+  border-bottom: 1px solid #363636;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 220px;
+  color: rgb(255, 234, 0);
+  cursor: pointer;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate span.ctrl {
+  position: absolute;
+  z-index: 2;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate .cont {
+  font-size: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate .saved {
+  color: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate .saved:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .starrate .display_val {
+  width: 40px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 24px;
+  color: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container {
+  margin-top: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container .comment_title {
+  margin-bottom: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container .comment_textarea {
+  width: 50%;
+  border-radius: 3px;
+  border: 1px solid #363636;
+  padding: 10px;
+  min-height: 100px;
+  overflow: hidden;
+  resize: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container .comment_textarea:hover,
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container .comment_textarea:focus,
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .input_container .comment_textarea:active {
+  border: 1px solid rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .comment_btn {
+  background: none;
+  border-radius: 3px;
+  border: 1px solid #363636;
+  padding: 5px 50px;
+  margin-top: 24px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_comment .comment_btn:hover {
+  color: rgb(255, 189, 39);
+  border: 1px solid rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #363636;
+  border-radius: 0;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_img {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  border: 1px solid #363636;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  font-size: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info .traveler_name {
+  margin-right: 15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info .msg_time {
+  font-size: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info .msg_time > .date {
+  margin-left: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info .msg_time > time {
+  margin-left: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .traveler_info .traveler_star {
+  color: rgb(255, 234, 0);
+  width: 100%;
+  margin-top: 10px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool {
+  position: absolute;
+  right: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .icon {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .icon:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .active {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .tool_list {
+  background: rgba(54, 54, 54, 0.95);
+  position: absolute;
+  width: 125px;
+  border-radius: 5px;
+  font-size: 14px;
+  right: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .tool_list .tool_item {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .tool_list .tool_item:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item > header .tool .show_tool_list {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .msg_data {
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.4em;
+  margin-left: 60px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .edit_save_btn {
+  display: none;
+  background: rgb(255, 189, 39);
+  border-radius: 3px;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 50px;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .edit_save_btn:hover {
+  background: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .show_edit_save_btn {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content {
+  margin-left: 60px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item {
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .name {
+  margin-right: 15px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .reply_time {
+  font-size: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .reply_time > .date {
+  margin-left: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .reply_time > time {
+  margin-left: 5px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool {
+  position: absolute;
+  right: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .icon {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .icon:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .active {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .tool_list {
+  background: rgba(54, 54, 54, 0.95);
+  position: absolute;
+  width: 125px;
+  border-radius: 5px;
+  font-size: 14px;
+  right: 0;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .tool_list .tool_item {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .tool_list .tool_item:hover {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item > header .tool .show_tool_list {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item .reply_data {
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.4em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item .reply_data .marking {
+  color: rgb(255, 189, 39);
+  margin-right: 4px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply_item .more_reply_data {
+  -webkit-line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 12px;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .reply_btn {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .reply_from .reply_area {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 12px;
+  resize: none;
+  overflow: hidden;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .reply_from .reply_style {
+  background: rgb(255, 189, 39);
+  border-radius: 3px;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 50px;
+  margin-top: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .reply_from .reply_style:hover {
+  background: rgb(255, 234, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .reply_from .active {
+  color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list {
+  background: rgba(204, 204, 204, 0.85);
+  position: absolute;
+  height: 195px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  top: 42px;
+  left: 33px;
+  overflow: hidden;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list .mark_item {
+  cursor: pointer;
+  padding: 12px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list .mark_item:hover {
+  color: rgb(0, 0, 0);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .mark_list::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .show_mark_list {
+  opacity: 1;
+  visibility: visible;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_msg_list .traveler_msg_item .reply_content .reply .hide_reply_form {
+  display: none;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul li {
+  color: #363636;
+  border-radius: 3px;
+  margin: 0 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul li > a,
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul li > span {
+  color: #363636;
+  padding: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul li:hover > a,
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul li:hover > span {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul .active > a,
+body #wrapper #myanLife_detail_content .prod_option .option_list .traveler_evaluation .traveler_msg_content .traveler_pagination ul .active > span {
+  background: rgb(255, 189, 39);
+  color: rgb(255, 255, 255);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar {
+  width: 292px;
+  height: 100%;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .option_bar_list {
+  background: rgb(247, 247, 247);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  line-height: 2em;
+  padding: 25px 15px;
+  white-space: nowrap;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .option_bar_list .option_bar_item {
+  border-bottom: 1px solid #363636;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 5px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .option_bar_list .option_bar_item:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .option_bar_list .option_bar_item:hover {
+  color: rgb(255, 189, 39);
+  border-color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .option_bar_list .active {
+  color: rgb(255, 189, 39);
+  border-color: rgb(255, 189, 39);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .fixed_option_bar {
+  position: fixed;
+  width: 262px;
+  top: 10%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body #wrapper #myanLife_detail_content .prod_option .option_bar .fixed_bottom {
+  position: absolute;
+  box-shadow: none;
+}

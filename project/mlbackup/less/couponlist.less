@@ -1,0 +1,310 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 酷碰卷下載管理 *****/
+                .coupon_management {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .coupon_management_contain {
+                        background: rgb(@white);
+                        height: 422px;
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        overflow: hidden;
+                        .ease(.2s);
+
+                        .coupon_tabs_list {
+                            .flexbox(row, center, flex-start);
+                            color: rgb(@adminColor);
+                            font-weight: bold;
+                            border-bottom: 1px solid rgb(@adminColor);
+                            margin-bottom: 24px;
+                            padding-bottom: 24px;
+
+                            .coupon_tabs_item {
+                                position: relative;
+                                cursor: pointer;
+                                margin-right: 24px;
+                                .ease(.2s);
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover {
+                                    color: rgb(@mainColor);
+                                }
+                            }
+
+                            .active {
+                                color: rgb(@mainColor);
+                            }
+                        }
+
+                        .main {
+                            position: relative;
+                            font-size: @fontSize - 4;
+
+                            .coupon_list_content {
+                                position: absolute;
+                                width: 100%;
+                                .hide;
+                                .ease(.2s);
+
+
+                                .func_list {
+                                    .flexbox(row, center, space-between);
+                                    margin-bottom: 12px;
+                                    padding: 0 24px;
+
+                                    .func_item {
+                                        .flexbox(row, center, flex-start);
+                                        color: rgb(@adminColor);
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .delete_all_btn {
+                                            cursor: pointer;
+                                            margin-left: 24px;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .coupon_item {
+                                    .flexbox(row, baseline, space-between);
+                                    flex-wrap: wrap;
+                                    position: relative;
+                                    color: @fontColor;
+                                    padding: 24px;
+                                    .link-default;
+                                    .ease(.2s);
+
+                                    .coupon_info {
+                                        .flexbox(row, flex-start, flex-start);
+                                        width: 100%;
+
+                                        .label--checkbox {
+                                            .material_checkbox;
+                                            .ease(.2s);
+
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: rgb(@adminColor);
+                                                }
+
+                                                &:after {
+                                                    background: rgb(@white);
+                                                }
+                                            }
+                                        }
+
+                                        .coupon_img {
+                                                flex: 0.5;
+                                            overflow: hidden;
+
+                                            & img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        .coupon_cell_list {
+                                            .flexbox(column, baseline, flex-start);
+                                            flex: 1;
+                                            margin-left: 24px;
+
+                                            .coupon_cell {
+                                                line-height: 1.3em;
+                                                margin-bottom: 24px;
+                                                margin-right: 12px;
+                                                &:last-child {
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .coupon_func {
+                                        position: absolute;
+                                        top: 24px;
+                                        right: 24px;
+
+                                        .coupon_cell {
+                                            cursor: pointer;
+                                            margin-right: 24px;
+                                            .ease(.2s);
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .delete_btn {
+                                            cursor: pointer;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+
+                                    .coupon_value {
+                                        .flexbox(row, center, flex-end);
+                                        width: 100%;
+                                        border-bottom: 1px solid rgb(@adminColor);
+                                        font-size: @fontSize - 2;
+                                        font-weight: bold;
+                                        margin-top: 12px;
+
+                                        .coupon_discount {
+                                            margin-right: 12px;
+                                        }
+
+                                        .key_reminder {
+                                            background: rgb(@mainColor);
+                                            color: rgb(@white);
+                                            font-size: @fontSize - 4;
+                                            border-radius: 5px 5px 0 0;
+                                            padding: 8px;
+                                        }
+                                    }
+
+                                    .coupon_func_bottom {
+                                        .flexbox(row, center, flex-end);
+                                        width: 100%;
+                                        font-weight: bold;
+                                        margin-top: 24px;
+
+                                        .view_btn {
+                                            border: 1px solid @fontColor;
+                                            border-radius: 10px;
+                                            color: @fontColor;
+                                            cursor: pointer;
+                                            padding: 7px;
+                                            .link-default;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                border-color: rgb(@mainColor);
+                                                color: rgb(@mainColor);
+                                            }
+                                        }
+
+                                        .contacts_service {
+                                            display: none;
+                                            .view_btn;
+                                            margin-right: 24px;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        position: relative;
+                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                                        z-index: 2;
+                                    }
+                                }
+
+                                .comming_soon {
+                                    background: #fff0f0;
+                                    color: @fontColor;
+
+                                    .coupon_info {
+                                        .label--checkbox {
+                                            .checkbox {
+                                                &:before {
+                                                    border-color: @fontColor;
+                                                }
+
+                                                &:after {
+                                                    background: #fff1d1;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .coupon_func {
+
+                                        .coupon_cell {
+                                            border-color: @fontColor;
+                                        }
+                                    }
+
+                                    .coupon_value {
+                                        border-color: @fontColor;
+
+                                        .coupon_discount {
+                                            margin-right: 12px;
+                                        }
+
+                                        .key_reminder {
+                                            background: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    .coupon_func_bottom {
+
+                                        .contacts_service,
+                                        .view_btn {
+                                            color: @fontColor;
+                                            border-color: @fontColor;
+                                        }
+                                    }
+                                }
+
+                                .close_coupon_item {
+                                    .hide;
+                                    .translateX(120%);
+                                }
+                            }
+
+                            .active {
+                                .show;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

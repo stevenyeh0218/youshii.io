@@ -1,0 +1,423 @@
+@import './mixins/_allMixins.less';
+
+@media (max-width:1200px) {
+    body {
+        #wrapper {
+
+            /* Propaganda */
+            .propaganda {
+
+                .trustMe-experience {
+
+                    .experienceList {
+
+                        .item {
+                            width: 215px;
+                        }
+
+                        .appleStore {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+
+            /* Propaganda end */
+
+        }
+    }
+}
+
+@media (max-width:1025px) {
+    body {
+        #wrapper {
+            & header {
+                .header-wrapper {
+                    padding: 0 70px;
+                }
+            }
+
+            /* Slideshow */
+            .slideshow {
+                height: 375px;
+
+                .owl-stage-outer {
+                    height: 375px;
+
+                    .owl-stage {
+                        height: 375px;
+                    }
+                }
+            }
+
+            /* Slideshow end */
+            /* Broadcast */
+            .broadcast {
+                padding: 7px 70px;
+            }
+
+            /* Broadcast end */
+            /* Propaganda */
+            .propaganda {
+                .trustMe-video {
+                    width: 480px;
+                    height: 320px;
+                }
+            }
+
+            /* Propaganda end */
+
+        }
+    }
+}
+
+@media (max-width:991px) {
+    body {}
+}
+
+@media (max-width:768px) {
+    body {
+        #wrapper {
+            & header {
+                .header-wrapper {
+                    padding: 0 50px;
+                }
+            }
+
+            /* Slideshow */
+            .slideshow {
+                height: 375px;
+
+                .owl-stage-outer {
+                    height: 375px;
+
+                    .owl-stage {
+                        height: 375px;
+                    }
+                }
+            }
+
+            /* Slideshow end */
+            /* Broadcast */
+            .broadcast {
+                padding: 7px 50px;
+            }
+
+            /* Broadcast end */
+            /* Propaganda */
+            .propaganda {
+                .trustMe-video {
+                    width: 480px;
+                    height: 320px;
+                }
+
+                .trustMe-experience {
+                    .experienceTitle {
+                        margin-top: 40px;
+                    }
+
+                    .experienceList {
+
+                        .item {
+                            width: 230px;
+                        }
+
+                        .appleStore {
+                            margin-right: 35px;
+                        }
+                    }
+                }
+            }
+
+            /* Propaganda end */
+            /* footer */
+            .colophon {
+                padding: 0 50px;
+
+                .footerNav {
+
+                    justify-content: center;
+
+                    .footerNavList {
+                        padding: 20px 0;
+
+                        .item {
+                            margin-right: 50px;
+                        }
+                    }
+                }
+            }
+
+            /* footer end */
+
+        }
+    }
+}
+
+@media (max-width:580px) {
+    body {
+        #wrapper {
+            & header {
+                .header-wrapper {
+                    padding: 0 20px;
+
+                    .trustMeNav {
+                        display: none;
+                    }
+
+                    .trustMeNav-m {
+                        display: flex;
+                    }
+                }
+            }
+
+            /* Broadcast */
+            .broadcast {
+                padding: 7px 20px;
+            }
+
+            /* Broadcast end */
+            /* Slideshow */
+            .slideshow {
+                height: 167px;
+
+                .owl-stage-outer {
+                    height: 167px;
+
+                    .owl-stage {
+                        height: 167px;
+                    }
+                }
+            }
+
+            /* Slideshow end */
+
+            /* Propaganda */
+            .propaganda {
+                .trustMe-video {
+                    width: 320px;
+                    height: 240px;
+                }
+
+                .trustMe-experience {
+                    .experienceTitle {
+                        font-size: 35px;
+                        margin: 30px;
+                    }
+
+                    .experienceList {
+
+                        .item {
+                            width: 275px;
+
+                            .cell {}
+
+                            & img {
+                                display: none;
+                            }
+                        }
+
+                        .appleStore {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            /* Propaganda end */
+
+            /* article */
+
+            & article {
+
+                margin-bottom: 20px;
+
+                .specifications-wrapper {
+
+                    //                    & > div {
+                    //                        display: none;
+                    //
+                    //                        &:first-child {
+                    //                            display: block;
+                    //                        }
+                    //
+                    //                        &:nth-child(2) {
+                    //                            display: block;
+                    //                        }
+                    //                    }
+                    //
+                    //                    & > ul {
+                    //                        display: none;
+                    //                    }
+                }
+
+                .privacy-wrapper {
+                    .specifications-wrapper;
+                }
+
+                .service-wrapper {
+                    .specifications-wrapper;
+                }
+            }
+
+            /* article end */
+
+            /* footer */
+            .colophon {
+                padding: 0 20px;
+
+                .footerNav {
+
+                    justify-content: center;
+
+                    .footerNavList {
+                        padding: 20px 0;
+
+                        .item {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                .service {
+
+                    .item {
+                        width: 50px !important;
+                        height: 50px;
+
+                        & img {
+                            margin: 0 !important;
+                        }
+
+                        .cell {
+                            display: none;
+                        }
+                    }
+
+                    .online-service {
+                        margin: 0 !important;
+                    }
+                }
+            }
+
+            /* footer end */
+
+        }
+
+        #loginWindow {
+            .wrapper {
+                max-width: 320px;
+                font-size: 16px;
+
+                & header {
+                    padding: 14px;
+
+                    .closeBtn {
+
+                        .line {
+                            width: 15px;
+
+                            &:first-child {
+                                .transform(rotate(45deg) translate(2px, 0px));
+                            }
+
+                            &:last-child {
+                                .transform(rotate(-45deg) translate(1px, 0px));
+                            }
+                        }
+                    }
+                }
+
+                .main {
+                    font-size: 14px;
+                    padding: 20px 10px;
+
+                    .switchLoginType {
+                        .item {
+                            width: 135px;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    #formWrapper {
+                        #appScanForm {
+                            & > img {
+                                width: 170px;
+                            }
+
+                            .item {
+                                .point {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    & footer {
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+
+        #registerWindow {
+
+            .wrapper {
+                max-width: 320px;
+                font-size: 16px;
+
+                & header {
+                    padding: 14px;
+
+                    .title {}
+
+                    .closeBtn {
+
+                        .line {
+                            width: 15px;
+
+                            &:first-child {
+                                .transform(rotate(45deg) translate(2px, 0px));
+                            }
+
+                            &:last-child {
+                                .transform(rotate(-45deg) translate(1px, 0px));
+                            }
+                        }
+                    }
+                }
+
+                .main {
+
+                    & h2 {
+                        font-size: 15px;
+                    }
+
+                    .list {
+
+                        .item {
+                            width: 305px;
+
+                            .icon {}
+
+                            .des {}
+
+                            &:first-child {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+
+                & footer {
+                    padding: 20px 0;
+
+                    .des {}
+
+                    .loginBtn {}
+                }
+            }
+        }
+    }
+
+}

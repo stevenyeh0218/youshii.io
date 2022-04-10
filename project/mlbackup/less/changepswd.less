@@ -1,0 +1,267 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 更改密碼 *****/
+                .changepswd {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .changepswd_contain {
+                        background: rgb(@white);
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        .ease(.2s);
+
+                        .main {
+                            .flexbox(column, center, center);
+                            width: 20%;
+                            margin: auto;
+
+                            .input_list {
+                                .flexbox(column, center, space-between);
+                                flex-wrap: wrap;
+                                width: 100%;
+                                font-weight: bold;
+                                margin-bottom: 24px;
+
+                                .common_item {
+                                    position: relative;
+                                    width: 100%;
+                                    margin-bottom: 24px;
+
+                                    .des {
+                                        margin-bottom: 5px;
+
+                                        &>small {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .input_style {
+                                        background: transparent;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        border: 1px solid rgb(@adminColor);
+                                        border-radius: 5px;
+                                        padding: 8px 6px;
+                                        padding-right: 24px;
+                                        .ease(.2s);
+
+                                        &:focus,
+                                        &:active {
+                                            border: 1px solid rgb(@mainColor);
+                                        }
+                                    }
+
+                                    #pwindicator {
+                                        position: absolute;
+                                        bottom: -20px;
+                                        left: 7px;
+
+                                        .bar {
+                                            margin-bottom: 2px;
+                                            height: 2px;
+                                        }
+
+                                        .label {
+                                            font-size: @fontSize - 6;
+                                        }
+                                    }
+
+                                    .pw-very-weak {
+                                        .bar {
+                                            background: rgb(@mlRed);
+                                            width: 30px;
+                                        }
+
+                                        .label {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .pw-weak {
+                                        .bar {
+                                            background: rgb(@mlRed);
+                                            width: 60px;
+                                        }
+
+                                        .label {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .pw-mediocre {
+                                        .bar {
+                                            background: rgb(@mlRed);
+                                            width: 90px;
+                                        }
+
+                                        .label {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .pw-strong {
+                                        .bar {
+                                            background: rgb(@mlRed);
+                                            width: 120px;
+                                        }
+
+                                        .label {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .pw-very-strong {
+                                        .bar {
+                                            background: rgb(@mlRed);
+                                            width: 150px;
+                                        }
+
+                                        .label {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .key_reminder {
+                                        position: absolute;
+                                        color: rgb(@mlRed);
+                                        font-size: @fontSize - 6;
+                                        bottom: -20px;
+                                        left: 7px;
+                                        .hide;
+                                    }
+
+                                    .show_key_reminder {
+                                        .show;
+                                    }
+                                }
+
+                                .confirm_item {
+                                    margin-bottom: 0;
+                                }
+
+                                .show_pswd_btn {
+                                    .flexbox(row, center, flex-start);
+                                    width: 100%;
+                                    margin-top: 24px;
+
+                                    .switch_input {
+                                        display: none;
+
+                                        &:checked {
+                                            &+.switch_label {
+
+                                                .switch_style {
+                                                    &:before {
+                                                        background: rgb(@mainColor);
+                                                    }
+
+                                                    &:after {
+                                                        background: rgb(@white);
+                                                        -ms-transform: translate(80%, -50%);
+                                                        -webkit-transform: translate(80%, -50%);
+                                                        transform: translate(80%, -50%);
+                                                    }
+                                                }
+
+                                                &:before {
+                                                    background: rgb(@mainColor);
+                                                }
+
+                                                .toggle--on {
+                                                    display: inline-block;
+                                                }
+
+                                                .toggle--off {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .switch_label {
+                                        position: relative;
+                                        color: rgb(@mlRed);
+                                        cursor: pointer;
+
+
+                                        .switch_style {
+
+                                            &:before,
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                margin: 0;
+                                                outline: 0;
+                                                top: 50%;
+                                                -ms-transform: translate(0, -50%);
+                                                -webkit-transform: translate(0, -50%);
+                                                transform: translate(0, -50%);
+                                                .ease(.2s);
+                                            }
+
+                                            &:before {
+                                                background: rgb(@adminColor);
+                                                border-radius: 8px;
+                                                width: 34px;
+                                                height: 14px;
+                                                right: -30px;
+                                            }
+
+                                            &:after {
+                                                background: #ccc;
+                                                border-radius: 50%;
+                                                width: 20px;
+                                                height: 20px;
+                                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                                right: -15px;
+                                            }
+                                        }
+
+                                        .toggle--on {
+                                            display: none;
+                                            margin-right: 12px;
+                                        }
+
+                                        .toggle--off {
+                                            display: inline-block;
+                                            margin-right: 12px;
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+                            .btn_style {
+                                background: @fontColor;
+                                border: 0;
+                                border-radius: 5px;
+                                color: rgb(@white);
+                                padding: 7px 18px;
+                                .ease(.2s);
+
+                                &:hover {
+                                    background: rgb(@mainColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

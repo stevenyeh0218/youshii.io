@@ -1,0 +1,135 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 商家設定 *****/
+                .merchant_setting_management {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .merchant_setting_management_contain {
+                        background: rgb(@white);
+                        height: 422px;
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        overflow: hidden;
+                        .ease(.2s);
+
+                        .main {
+                            .merchant_setting_list_content {
+                                margin-bottom: 24px;
+
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+
+                                &>h3 {
+                                    font-weight: bold;
+                                    margin-bottom: 12px;
+                                }
+
+                                .merchant_setting_item {
+                                    .flexbox(row, center, space-between);
+                                    color: rgb(@adminColor);
+                                    padding: 12px;
+
+                                    .close_notice_btn {
+
+                                        min-width: 80px;
+
+                                        .switch_input {
+                                            display: none;
+
+                                            &:checked {
+                                                &+.switch_label {
+                                                    &:before {
+                                                        background: rgb(@mainColor);
+                                                    }
+
+                                                    &:after {
+                                                        background: rgb(@white);
+                                                        -ms-transform: translate(80%, -50%);
+                                                        -webkit-transform: translate(80%, -50%);
+                                                        transform: translate(80%, -50%);
+                                                    }
+
+                                                    .toggle--on {
+                                                        display: inline-block;
+                                                    }
+
+                                                    .toggle--off {
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .switch_label {
+                                            position: relative;
+                                            cursor: pointer;
+
+                                            &:before,
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                margin: 0;
+                                                outline: 0;
+                                                top: 50%;
+                                                -ms-transform: translate(0, -50%);
+                                                -webkit-transform: translate(0, -50%);
+                                                transform: translate(0, -50%);
+                                                .ease(.2s);
+                                            }
+
+                                            &:before {
+                                                background: rgb(@adminColor);
+                                                border-radius: 8px;
+                                                width: 34px;
+                                                height: 14px;
+                                                left: 35px;
+                                            }
+
+                                            &:after {
+                                                background: rgb(@white);
+                                                border-radius: 50%;
+                                                width: 20px;
+                                                height: 20px;
+                                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+                                                left: 35px;
+                                            }
+
+                                            .toggle--on {
+                                                display: none;
+                                            }
+
+                                            .toggle--off {
+                                                display: inline-block;
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                .open {
+                                    background: #fff1d1;
+                                    color: @fontColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

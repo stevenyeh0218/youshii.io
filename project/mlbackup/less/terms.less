@@ -1,0 +1,116 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** 網站條款 *****/
+        #myanLife_terms {
+            width: 80%;
+            margin: 100px auto;
+
+            .terms_list {
+                .terms_item {
+                    border-bottom: 1px solid @fontColor;
+                    margin-bottom: 24px;
+                    padding-bottom: 24px;
+
+                    & h2 {
+                        font-size: @fontSize;
+                        font-weight: bold;
+                    }
+
+                    .data {
+                        font-size: @fontSize - 4;
+                        letter-spacing: 1px;
+                        margin-top: 24px;
+
+                        & h3 {
+                            font-weight: bold;
+                            margin-bottom: 12px;
+                        }
+
+                        .cell {
+                            color: #777;
+                            line-height: 1.3em;
+                            text-align: justify;
+                            margin-bottom: 12px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            .point {
+                            }
+
+                            & a {
+                                .link-default;
+                                .ease(.2s);
+
+                                &:hover {
+                                    color: rgb(@mainColor);
+                                }
+                            }
+                        }
+
+                        & ol {
+                            list-style: disc;
+                            margin-top: 24px;
+                            margin-left: 32px;
+
+                            & h3 {
+                                color: @fontColor;
+                                font-weight: bold;
+                            }
+
+                            & li {
+                                margin-bottom: 12px;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                        .ol-indent24x {
+                            & li {
+                                margin-left: 24px;
+                            }
+                        }
+
+                        .lower-roman {
+                            list-style: lower-roman;
+                        }
+                    }
+
+                    .data_hidden {
+                        display: none;
+                    }
+
+                    .indent24x {
+                        margin-left: 24px;
+                    }
+
+                    .indent48x {
+                        margin-left: 48px;
+                    }
+
+                    .data_more {
+                        text-align: center;
+                        margin-top: 24px;
+
+                        & > .icon {
+                            cursor: pointer;
+                            .ease(.2s);
+
+                            &:hover {
+                                color: rgb(@mainColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,257 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 帳號設定 *****/
+                .account_settings {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .account_settings_contain {
+                        background: rgb(@white);
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+
+                        .main {
+                            .flexbox(column, center, center);
+
+                            .input_list {
+                                .flexbox(row, baseline, space-between);
+                                flex-wrap: wrap;
+                                width: 100%;
+                                font-size: @fontSize - 2;
+                                font-weight: bold;
+                                margin-bottom: 24px;
+
+                                .common_item {
+                                    width: 49%;
+                                    margin-bottom: 24px;
+
+                                    .des {
+                                        margin-bottom: 5px;
+
+                                        &>small {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .input_style {
+                                        background: transparent;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        border: 1px solid rgb(@adminColor);
+                                        border-radius: 5px;
+                                        padding: 8px 6px;
+                                        .ease(.2s);
+
+                                        &:focus,
+                                        &:active {
+                                            border: 1px solid rgb(@mainColor);
+                                        }
+
+                                        &:read-only {
+                                            border: 1px solid rgb(@grayBg);
+
+                                            &:focus,
+                                            &:active {
+                                                border: 1px solid rgb(@grayBg);
+                                            }
+                                        }
+                                    }
+
+                                    .select_style {
+                                        .input_style;
+
+                                        &:read-only {
+                                            border: 1px solid rgb(@adminColor);
+
+                                            &:focus,
+                                            &:active {
+                                                border: 1px solid rgb(@adminColor);
+                                            }
+                                        }
+
+                                        &:disabled {
+                                            -moz-appearance: none;
+                                            /* Firefox */
+                                            -webkit-appearance: none;
+                                            /* Safari and Chrome */
+                                            appearance: none;
+                                            border: none;
+                                        }
+                                    }
+                                    .phone_input{
+                                        padding-left: 48px;
+                                    }
+
+                                    .textarea_style {
+                                        .input_style;
+                                    }
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .merchant_item {
+                                    display: none;
+                                }
+
+                                .normal_item {
+                                    display: block;
+                                }
+
+                                .sex_item {
+                                    width: 8%;
+                                }
+
+                                .date_item {
+                                    width: 39%;
+                                }
+                            }
+
+                            .merchant_apply_list {
+                                display: none;
+                            }
+
+                            .btn_style {
+                                background: @fontColor;
+                                border: 0;
+                                border-radius: 5px;
+                                color: rgb(@white);
+                                padding: 7px 18px;
+                                .ease(.2s);
+
+                                &:hover {
+                                    background: rgb(@mainColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/***** 商家 *****/
+#merchant_admin {
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+                .account_settings {
+                    .account_settings_contain {
+
+                        .main {
+
+                            .input_list {
+                                .normal_item {
+                                    display: none;
+                                }
+
+                                .merchant_item {
+                                    display: block;
+                                    width: 32%;
+
+                                    &:last-child {
+                                        margin-bottom: 24px;
+                                    }
+
+                                    .upload_img {
+                                        margin-top: 6px;
+
+                                        & h3 {
+                                            color: #999;
+                                            font-size: @fontSize - 6;
+                                            margin-bottom: 8px;
+                                        }
+
+                                        & img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .textarea_style {
+                                        height: 150px;
+                                        resize: vertical;
+
+                                        &:read-only {
+
+                                            resize: none;
+                                        }
+                                    }
+                                }
+
+                                .address_item {
+                                    width: 100%;
+                                }
+
+                                .company_data_item,
+                                .business_content_item {
+                                    width: 100%;
+                                }
+                            }
+
+                            .merchant_apply_list {
+                                .flexbox(row, center, space-between);
+                                border-top: 1px solid @fontColor;
+                                margin-top: 24px;
+                                padding-top: 48px;
+
+                                .apply_type {
+                                    .flexbox(row, center, flex-start);
+                                    width: 100%;
+                                    margin-bottom: 12px;
+
+                                    .type_text {
+                                        color: rgb(@mlRed);
+                                    }
+
+                                    .icon {
+                                        cursor: pointer;
+                                        margin-left: 12px;
+                                        .ease(.2s);
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+                                }
+
+                                .merchant_item {
+                                    width: 49% !important;
+                                }
+
+                                &:first-child {
+                                    margin-top: 24px;
+                                }
+                            }
+
+                            .close_list {
+                                border-top: none;
+                                margin: 0;
+
+                                .merchant_item {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

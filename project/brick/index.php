@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 匠士工程有限公司 </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="./css/layout.less" />
+    <link rel="stylesheet/less" type="text/css" href="./css/mediaQuery.less" />
+    <link rel="stylesheet/less" type="text/css" href="./css/reset.less" />
+
+</head>
+
+<body>
+    <header id="header" class="changeHeaderStyle d-flex align-items-center justify-content-center">
+        <div class="header-container d-flex align-items-center justify-content-between">
+            <!--            <a href="./index.php" class="logo-fixed"><img src="images/logo_big.png"></a>-->
+            <div class="home">
+                <a href="./index.php" class="logo d-flex align-items-center justify-content-center">
+                    <img src="./images/logo.svg" class="logo-svg">
+                    <div class="sub">匠士工程有限公司</div>               
+                </a>
+            </div>
+            <nav class="menu ">
+                <ul class="menu-list d-flex align-items-center justify-content-between">
+                    <li class="menu-item"><a href="./about-us.php">關於我們</a></li>
+                    <li class="menu-item"><a href="./quartz-brick.php">新做拋光石英磚爆裂</a></li>
+                    <li class="menu-item"><a href="./white-brick.php">白磚隔間</a></li>
+                    <li class="menu-item"><a href="./roof.php">屋頂防水膜</a></li>
+                    <li class="menu-item"><a href="./other.php">其他服務</a></li>
+                    <li class="menu-item"><a href="./contact.php">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <nav class="phone-menu">
+                <i class="fa fa-bars switch"></i>
+                <ul class="menu-list menu-list-close">
+                    <li class="menu-item"><a href="./about-us.php">關於我們</a></li>
+                    <li class="menu-item"><a href="./quartz-brick.php">新做拋光石英磚爆裂</a></li>
+                    <li class="menu-item"><a href="./white-brick.php">白磚隔間</a></li>
+                    <li class="menu-item"><a href="./roof.php">屋頂防水膜</a></li>
+                    <li class="menu-item"><a href="./other.php">其他服務</a></li>
+                    <li class="menu-item"><a href="./contact.php">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="slideshow"></section>
+    <section id="web-intro">
+        <div class="intro-top">
+            本公司以工匠精神為服務宗旨：
+            <div>一、 技術本位</div>
+            <div>二、 誠信專注</div>
+            <div>三、 創新工藝</div>
+        </div>
+
+        <div class="intro-bottom">
+            <div>
+                本公司已有近40年的工程經驗，雖然經驗已很豐富，但我們仍定期安排內部人員進行職能訓練，不斷的學習以求技術的更精進，每一工種都是以保固十年為核心概念，經由不斷學習及經驗累積出對客戶最有保障的工法。
+            </div>
+            <div style="margin-top: 15px;">
+                近年由於氣候變化因素，地磚磁磚爆裂、膨拱的客戶暴增，因此特別成立地磚修繕團隊，以特殊灌膠工法1mm孔徑灌注及縫隙灌注，針對拋光石英磚爆裂處理，以『免拆除、無灰塵、噪音小』的細膩手法解壓，可當天施工當天完工，把對客戶的生活起居影響降到最小～
+            </div>
+        </div>
+    </section>
+    <section id="shortcut-link" class="d-flex justify-content-between">
+        <div class="shortcut-item left d-flex align-items-center justify-content-between">
+            <a href="./white-brick.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/white-brick.jpg">
+                <div class="sub">白磚隔間</div>
+            </a>
+            <a href="./quartz-brick.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/q-brick.jpg">
+                <div class="sub">新作拋光石英磚爆裂</div>
+            </a>
+            <a href="./roof.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/roof.JPG">
+                <div class="sub">屋頂防水膜</div>
+            </a>
+        </div>
+    </section>
+    <section id="collection">
+        <h1>作品集</h1>
+        <div class="collection-contain d-flex align-items-center justify-content-between flex-wrap">
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+            <a href="./index.php" class="cell d-flex align-items-center justify-content-center">
+                <img src="images/collection.jpg">
+                <div class="sub">作品名稱</div>
+            </a>
+        </div>
+    </section>
+    <section id="intro" class="d-flex align-items-center justify-content-around">
+        <div class="company-info">
+            <div class="des">
+                <i class="fa fa-phone"></i>
+                <a href="tel:0287918080">02-8791-8080</a>
+            </div>
+            <div class="des">
+                <i class="fa fa-phone"></i>
+                <a href="tel:0932204993">0932-204-993</a>
+                <span>徐先生</span>
+            </div>
+            <div class="des">
+                <i class="fa fa-map-marker"></i>
+                <span>台北市內湖區成功路四段308號</span>
+            </div>
+        </div>
+    </section>
+    <footer id="colophon" class="d-flex align-items-center justify-content-center">
+        <div class="copyright">Copyright 2018 © 匠士工程有限公司</div>
+    </footer>
+    <div id="topBtn" class="fa fa-arrow-up"></div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.5.3/less.js" crossorigin="anonymous"></script>
+<script src="js/other.js"></script>
+
+
+</html>

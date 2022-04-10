@@ -1,0 +1,555 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+
+.op_signup_w {
+    &:before {
+        .show !important;
+    }
+
+    .windows_content {
+        .show !important;
+        .translateY(0) !important;
+    }
+}
+
+/***** 註冊視窗 *****/
+#signup_windows {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+
+    &:before {
+        content: "";
+        position: absolute;
+        background: rgba(@black, .5);
+        width: 100%;
+        height: 100%;
+        .hide;
+        .ease(.2s);
+    }
+
+    .windows_content {
+        position: absolute;
+        background: rgba(@loginbg, .9);
+        width: 880px;
+        height: 425px;
+        border-radius: 10px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 24px;
+        overflow: hidden;
+        z-index: 9999;
+        .hide;
+        .translateY(-50%);
+        .ease(.2s);
+
+        & header {
+            position: relative;
+            .flexbox(row, flex-start, space-between);
+            font-size: @fontSize;
+            margin-bottom: 24px;
+            z-index: 2;
+
+            & img {
+                width: 35px;
+            }
+
+            .icon {
+                cursor: pointer;
+                .ease(.2s);
+
+                &:hover {
+                    color: rgb(@mainColor);
+                }
+            }
+        }
+
+        .switch_content {
+            height: calc(100% - 54px);
+            .show;
+            .scale(1);
+            .ease(.2s);
+
+            & h2 {
+                font-size: @fontSize ;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+
+            .switch_type {
+                .flexbox(row, center, space-around);
+                height: calc(100% - 42px);
+
+                .switch_item {
+                    .flexbox(column-reverse, center, center);
+                    width: 45%;
+                    height: 100%;
+                    cursor: pointer;
+                    border: 1px solid @fontColor;
+                    border-radius: 10px;
+                    .ease(.2s);
+
+                    .imgView {
+                        width: 75%;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    & h3 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                        padding: 10px;
+                        .ease(.2s);
+                    }
+
+                    &:hover {
+                        background: rgb(@mainColor);
+                        border: 1px solid rgb(@mainColor);
+
+                        & h3 {
+                            color: rgb(@white);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .close_switch {
+            .hide;
+            .scale(0);
+        }
+
+        .main {
+            .flexbox(column, center, center);
+            position: absolute;
+            width: 90%;
+            height: calc(100% - 54px);
+            margin: auto;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            & h2 {
+                width: 100%;
+                font-size: @fontSize + 2;
+                border-top: 2px solid @fontColor;
+                letter-spacing: 3px;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .user_data {
+                .flexbox(column, center, space-between);
+                flex-wrap: wrap;
+                width: 100%;
+
+                .item {
+                    position: relative;
+                    width: 100%;
+                    font-size: @fontSize - 2;
+                    margin-bottom: 24px;
+
+                    .icon {
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    .input_style {
+                        background: transparent;
+                        box-sizing: border-box;
+                        width: 100%;
+                        border: 0;
+                        border-bottom: 1px solid rgb(@black);
+                        border-radius: 0;
+                        padding-left: 24px;
+                        .ease(.2s);
+
+                        &:focus,
+                        &:active {
+                            border-bottom: 1px solid rgb(@mainColor);
+                        }
+                    }
+
+                    .phone_input {
+                        padding-left: 65px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .telephon {
+                    .iti {
+                        .iti__flag-container {
+                            left: 16px;
+                        }
+                    }
+                }
+
+                .pswd {
+                    .input_style {
+                        padding-right: 24px;
+                    }
+
+                    .show_pswd {
+                        position: absolute;
+                        cursor: pointer;
+                        right: 0;
+                        .ease(.2s);
+
+                        &:hover {
+                            color: rgb(@mainColor);
+                        }
+                    }
+
+                    #pwindicator {
+                        position: absolute;
+                        top: 24px;
+                        left: 24px;
+
+                        .bar {
+                            margin-bottom: 2px;
+                            height: 2px;
+                        }
+
+                        .label {
+                            font-size: @fontSize - 6;
+                        }
+                    }
+
+                    .pw-very-weak {
+                        .bar {
+                            background: rgb(@mlRed);
+                            width: 30px;
+                        }
+
+                        .label {
+                            color: rgb(@mlRed);
+                        }
+                    }
+
+                    .pw-weak {
+                        .bar {
+                            background: rgb(@mlRed);
+                            width: 60px;
+                        }
+
+                        .label {
+                            color: rgb(@mlRed);
+                        }
+                    }
+
+                    .pw-mediocre {
+                        .bar {
+                            background: rgb(@mlRed);
+                            width: 90px;
+                        }
+
+                        .label {
+                            color: rgb(@mlRed);
+                        }
+                    }
+
+                    .pw-strong {
+                        .bar {
+                            background: rgb(@mlRed);
+                            width: 120px;
+                        }
+
+                        .label {
+                            color: rgb(@mlRed);
+                        }
+                    }
+
+                    .pw-very-strong {
+                        .bar {
+                            background: rgb(@mlRed);
+                            width: 150px;
+                        }
+
+                        .label {
+                            color: rgb(@mlRed);
+                        }
+                    }
+
+
+                    #m_pwindicator {
+                        #pwindicator;
+                    }
+                }
+
+                .pswd_confirm {
+                    .input_style {
+                        padding-right: 24px;
+                    }
+
+                    .show_confirm_pswd {
+                        position: absolute;
+                        cursor: pointer;
+                        right: 0;
+                        .ease(.2s);
+
+                        &:hover {
+                            color: rgb(@mainColor);
+                        }
+                    }
+
+                    .key_reminder {
+                        position: absolute;
+                        top: 24px;
+                        left: 24px;
+                        font-size: @fontSize - 6;
+                        color: rgb(@mlRed);
+                        .hide;
+                    }
+
+                    .m_key_reminder {
+                        .key_reminder;
+                    }
+
+                    .show_key_reminder {
+                        .show;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            .btn_style {
+                background: rgb(@mainColor);
+                border: 0;
+                color: rgb(@white);
+                width: 120px;
+                height: 30px;
+                font-size: @fontSize - 2;
+                border-radius: 5px;
+                margin-top: 24px;
+                .ease(.2s);
+
+                &:hover {
+                    background: rgb(@mainColorHover);
+                }
+            }
+
+            .divider {
+                font-size: @fontSize - 4;
+                font-weight: bold;
+                text-align: center;
+                margin: 24px 0;
+            }
+
+            .social_link {
+                .flexbox(row, center, center);
+                font-size: @fontSize + 22;
+
+                .item {
+                    cursor: pointer;
+                    margin: auto 10px;
+                    .link-default;
+                    .ease(.2s);
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &:hover {
+                        .scale(1.1);
+                    }
+                }
+
+                .fb_login {
+                    color: @fb;
+                }
+
+                .line_login {
+                    color: @line;
+                }
+
+                .gmail_login {
+                    .flexbox(row, center, center);
+                    width: 38px;
+                    height: 38px;
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+            }
+        }
+
+
+        .normal_notice_window,
+        .merchant_notice_window {
+            .flexbox(column, center, center);
+            position: absolute;
+            width: 100%;
+            margin: auto;
+            top: 100px;
+            left: 0;
+            right: 0;
+            .show;
+            .scale(1);
+            .ease(.2s);
+
+            .merchant_application_info {
+                letter-spacing: 1px;
+                line-height: 2.5em;
+                font-weight: bold;
+            }
+
+            .btn_list {
+                .flexbox(row, center, center);
+                margin-top: 24px;
+
+                .btn_style {
+                    background: @fontColor;
+                    border: 0;
+                    border-radius: 5px;
+                    color: rgb(@white);
+                    margin-right: 24px;
+                    padding: 7px 18px;
+                    .ease(.2s);
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        background: rgb(@mainColor);
+                    }
+                }
+            }
+
+        }
+
+        .sign_up_form {
+            .show;
+            .scale(1);
+            .ease(.2s);
+        }
+
+        .merchant_form {
+            width: 94%;
+            .sign_up_form;
+
+            .user_data {
+                .flexbox(row, center, space-between);
+
+                .item {
+                    width: 49%;
+
+                    .radio_content {
+                        .flexbox(row, center, flex-start);
+                        margin-left: 24px;
+
+                        & fieldset {
+                            .flexbox(row, center, center);
+                            position: relative;
+                            width: 50%;
+                            margin-left: 6px;
+                            .material_radio;
+                        }
+                    }
+                }
+
+                .license {
+                    width: 100%;
+
+                    .upload_btn {
+                        margin-top: 6px;
+                        margin-left: 32px;
+
+                        .inputfile {
+                            width: 0.1px;
+                            height: 0.1px;
+                            .hide;
+                            position: absolute;
+                            z-index: -1;
+
+                            & label {
+                                .link-default;
+                            }
+
+                            &+label {
+                                max-width: 80%;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                cursor: pointer;
+                                display: inline-block;
+                                overflow: hidden;
+                                margin-top: 6px;
+
+                                &>svg {
+                                    margin-right: 3px;
+                                }
+                            }
+                        }
+                    }
+
+                    .upload_btn_close {
+                        display: none;
+                    }
+                }
+
+                .store,
+                .store_type {
+                    .license;
+                }
+
+                .address {
+                    width: 100%;
+                }
+
+                .company_info {
+                    width: 100%;
+                    margin-bottom: 24px;
+
+                    .input_style {
+                        height: 100px;
+                        resize: none;
+                    }
+                }
+
+                .business_content {
+                    .company_info;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .close_window {
+            .hide;
+            .scale(0);
+        }
+    }
+
+    .notice_height {
+        height: 280px;
+    }
+
+    .normal_height {
+        width: 480px;
+        height: 480px;
+    }
+
+    .merchant_height {
+        width: 800px;
+        height: 800px;
+    }
+}

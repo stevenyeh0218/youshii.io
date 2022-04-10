@@ -1,0 +1,615 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@media (max-width:1366px) {
+    body {
+
+        /***** 登入視窗 *****/
+        #login_windows {
+            .windows_content {
+                width: 775px;
+                height: 410px;
+
+                .main {
+                    width: calc(100% - 250px);
+                }
+
+                .sign_up_block,
+                .forgot_block {
+                    width: 250px;
+                }
+            }
+        }
+
+        /***** 註冊視窗 *****/
+        #signup_windows {
+            .windows_content {
+                .main {
+                    .user_data {
+                        .item {
+                            .radio_content {
+                                & fieldset {
+                                    width: 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .merchant_form {
+                    .user_data {
+                        .item {
+                            .radio_content {
+                                & fieldset {
+                                    width: 50%;
+
+                                    & input[type="radio"] {
+                                        &+label {
+                                            margin-left: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .notice_height {
+                height: 280px;
+            }
+        }
+
+        #wrapper {
+
+            #myanLife_MainVisual {
+                #myanLife_global_searchBox {
+                    width: 90%;
+                }
+            }
+
+            #myanLife_Navigation {
+                width: 90%;
+            }
+
+            /***** 六大選單 Nav  *****/
+            #myanLife_list_Navigation {
+                .item {
+                    margin-right: 12px;
+                }
+            }
+
+            /***** 達人分享首頁 *****/
+            #myanLife_sharing {
+                .sharing_author {
+                    width: 90%;
+
+                    .author_img {
+                        height: 60vh;
+                    }
+                }
+
+                .sharing_author_list {
+                    width: 90%;
+
+                    .sharing_author_list_item {
+                        height: 289px;
+                    }
+                }
+
+                .author_article {
+                    width: 90%;
+                }
+
+                .traveler_comment {
+                    .author_article;
+                }
+
+                .traveler_msg_content {
+                    .author_article;
+                }
+            }
+
+            /***** 最新優惠 *****/
+            #myanLife_discount {
+                .common_content {
+                    .common_item {
+                        width: 18.7vw;
+
+                        .imgView {
+                            height: 256px;
+                        }
+                    }
+                }
+            }
+
+            /***** 為您精挑細選 *****/
+            #myanLife_featured {
+
+                .featured_content {
+                    width: 90%;
+
+                    .featured_item {
+                        height: 191px;
+
+                        &:first-child {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                            height: 407px;
+                        }
+
+                        .featured_info {
+                            .data {
+                                .lineClamp(2)
+                            }
+                        }
+                    }
+                }
+            }
+
+            /***** Top ten *****/
+            #myanLife_hot_ten {
+                #myanLife_discount;
+            }
+
+            /***** 搜尋結果 *****/
+            #myanLife_search_result {
+                width: 90%;
+            }
+
+            /***** 選單詳細頁 *****/
+            #myanLife_detail_content {
+                width: 90%;
+
+                .prod_overview {
+                    .product_coupon {
+                        .fixed_download_bar {
+                            top: 425px;
+                        }
+                    }
+                }
+            }
+
+            /***** 達人分享 *****/
+            #myanLife_blog {
+                .blog_content {
+                    .blog_item {
+                        width: 18.7vw;
+
+                        .imgView {
+                            height: 256px;
+                        }
+                    }
+                }
+            }
+
+            /***** 為您精挑細選 *****/
+            #myanLife_featured {
+                .featured_content {
+                    .featured_item {
+                        .featured_info {
+                            .coupon_download {
+                                .flexbox(row-reverse, center, center);
+                                bottom: 7px;
+                                top: auto;
+
+                                .icon {
+                                    margin: 0;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            .featured_info {
+                                .coupon_download {
+                                    top: auto;
+                                    bottom: 18px;
+
+                                    .icon {
+                                        margin: 0;
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /***** 深入探索 *****/
+            #myanLife_explore_in_depth {
+                .explore_in_depth_content {
+                    width: 90%;
+                }
+            }
+
+            #myanLife_hot_active_location {
+                .common_content {
+                    .common_item {
+                        width: 20.7vw;
+
+                        .imgView {
+                            height: 268px;
+                        }
+                    }
+                }
+
+            }
+
+            /***** 網友都在看 *****/
+            #myanLife_recently {
+                #myanLife_discount;
+            }
+
+            /***** 公益活動首頁  *****/
+            #myanLife_charity_result {
+                width: 90%;
+
+                .charity_result {
+                    .charity_content {
+                        .charity_list {
+                            .charity_item {
+                                height: 240px;
+
+                                .charity_image {
+                                    width: 290px;
+                                }
+
+                                .information {
+                                    .data {
+                                        .lineClamp(5);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /***** 公益活動詳細頁面 *****/
+            #myanLife_charity {
+                .author_recommend {
+                    .recent_activities {
+                        .recent_activities_list {
+                            .recent_activities_article {
+                                .imgView {
+                                    height: 168px;
+                                }
+
+                                .recent_activities_content {
+                                    .data {
+                                        .lineClamp(4);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .past_participation {
+                        .past_participation_list {
+                            .past_participation_article {
+                                .imgView {
+                                    height: 168px;
+                                }
+
+                                .past_participation_content {
+                                    .data {
+                                        .lineClamp(4);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .author_article {
+                    width: 90%;
+                }
+
+                .author_recommend {
+                    .author_article;
+                }
+            }
+
+            /***** 熱門活動住宿 *****/
+            #myanLife_hot_active_location {
+                .common_content {
+                    grid-template-columns: repeat(4, auto);
+                    width: 90%;
+                }
+            }
+
+            /***** 熱門活動 *****/
+            #myanLife_hot_active {
+                #myanLife_discount;
+            }
+
+            /***** ML 推薦 *****/
+            #myanLife_recommend {
+                .recommend_content {
+                    .recommend_item {
+                        width: 255px;
+                        height: 255px;
+                    }
+                }
+            }
+
+            /***** 新進達人推薦 *****/
+            #myanLife_blog_recommend {
+                .blog_recommend_content {
+                    .blog_recommend_item {
+                        width: 255px;
+                        height: 255px;
+                    }
+                }
+            }
+
+            /***** 達人分享首頁 *****/
+            #myanLife_sharing {
+                .sharing_search {
+                    width: 90%;
+                }
+
+                .sharing_content {
+                    width: 90%;
+
+                    .sharing_item {
+                        height: 14vw;
+
+                        &:first-child {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                            height: 29.8vw;
+                        }
+                    }
+                }
+            }
+
+            /***** 熱門其他活動 *****/
+            #myanLife_other {
+                width: 90%;
+            }
+
+            /***** 版權 *****/
+            #colophon {
+                .colophon_sitemap {
+                    padding: 0 5%;
+                }
+
+                .copy_rights {
+                    padding: 15px 5%;
+                }
+            }
+        }
+
+        /***** 商家頁面  *****/
+        .merchant_wrapper {
+            #myanLife_merchant {
+                .merchant_content {
+                    .merchant_about {
+                        flex: 0.7;
+                    }
+                }
+
+                .merchant_coupon {
+
+                    .merchant_coupon_content {
+                        &>ul {
+                            .coupon_item_tab {
+                                width: 16.5%;
+                            }
+                        }
+
+                        .coupon_item_list {
+                            width: 90%;
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                }
+            }
+        }
+
+        /***** 管理頁面  *****/
+        #admin_wrapper {
+            .admin_contain {
+                .admin_sidebar {
+                    width: 19rem;
+                }
+                .admin_canvas {
+
+                    /***** 酷碰卷管理 *****/
+                    .m_coupon_management {
+                        .edit_contain {
+                            .main {
+                                .edit_content {
+                                    .input_list {
+                                        .common_item {
+                                            width: 100%;
+                                        }
+
+                                        .date_item {
+                                            .date_input_contain {
+                                                width: 100%;
+
+                                                .date_input_item {
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+
+                                        .preview_item {
+                                            .canvas {
+                                                height: 30vw;
+
+                                                .main {
+                                                    .m_coupon_title {
+                                                        font-size: 1.8vw;
+                                                    }
+
+                                                    .m_coupon_info {
+                                                        .market_title {
+                                                            font-size: @fontSize + 8;
+                                                            margin-top: 4vw;
+                                                            margin-bottom: 1.8vw;
+                                                        }
+
+                                                        .value {
+                                                            font-size: @fontSize * 3;
+                                                            border-top: 7px dotted #d82316;
+                                                            border-bottom: 7px dotted #d82316;
+                                                        }
+
+                                                        .how_to_use {
+                                                            font-size: @fontSize;
+                                                            margin-top: 12px;
+                                                            line-height: 1.2em;
+                                                        }
+
+                                                        .myanlife_logo {
+                                                            width: 80px;
+                                                            bottom: 12px;
+                                                            right: 12px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    /***** 管理員(會員資料中的酷碰卷) *****/
+                    .admin_userlist {
+                        .coupon_edit_contain {
+                            .main {
+                                .input_list {
+                                    .common_item {
+                                        width: 100%;
+                                    }
+
+                                    .date_item {
+                                        .date_input_contain {
+                                            width: 100%;
+
+                                            .date_input_item {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .preview_item {
+                                        .canvas {
+                                            height: 30vw;
+
+                                            .main {
+                                                .m_coupon_title {
+                                                    font-size: 1.8vw;
+                                                }
+
+                                                .m_coupon_info {
+                                                    .market_title {
+                                                        font-size: @fontSize + 8;
+                                                        margin-top: 4vw;
+                                                        margin-bottom: 1.8vw;
+                                                    }
+
+                                                    .value {
+                                                        font-size: @fontSize * 3;
+                                                        border-top: 7px dotted #d82316;
+                                                        border-bottom: 7px dotted #d82316;
+                                                    }
+
+                                                    .how_to_use {
+                                                        font-size: @fontSize;
+                                                        margin-top: 12px;
+                                                        line-height: 1.2em;
+                                                    }
+
+                                                    .myanlife_logo {
+                                                        width: 80px;
+                                                        right: 24px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 830px) and (max-width: 1920px) {
+    body {
+
+        #signup_windows {
+            .windows_content {
+                .merchant_form {
+                    .user_data {
+                        .item {
+                            width: 32%;
+                        }
+
+                        .company_info,
+                        .business_content {
+                            width: 48%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .merchant_height {
+                height: 500px;
+            }
+        }
+
+        #coupon_windows {
+            .coupon_content {
+                .scale(.9) !important;
+            }
+        }
+
+        #wrapper {
+
+            /***** 首頁 banner *****/
+            #myanLife_MainVisual {
+                min-height: 100vh;
+
+                .myanLife_logo {
+                    width: 150px;
+                }
+
+                .myanLife_Slogan {
+                    font-size: @fontSize * 2 - 4;
+                }
+
+                #myanLife_global_searchBox {
+                    height: 150px;
+                    margin-top: 80px;
+                }
+            }
+
+            #myanLife_detail_content {
+                .prod_overview {
+                    .product_coupon {
+                        .fixed_download_bar {
+                            top: 374px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

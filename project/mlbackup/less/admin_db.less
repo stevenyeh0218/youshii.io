@@ -1,0 +1,163 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 管理員(DB匯入) *****/
+                .admin_management {
+                    .admin_management_contain {
+
+                        .main {
+                            .admin_list_content {
+                                .db_func_list {
+                                    .func_item {
+                                        .link-default;
+                                        .ease(.2s);
+
+                                        .icon {
+                                            margin-right: 5px;
+                                        }
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    .dblist_search_item {
+                                        .user_search_btn {
+                                            background: transparent;
+                                            border: none;
+                                            .ease(.2s);
+
+                                            &:hover {
+                                                .icon {
+                                                    color: rgb(mainColor);
+                                                }
+                                            }
+                                        }
+
+
+                                        .input_style {
+                                            border: none;
+                                            border-bottom: 1px solid #363636;
+                                            border-radius: 0;
+
+                                            &:active,
+                                            &:focus {
+                                                border-bottom: 1px solid rgb(@mainColor);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .db_content {
+                                    height: 750px;
+                                    overflow: hidden;
+                                    overflow-y: scroll;
+
+
+                                    &::-webkit-scrollbar-track {
+                                        background-color: transparent;
+                                    }
+
+                                    &::-webkit-scrollbar {
+                                        width: 6px;
+                                        background-color: transparent;
+                                    }
+
+                                    &::-webkit-scrollbar-thumb {
+                                        background-color: rgb(@mainColor);
+                                    }
+
+                                    .admin_item {
+                                        .admin_db_func {
+                                            .admin_cell {
+                                                .preview_box {
+                                                    .flexbox(row, center, center);
+                                                    display: none;
+                                                    background: rgba(@black, .85);
+                                                    position: fixed;
+                                                    width: 100%;
+                                                    top: 0;
+                                                    bottom: 0;
+                                                    z-index: 99;
+                                                    height: 100%;
+                                                    left: 0;
+                                                    right: 0;
+
+                                                    .icon {
+                                                        position: absolute;
+                                                        color: rgb(@white);
+                                                        font-size: @fontSize + 6;
+                                                        top: 6%;
+                                                        right: 9%;
+                                                        .ease(.2s);
+
+                                                        &:hover {
+                                                            color: rgb(@mainColor);
+                                                        }
+                                                    }
+
+                                                    &>embed {
+                                                        background: rgb(@white);
+                                                        width: 80%;
+                                                        height: 80%;
+                                                        .hide;
+                                                        .scale(0);
+                                                        .ease(.2s);
+                                                    }
+                                                }
+
+                                                .op_box {
+
+                                                    &>embed {
+                                                        background: rgb(@white);
+                                                        width: 80%;
+                                                        height: 80%;
+                                                        .scale(1);
+                                                        .show;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                                .btn_group {
+                                    .flexbox(row, center, center);
+                                    margin-top: 12px;
+
+                                    .btn_style {
+                                        background: @fontColor;
+                                        border: 0;
+                                        border-radius: 5px;
+                                        color: rgb(@white);
+                                        padding: 7px 18px;
+                                        .ease(.2s);
+
+                                        &:hover {
+                                            color: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    .cancel_btn {
+                                        cursor: pointer;
+                                        margin-right: 12px;
+                                        padding: 9.5px 18px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

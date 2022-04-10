@@ -1,0 +1,306 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+@adminColor: 153, 153, 153;
+
+body {
+
+    /***** 一般會員 *****/
+    #admin_wrapper {
+        .admin_contain {
+            .admin_canvas {
+
+                /***** 申請其他商家 *****/
+                .other_application {
+                    &>h2 {
+                        font-size: @fontSize + 6;
+                        font-weight: bold;
+                    }
+
+                    .other_application_contain {
+                        background: rgb(@white);
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+                        .ease(.2s);
+
+                        .main {
+                            .flexbox(column, center, center);
+                            width: 100%;
+                            margin: auto;
+
+                            .other_application_info {
+                                letter-spacing: 1px;
+                                line-height: 2.5em;
+                                font-weight: bold;
+                            }
+
+                            .merchant_select_contain {
+                                .flexbox(row, center, space-between);
+                                margin: 50px 0;
+
+                                .select_item {
+                                    .flexbox(row, center, center);
+
+                                    &>input {
+                                        display: none;
+
+                                        &:checked {
+                                            &+label {
+                                                -webkit-filter: brightness(1.12);
+                                                filter: brightness(1.12);
+                                            }
+                                        }
+
+                                        &:disabled {
+                                            &+label {
+                                                cursor: not-allowed;
+                                                -webkit-filter: opacity(.2) grayscale(1);
+                                                filter: opacity(.2) grayscale(1);
+                                            }
+                                        }
+                                    }
+
+                                    & label {
+                                        .flexbox(row, center, center);
+                                        color: rgb(@white);
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        width: 100%;
+                                        margin: 0 24px;
+                                        padding: 15px;
+                                        .ease(.2s);
+
+                                        .icon {
+                                            margin-right: 24px;
+                                        }
+
+                                        &:hover {
+                                            -webkit-filter: brightness(1.12);
+                                            filter: brightness(1.12);
+                                        }
+                                    }
+
+
+                                    &:first-child {
+                                        & label {
+                                            background: rgb(@mlBlue);
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        & label {
+                                            background: rgb(@mainColor);
+                                        }
+                                    }
+
+                                    &:nth-child(3) {
+                                        & label {
+                                            background: rgb(@mlGreen);
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        & label {
+                                            background: rgb(@mlPink);
+                                        }
+                                    }
+                                }
+
+                                .not_select {
+                                    &>input {
+
+
+                                        &:not(:checked) {
+                                            &+label {
+                                                -webkit-filter: brightness(0.8);
+                                                filter: brightness(0.8);
+                                                .ease(.2s);
+
+                                                &:hover {
+                                                    -webkit-filter: brightness(1);
+                                                    filter: brightness(1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .btn_list {
+                                .flexbox(row, center, center);
+
+                                .btn_style {
+                                    background: @fontColor;
+                                    border: 0;
+                                    border-radius: 5px;
+                                    color: rgb(@white);
+                                    margin-right: 24px;
+                                    padding: 7px 18px;
+                                    .ease(.2s);
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+
+                                    &:hover {
+                                        background: rgb(@mainColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .account_settings_contain {
+                        background: rgb(@white);
+                        border-radius: 5px;
+                        margin-top: 24px;
+                        padding: 24px;
+
+                        .main {
+                            .flexbox(column, center, center);
+
+                            .input_list {
+                                .flexbox(column, center, space-between);
+                                flex-wrap: wrap;
+                                width: 100%;
+                                font-size: @fontSize - 2;
+                                font-weight: bold;
+                                margin-bottom: 24px;
+
+                                .common_item {
+                                    width: 32%;
+                                    margin-bottom: 24px;
+
+                                    .des {
+                                        margin-bottom: 5px;
+
+                                        &>small {
+                                            color: rgb(@mlRed);
+                                        }
+                                    }
+
+                                    .input_style {
+                                        background: transparent;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        border: 1px solid rgb(@adminColor);
+                                        border-radius: 5px;
+                                        padding: 8px 6px;
+                                        .ease(.2s);
+
+                                        &:focus,
+                                        &:active {
+                                            border: 1px solid rgb(@mainColor);
+                                        }
+
+                                        &:read-only {
+                                            border: none;
+                                        }
+                                    }
+
+                                    .select_style {
+                                        .input_style;
+
+                                        &:disabled {
+                                            -moz-appearance: none;
+                                            /* Firefox */
+                                            -webkit-appearance: none;
+                                            /* Safari and Chrome */
+                                            appearance: none;
+                                            border: none;
+                                        }
+                                    }
+
+                                    .phone_input {
+                                        padding-left: 48px;
+                                    }
+
+                                    .textarea_style {
+                                        .input_style;
+                                        height: 150px;
+                                        resize: vertical;
+                                    }
+
+
+                                    .upload_btn {
+
+                                        .inputfile {
+                                            width: 0.1px;
+                                            height: 0.1px;
+                                            opacity: 0;
+                                            overflow: hidden;
+                                            position: absolute;
+                                            z-index: -1;
+
+                                            & label {
+                                                .link-default;
+                                            }
+
+                                            &+label {
+                                                max-width: 80%;
+                                                font-size: @fontSize - 2;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                cursor: pointer;
+                                                display: inline-block;
+                                                overflow: hidden;
+                                                margin-top: 6px;
+
+                                                &>svg {
+                                                    margin-right: 3px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .upload_btn_close {
+                                        display: none;
+                                    }
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .user_item {
+                                    .input_style {
+                                        border: none;
+
+                                        &:focus,
+                                        &:active {
+                                            border: none;
+                                        }
+                                    }
+                                }
+
+                                .address_item {
+                                    width: 100%;
+                                }
+
+                                .company_data_item,
+                                .business_content_item {
+                                    width: 100%;
+                                }
+                            }
+
+                            .btn_style {
+                                background: @fontColor;
+                                border: 0;
+                                border-radius: 5px;
+                                color: rgb(@white);
+                                padding: 7px 18px;
+                                .ease(.2s);
+
+                                &:hover {
+                                    background: rgb(@mainColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

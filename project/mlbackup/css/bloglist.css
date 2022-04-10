@@ -1,0 +1,1598 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.link-default {
+  text-decoration: none;
+  outline: none;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/** animate **/
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.scaleRotateAnimateDisplay {
+  -webkit-transform: scale(1) rotate(180deg);
+  -moz-transform: scale(1) rotate(180deg);
+  -o-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.scaleRotateAnimateDisplayN {
+  -webkit-transform: scale(0) rotate(0deg);
+  -moz-transform: scale(0) rotate(0deg);
+  -o-transform: scale(0) rotate(0deg);
+  transform: scale(0) rotate(0deg);
+}
+.opacityDisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+.couponBg {
+  background: #ffbd27;
+  background: -moz-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: -webkit-linear-gradient(top, #ffbd27 0%, #ff6d00 99%);
+  background: linear-gradient(to bottom, #ffbd27 0%, #ff6d00 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd27', endColorstr='#ff6d00', GradientType=0);
+}
+.material_checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.material_checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+.material_checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.material_checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+.material_checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.material_radio input[type="radio"] {
+  display: none;
+}
+.material_radio input[type="radio"] + label {
+  cursor: pointer;
+}
+.material_radio input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+.material_radio input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+.material_radio input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+body {
+  /***** 一般會員 *****/
+}
+body #admin_wrapper .admin_contain .admin_canvas {
+  /***** 達人分享 *****/
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management > h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain {
+  background: rgb(255, 255, 255);
+  height: 422px;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 24px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .blog_tabs_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  color: rgb(153, 153, 153);
+  font-weight: bold;
+  border-bottom: 1px solid rgb(153, 153, 153);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .blog_tabs_list .blog_tabs_item {
+  position: relative;
+  cursor: pointer;
+  margin-right: 24px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .blog_tabs_list .blog_tabs_item:last-child {
+  margin-right: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .blog_tabs_list .blog_tabs_item:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .blog_tabs_list .active {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main {
+  position: relative;
+  font-size: 14px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 0 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  outline: none;
+  color: rgb(153, 153, 153);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox:before {
+  border-color: rgb(153, 153, 153);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox .checkbox:after {
+  background: rgb(255, 255, 255);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .label--checkbox:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .icon {
+  margin-right: 4px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .delete_all_btn {
+  cursor: pointer;
+  margin-left: 24px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .delete_all_btn:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_btn {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_btn:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  display: none;
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_box .icon {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 24px;
+  top: 6%;
+  right: 9%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_box .icon:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .preview_box > embed {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  height: 80%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .func_list .func_item .op_box > embed {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  height: 80%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .preview_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #363636;
+  cursor: pointer;
+  padding: 24px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  height: 18px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #363636;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox:checked:before {
+  height: 6px;
+  border-color: #ffbd27;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox:before {
+  border-color: rgb(153, 153, 153);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .label--checkbox .checkbox:after {
+  background: rgb(255, 255, 255);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_cell {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  margin-right: 12px;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_cell .star_counter {
+  margin-left: 5px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_cell:last-child {
+  margin-right: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_img {
+  flex: 0.5;
+  overflow: hidden;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .blog_title {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .passenger_message {
+  display: none !important;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .passenger_message .hint_icon {
+  position: absolute;
+  font-size: 8px;
+  color: rgb(216, 35, 22);
+  top: 0;
+  right: -10px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_info .passenger_message:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell {
+  color: #363636;
+  cursor: pointer;
+  margin-right: 24px;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell:last-child {
+  margin-right: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell .preview_box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  display: none;
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell .preview_box .icon {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 24px;
+  top: 6%;
+  right: 9%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell .preview_box .icon:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell .preview_box > embed {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  height: 80%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .blog_cell .op_box > embed {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  height: 80%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn {
+  margin-right: 48px !important;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_input {
+  display: none;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_input:checked + .switch_label .switch_style:before {
+  background: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_input:checked + .switch_label .switch_style:after {
+  background: rgb(255, 255, 255);
+  -ms-transform: translate(80%, -50%);
+  -webkit-transform: translate(80%, -50%);
+  transform: translate(80%, -50%);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_input:checked + .switch_label .toggle--on {
+  display: inline-block;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_input:checked + .switch_label .toggle--off {
+  display: none;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  color: rgb(216, 35, 22);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .switch_style:before,
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .switch_style:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  outline: 0;
+  top: 50%;
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .switch_style:before {
+  background: rgb(153, 153, 153);
+  border-radius: 8px;
+  width: 34px;
+  height: 14px;
+  right: -30px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .switch_style:after {
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+  right: -15px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .toggle--on {
+  display: none;
+  margin-right: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .put_on_btn .switch_label .toggle--off {
+  display: inline-block;
+  margin-right: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .edit_btn {
+  color: #363636;
+  border: 1px solid #363636;
+  border-radius: 7px;
+  padding: 7px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .edit_btn:hover {
+  color: rgb(255, 189, 39);
+  border: 1px solid rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .preview_btn {
+  color: #363636;
+  border: 1px solid #363636;
+  border-radius: 7px;
+  padding: 7px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .preview_btn:hover {
+  color: rgb(255, 189, 39);
+  border: 1px solid rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .delete_btn {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item .blog_func .delete_btn:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .blog_item:hover {
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 2;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blog_list_content .close_blog_item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(120%);
+  -moz-transform: translateX(120%);
+  -o-transform: translateX(120%);
+  transform: translateX(120%);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item:last-child {
+  margin-bottom: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .des {
+  margin-right: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .des > small {
+  color: rgb(216, 35, 22);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .input_style {
+  background: transparent;
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  padding: 8px 6px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .input_style:focus,
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .input_style:active {
+  border: 1px solid rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .upload_btn .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .upload_btn .inputfile label {
+  text-decoration: none;
+  outline: none;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .upload_btn .inputfile + label {
+  display: inline-block;
+  max-width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 6px;
+  overflow: hidden;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .upload_btn .inputfile + label > span {
+  color: rgb(216, 35, 22);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .common_item .upload_btn .inputfile + label > svg {
+  margin-left: 5px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .cover_photo_item {
+  flex-wrap: wrap;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .cover_photo_item .preview_img {
+  width: 100%;
+  margin-top: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .cover_photo_item .preview_img h3 {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .cover_photo_item .preview_img img {
+  width: 50%;
+  height: 100%;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .editor_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .editor_item .des {
+  margin-right: 0;
+  margin-bottom: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .editor_item .ck.ck-editor {
+  min-width: 100%;
+  max-width: 100%;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .input_list .editor_item .ck-editor__editable {
+  min-height: 200px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .btn_group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .btn_group .btn_style {
+  background: #363636;
+  border: 0;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 7px 18px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .blogger_intro_content .intro_content .btn_group .btn_style:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .blog_management_contain .main .active {
+  opacity: 1;
+  visibility: visible;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain {
+  height: auto;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item:last-child {
+  margin-bottom: 0;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .des {
+  margin-right: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .des > small {
+  color: rgb(216, 35, 22);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .input_style {
+  background: transparent;
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  padding: 8px 6px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .input_style:focus,
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .input_style:active {
+  border: 1px solid rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .upload_btn .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .upload_btn .inputfile label {
+  text-decoration: none;
+  outline: none;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .upload_btn .inputfile + label {
+  display: inline-block;
+  max-width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 6px;
+  overflow: hidden;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .upload_btn .inputfile + label > span {
+  color: rgb(216, 35, 22);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .upload_btn .inputfile + label > svg {
+  margin-left: 5px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: relative;
+  width: 65px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] {
+  display: none;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] + label {
+  cursor: pointer;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] + label::before {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #363636;
+  border: 0px solid #363636;
+  font-size: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] + label::after {
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #363636;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, 50%);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"]:checked + label::before {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"]:checked + label::after {
+  width: 8px;
+  height: 8px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] + label::before,
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"] + label::after {
+  bottom: 7px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"]:checked + label::before {
+  width: 14px;
+  height: 14px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .common_item .radio_content fieldset input[type="radio"]:checked + label::after {
+  width: 6px;
+  height: 6px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .cover_photo_item {
+  flex-wrap: wrap;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .cover_photo_item .preview_img {
+  width: 100%;
+  margin-top: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .cover_photo_item .preview_img h3 {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .cover_photo_item .preview_img img {
+  width: 50%;
+  height: 100%;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .editor_item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .editor_item .des {
+  margin-right: 0;
+  margin-bottom: 12px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .editor_item .ck.ck-editor {
+  min-width: 100%;
+  max-width: 100%;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .input_list .editor_item .ck-editor__editable {
+  min-height: 200px;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .btn_group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .btn_group .btn_style {
+  background: #363636;
+  border: 0;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 7px 18px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .btn_group .btn_style:hover {
+  color: rgb(255, 189, 39);
+}
+body #admin_wrapper .admin_contain .admin_canvas .blog_management .edit_contain .main .edit_content .btn_group .cancel_btn {
+  cursor: pointer;
+  margin-right: 12px;
+  padding: 9.5px 18px;
+}

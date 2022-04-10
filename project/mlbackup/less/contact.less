@@ -1,0 +1,104 @@
+@import './mixins/_allMixins.less';
+@import './_default-themes.less';
+
+body {
+
+    #wrapper {
+
+        /***** MyanLife 聯絡我們 *****/
+        #myanlife_contact {
+            .flexbox(column, center, center);
+            width: 50%;
+            margin: auto;
+            margin-top: 80px;
+
+            .intro {
+                text-align: center;
+                margin-bottom: 50px;
+
+                & h2 {
+                    font-size: @fontSize + 6;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                }
+
+                & small {
+                    display: block;
+                    font-size: @fontSize - 6;
+                    color: rgb(@mlRed);
+                    margin-bottom: 8px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+
+            .contact_form {
+                .flexbox(column, center, center);
+                width: 100%;
+                font-size: @fontSize - 2;
+                margin-bottom: 50px;
+
+                .inputContainer {
+                    width: 100%;
+
+                    .input_item {
+                        margin-bottom: 24px;
+
+                        .des {
+                            margin-bottom: 12px;
+
+                            .hint_style {
+                                color: rgb(@mlRed);
+                            }
+                        }
+
+                        .input_style {
+                            background: rgb(@grayBg);
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 10px 6px;
+                            border-radius: 5px;
+                            border: 1px solid @fontColor;
+                            .ease(.2s);
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                border: 1px solid rgb(@mainColor);
+                            }
+                        }
+
+                        .select_style {
+                            .input_style;
+                        }
+
+                        .textarea_style {
+                            .input_style;
+                            min-height: 250px;
+                            resize: vertical;
+                        }
+                    }
+                }
+
+                .btn_style {
+                    background: rgb(@mainColor);
+                    border: 0;
+                    color: rgb(@white);
+                    width: 120px;
+                    height: 30px;
+                    margin: auto;
+                    border-radius: 5px;
+                    margin-top: 24px;
+                    .ease(.2s);
+
+                    &:hover {
+                        background: rgb(@mainColorHover);
+                    }
+                }
+            }
+        }
+    }
+}
