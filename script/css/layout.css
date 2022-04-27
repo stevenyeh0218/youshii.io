@@ -777,7 +777,8 @@ body #wrapper .appProject .appProjectList .appProjectItem {
   -ms-justify-content: flex-start;
   -o-justify-content: flex-start;
   justify-content: flex-start;
-  width: 15%;
+  gap: 16px;
+  width: 24%;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
