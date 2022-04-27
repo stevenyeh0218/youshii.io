@@ -444,7 +444,7 @@ body {
 
                 .appProjectItem {
                     .flexbox-gap(column, flex-start, flex-start,16px);
-                    width: 24%;
+                    width: calc((100%/4) - 12px);
                     .ease(.2s);
 
                     &>a {
@@ -454,6 +454,12 @@ body {
                         &>img {
                             width: 100%;
                         }
+                    }
+
+                    & > h2{
+                        font-size: @fontSize + 0.5;
+                        letter-spacing: 2.5px;
+                        margin-bottom: 1.5rem;
                     }
                 }
             }
