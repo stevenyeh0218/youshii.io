@@ -31,22 +31,22 @@ body {
     }
 
     .animate-translateX {
-        .show !important;
+        .show() !important;
         .translateX(0) !important;
     }
 
     .animate-translateY {
-        .show !important;
+        .show() !important;
         .translateY(0) !important;
     }
 
     .animate-scale {
-        .show !important;
+        .show() !important;
         .scale(1) !important;
     }
 
     .animate-show {
-        .show !important;
+        .show() !important;
     }
 
     .header {
@@ -62,7 +62,7 @@ body {
             .flexbox(row, center, center);
             width: 120px;
             margin-left: 50px;
-            .link-default;
+            .link-default();
 
             & img {
 
@@ -81,7 +81,7 @@ body {
                 position: relative;
                 color: @fontColor;
                 cursor: pointer;
-                .hide;
+                .hide();
                 .scale(0);
                 .ease(.3s);
 
@@ -149,8 +149,8 @@ body {
                 position: relative;
                 color: @fontColor;
                 margin-left: 10px;
-                .link-default;
-                .hide;
+                .link-default();
+                .hide();
                 .scale(0);
                 .ease(.3s);
 
@@ -207,7 +207,7 @@ body {
                 position: absolute;
                 color: @fontColor;
                 margin-left: 10px;
-                .link-default;
+                .link-default();
                 .ease(.5s);
             }
 
@@ -215,7 +215,7 @@ body {
                 position: absolute;
                 color: @fontColor;
                 margin-left: 10px;
-                .link-default;
+                .link-default();
                 .transform(translateX(0) rotateY(360deg) scale(0));
                 .ease(.5s);
             }
@@ -245,7 +245,7 @@ body {
                     .scale(1.5);
                     opacity: 0.2 !important;
                     bottom: 20%;
-                    .hide;
+                    .hide();
                     .linear(.3s);
                     z-index: 2;
 
@@ -271,7 +271,7 @@ body {
                     left: -13rem;
                     bottom: 8.5%;
                     z-index: 2;
-                    .hide;
+                    .hide();
                     .translateX(-100%);
                     .linear(.3s);
 
@@ -291,7 +291,7 @@ body {
                     right: 0;
                     top: 0;
                     overflow: hidden;
-                    .hide;
+                    .hide();
                     .translateX(100%);
                     .linear(.3s);
 
@@ -301,7 +301,7 @@ body {
                         height: 100%;
                         top: 0;
                         left: 0;
-                        .hide;
+                        .hide();
                         animation: slide 10s infinite;
 
                         &:nth-child(2) {
@@ -437,91 +437,18 @@ body {
             }
 
             .appProjectList {
-                position: relative;
-                margin: 4% 12% 0 40%;
-                overflow: hidden;
-
                 .appProjectItem {
                     .flexbox(row, flex-start, flex-start);
                     .ease(.2s);
 
-                    &>header {
-                        margin-left: 1rem;
-
-                        &>h3 {
-                            font-size: 1.5rem;
-                            margin-bottom: 1.5rem;
-                        }
-
-                        .description {
-                            margin-bottom: 1rem;
-                            line-height: 1.5rem;
-                            letter-spacing: 0.1rem;
-                        }
-
-                        .guideline {
-                            margin-bottom: 1rem;
-
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-
                     &>a {
                         position: relative;
-                        width: 240px;
-                        .link-default;
+                        .link-default();
 
                         &>img {
                             width: 100%;
-                            .ease(.2s);
-
-                            &:hover {
-                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px;
-                            }
                         }
                     }
-                }
-
-                .preAppProject {
-                    position: absolute;
-                    bottom: 0;
-                    .translateX(-200%);
-                }
-
-                .nextAppProject {
-                    .translateX(200%);
-
-                    &:last-child {
-                        position: absolute;
-                        bottom: 0;
-                    }
-                }
-            }
-
-            .appProjectBtn {
-                .flexbox(row, flex-start, flex-end);
-                padding: 0 12% 0% 40%;
-                font-size: 1.5rem;
-
-                .arrowPre {
-                    padding: .8rem;
-                    cursor: pointer;
-                    .hide;
-                    .ease(.2s);
-
-                    &:hover {
-                        color: @yellow;
-                    }
-                }
-
-                .arrowNext {
-                    .arrowPre;
-                }
-
-                .active {
-                    .show;
                 }
             }
         }
@@ -685,7 +612,7 @@ body {
                     cursor: pointer;
                     margin: 0.3rem;
                     padding: 0.5rem;
-                    .link-default;
+                    .link-default();
                     .ease(.3s);
 
                     .design_img {
@@ -811,7 +738,7 @@ body {
                                     position: relative;
                                     color: @fontColor;
                                     margin-right: 1rem;
-                                    .link-default;
+                                    .link-default();
                                     .ease(.3s);
 
                                     &::after {
@@ -878,7 +805,7 @@ body {
 
 @keyframes slide {
     25% {
-        .show;
+        .show();
     }
 
     50% {
@@ -886,7 +813,7 @@ body {
     }
 
     100% {
-        .hide;
+        .hide();
     }
 }
 

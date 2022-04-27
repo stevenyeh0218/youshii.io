@@ -1,29 +1,5 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
-.clearfix {
-  display: block;
-  zoom: 1;
-}
-.clearfix:after {
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.link-default {
-  text-decoration: none;
-  outline: none;
-}
-.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-.show {
-  opacity: 1;
-  visibility: visible;
-}
 /** animate **/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 @-webkit-keyframes bounce {
   0%,
   20%,
@@ -53,36 +29,6 @@
   60% {
     transform: translateY(-15px);
   }
-}
-.flex {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-.inline-flex {
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
-  display: inline-flex;
-}
-.scaleRotateAnimateDisplay {
-  -webkit-transform: scale(1) rotate(180deg);
-  -moz-transform: scale(1) rotate(180deg);
-  -o-transform: scale(1) rotate(180deg);
-  transform: scale(1) rotate(180deg);
-}
-.scaleRotateAnimateDisplayN {
-  -webkit-transform: scale(0) rotate(0deg);
-  -moz-transform: scale(0) rotate(0deg);
-  -o-transform: scale(0) rotate(0deg);
-  transform: scale(0) rotate(0deg);
-}
-.opacityDisplay {
-  opacity: 0;
-  visibility: hidden;
 }
 body {
   background: #ffffff;
@@ -778,11 +724,6 @@ body #wrapper .appProject > h2:before {
   margin-top: 0;
   background-color: #686868;
 }
-body #wrapper .appProject .appProjectList {
-  position: relative;
-  margin: 4% 12% 0 40%;
-  overflow: hidden;
-}
 body #wrapper .appProject .appProjectList .appProjectItem {
   display: -webkit-flex;
   display: -moz-flex;
@@ -809,111 +750,13 @@ body #wrapper .appProject .appProjectList .appProjectItem {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-body #wrapper .appProject .appProjectList .appProjectItem > header {
-  margin-left: 1rem;
-}
-body #wrapper .appProject .appProjectList .appProjectItem > header > h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-body #wrapper .appProject .appProjectList .appProjectItem > header .description {
-  margin-bottom: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
-}
-body #wrapper .appProject .appProjectList .appProjectItem > header .guideline {
-  margin-bottom: 1rem;
-}
-body #wrapper .appProject .appProjectList .appProjectItem > header .guideline:last-child {
-  margin-bottom: 0;
-}
 body #wrapper .appProject .appProjectList .appProjectItem > a {
   position: relative;
-  width: 240px;
   text-decoration: none;
   outline: none;
 }
 body #wrapper .appProject .appProjectList .appProjectItem > a > img {
   width: 100%;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-body #wrapper .appProject .appProjectList .appProjectItem > a > img:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px;
-}
-body #wrapper .appProject .appProjectList .preAppProject {
-  position: absolute;
-  bottom: 0;
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transform: translateX(-200%);
-}
-body #wrapper .appProject .appProjectList .nextAppProject {
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
-}
-body #wrapper .appProject .appProjectList .nextAppProject:last-child {
-  position: absolute;
-  bottom: 0;
-}
-body #wrapper .appProject .appProjectBtn {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -o-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  -o-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  -ms-justify-content: flex-end;
-  -o-justify-content: flex-end;
-  justify-content: flex-end;
-  padding: 0 12% 0% 40%;
-  font-size: 1.5rem;
-}
-body #wrapper .appProject .appProjectBtn .arrowPre {
-  padding: 0.8rem;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-body #wrapper .appProject .appProjectBtn .arrowPre:hover {
-  color: #e4dbcc;
-}
-body #wrapper .appProject .appProjectBtn .arrowNext {
-  padding: 0.8rem;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-body #wrapper .appProject .appProjectBtn .arrowNext:hover {
-  color: #e4dbcc;
-}
-body #wrapper .appProject .appProjectBtn .active {
-  opacity: 1;
-  visibility: visible;
 }
 body #wrapper .project {
   position: relative;
