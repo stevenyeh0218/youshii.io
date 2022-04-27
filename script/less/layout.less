@@ -437,8 +437,13 @@ body {
             }
 
             .appProjectList {
+                .flexbox-gap(row,flex-start,flex-start,16px);
+                .fill-available();
+                padding: 44px;
+                padding-left: 15%;
+
                 .appProjectItem {
-                    .flexbox(row, flex-start, flex-start);
+                    .flexbox(column, flex-start, flex-start);
                     .ease(.2s);
 
                     &>a {
