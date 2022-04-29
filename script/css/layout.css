@@ -786,7 +786,7 @@ body #wrapper .appProject .appProjectList .appProjectItem {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-body #wrapper .appProject .appProjectList .appProjectItem-cover {
+body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover {
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -796,10 +796,10 @@ body #wrapper .appProject .appProjectList .appProjectItem-cover {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-body #wrapper .appProject .appProjectList .appProjectItem-cover > img {
+body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover > img {
   width: 100%;
 }
-body #wrapper .appProject .appProjectList .appProjectItem-cover:hover {
+body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover:hover {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
