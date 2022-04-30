@@ -519,10 +519,17 @@
                     }
                 }
                 .appProjectList{
+                    flex-direction: column;
                     padding: 44px 16px 44px 5%;
                     .appProjectItem{
-                        width: calc((100%/1) - 16px);
-    
+                        width: 100%;
+                        
+                        .appProjectItem-cover{
+                            &:hover{
+                                .scale(1.1);
+                            }
+                        }
+
                         &>h3{
                             font-size: 1rem;
                         }
