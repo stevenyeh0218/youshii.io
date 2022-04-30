@@ -548,8 +548,20 @@
     padding-left: 9%;
   }
   body #wrapper .appProject > h2:before {
-    height: 56 px;
+    height: 56px;
     left: 7%;
+  }
+  body #wrapper .appProject .appProjectList {
+    padding: 44px 16px 44px 5%;
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem {
+    width: calc((100%/1) - 16px);
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem > h3 {
+    font-size: 1rem;
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem .guideline {
+    font-size: 0.8rem;
   }
   body #wrapper .project:before {
     height: 85%;
