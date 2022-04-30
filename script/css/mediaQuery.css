@@ -29,6 +29,9 @@
     transform: translateY(-15px);
   }
 }
+/* font size */
+/* color hex */
+/* color rgb */
 /* fill width */
 @media (max-width: 1366px) {
   body #wrapper .banner {
@@ -115,6 +118,15 @@
   }
   body #wrapper .appProject > h2:before {
     height: 80px;
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem {
+    width: calc((100%/4) - 16px);
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem > h3 {
+    font-size: 1.2rem;
+  }
+  body #wrapper .appProject .appProjectList .appProjectItem .guideline {
+    font-size: 0rem;
   }
   body #wrapper .project > h2 {
     font-size: 2.5rem;
@@ -383,6 +395,9 @@
     height: 60px;
     left: 7%;
   }
+  body #wrapper .appProject .appProjectList {
+    padding: 44px 16px 44px 12%;
+  }
   body #wrapper .project:before {
     top: 6.5%;
   }
@@ -535,6 +550,15 @@
   body #wrapper .appProject > h2:before {
     height: 56 px;
     left: 7%;
+  }
+  body #wrapper .appProject .appProjectItem {
+    width: calc((100%/1) - 16px);
+  }
+  body #wrapper .appProject .appProjectItem > h3 {
+    font-size: 1rem;
+  }
+  body #wrapper .appProject .appProjectItem .guideline {
+    font-size: 0rem;
   }
   body #wrapper .project:before {
     height: 85%;

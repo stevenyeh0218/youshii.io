@@ -91,7 +91,7 @@
                     }
                 }
             }
-
+            
             .appProject {
                 &:before {
                     width: 80%;
@@ -104,6 +104,19 @@
 
                     &:before {
                         height: 80px;
+                    }
+                }
+                .appProjectList{
+                    .appProjectItem{
+                        width: calc((100%/4) - 16px);
+
+                        &>h3{
+                            font-size: 1.2rem;
+                        }
+
+                        .guideline{
+                            font-size: 0.0rem;
+                        }
                     }
                 }
             }
@@ -343,6 +356,10 @@
                         left: 7%;
                     }
                 }
+                
+                .appProjectList{
+                    padding: 44px 16px 44px 12%;
+                }
             }
 
             .project {
@@ -499,6 +516,18 @@
                     &:before {
                         height: 56 px;
                         left: 7%;
+                    }
+                }
+                
+                .appProjectItem{
+                    width: calc((100%/1) - 16px);
+
+                    &>h3{
+                        font-size: 1rem;
+                    }
+
+                    .guideline{
+                        font-size: 0.0rem;
                     }
                 }
             }
