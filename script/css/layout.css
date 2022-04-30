@@ -813,7 +813,6 @@ body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover:
 body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   font-size: 1.5rem;
   letter-spacing: 2.5px;
-  margin-bottom: 1.5rem;
 }
 body #wrapper .project {
   position: relative;
