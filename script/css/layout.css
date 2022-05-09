@@ -572,6 +572,11 @@ body #wrapper .banner .banner_inner .slideImg img {
 body #wrapper .banner .banner_inner .slideImg img:nth-child(2) {
   animation-delay: 5s;
 }
+body #wrapper .about {
+  position: relative;
+  margin-top: 6rem;
+  padding: 0 6rem;
+}
 body #wrapper .skill {
   position: relative;
   margin-top: 6rem;
