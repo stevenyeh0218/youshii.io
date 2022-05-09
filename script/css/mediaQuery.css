@@ -54,6 +54,15 @@
   body #wrapper .banner .banner_inner .youshiiDesignLoop {
     bottom: 22%;
   }
+  body #wrapper .about > h2 {
+    font-size: 2.5rem;
+  }
+  body #wrapper .about > h2:before {
+    width: 80px;
+  }
+  body #wrapper .about .about_inner {
+    font-size: 0.8rem;
+  }
   body #wrapper .skill > h2 {
     font-size: 2.5rem;
     padding-left: 20%;
@@ -333,6 +342,15 @@
   body #wrapper .banner .banner_inner .youshiiDesignLoop > img:last-child {
     margin-left: 2rem;
   }
+  body #wrapper .about {
+    padding: 0 4rem;
+  }
+  body #wrapper .about > h2 {
+    font-size: 2rem;
+  }
+  body #wrapper .about > h2:before {
+    width: 60px;
+  }
   body #wrapper .skill > h2 {
     font-size: 2rem;
     padding-left: 8%;
@@ -483,6 +501,19 @@
   body #wrapper .banner .banner_inner .message {
     left: 20%;
     bottom: -37.5%;
+  }
+  body #wrapper .about {
+    margin-top: 9rem;
+    padding: 0 2rem;
+  }
+  body #wrapper .about > h2 {
+    font-size: 1.8rem;
+  }
+  body #wrapper .about > h2:before {
+    width: 56px;
+  }
+  body #wrapper .about .about_inner {
+    font-size: 0.8rem;
   }
   body #wrapper .skill {
     margin-top: 9rem;
