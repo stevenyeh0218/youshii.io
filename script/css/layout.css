@@ -577,6 +577,30 @@ body #wrapper .about {
   margin-top: 6rem;
   padding: 0 6rem;
 }
+body #wrapper .about > h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
+body #wrapper .about > h2:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -36%;
+  width: 100px;
+  height: 1px;
+  margin-top: 0;
+  background-color: #686868;
+}
+body #wrapper .about .about_inner {
+  padding-top: 3rem;
+}
+body #wrapper .about .about_inner > div {
+  margin-bottom: 16px;
+  line-height: 1.5em;
+}
 body #wrapper .skill {
   position: relative;
   margin-top: 6rem;

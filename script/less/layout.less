@@ -316,6 +316,33 @@ body {
             position: relative;
             margin-top: 6rem;
             padding: 0 6rem;
+
+            &>h2 {
+                position: relative;
+                font-size: 3rem;
+                font-weight: lighter;
+                letter-spacing: 0.1em;
+
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;    
+                    left: 0;
+                    bottom: -36%;
+                    width: 100px;
+                    height: 1px;
+                    margin-top: 0;
+                    background-color: @gray;
+                }
+            }
+            .about_inner{
+                padding-top: 3rem;
+
+                & > div{
+                    margin-bottom: 16px;
+                    line-height: 1.5em;
+                }
+            }
         }
 
         .skill {
