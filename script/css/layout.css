@@ -1150,7 +1150,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
   -o-justify-content: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  height: 21px;
+  height: 100%;
   cursor: pointer;
   margin-top: 1.5rem;
 }
