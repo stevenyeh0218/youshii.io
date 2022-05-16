@@ -825,6 +825,7 @@ body #wrapper .appProject .appProjectList .appProjectItem {
   justify-content: flex-start;
   gap: 16px;
   width: calc((100%/6) - 16px);
+  cursor: default;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -841,6 +842,10 @@ body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover 
 }
 body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover > img {
   width: 100%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   font-size: 1.5rem;
