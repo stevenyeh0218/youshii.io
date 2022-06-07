@@ -478,7 +478,8 @@ body {
                 .appProjectItem {
                     .flexbox-gap(column, flex-start, flex-start,16px);
                     width: calc((100%/6) - 16px);
-                    cursor: default;
+                    cursor: pointer;
+                    padding: 12px;
                     .ease(.2s);
 
                     .appProjectItem-cover {
@@ -496,7 +497,53 @@ body {
                         font-size: @fontSize + 0.5;
                         letter-spacing: 2.5px;
                     }
+
+                    &:hover {
+                        box-shadow: 0 10px 20px rgba(@black-rgb, 0.19), 0 6px 6px;
+                    }
                 }
+            }
+
+            .appProject_info{
+                .flexbox(row,center,center);
+                position: fixed;
+                background: rgba(@black-rgb,.5);
+                backdrop-filter: blur(2em);
+                width: 100vw;
+                height: 100vh;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                .hide();
+                .scaleY(0);
+                z-index: 9999;
+                .ease(.2s);
+                &_closeBtn{
+                    position: absolute;
+                    top: 44px;
+                    right: 44px;
+                    color: #fff;
+                    cursor: pointer;
+                    .ease(.2s);
+                    &:hover{
+                        color: #d8c7ac;
+                    }
+                }
+                & > img{       
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    object-fit: contain;
+                    .hide();
+                }
+                .imgShow{
+                    .show();
+                }
+            }
+            .active{
+                .show();
+                .scaleY(1);
             }
         }
 

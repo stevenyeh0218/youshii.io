@@ -825,7 +825,8 @@ body #wrapper .appProject .appProjectList .appProjectItem {
   justify-content: flex-start;
   gap: 16px;
   width: calc((100%/6) - 16px);
-  cursor: default;
+  cursor: pointer;
+  padding: 12px;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -850,6 +851,85 @@ body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover 
 body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   font-size: 1.5rem;
   letter-spacing: 2.5px;
+}
+body #wrapper .appProject .appProjectList .appProjectItem:hover {
+  box-shadow: 0 10px 20px rgba(48, 48, 48, 0.19), 0 6px 6px;
+}
+body #wrapper .appProject .appProject_info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  position: fixed;
+  background: rgba(48, 48, 48, 0.5);
+  backdrop-filter: blur(2em);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform: scaleY(0);
+  z-index: 9999;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper .appProject .appProject_info_closeBtn {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+body #wrapper .appProject .appProject_info_closeBtn:hover {
+  color: #d8c7ac;
+}
+body #wrapper .appProject .appProject_info > img {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+}
+body #wrapper .appProject .appProject_info .imgShow {
+  opacity: 1;
+  visibility: visible;
+}
+body #wrapper .appProject .active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  transform: scaleY(1);
 }
 body #wrapper .project {
   position: relative;
