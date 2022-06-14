@@ -3,10 +3,10 @@
 
 body {
 
-    background: @bgcolor;
+    background: var(--bgcolor);
     width: 100%;
     height: 100vh;
-    color: @fontColor;
+    color: var(--fontColor);
     font-family: 'Noto Sans TC' !important;
     font-size: @fontSize;
     .mac-scrollbar-style();
@@ -14,7 +14,7 @@ body {
     #loading {
         .flexbox(row, center, center);
         position: fixed;
-        background: @bgcolor;
+        background: var(--bgcolor);
         width: 100%;
         height: 100%;
         z-index: 99999;
@@ -80,7 +80,7 @@ body {
 
             .menu_item {
                 position: relative;
-                color: @fontColor;
+                color: var(--fontColor);
                 cursor: pointer;
                 .hide();
                 .scale(0);
@@ -89,7 +89,7 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    background: @gray;
+                    background: var(--gray);
                     left: 0;
                     bottom: -5px;
                     width: 100%;
@@ -120,7 +120,7 @@ body {
                 display: block;
                 height: 1px;
                 width: 10px;
-                background: @black;
+                background: var(--black);
                 margin: 3px 14px 0 12px;
                 .transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
                 .transform-origin(left bottom);
@@ -137,7 +137,7 @@ body {
                 content: '';
                 display: block;
                 position: relative;
-                background: @black;
+                background: var(--black);
                 width: 30px;
                 margin-right: 5px;
                 height: 1px;
@@ -148,7 +148,7 @@ body {
 
             & a {
                 position: relative;
-                color: @fontColor;
+                color: var(--fontColor);
                 margin-left: 10px;
                 .link-default();
                 .hide();
@@ -158,7 +158,7 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    background: @gray;
+                    background: var(--gray);
                     width: 100%;
                     height: 1px;
                     left: 0;
@@ -194,7 +194,7 @@ body {
                 content: '';
                 display: block;
                 position: relative;
-                background: @black;
+                background: var(--black);
                 width: 30px;
                 height: 1px;
                 top: 9px;
@@ -206,7 +206,7 @@ body {
 
             .m_open_btn {
                 position: absolute;
-                color: @fontColor;
+                color: var(--fontColor);
                 margin-left: 10px;
                 .link-default();
                 .ease(.5s);
@@ -214,7 +214,7 @@ body {
 
             .m_close_btn {
                 position: absolute;
-                color: @fontColor;
+                color: var(--fontColor);
                 margin-left: 10px;
                 .link-default();
                 .transform(translateX(0) rotateY(360deg) scale(0));
@@ -277,7 +277,7 @@ body {
                     .linear(.3s);
 
                     .message_line {
-                        background: @fontColor;
+                        background: var(--fontColor);
                         width: 56rem;
                         height: 0.1rem;
                         margin-bottom: 1rem;
@@ -333,7 +333,7 @@ body {
                     width: 100px;
                     height: 1px;
                     margin-top: 0;
-                    background-color: @gray;
+                    background-color: var(--gray);
                 }
             }
             .about_inner{
@@ -366,7 +366,7 @@ body {
                     width: 1px;
                     height: 100px;
                     margin-top: 0;
-                    background-color: @gray;
+                    background-color: var(--gray);
                 }
             }
 
@@ -441,7 +441,7 @@ body {
                 display: block;
                 content: '';
                 position: absolute;
-                background-color: @blue;
+                background-color: var(--blue);
                 width: 70.7%;
                 height: 58%;
                 margin-left: 29.3%;
@@ -466,7 +466,7 @@ body {
                     width: 1px;
                     height: 100px;
                     margin-top: 0;
-                    background-color: @gray;
+                    background-color: var(--gray);
                 }
             }
 
@@ -499,7 +499,7 @@ body {
                     }
 
                     &:hover {
-                        box-shadow: 0 10px 20px rgba(@black-rgb, 0.19), 0 6px 6px;
+                        box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
                     }
                 }
             }
@@ -507,7 +507,7 @@ body {
             .appProject_info{
                 .flexbox(row,center,center);
                 position: fixed;
-                background: rgba(@black-rgb,.5);
+                background: rgba(var(--black-rgb),.5);
                 backdrop-filter: blur(2em);
                 width: 100vw;
                 height: 100vh;
@@ -523,11 +523,11 @@ body {
                     position: absolute;
                     top: 44px;
                     right: 44px;
-                    color: @white;
+                    color: var(--white);
                     cursor: pointer;
                     .ease(.2s);
                     &:hover{
-                        color: @yellow;
+                        color: var(--yellow);
                     }
                 }
                 & > img{       
@@ -557,7 +557,7 @@ body {
                 width: 85%;
                 height: 80%;
                 margin: auto;
-                border: 1px solid @gray;
+                border: 1px solid var(--gray);
                 top: 10%;
                 left: 0;
                 right: 0;
@@ -574,7 +574,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;
-                    background: @gray;
+                    background: var(--gray);
                     width: 1px;
                     height: 100px;
                     margin: auto;
@@ -588,7 +588,7 @@ body {
                 &:after {
                     content: '';
                     position: absolute;
-                    background: @white;
+                    background: var(--white);
                     top: 4rem;
                     left: 0;
                     right: 0;
@@ -607,7 +607,7 @@ body {
 
                 .project_item {
                     .flexbox(column, flex-start, flex-start);
-                    background: @bgcolor;
+                    background: var(--bgcolor);
                     width: 27%;
 
                     .project_link {
@@ -617,7 +617,7 @@ body {
                             display: block;
                             width: 100%;
                             height: 100%;
-                            color: rgba(@black-rgb, 0.19);
+                            color: rgba(var(--black-rgb), 0.19);
 
                             & img {
                                 width: 100%;
@@ -625,7 +625,7 @@ body {
                             }
 
                             &:hover {
-                                box-shadow: 0 10px 20px rgba(@black-rgb, 0.19), 0 6px 6px;
+                                box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
                             }
                         }
                     }
@@ -669,7 +669,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;
-                    background: @gray;
+                    background: var(--gray);
                     width: 100px;
                     height: 1px;
                     margin: auto;
@@ -683,7 +683,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;
-                    background: @gray;
+                    background: var(--gray);
                     width: 100%;
                     height: 1px;
                     margin: auto;
@@ -701,7 +701,7 @@ body {
 
                 .design_item {
                     width: 18%;
-                    color: @fontColor;
+                    color: var(--fontColor);
                     cursor: pointer;
                     margin: 0.3rem;
                     padding: 0.5rem;
@@ -725,8 +725,8 @@ body {
 
                     &:hover {
                         position: relative;
-                        background: rgba(@white, .9);
-                        box-shadow: 0 10px 20px rgba(@black-rgb, 0.19), 0 6px 6px rgba(@black-rgb, 0.23);
+                        background: rgba(var(--white), .9);
+                        box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px rgba(var(--black-rgb), 0.23);
                         z-index: 10;
                     }
                 }
@@ -744,13 +744,13 @@ body {
                 .colophon_inner_top {
                     .flexbox(row, flex-start, space-between);
                     width: 100%;
-                    border-top: 1px solid @gray;
+                    border-top: 1px solid var(--gray);
                     padding: 1.5rem 0;
 
                     .colophon_inner_top_left {
                         width: 50%;
                         padding-right: 1.5rem;
-                        border-right: 1px solid @gray;
+                        border-right: 1px solid var(--gray);
 
                         .colophon_inner_top_left_header {
                             width: 50%;
@@ -770,7 +770,7 @@ body {
 
                             .menu_item {
                                 position: relative;
-                                color: @fontColor;
+                                color: var(--fontColor);
                                 cursor: pointer;
                                 margin: 0.5rem;
 
@@ -781,7 +781,7 @@ body {
                                     bottom: -5px;
                                     width: 100%;
                                     height: 1px;
-                                    background: @gray;
+                                    background: var(--gray);
                                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                                     .scaleX(0);
                                     .transform-origin(right);
@@ -812,7 +812,7 @@ body {
 
                         .colophon_inner_top_right_header {
                             font-size: 2.5rem;
-                            color: @black;
+                            color: var(--black);
                         }
 
                         .colophon_inner_top_right_contact {
@@ -829,7 +829,7 @@ body {
 
                                 & a {
                                     position: relative;
-                                    color: @fontColor;
+                                    color: var(--fontColor);
                                     margin-right: 1rem;
                                     .link-default();
                                     .ease(.3s);
@@ -841,7 +841,7 @@ body {
                                         bottom: -5px;
                                         width: 100%;
                                         height: 1px;
-                                        background: @gray;
+                                        background: var(--gray);
                                         .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                                         .scaleX(0);
                                         .transform-origin(right);
@@ -874,7 +874,7 @@ body {
                     width: 100%;
                     text-align: center;
                     padding-top: 1.5rem;
-                    border-top: 1px solid @gray;
+                    border-top: 1px solid var(--gray);
                 }
             }
         }
@@ -889,7 +889,7 @@ body {
             .ease(.2s);
 
             &:hover {
-                color: @yellow;
+                color: var(--yellow);
             }
         }
     }

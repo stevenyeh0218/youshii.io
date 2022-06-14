@@ -1,4 +1,13 @@
+:root {
+  --bgcolor: #fdf9f7;
+  --fontColor: #666666;
+  --white: #ffffff;
+  --gray: #686868;
+  --black: #303030;
+  --yellow: #d8c7ac;
+  --blue: #e6f2ff;
+  /* color rgb */
+  --black-rgb: 48,48,48;
+}
 /* font size */
-/* color hex */
-/* color rgb */
 /* fill width */
