@@ -29,9 +29,18 @@
     transform: translateY(-15px);
   }
 }
+:root {
+  --bgcolor: #fdf9f7;
+  --fontColor: #666666;
+  --white: #ffffff;
+  --gray: #686868;
+  --black: #303030;
+  --yellow: #d8c7ac;
+  --blue: #e6f2ff;
+  /* color rgb */
+  --black-rgb: 48,48,48;
+}
 /* font size */
-/* color hex */
-/* color rgb */
 /* fill width */
 @media (max-width: 1366px) {
   body #wrapper .banner {
@@ -197,7 +206,7 @@
     top: 0;
     width: 20%;
     height: 100%;
-    background: #fdf9f7;
+    background: var(--bgcolor);
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -o-transform: scaleX(0);
@@ -212,7 +221,7 @@
     top: 0;
     width: 80.05%;
     height: 100%;
-    background: #e6f2ff;
+    background: var(--blue);
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -o-transform: scaleX(0);
@@ -587,6 +596,7 @@
     padding: 44px 16px 44px 5%;
   }
   body #wrapper .appProject .appProjectList .appProjectItem {
+    padding: 0;
     width: 100%;
   }
   body #wrapper .appProject .appProjectList .appProjectItem .appProjectItem-cover:hover {
@@ -600,6 +610,10 @@
   }
   body #wrapper .appProject .appProjectList .appProjectItem .guideline {
     font-size: 0.8rem;
+  }
+  body #wrapper .appProject .appProject_info .appProject_info_closeBtn {
+    top: 24px;
+    right: 24px;
   }
   body #wrapper .project:before {
     height: 85%;

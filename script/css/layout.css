@@ -30,15 +30,24 @@
     transform: translateY(-15px);
   }
 }
+:root {
+  --bgcolor: #fdf9f7;
+  --fontColor: #666666;
+  --white: #ffffff;
+  --gray: #686868;
+  --black: #303030;
+  --yellow: #d8c7ac;
+  --blue: #e6f2ff;
+  /* color rgb */
+  --black-rgb: 48,48,48;
+}
 /* font size */
-/* color hex */
-/* color rgb */
 /* fill width */
 body {
-  background: #ffffff;
+  background: var(--bgcolor);
   width: 100%;
   height: 100vh;
-  color: #666666;
+  color: var(--fontColor);
   font-family: 'Noto Sans TC' !important;
   font-size: 1rem;
 }
@@ -50,7 +59,7 @@ body::-webkit-scrollbar-track {
   background-color: transparent;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #686868;
+  background-color: var(--gray);
   border-radius: 16px;
   border: 2px solid transparent;
 }
@@ -79,7 +88,7 @@ body #loading {
   -o-justify-content: center;
   justify-content: center;
   position: fixed;
-  background: #ffffff;
+  background: var(--bgcolor);
   width: 100%;
   height: 100%;
   z-index: 99999;
@@ -211,7 +220,7 @@ body .header .menu {
 }
 body .header .menu .menu_item {
   position: relative;
-  color: #666666;
+  color: var(--fontColor);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -227,7 +236,7 @@ body .header .menu .menu_item {
 body .header .menu .menu_item::after {
   content: '';
   position: absolute;
-  background: #686868;
+  background: var(--gray);
   left: 0;
   bottom: -5px;
   width: 100%;
@@ -277,7 +286,7 @@ body .header .menu .nav_line {
   display: block;
   height: 1px;
   width: 10px;
-  background: #303030;
+  background: var(--black);
   margin: 3px 14px 0 12px;
   -webkit-transition: transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1);
   -moz-transition: transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -320,7 +329,7 @@ body .header .sns::before {
   content: '';
   display: block;
   position: relative;
-  background: #303030;
+  background: var(--black);
   width: 30px;
   margin-right: 5px;
   height: 1px;
@@ -336,7 +345,7 @@ body .header .sns::before {
 }
 body .header .sns a {
   position: relative;
-  color: #666666;
+  color: var(--fontColor);
   margin-left: 10px;
   text-decoration: none;
   outline: none;
@@ -354,7 +363,7 @@ body .header .sns a {
 body .header .sns a::after {
   content: '';
   position: absolute;
-  background: #686868;
+  background: var(--gray);
   width: 100%;
   height: 1px;
   left: 0;
@@ -406,7 +415,7 @@ body .header .m_nav_switch::before {
   content: '';
   display: block;
   position: relative;
-  background: #303030;
+  background: var(--black);
   width: 30px;
   height: 1px;
   top: 9px;
@@ -426,7 +435,7 @@ body .header .m_nav_switch::before {
 }
 body .header .m_nav_switch .m_open_btn {
   position: absolute;
-  color: #666666;
+  color: var(--fontColor);
   margin-left: 10px;
   text-decoration: none;
   outline: none;
@@ -437,7 +446,7 @@ body .header .m_nav_switch .m_open_btn {
 }
 body .header .m_nav_switch .m_close_btn {
   position: absolute;
-  color: #666666;
+  color: var(--fontColor);
   margin-left: 10px;
   text-decoration: none;
   outline: none;
@@ -551,7 +560,7 @@ body #wrapper .banner .banner_inner .message {
   transition: all 0.3s linear;
 }
 body #wrapper .banner .banner_inner .message .message_line {
-  background: #666666;
+  background: var(--fontColor);
   width: 56rem;
   height: 0.1rem;
   margin-bottom: 1rem;
@@ -607,7 +616,7 @@ body #wrapper .about > h2:before {
   width: 100px;
   height: 1px;
   margin-top: 0;
-  background-color: #686868;
+  background-color: var(--gray);
 }
 body #wrapper .about .about_inner {
   padding-top: 3rem;
@@ -636,7 +645,7 @@ body #wrapper .skill > h2:before {
   width: 1px;
   height: 100px;
   margin-top: 0;
-  background-color: #686868;
+  background-color: var(--gray);
 }
 body #wrapper .skill .skill_inner {
   display: -webkit-flex;
@@ -746,7 +755,7 @@ body #wrapper .appProject:before {
   display: block;
   content: '';
   position: absolute;
-  background-color: #e6f2ff;
+  background-color: var(--blue);
   width: 70.7%;
   height: 58%;
   margin-left: 29.3%;
@@ -770,7 +779,7 @@ body #wrapper .appProject > h2:before {
   width: 1px;
   height: 100px;
   margin-top: 0;
-  background-color: #686868;
+  background-color: var(--gray);
 }
 body #wrapper .appProject .appProjectList {
   display: -webkit-flex;
@@ -853,7 +862,7 @@ body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   letter-spacing: 2.5px;
 }
 body #wrapper .appProject .appProjectList .appProjectItem:hover {
-  box-shadow: 0 10px 20px rgba(48, 48, 48, 0.19), 0 6px 6px;
+  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
 }
 body #wrapper .appProject .appProject_info {
   display: -webkit-flex;
@@ -877,7 +886,7 @@ body #wrapper .appProject .appProject_info {
   -o-justify-content: center;
   justify-content: center;
   position: fixed;
-  background: rgba(48, 48, 48, 0.5);
+  background: rgba(var(--black-rgb), 0.5);
   backdrop-filter: blur(2em);
   width: 100vw;
   height: 100vh;
@@ -901,7 +910,7 @@ body #wrapper .appProject .appProject_info_closeBtn {
   position: absolute;
   top: 44px;
   right: 44px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -909,7 +918,7 @@ body #wrapper .appProject .appProject_info_closeBtn {
   transition: all 0.2s ease;
 }
 body #wrapper .appProject .appProject_info_closeBtn:hover {
-  color: #d8c7ac;
+  color: var(--yellow);
 }
 body #wrapper .appProject .appProject_info > img {
   position: absolute;
@@ -941,7 +950,7 @@ body #wrapper .project:before {
   width: 85%;
   height: 80%;
   margin: auto;
-  border: 1px solid #686868;
+  border: 1px solid var(--gray);
   top: 10%;
   left: 0;
   right: 0;
@@ -957,7 +966,7 @@ body #wrapper .project > h2:before {
   display: block;
   content: '';
   position: absolute;
-  background: #686868;
+  background: var(--gray);
   width: 1px;
   height: 100px;
   margin: auto;
@@ -970,7 +979,7 @@ body #wrapper .project > h2:before {
 body #wrapper .project > h2:after {
   content: '';
   position: absolute;
-  background: #ffffff;
+  background: var(--white);
   top: 4rem;
   left: 0;
   right: 0;
@@ -1026,7 +1035,7 @@ body #wrapper .project .project_inner .project_item {
   -ms-justify-content: flex-start;
   -o-justify-content: flex-start;
   justify-content: flex-start;
-  background: #ffffff;
+  background: var(--bgcolor);
   width: 27%;
 }
 body #wrapper .project .project_inner .project_item .project_link {
@@ -1036,14 +1045,14 @@ body #wrapper .project .project_inner .project_item .project_link a {
   display: block;
   width: 100%;
   height: 100%;
-  color: rgba(48, 48, 48, 0.19);
+  color: rgba(var(--black-rgb), 0.19);
 }
 body #wrapper .project .project_inner .project_item .project_link a img {
   width: 100%;
   height: 100%;
 }
 body #wrapper .project .project_inner .project_item .project_link a:hover {
-  box-shadow: 0 10px 20px rgba(48, 48, 48, 0.19), 0 6px 6px;
+  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
 }
 body #wrapper .project .project_inner .project_item .project_info {
   margin-top: 22px;
@@ -1077,7 +1086,7 @@ body #wrapper .design > h2:before {
   display: block;
   content: '';
   position: absolute;
-  background: #686868;
+  background: var(--gray);
   width: 100px;
   height: 1px;
   margin: auto;
@@ -1090,7 +1099,7 @@ body #wrapper .design > h2:after {
   display: block;
   content: '';
   position: absolute;
-  background: #686868;
+  background: var(--gray);
   width: 100%;
   height: 1px;
   margin: auto;
@@ -1125,7 +1134,7 @@ body #wrapper .design .design_inner {
 }
 body #wrapper .design .design_inner .design_item {
   width: 18%;
-  color: #666666;
+  color: var(--fontColor);
   cursor: pointer;
   margin: 0.3rem;
   padding: 0.5rem;
@@ -1148,8 +1157,8 @@ body #wrapper .design .design_inner .design_item .design_info .design_title {
 }
 body #wrapper .design .design_inner .design_item:hover {
   position: relative;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 20px rgba(48, 48, 48, 0.19), 0 6px 6px rgba(48, 48, 48, 0.23);
+  background: rgba(var(--white), 0.9);
+  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px rgba(var(--black-rgb), 0.23);
   z-index: 10;
 }
 body #wrapper .colophon {
@@ -1201,13 +1210,13 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top {
   -o-justify-content: space-between;
   justify-content: space-between;
   width: 100%;
-  border-top: 1px solid #686868;
+  border-top: 1px solid var(--gray);
   padding: 1.5rem 0;
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left {
   width: 50%;
   padding-right: 1.5rem;
-  border-right: 1px solid #686868;
+  border-right: 1px solid var(--gray);
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left .colophon_inner_top_left_header {
   width: 50%;
@@ -1244,7 +1253,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left .colophon_inner_top_left_menu .menu_item {
   position: relative;
-  color: #666666;
+  color: var(--fontColor);
   cursor: pointer;
   margin: 0.5rem;
 }
@@ -1255,7 +1264,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
   bottom: -5px;
   width: 100%;
   height: 1px;
-  background: #686868;
+  background: var(--gray);
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -1303,7 +1312,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_right .colophon_inner_top_right_header {
   font-size: 2.5rem;
-  color: #000;
+  color: var(--black);
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_right .colophon_inner_top_right_contact {
   display: -webkit-flex;
@@ -1356,7 +1365,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_right .colophon_inner_top_right_contact .colophon_inner_top_right_contact_item a {
   position: relative;
-  color: #666666;
+  color: var(--fontColor);
   margin-right: 1rem;
   text-decoration: none;
   outline: none;
@@ -1372,7 +1381,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
   bottom: -5px;
   width: 100%;
   height: 1px;
-  background: #686868;
+  background: var(--gray);
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -1416,7 +1425,7 @@ body #wrapper .colophon .colophon_inner .colophon_inner_bottom {
   width: 100%;
   text-align: center;
   padding-top: 1.5rem;
-  border-top: 1px solid #686868;
+  border-top: 1px solid var(--gray);
 }
 body #wrapper #topbtn {
   position: fixed;
@@ -1431,7 +1440,7 @@ body #wrapper #topbtn {
   transition: all 0.2s ease;
 }
 body #wrapper #topbtn:hover {
-  color: #d8c7ac;
+  color: var(--yellow);
 }
 @keyframes slide {
   25% {

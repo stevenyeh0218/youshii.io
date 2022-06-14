@@ -177,7 +177,6 @@
 }
 
 @media (max-width:991px) {
-    body {}
 }
 
 @media (max-width:768px) {
@@ -195,7 +194,7 @@
                 top: 0;
                 width: 20%;
                 height: 100%;
-                background: @white2;
+                background: var(--bgcolor);
                 .scaleX(0);
                 transition: 0.35s cubic-bezier(0.08, 0.92, 0.35, 1);
             }
@@ -208,7 +207,7 @@
                 top: 0;
                 width: 80.05%;
                 height: 100%;
-                background: @blue;
+                background: var(--blue);
                 .scaleX(0);
                 transition: 0.5s cubic-bezier(0.79, 0.17, 0.15, 0.96);
             }
@@ -562,6 +561,7 @@
                     flex-direction: column;
                     padding: 44px 16px 44px 5%;
                     .appProjectItem{
+                        padding: 0;
                         width: 100%;
                         
                         .appProjectItem-cover{
@@ -577,6 +577,12 @@
                         .guideline{
                             font-size: 0.8rem;
                         }
+                    }
+                }
+                .appProject_info{
+                    .appProject_info_closeBtn{
+                        top:24px;
+                        right:24px;
                     }
                 }
             }

@@ -1,10 +1,10 @@
-/* APP_1 */
+/* ML */
 $(".appAproject_app_1").click(function(){
     $(".appProject_info").addClass("active");
     $(".appProject_info_app_1").addClass("imgShow");
 })
 
-/* APP_2 */
+/* WEBPAT */
 $(".appAproject_app_2").click(function(){
     $(".appProject_info").addClass("active");
     $(".appProject_info_app_2").addClass("imgShow");
