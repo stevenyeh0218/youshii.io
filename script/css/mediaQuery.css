@@ -702,6 +702,9 @@
     -webkit-filter: invert(7 1);
     -o-filter: invert(1);
   }
+  body .header .sns .mode-select {
+    display: none;
+  }
   body #wrapper .banner .banner_inner .youshiiDesignLoop > img {
     filter: invert(1);
     -moz-filter: invert(1);
