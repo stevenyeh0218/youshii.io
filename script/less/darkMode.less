@@ -1,0 +1,50 @@
+@import './mixins/_allMixins.less';
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/* dark mode */
+.dark{
+    --bgcolor: #333333;
+    --fontColor: #ffffff;
+    --black: #ffffff;
+    --white: #333333;
+    --gray: #ffffff;
+    --blue: #295768;
+
+    #loading{
+        & > object{
+            .filter-invert(1);
+        }
+    }
+
+    .header{
+        .logo{
+            .filter-invert(1);
+        }
+    }
+
+    #wrapper{ 
+        .banner{
+            .banner_inner {
+                .youshiiDesignLoop{ 
+                    & > img{
+                        .filter-invert(1);
+                    }
+                }
+            }
+        }
+        .colophon{ 
+            .colophon_inner{
+                .colophon_inner_top{
+                    .colophon_inner_top_left{
+                        .colophon_inner_top_left_header{ 
+                            & > img{
+                                .filter-invert(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+    } 
+}
+/* dark mode end*/

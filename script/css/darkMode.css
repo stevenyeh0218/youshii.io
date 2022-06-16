@@ -1,0 +1,80 @@
+/** animate **/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+:root {
+  --bgcolor: #fdf9f7;
+  --fontColor: #666666;
+  --white: #ffffff;
+  --gray: #686868;
+  --black: #303030;
+  --yellow: #d8c7ac;
+  --blue: #e6f2ff;
+  /* color rgb */
+  --black-rgb: 48,48,48;
+}
+/* font size */
+/* fill width */
+/* scrollbar style */
+/* dark mode */
+.dark {
+  --bgcolor: #333333;
+  --fontColor: #ffffff;
+  --black: #ffffff;
+  --white: #333333;
+  --gray: #ffffff;
+  --blue: #295768;
+}
+.dark #loading > object {
+  filter: invert(1);
+  -moz-filter: invert(1);
+  -webkit-filter: invert(7 1);
+  -o-filter: invert(1);
+}
+.dark .header .logo {
+  filter: invert(1);
+  -moz-filter: invert(1);
+  -webkit-filter: invert(7 1);
+  -o-filter: invert(1);
+}
+.dark #wrapper .banner .banner_inner .youshiiDesignLoop > img {
+  filter: invert(1);
+  -moz-filter: invert(1);
+  -webkit-filter: invert(7 1);
+  -o-filter: invert(1);
+}
+.dark #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left .colophon_inner_top_left_header > img {
+  filter: invert(1);
+  -moz-filter: invert(1);
+  -webkit-filter: invert(7 1);
+  -o-filter: invert(1);
+}
+/* dark mode end*/

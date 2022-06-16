@@ -1,0 +1,55 @@
+@import './mixins/_allMixins.less';
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/* loading translate */
+.scaleLoading {
+    .scale(3);
+}
+/* loading translate end */
+
+/* menu translate */
+.animate-translateX {
+    .show() !important;
+    .translateX(0) !important;
+}
+
+.animate-translateY {
+    .show() !important;
+    .translateY(0) !important;
+}
+
+.animate-scale {
+    .show() !important;
+    .scale(1) !important;
+}
+
+.animate-show {
+    .show() !important;
+}
+/* menu translate end */
+
+
+@keyframes slide {
+    25% {
+        .show();
+    }
+
+    50% {
+        .transform(rotate(-2.5deg) scale(1.1));
+    }
+
+    100% {
+        .hide();
+    }
+}
+
+
+@keyframes infinity_slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-1692px, 0, 0);
+    }
+}
