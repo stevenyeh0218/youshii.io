@@ -44,16 +44,6 @@
 /* font size */
 /* fill width */
 /* scrollbar style */
-/* dark mode */
-.dark {
-  --bgcolor: #333333;
-  --fontColor: #ffffff;
-  --black: #ffffff;
-  --white: #333333;
-  --gray: #ffffff;
-  --blue: #295768;
-}
-/* dark mode end*/
 body {
   background: var(--bgcolor);
   width: 100%;
@@ -1513,6 +1503,16 @@ body #wrapper #topbtn {
 body #wrapper #topbtn:hover {
   color: var(--yellow);
 }
+/* dark mode */
+.dark {
+  --bgcolor: #333333;
+  --fontColor: #ffffff;
+  --black: #ffffff;
+  --white: #333333;
+  --gray: #ffffff;
+  --blue: #295768;
+}
+/* dark mode end*/
 @keyframes slide {
   25% {
     opacity: 1;
