@@ -42,6 +42,7 @@
 }
 /* font size */
 /* fill width */
+/* scrollbar style */
 @media (max-width: 1366px) {
   body #wrapper .banner {
     height: 70vh;
@@ -469,7 +470,7 @@
   body .header .sns {
     font-size: 1.5rem;
     margin-right: 0;
-    bottom: 16%;
+    bottom: 5%;
   }
   body .header .m_nav_switch {
     right: 0;

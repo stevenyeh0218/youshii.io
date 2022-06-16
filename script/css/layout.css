@@ -43,6 +43,27 @@
 }
 /* font size */
 /* fill width */
+/* scrollbar style */
+/* dark mode */
+.dark {
+  --bgcolor: #333333;
+  --fontColor: #ffffff;
+  --black: #ffffff;
+  --white: #333333;
+  --gray: #ffffff;
+  --blue: #295768;
+}
+/* dark mode end*/
+/* auto dark mode */
+@media (prefers-color-scheme: dark) {
+  --bgcolor: #333333;
+  --fontColor: #ffffff;
+  --black: #ffffff;
+  --white: #333333;
+  --gray: #ffffff;
+  --blue: #295768;
+}
+/* auto dark mode */
 body {
   background: var(--bgcolor);
   width: 100%;
@@ -343,9 +364,10 @@ body .header .sns::before {
   -o-transform-origin: left;
   transform-origin: left;
 }
-body .header .sns a {
+body .header .sns .mode-select {
   position: relative;
   color: var(--fontColor);
+  cursor: pointer;
   margin-left: 10px;
   text-decoration: none;
   outline: none;
@@ -360,7 +382,7 @@ body .header .sns a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-body .header .sns a::after {
+body .header .sns .mode-select::after {
   content: '';
   position: absolute;
   background: var(--gray);
@@ -381,13 +403,72 @@ body .header .sns a::after {
   -o-transform-origin: right;
   transform-origin: right;
 }
-body .header .sns a:hover {
+body .header .sns .mode-select:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-body .header .sns a:hover:after {
+body .header .sns .mode-select:hover:after {
+  -webkit-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
+  -moz-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
+  transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -o-transform-origin: left;
+  transform-origin: left;
+}
+body .header .sns > a {
+  position: relative;
+  color: var(--fontColor);
+  cursor: pointer;
+  margin-left: 10px;
+  text-decoration: none;
+  outline: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body .header .sns > a::after {
+  content: '';
+  position: absolute;
+  background: var(--gray);
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
+  -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
+  -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
+  transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  -moz-transform-origin: right;
+  -o-transform-origin: right;
+  transform-origin: right;
+}
+body .header .sns > a:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+body .header .sns > a:hover:after {
   -webkit-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -moz-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -o-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -862,7 +943,7 @@ body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   letter-spacing: 2.5px;
 }
 body #wrapper .appProject .appProjectList .appProjectItem:hover {
-  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
+  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19);
 }
 body #wrapper .appProject .appProject_info {
   display: -webkit-flex;

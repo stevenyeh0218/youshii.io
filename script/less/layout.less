@@ -1,6 +1,29 @@
 @import './mixins/_allMixins.less';
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+
+/* dark mode */
+.dark{
+    --bgcolor: #333333;
+    --fontColor: #ffffff;
+    --black: #ffffff;
+    --white: #333333;
+    --gray: #ffffff;
+    --blue: #295768;
+}
+/* dark mode end*/
+
+/* auto dark mode */
+@media (prefers-color-scheme: dark) {
+    --bgcolor: #333333;
+    --fontColor: #ffffff;
+    --black: #ffffff;
+    --white: #333333;
+    --gray: #ffffff;
+    --blue: #295768;
+}
+/* auto dark mode */
+
 body {
 
     background: var(--bgcolor);
@@ -146,9 +169,10 @@ body {
                 .transform-origin(left);
             }
 
-            & a {
+            .mode-select{
                 position: relative;
                 color: var(--fontColor);
+                cursor: pointer;
                 margin-left: 10px;
                 .link-default();
                 .hide();
@@ -177,6 +201,10 @@ body {
                         .transform-origin(left);
                     }
                 }
+            }
+
+            & > a {
+                .mode-select;
             }
         }
 
@@ -499,7 +527,7 @@ body {
                     }
 
                     &:hover {
-                        box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
+                        box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19);
                     }
                 }
             }
