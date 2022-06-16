@@ -40,6 +40,7 @@
   --blue: #e6f2ff;
   /* color rgb */
   --black-rgb: 48,48,48;
+  --popwindow-bg: 48,48,48;
 }
 /* font size */
 /* fill width */
@@ -568,8 +569,6 @@ body #wrapper .banner .banner_inner .message {
   position: absolute;
   width: auto;
   font-size: 0.8rem;
-  text-align: left;
-  text-shadow: -1px 0 #f1ece6, 0 1px #f1ece6, 1px 0 #f1ece6, 0 -1px #f1ece6;
   letter-spacing: 1.17px;
   line-height: 1.5em;
   left: -13rem;
@@ -889,7 +888,9 @@ body #wrapper .appProject .appProjectList .appProjectItem > h3 {
   letter-spacing: 2.5px;
 }
 body #wrapper .appProject .appProjectList .appProjectItem:hover {
-  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  -moz-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
 }
 body #wrapper .appProject .appProject_info {
   display: -webkit-flex;
@@ -913,8 +914,9 @@ body #wrapper .appProject .appProject_info {
   -o-justify-content: center;
   justify-content: center;
   position: fixed;
-  background: rgba(var(--black-rgb), 0.5);
+  background: rgba(var(--popwindow-bg), 0.5);
   backdrop-filter: blur(2em);
+  -webkit-backdrop-filter: blur(2em);
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -1078,7 +1080,9 @@ body #wrapper .project .project_inner .project_item .project_link a img {
   height: 100%;
 }
 body #wrapper .project .project_inner .project_item .project_link a:hover {
-  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  -moz-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
 }
 body #wrapper .project .project_inner .project_item .project_info {
   margin-top: 22px;
@@ -1183,8 +1187,9 @@ body #wrapper .design .design_inner .design_item .design_info .design_title {
 }
 body #wrapper .design .design_inner .design_item:hover {
   position: relative;
-  background: rgba(var(--white), 0.9);
-  box-shadow: 0 10px 20px rgba(var(--black-rgb), 0.19), 0 6px 6px rgba(var(--black-rgb), 0.23);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  -moz-box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
+  box-shadow: 0 10px 20px 0 rgba(var(--black-rgb), 0.19);
   z-index: 10;
 }
 body #wrapper .colophon {
