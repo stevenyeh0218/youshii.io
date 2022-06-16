@@ -1006,7 +1006,6 @@ body #wrapper .project > h2:before {
 body #wrapper .project > h2:after {
   content: '';
   position: absolute;
-  background: var(--white);
   top: 4rem;
   left: 0;
   right: 0;
