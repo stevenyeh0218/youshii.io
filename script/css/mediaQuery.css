@@ -690,5 +690,29 @@
     --gray: #ffffff;
     --blue: #295768;
   }
+  body #loading > object {
+    filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(7 1);
+    -o-filter: invert(1);
+  }
+  body .header .logo {
+    filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(7 1);
+    -o-filter: invert(1);
+  }
+  body #wrapper .banner .banner_inner .youshiiDesignLoop > img {
+    filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(7 1);
+    -o-filter: invert(1);
+  }
+  body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left .colophon_inner_top_left_header > img {
+    filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(7 1);
+    -o-filter: invert(1);
+  }
 }
 /* auto dark mode */
