@@ -66,11 +66,9 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    background: var(--gray);
+                    .pseudo-line(var(--gray),100%,1px);
                     left: 0;
                     bottom: -5px;
-                    width: 100%;
-                    height: 1px;
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                     .scaleX(0);
                     .transform-origin(right);
@@ -308,7 +306,8 @@ body {
                     display: block;
                     content: '';
                     position: absolute;    
-                    .h2-line(var(--gray),100px,1px);
+                    .pseudo-line(var(--gray),100px,1px);
+                    margin-top: 0;
                     left: 0;
                     bottom: -36%;
                 }
@@ -338,7 +337,8 @@ body {
                     display: block;
                     content: '';
                     position: absolute;                    
-                    .h2-line(var(--gray),1px,100px);
+                    .pseudo-line(var(--gray),1px,100px);
+                    margin-top:0px;
                     top: 8px;
                     left: 26%;
                 }
@@ -435,7 +435,8 @@ body {
                     display: block;
                     content: '';
                     position: absolute;                    
-                    .h2-line(var(--gray),1px,100px);
+                    .pseudo-line(var(--gray),1px,100px);
+                    margin-top:0;
                     top: 8px;
                     left: 10%;
                 }
@@ -545,8 +546,9 @@ body {
                     display: block;
                     content: '';
                     position: absolute;        
+                    .pseudo-line(var(--gray),1px,100px);    
                     margin: auto;            
-                    .h2-line(var(--gray),1px,100px);                    
+                    margin-top: 0;                
                     top: 4rem;
                     left: 0;
                     right: 0;
@@ -635,9 +637,10 @@ body {
                 &:before {
                     display: block;
                     content: '';
-                    position: absolute;
-                    margin: auto;                    
-                    .h2-line(var(--gray),1px,100px);      
+                    position: absolute;        
+                    .pseudo-line(var(--gray),1px,100px);   
+                    margin: auto;            
+                    margin-top:0;   
                     top: 4.5rem;
                     right: 13rem;
                     z-index: 1;
