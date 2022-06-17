@@ -1130,9 +1130,9 @@ body #wrapper .design > h2:after {
   display: block;
   content: '';
   position: absolute;
-  background: var(--gray);
-  width: 100%;
-  height: 1px;
+  background-color: var(--gray);
+  width: 1px;
+  height: 100px;
   margin: auto;
   margin-top: 0;
   top: 5.5rem;
