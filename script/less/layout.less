@@ -2,36 +2,28 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 body {
-
-    background: var(--bgcolor);
-    width: 100%;
-    height: 100vh;
+    .bgwh(var(--bgcolor),100%,100vh);
     color: var(--fontColor);
     font-family: 'Noto Sans TC' !important;
     font-size: @fontSize;
     .mac-scrollbar-style();
 
     #loading {
-        .flexbox(row, center, center);
         position: fixed;
-        background: var(--bgcolor);
-        width: 100%;
-        height: 100%;
+        .flexbox(row, center, center);
+        .bgwh(var(--bgcolor),100%,100%);
         z-index: 99999;
         .ease(2s);
 
         object {
-            width: 30%;
-            height: 30%;
-
+            .wh(30%,30%);
         }
     }
 
     .header {
         position: fixed;
         .flexbox(row, center, space-between);
-        height: 120px;
-        width: 100vw;
+        .wh(100vw,120px);
         top: 0;
         left: 0;
         z-index: 100;
@@ -43,16 +35,13 @@ body {
             .link-default();
 
             & img {
-
-                width: 100%;
-                height: 100%;
+                .wh(100%,100%);
             }
         }
 
         .menu {
             .flexbox(row, center, flex-end);
-            width: 100%;
-            height: 21px;
+            .wh(100%,21px);
             padding-right: 14px;
 
             .menu_item {
@@ -66,7 +55,7 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    .pseudo-line(var(--gray),100%,1px);
+                    .bgwh(var(--gray),100%,1px);
                     left: 0;
                     bottom: -5px;
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
@@ -93,9 +82,7 @@ body {
 
             .nav_line {
                 display: block;
-                height: 1px;
-                width: 10px;
-                background: var(--black);
+                .bgwh(var(--black),10px,1px);
                 margin: 3px 14px 0 12px;
                 .transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
                 .transform-origin(left bottom);
@@ -112,10 +99,8 @@ body {
                 content: '';
                 display: block;
                 position: relative;
-                background: var(--black);
-                width: 30px;
+                .bgwh(var(--black),30px,1px);
                 margin-right: 5px;
-                height: 1px;
                 top: 1px;
                 .transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
                 .transform-origin(left);
@@ -134,7 +119,7 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    .pseudo-line(var(--gray),100%,1px);
+                    .bgwh(var(--gray),100%,1px);
                     left: 0;
                     bottom: -5px;
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
@@ -161,8 +146,7 @@ body {
         .m_nav_switch {
             display: none;
             position: absolute;
-            width: 65px;
-            height: 20px;
+            .wh(65px,20px);
             cursor: pointer;
             top: 50px;
             right: 20px;
@@ -172,9 +156,7 @@ body {
                 content: '';
                 display: block;
                 position: relative;
-                background: var(--black);
-                width: 30px;
-                height: 1px;
+                .bgwh(var(--black),30px,1px);
                 top: 9px;
                 right: 30px;
                 .transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
@@ -208,22 +190,20 @@ body {
         .banner {
             position: relative;
             .flexbox(row, center, flex-end);
-            width: 100%;
-            height: 82vh;
+            .wh(100%,82vh);
 
             .banner_inner {
                 position: relative;
-                width: 70%;
-                height: 100%;
+                .wh(70%,100%);
 
 
                 .youshiiDesignLoop {
                     .flexbox(row, center, space-between);
                     position: absolute;
                     width: 100%;
-                    .scale(1.5);
                     opacity: 0.2 !important;
                     bottom: 20%;
+                    .scale(1.5);
                     .hide();
                     .linear(.3s);
                     z-index: 2;
@@ -253,9 +233,7 @@ body {
                     .linear(.3s);
 
                     .message_line {
-                        background: var(--fontColor);
-                        width: 56rem;
-                        height: 0.1rem;
+                        .bgwh(var(--fontColor),56rem,0.1rem);
                         margin-bottom: 1rem;
 
                     }
@@ -263,8 +241,7 @@ body {
 
                 .slideImg {
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
+                    .wh(100%,100%);
                     right: 0;
                     top: 0;
                     overflow: hidden;
@@ -274,8 +251,7 @@ body {
 
                     & img {
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
+                        .wh(100%,100%);
                         top: 0;
                         left: 0;
                         .hide();
@@ -304,7 +280,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;    
-                    .pseudo-line(var(--gray),100px,1px);
+                    .bgwh(var(--gray),100px,1px);
                     margin-top: 0;
                     left: 0;
                     bottom: -36%;
@@ -335,7 +311,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;                    
-                    .pseudo-line(var(--gray),1px,100px);
+                    .bgwh(var(--gray),1px,100px);
                     margin-top:0px;
                     top: 8px;
                     left: 26%;
@@ -350,22 +326,16 @@ body {
                     width: 18.5%;
 
                     & img {
-                        width: 100%;
-                        height: 100%;
+                        .wh(100%,100%);
                         object-fit: cover;
                     }
                 }
 
                 .skill_bg_right {
+                    .skill_bg;
                     width: 30%;
                     margin-left: 22rem;
                     margin-top: 20rem;
-
-                    & img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
                 }
 
                 .skill_list {
@@ -413,9 +383,7 @@ body {
                 display: block;
                 content: '';
                 position: absolute;
-                background-color: var(--blue);
-                width: 70.7%;
-                height: 58%;
+                .bgwh(var(--blue),70.7%,58%);
                 margin-left: 29.3%;
                 bottom: 0;
                 right: 0;
@@ -433,7 +401,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;                    
-                    .pseudo-line(var(--gray),1px,100px);
+                    .bgwh(var(--gray),1px,100px);
                     margin-top:0;
                     top: 8px;
                     left: 10%;
@@ -477,10 +445,8 @@ body {
             .appProject_info{
                 .flexbox(row,center,center);
                 position: fixed;
-                background: rgba(var(--popwindow-bg),.5);
+                .bgwh(rgba(var(--popwindow-bg),.5),100vw,100vh);
                 .background-blur(2em);
-                width: 100vw;
-                height: 100vh;
                 top:0;
                 left:0;
                 bottom:0;
@@ -502,8 +468,7 @@ body {
                 }
                 & > img{       
                     position: absolute;
-                    width: 90%;
-                    height: 90%;
+                    .wh(90%,90%);
                     object-fit: contain;
                     .hide();
                 }
@@ -524,8 +489,7 @@ body {
             &:before {
                 content: " ";
                 position: absolute;
-                width: 85%;
-                height: 80%;
+                .wh(85%,80%);
                 margin: auto;
                 border: 1px solid var(--gray);
                 top: 10%;
@@ -544,7 +508,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;        
-                    .pseudo-line(var(--gray),1px,100px);    
+                    .bgwh(var(--gray),1px,100px);    
                     margin: auto;            
                     margin-top: 0;                
                     top: 4rem;
@@ -556,12 +520,11 @@ body {
                 &:after {
                     content: '';
                     position: absolute;
+                    .wh(1rem,100px);
                     top: 4rem;
                     left: 0;
                     right: 0;
                     margin: auto;
-                    width: 1rem;
-                    height: 100px;
                 }
             }
 
@@ -582,13 +545,11 @@ body {
 
                         & a {
                             display: block;
-                            width: 100%;
-                            height: 100%;
+                            .wh(100%,100%);
                             color: rgba(var(--black-rgb), 0.19);
 
                             & img {
-                                width: 100%;
-                                height: 100%;
+                                .wh(100%,100%);
                             }
 
                             &:hover {
@@ -636,7 +597,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;        
-                    .pseudo-line(var(--gray),100px,1px);   
+                    .bgwh(var(--gray),100px,1px);   
                     margin: auto;            
                     margin-top:0;   
                     top: 4.5rem;
@@ -648,7 +609,7 @@ body {
                     display: block;
                     content: '';
                     position: absolute;                    
-                    .pseudo-line(var(--gray),100%,1px);   
+                    .bgwh(var(--gray),100%,1px);   
                     margin: auto;
                     margin-top: 0;
                     top: 5.5rem;
@@ -673,8 +634,7 @@ body {
 
                     .design_img {
                         & img {
-                            width: 100%;
-                            height: 100%;
+                            .wh(100%,100%);
                         }
                     }
 
@@ -718,14 +678,12 @@ body {
                             width: 50%;
 
                             & img {
-                                width: 100%;
-                                height: 100%;
+                                .wh(100%,100%);
                             }
                         }
 
                         .colophon_inner_top_left_menu {
-                            .flexbox(row, center, flex-start);
-                            flex-wrap: wrap;
+                            .flexbox-wrap(row,center,flex-start,wrap);
                             height: 100%;
                             cursor: pointer;
                             margin-top: 1.5rem;
@@ -739,7 +697,7 @@ body {
                                 &::after {
                                     content: '';
                                     position: absolute;
-                                    .pseudo-line(var(--gray),100px,1px);   
+                                    .bgwh(var(--gray),100px,1px);   
                                     left: 0;
                                     bottom: -5px;
                                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
@@ -797,11 +755,9 @@ body {
                                     &::after {
                                         content: '';
                                         position: absolute;
+                                        .bgwh(var(--gray),100%,1px);
                                         left: 0;
                                         bottom: -5px;
-                                        width: 100%;
-                                        height: 1px;
-                                        background: var(--gray);
                                         .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                                         .scaleX(0);
                                         .transform-origin(right);

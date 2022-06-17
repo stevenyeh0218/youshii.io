@@ -24,9 +24,15 @@
     width: stretch;
 }
 
-/* h2:before :after line */
-.pseudo-line(@bg,@w,@h){
-    background-color: @bg;
+/* bgColor width height default*/
+.bgwh(@bg,@w,@h){
+    background: @bg;
+    width: @w;
+    height: @h;
+}
+
+/*  width height default*/
+.wh(@w,@h){
     width: @w;
     height: @h;
 }
