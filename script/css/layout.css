@@ -333,7 +333,7 @@ body .header .sns .mode-select {
 body .header .sns .mode-select::after {
   content: '';
   position: absolute;
-  background: var(--gray);
+  background-color: var(--gray);
   width: 100%;
   height: 1px;
   left: 0;
@@ -392,7 +392,7 @@ body .header .sns > a {
 body .header .sns > a::after {
   content: '';
   position: absolute;
-  background: var(--gray);
+  background-color: var(--gray);
   width: 100%;
   height: 1px;
   left: 0;

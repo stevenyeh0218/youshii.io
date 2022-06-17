@@ -134,9 +134,7 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    background: var(--gray);
-                    width: 100%;
-                    height: 1px;
+                    .pseudo-line(var(--gray),100%,1px);
                     left: 0;
                     bottom: -5px;
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
