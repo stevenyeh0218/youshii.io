@@ -44,6 +44,7 @@
 }
 /* font size */
 /* fill width */
+/* h2:before :after line */
 /* scrollbar style */
 body {
   background: var(--bgcolor);
@@ -637,12 +638,12 @@ body #wrapper .about > h2:before {
   display: block;
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -36%;
+  background-color: var(--gray);
   width: 100px;
   height: 1px;
   margin-top: 0;
-  background-color: var(--gray);
+  left: 0;
+  bottom: -36%;
 }
 body #wrapper .about .about_inner {
   padding-top: 3rem;
@@ -666,12 +667,12 @@ body #wrapper .skill > h2:before {
   display: block;
   content: '';
   position: absolute;
-  top: 8px;
-  left: 26%;
+  background-color: var(--gray);
   width: 1px;
   height: 100px;
   margin-top: 0;
-  background-color: var(--gray);
+  top: 8px;
+  left: 26%;
 }
 body #wrapper .skill .skill_inner {
   display: -webkit-flex;
@@ -800,12 +801,12 @@ body #wrapper .appProject > h2:before {
   display: block;
   content: '';
   position: absolute;
-  top: 8px;
-  left: 10%;
+  background-color: var(--gray);
   width: 1px;
   height: 100px;
   margin-top: 0;
-  background-color: var(--gray);
+  top: 8px;
+  left: 10%;
 }
 body #wrapper .appProject .appProjectList {
   display: -webkit-flex;
@@ -995,10 +996,10 @@ body #wrapper .project > h2:before {
   display: block;
   content: '';
   position: absolute;
-  background: var(--gray);
+  margin: auto;
+  background-color: var(--gray);
   width: 1px;
   height: 100px;
-  margin: auto;
   margin-top: 0;
   top: 4rem;
   left: 0;
@@ -1116,10 +1117,10 @@ body #wrapper .design > h2:before {
   display: block;
   content: '';
   position: absolute;
-  background: var(--gray);
-  width: 100px;
-  height: 1px;
   margin: auto;
+  background-color: var(--gray);
+  width: 1px;
+  height: 100px;
   margin-top: 0;
   top: 4.5rem;
   right: 13rem;
