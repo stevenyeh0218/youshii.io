@@ -44,7 +44,7 @@ body {
             .wh(100%,21px);
             padding-right: 14px;
 
-            .menu_item {
+            &_item {
                 position: relative;
                 color: var(--fontColor);
                 cursor: pointer;
@@ -72,7 +72,7 @@ body {
                 }
             }
 
-            .menu_item_focus {
+            &_item_focus {
                 &:after {
                     .transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
                     .transform(scaleX(1) translateY(-11px));
@@ -192,7 +192,7 @@ body {
             .flexbox(row, center, flex-end);
             .wh(100%,82vh);
 
-            .banner_inner {
+            &_inner {
                 position: relative;
                 .wh(70%,100%);
 
@@ -272,9 +272,7 @@ body {
 
             &>h2 {
                 position: relative;
-                font-size: 3rem;
-                font-weight: lighter;
-                letter-spacing: 0.1em;
+                .font-style(3rem,lighter,0.1em);
 
                 &:before {
                     display: block;
@@ -286,7 +284,7 @@ body {
                     bottom: -36%;
                 }
             }
-            .about_inner{
+            &_inner{
                 padding-top: 3rem;
 
                 & > div{
@@ -302,9 +300,7 @@ body {
 
             &>h2 {
                 position: relative;
-                font-size: 3rem;
-                font-weight: lighter;
-                letter-spacing: 0.1em;
+                .font-style(3rem,lighter,0.1em);
                 padding-left: 27%;
 
                 &:before {
@@ -318,7 +314,7 @@ body {
                 }
             }
 
-            .skill_inner {
+            &_inner {
                 .flexbox(row, flex-start, space-between);
                 padding-top: 6rem;
 
@@ -392,9 +388,7 @@ body {
 
             &>h2 {
                 position: relative;
-                font-size: 3rem;
-                font-weight: lighter;
-                letter-spacing: 0.1em;
+                .font-style(3rem,lighter,0.1em);
                 padding-left: 11%;
 
                 &:before {
@@ -499,9 +493,7 @@ body {
 
             &>h2 {
                 position: relative;
-                font-size: 3rem;
-                font-weight: lighter;
-                letter-spacing: 0.1em;
+                .font-style(3rem,lighter,0.1em);
                 text-align: center;
 
                 &:before {
@@ -587,9 +579,7 @@ body {
 
             &>h2 {
                 position: relative;
-                font-size: 3rem;
-                font-weight: lighter;
-                letter-spacing: 0.1em;
+                .font-style(3rem,lighter,0.1em);
                 text-align: right;
                 padding-right: 13rem;
 

@@ -46,6 +46,7 @@
 /* fill width */
 /* bgColor width height default*/
 /*  width height default*/
+/*  h2 font style */
 /* scrollbar style */
 body {
   background: var(--bgcolor);
@@ -188,7 +189,7 @@ body .header .menu {
   height: 21px;
   padding-right: 14px;
 }
-body .header .menu .menu_item {
+body .header .menu_item {
   position: relative;
   color: var(--fontColor);
   cursor: pointer;
@@ -203,7 +204,7 @@ body .header .menu .menu_item {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-body .header .menu .menu_item::after {
+body .header .menu_item::after {
   content: '';
   position: absolute;
   background: var(--gray);
@@ -224,7 +225,7 @@ body .header .menu .menu_item::after {
   -o-transform-origin: right;
   transform-origin: right;
 }
-body .header .menu .menu_item:hover:after {
+body .header .menu_item:hover:after {
   -webkit-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -moz-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -o-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -238,7 +239,7 @@ body .header .menu .menu_item:hover:after {
   -o-transform-origin: left;
   transform-origin: left;
 }
-body .header .menu .menu_item_focus:after {
+body .header .menu_item_focus:after {
   -webkit-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -moz-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
   -o-transition: transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -518,12 +519,12 @@ body #wrapper .banner {
   width: 100%;
   height: 82vh;
 }
-body #wrapper .banner .banner_inner {
+body #wrapper .banner_inner {
   position: relative;
   width: 70%;
   height: 100%;
 }
-body #wrapper .banner .banner_inner .youshiiDesignLoop {
+body #wrapper .banner_inner .youshiiDesignLoop {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -560,14 +561,14 @@ body #wrapper .banner .banner_inner .youshiiDesignLoop {
   transition: all 0.3s linear;
   z-index: 2;
 }
-body #wrapper .banner .banner_inner .youshiiDesignLoop > img {
+body #wrapper .banner_inner .youshiiDesignLoop > img {
   width: 100%;
   animation: infinity_slide 30s linear infinite;
 }
-body #wrapper .banner .banner_inner .youshiiDesignLoop > img:last-child {
+body #wrapper .banner_inner .youshiiDesignLoop > img:last-child {
   margin-left: 5rem;
 }
-body #wrapper .banner .banner_inner .message {
+body #wrapper .banner_inner .message {
   position: absolute;
   width: auto;
   font-size: 0.8rem;
@@ -587,13 +588,13 @@ body #wrapper .banner .banner_inner .message {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-body #wrapper .banner .banner_inner .message .message_line {
+body #wrapper .banner_inner .message .message_line {
   background: var(--fontColor);
   width: 56rem;
   height: 0.1rem;
   margin-bottom: 1rem;
 }
-body #wrapper .banner .banner_inner .slideImg {
+body #wrapper .banner_inner .slideImg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -611,7 +612,7 @@ body #wrapper .banner .banner_inner .slideImg {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-body #wrapper .banner .banner_inner .slideImg img {
+body #wrapper .banner_inner .slideImg img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -621,7 +622,7 @@ body #wrapper .banner .banner_inner .slideImg img {
   visibility: hidden;
   animation: slide 10s infinite;
 }
-body #wrapper .banner .banner_inner .slideImg img:nth-child(2) {
+body #wrapper .banner_inner .slideImg img:nth-child(2) {
   animation-delay: 5s;
 }
 body #wrapper .about {
@@ -646,10 +647,10 @@ body #wrapper .about > h2:before {
   left: 0;
   bottom: -36%;
 }
-body #wrapper .about .about_inner {
+body #wrapper .about_inner {
   padding-top: 3rem;
 }
-body #wrapper .about .about_inner > div {
+body #wrapper .about_inner > div {
   margin-bottom: 16px;
   line-height: 1.5em;
 }
@@ -675,7 +676,7 @@ body #wrapper .skill > h2:before {
   top: 8px;
   left: 26%;
 }
-body #wrapper .skill .skill_inner {
+body #wrapper .skill_inner {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -698,82 +699,82 @@ body #wrapper .skill .skill_inner {
   justify-content: space-between;
   padding-top: 6rem;
 }
-body #wrapper .skill .skill_inner .skill_bg {
+body #wrapper .skill_inner .skill_bg {
   width: 18.5%;
 }
-body #wrapper .skill .skill_inner .skill_bg img {
+body #wrapper .skill_inner .skill_bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body #wrapper .skill .skill_inner .skill_bg_right {
+body #wrapper .skill_inner .skill_bg_right {
   width: 18.5%;
   width: 30%;
   margin-left: 22rem;
   margin-top: 20rem;
 }
-body #wrapper .skill .skill_inner .skill_bg_right img {
+body #wrapper .skill_inner .skill_bg_right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body #wrapper .skill .skill_inner .skill_list {
+body #wrapper .skill_inner .skill_list {
   margin-left: 13rem;
 }
-body #wrapper .skill .skill_inner .skill_list .communication_list {
+body #wrapper .skill_inner .skill_list .communication_list {
   font-size: 1rem;
   margin-bottom: 4rem;
 }
-body #wrapper .skill .skill_inner .skill_list .communication_list > h2 {
+body #wrapper .skill_inner .skill_list .communication_list > h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-body #wrapper .skill .skill_inner .skill_list .communication_list .skill_item {
+body #wrapper .skill_inner .skill_list .communication_list .skill_item {
   margin-bottom: 1rem;
 }
-body #wrapper .skill .skill_inner .skill_list .communication_list .skill_item:last-child {
+body #wrapper .skill_inner .skill_list .communication_list .skill_item:last-child {
   margin: 0;
 }
-body #wrapper .skill .skill_inner .skill_list .create_list {
+body #wrapper .skill_inner .skill_list .create_list {
   font-size: 1rem;
   margin-bottom: 4rem;
 }
-body #wrapper .skill .skill_inner .skill_list .create_list > h2 {
+body #wrapper .skill_inner .skill_list .create_list > h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-body #wrapper .skill .skill_inner .skill_list .create_list .skill_item {
+body #wrapper .skill_inner .skill_list .create_list .skill_item {
   margin-bottom: 1rem;
 }
-body #wrapper .skill .skill_inner .skill_list .create_list .skill_item:last-child {
+body #wrapper .skill_inner .skill_list .create_list .skill_item:last-child {
   margin: 0;
 }
-body #wrapper .skill .skill_inner .skill_list .technology_list {
+body #wrapper .skill_inner .skill_list .technology_list {
   font-size: 1rem;
   margin-bottom: 4rem;
 }
-body #wrapper .skill .skill_inner .skill_list .technology_list > h2 {
+body #wrapper .skill_inner .skill_list .technology_list > h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-body #wrapper .skill .skill_inner .skill_list .technology_list .skill_item {
+body #wrapper .skill_inner .skill_list .technology_list .skill_item {
   margin-bottom: 1rem;
 }
-body #wrapper .skill .skill_inner .skill_list .technology_list .skill_item:last-child {
+body #wrapper .skill_inner .skill_list .technology_list .skill_item:last-child {
   margin: 0;
 }
-body #wrapper .skill .skill_inner .skill_list .tool_list {
+body #wrapper .skill_inner .skill_list .tool_list {
   font-size: 1rem;
   margin-bottom: 4rem;
 }
-body #wrapper .skill .skill_inner .skill_list .tool_list > h2 {
+body #wrapper .skill_inner .skill_list .tool_list > h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-body #wrapper .skill .skill_inner .skill_list .tool_list .skill_item {
+body #wrapper .skill_inner .skill_list .tool_list .skill_item {
   margin-bottom: 1rem;
 }
-body #wrapper .skill .skill_inner .skill_list .tool_list .skill_item:last-child {
+body #wrapper .skill_inner .skill_list .tool_list .skill_item:last-child {
   margin: 0;
 }
 body #wrapper .appProject {
