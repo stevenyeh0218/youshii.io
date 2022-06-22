@@ -47,6 +47,7 @@
 /* bgColor width height default*/
 /*  width height default*/
 /*  h2 font style */
+/*  position fixed or absolute */
 /* scrollbar style */
 body {
   background: var(--bgcolor);
@@ -107,7 +108,6 @@ body #loading object {
   height: 30%;
 }
 body .header {
-  position: fixed;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -130,7 +130,10 @@ body .header {
   justify-content: space-between;
   width: 100vw;
   height: 120px;
+  position: fixed;
   top: 0;
+  right: auto;
+  bottom: auto;
   left: 0;
   z-index: 100;
 }
@@ -206,12 +209,14 @@ body .header .menu_item {
 }
 body .header .menu_item::after {
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -5px;
+  left: 0;
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -334,12 +339,14 @@ body .header .sns .mode-select {
 }
 body .header .sns .mode-select::after {
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -5px;
+  left: 0;
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -393,12 +400,14 @@ body .header .sns > a {
 }
 body .header .sns > a::after {
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -5px;
+  left: 0;
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -434,12 +443,14 @@ body .header .sns > a:hover:after {
 }
 body .header .m_nav_switch {
   display: none;
-  position: absolute;
   width: 65px;
   height: 20px;
-  cursor: pointer;
+  position: absolute;
   top: 50px;
   right: 20px;
+  bottom: auto;
+  left: auto;
+  cursor: pointer;
   z-index: 10;
 }
 body .header .m_nav_switch::before {
@@ -545,10 +556,13 @@ body #wrapper .banner_inner .youshiiDesignLoop {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  position: absolute;
   width: 100%;
-  opacity: 0.2 !important;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: 20%;
+  left: auto;
+  opacity: 0.2 !important;
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
@@ -569,13 +583,15 @@ body #wrapper .banner_inner .youshiiDesignLoop > img:last-child {
   margin-left: 5rem;
 }
 body #wrapper .banner_inner .message {
-  position: absolute;
   width: auto;
   font-size: 0.8rem;
   letter-spacing: 1.17px;
   line-height: 1.5em;
-  left: -13rem;
+  position: absolute;
+  top: auto;
+  right: -13rem;
   bottom: 8.5%;
+  left: auto;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -595,11 +611,13 @@ body #wrapper .banner_inner .message .message_line {
   margin-bottom: 1rem;
 }
 body #wrapper .banner_inner .slideImg {
-  position: absolute;
   width: 100%;
   height: 100%;
-  right: 0;
+  position: absolute;
   top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
@@ -613,10 +631,12 @@ body #wrapper .banner_inner .slideImg {
   transition: all 0.3s linear;
 }
 body #wrapper .banner_inner .slideImg img {
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   top: 0;
+  right: auto;
+  bottom: auto;
   left: 0;
   opacity: 0;
   visibility: hidden;
@@ -639,13 +659,15 @@ body #wrapper .about > h2 {
 body #wrapper .about > h2:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100px;
   height: 1px;
   margin-top: 0;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -36%;
+  left: 0;
 }
 body #wrapper .about_inner {
   padding-top: 3rem;
@@ -668,12 +690,14 @@ body #wrapper .skill > h2 {
 body #wrapper .skill > h2:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 1px;
   height: 100px;
   margin-top: 0px;
+  position: absolute;
   top: 8px;
+  right: auto;
+  bottom: auto;
   left: 26%;
 }
 body #wrapper .skill_inner {
@@ -784,13 +808,15 @@ body #wrapper .appProject {
 body #wrapper .appProject:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--blue);
   width: 70.7%;
   height: 58%;
   margin-left: 29.3%;
-  bottom: 0;
+  position: absolute;
+  top: auto;
   right: 0;
+  bottom: 0;
+  left: auto;
   z-index: -1;
 }
 body #wrapper .appProject > h2 {
@@ -803,13 +829,15 @@ body #wrapper .appProject > h2 {
 body #wrapper .appProject > h2:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 1px;
   height: 100px;
-  margin-top: 0;
+  position: absolute;
   top: 8px;
+  right: auto;
+  bottom: auto;
   left: 10%;
+  margin-top: 0;
 }
 body #wrapper .appProject .appProjectList {
   display: -webkit-flex;
@@ -917,16 +945,16 @@ body #wrapper .appProject .appProject_info {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  position: fixed;
   background: rgba(var(--popwindow-bg), 0.5);
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(2em);
   -webkit-backdrop-filter: blur(2em);
+  position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: scaleY(0);
@@ -943,6 +971,8 @@ body #wrapper .appProject .appProject_info_closeBtn {
   position: absolute;
   top: 44px;
   right: 44px;
+  bottom: auto;
+  left: auto;
   color: var(--white);
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
@@ -980,13 +1010,14 @@ body #wrapper .project {
 body #wrapper .project:before {
   content: " ";
   position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: auto;
+  left: 0;
   width: 85%;
   height: 80%;
   margin: auto;
   border: 1px solid var(--gray);
-  top: 10%;
-  left: 0;
-  right: 0;
 }
 body #wrapper .project > h2 {
   position: relative;
@@ -998,25 +1029,27 @@ body #wrapper .project > h2 {
 body #wrapper .project > h2:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 1px;
   height: 100px;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  bottom: auto;
+  left: 0;
   margin: auto;
   margin-top: 0;
-  top: 4rem;
-  left: 0;
-  right: 0;
   z-index: 1;
 }
 body #wrapper .project > h2:after {
   content: '';
-  position: absolute;
   width: 1rem;
   height: 100px;
+  position: absolute;
   top: 4rem;
-  left: 0;
   right: 0;
+  bottom: auto;
+  left: 0;
   margin: auto;
 }
 body #wrapper .project .project_inner {
@@ -1119,27 +1152,31 @@ body #wrapper .design > h2 {
 body #wrapper .design > h2:before {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100px;
   height: 1px;
-  margin: auto;
-  margin-top: 0;
+  position: absolute;
   top: 4.5rem;
   right: 13rem;
+  bottom: auto;
+  left: auto;
+  margin: auto;
+  margin-top: 0;
   z-index: 1;
 }
 body #wrapper .design > h2:after {
   display: block;
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  margin: auto;
-  margin-top: 0;
+  position: absolute;
   top: 5.5rem;
   right: 13rem;
+  bottom: auto;
+  left: auto;
+  margin: auto;
+  margin-top: 0;
   z-index: 1;
 }
 body #wrapper .design .design_inner {
@@ -1294,12 +1331,14 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_left .colophon_inner_top_left_menu .menu_item::after {
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -5px;
+  left: 0;
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -1411,12 +1450,14 @@ body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_
 }
 body #wrapper .colophon .colophon_inner .colophon_inner_top .colophon_inner_top_right .colophon_inner_top_right_contact .colophon_inner_top_right_contact_item a::after {
   content: '';
-  position: absolute;
   background: var(--gray);
   width: 100%;
   height: 1px;
-  left: 0;
+  position: absolute;
+  top: auto;
+  right: auto;
   bottom: -5px;
+  left: 0;
   -webkit-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -moz-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   -o-transition: transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96);
@@ -1457,11 +1498,13 @@ body #wrapper .colophon .colophon_inner .colophon_inner_bottom {
   border-top: 1px solid var(--gray);
 }
 body #wrapper #topbtn {
-  position: fixed;
   cursor: pointer;
   font-size: 2.5rem;
-  bottom: 20px;
+  position: fixed;
+  top: auto;
   right: 20px;
+  bottom: 20px;
+  left: auto;
   z-index: 1000;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;

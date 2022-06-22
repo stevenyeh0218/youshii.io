@@ -21,11 +21,9 @@ body {
     }
 
     .header {
-        position: fixed;
         .flexbox(row, center, space-between);
         .wh(100vw,120px);
-        top: 0;
-        left: 0;
+        .position-style(fixed,0,auto,auto,0);
         z-index: 100;
 
         & .logo {
@@ -55,9 +53,8 @@ body {
                 &::after {
                     content: '';
                     position: absolute;
-                    .bgwh(var(--gray),100%,1px);
-                    left: 0;
-                    bottom: -5px;
+                    .bgwh(var(--gray),100%,1px);                    
+                    .position-style(absolute,auto,auto,-5px,0);
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                     .scaleX(0);
                     .transform-origin(right);
@@ -118,10 +115,8 @@ body {
 
                 &::after {
                     content: '';
-                    position: absolute;
-                    .bgwh(var(--gray),100%,1px);
-                    left: 0;
-                    bottom: -5px;
+                    .bgwh(var(--gray),100%,1px);                       
+                    .position-style(absolute,auto,auto,-5px,0);
                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                     .scaleX(0);
                     .transform-origin(right);
@@ -145,11 +140,9 @@ body {
 
         .m_nav_switch {
             display: none;
-            position: absolute;
-            .wh(65px,20px);
+            .wh(65px,20px);               
+            .position-style(absolute,50px,20px,auto,auto);
             cursor: pointer;
-            top: 50px;
-            right: 20px;
             z-index: 10;
 
             &::before {
@@ -198,11 +191,10 @@ body {
 
 
                 .youshiiDesignLoop {
-                    .flexbox(row, center, space-between);
-                    position: absolute;
+                    .flexbox(row, center, space-between);  
                     width: 100%;
+                    .position-style(absolute,auto,auto,20%,auto);
                     opacity: 0.2 !important;
-                    bottom: 20%;
                     .scale(1.5);
                     .hide();
                     .linear(.3s);
@@ -220,13 +212,11 @@ body {
                 }
 
                 .message {
-                    position: absolute;
                     width: auto;
                     font-size: @fontSize - 0.2;
                     letter-spacing: 1.17px;
-                    line-height: 1.5em;
-                    left: -13rem;
-                    bottom: 8.5%;
+                    line-height: 1.5em;                    
+                    .position-style(absolute,auto,-13rem,8.5%,auto);
                     z-index: 2;
                     .hide();
                     .translateX(-100%);
@@ -240,20 +230,16 @@ body {
                 }
 
                 .slideImg {
-                    position: absolute;
                     .wh(100%,100%);
-                    right: 0;
-                    top: 0;
+                    .position-style(absolute,0,0,auto,auto);
                     overflow: hidden;
                     .hide();
                     .translateX(100%);
                     .linear(.3s);
 
                     & img {
-                        position: absolute;
                         .wh(100%,100%);
-                        top: 0;
-                        left: 0;
+                        .position-style(absolute,0,auto,auto,0);
                         .hide();
                         animation: slide 10s infinite;
 
@@ -277,11 +263,9 @@ body {
                 &:before {
                     display: block;
                     content: '';
-                    position: absolute;    
                     .bgwh(var(--gray),100px,1px);
                     margin-top: 0;
-                    left: 0;
-                    bottom: -36%;
+                    .position-style(absolute,auto,auto,-36%,0);
                 }
             }
             &_inner{
@@ -305,12 +289,10 @@ body {
 
                 &:before {
                     display: block;
-                    content: '';
-                    position: absolute;                    
+                    content: '';                
                     .bgwh(var(--gray),1px,100px);
                     margin-top:0px;
-                    top: 8px;
-                    left: 26%;
+                    .position-style(absolute,8px,auto,auto,26%);
                 }
             }
 
@@ -378,11 +360,9 @@ body {
             &:before {
                 display: block;
                 content: '';
-                position: absolute;
                 .bgwh(var(--blue),70.7%,58%);
                 margin-left: 29.3%;
-                bottom: 0;
-                right: 0;
+                .position-style(absolute,auto,0,0,auto);
                 z-index: -1;
             }
 
@@ -393,12 +373,10 @@ body {
 
                 &:before {
                     display: block;
-                    content: '';
-                    position: absolute;                    
+                    content: '';               
                     .bgwh(var(--gray),1px,100px);
+                    .position-style(absolute,8px,auto,auto,10%);
                     margin-top:0;
-                    top: 8px;
-                    left: 10%;
                 }
             }
 
@@ -438,21 +416,15 @@ body {
 
             .appProject_info{
                 .flexbox(row,center,center);
-                position: fixed;
                 .bgwh(rgba(var(--popwindow-bg),.5),100vw,100vh);
                 .background-blur(2em);
-                top:0;
-                left:0;
-                bottom:0;
-                right:0;
+                .position-style(fixed,0,0,0,0);
                 .hide();
                 .scaleY(0);
                 z-index: 9999;
                 .ease(.2s);
                 &_closeBtn{
-                    position: absolute;
-                    top: 44px;
-                    right: 44px;
+                    .position-style(absolute,44px,44px,auto,auto);
                     color: var(--white);
                     cursor: pointer;
                     .ease(.2s);
@@ -482,13 +454,10 @@ body {
 
             &:before {
                 content: " ";
-                position: absolute;
+                .position-style(absolute,10%,0,auto,0);
                 .wh(85%,80%);
                 margin: auto;
                 border: 1px solid var(--gray);
-                top: 10%;
-                left: 0;
-                right: 0;
             }
 
             &>h2 {
@@ -498,24 +467,18 @@ body {
 
                 &:before {
                     display: block;
-                    content: '';
-                    position: absolute;        
+                    content: '';     
                     .bgwh(var(--gray),1px,100px);    
+                    .position-style(absolute,4rem,0,auto,0);
                     margin: auto;            
-                    margin-top: 0;                
-                    top: 4rem;
-                    left: 0;
-                    right: 0;
+                    margin-top: 0;             
                     z-index: 1;
                 }
 
                 &:after {
                     content: '';
-                    position: absolute;
                     .wh(1rem,100px);
-                    top: 4rem;
-                    left: 0;
-                    right: 0;
+                    .position-style(absolute,4rem,0,auto,0);
                     margin: auto;
                 }
             }
@@ -585,25 +548,21 @@ body {
 
                 &:before {
                     display: block;
-                    content: '';
-                    position: absolute;        
+                    content: '';      
                     .bgwh(var(--gray),100px,1px);   
+                    .position-style(absolute,4.5rem,13rem,auto,auto);
                     margin: auto;            
                     margin-top:0;   
-                    top: 4.5rem;
-                    right: 13rem;
                     z-index: 1;
                 }
 
                 &:after {
                     display: block;
-                    content: '';
-                    position: absolute;                    
+                    content: '';                
                     .bgwh(var(--gray),100%,1px);   
+                    .position-style(absolute,5.5rem,13rem,auto,auto);
                     margin: auto;
                     margin-top: 0;
-                    top: 5.5rem;
-                    right: 13rem;
                     z-index: 1;
                 }
             }
@@ -686,10 +645,8 @@ body {
 
                                 &::after {
                                     content: '';
-                                    position: absolute;
-                                    .bgwh(var(--gray),100%,1px);   
-                                    left: 0;
-                                    bottom: -5px;
+                                    .bgwh(var(--gray),100%,1px);  
+                                    .position-style(absolute,auto,auto,-5px,0); 
                                     .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                                     .scaleX(0);
                                     .transform-origin(right);
@@ -746,8 +703,7 @@ body {
                                         content: '';
                                         position: absolute;
                                         .bgwh(var(--gray),100%,1px);
-                                        left: 0;
-                                        bottom: -5px;
+                                        .position-style(absolute,auto,auto,-5px,0);
                                         .transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                                         .scaleX(0);
                                         .transform-origin(right);
@@ -784,11 +740,9 @@ body {
         }
 
         #topbtn {
-            position: fixed;
             cursor: pointer;
             font-size: @fontSize * 2 + 0.5;
-            bottom: 20px;
-            right: 20px;
+            .position-style(fixed,auto,20px,20px,auto);
             z-index: 1000;
             .ease(.2s);
 
