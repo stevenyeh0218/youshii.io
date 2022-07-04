@@ -984,15 +984,8 @@ body #wrapper .appProject .appProject_info_closeBtn {
 body #wrapper .appProject .appProject_info_closeBtn:hover {
   color: var(--yellow);
 }
-body #wrapper .appProject .appProject_info > a {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  object-fit: contain;
-  opacity: 0;
-  visibility: hidden;
-}
-body #wrapper .appProject .appProject_info > img {
+body #wrapper .appProject .appProject_info > img,
+body #wrapper .appProject .appProject_info a {
   position: absolute;
   width: 90%;
   height: 90%;
