@@ -1,0 +1,150 @@
+/* Import Mixins */
+
+@import 'mixins/_allMixins.less';
+/* Import Mixins End*/
+
+body {
+    #home-slide {
+        .descript {
+            .log-in {
+                &::after {
+                    content: '\21E3 ' !important;
+                    top: 17% !important;
+                    font-size: 45px !important;
+                }
+            }
+            .join-us {
+                &::after {
+                    content: '\21E3 ' !important;
+                    top: 17% !important;
+                    font-size: 45px !important;
+                }
+            }
+        }
+    }
+
+    #home-input {
+        position: relative;
+        display: block;
+        padding: 250px 10%;
+        text-align: center;
+        .input-contain {
+            max-width: 1300px;
+            color: #878787;
+            margin: auto;
+            color: #878787;
+            & h3 {
+                margin-bottom: 30px;
+            }
+            .input-box {
+                width: 80%;
+                margin: auto;
+                .username {
+                    position: relative;
+                    .icon-style {
+                        position: absolute;
+                        top: 12px;
+                        left: 7px;
+                    }
+                    .del-text {
+                        cursor: pointer;
+                        left: auto;
+                        right: 10px;
+                        .ease(.3s);
+                        &:hover {
+                            color: rgb(159, 143, 104);
+                        }
+                    }
+                    .input-style {
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(96%, rgba(255, 255, 255, 0)), to(rgba(159, 143, 104, 1)));
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, rgba(159, 143, 104, 1));
+                        background-position: -1200px 0;
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        border: 0;
+                        border-bottom: 1px solid #ddd;
+                        color: #9f8f68;
+                        padding: 7px 32px;
+                        margin-bottom: 50px;
+                        .out-line;
+                        .ease(.3s);
+
+                        &::-webkit-input-placeholder {
+                            color: #878787;
+                            .ease(.3s);
+                        }
+                        &:focus {
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                            outline: none;
+                            background-position: 0 0;
+                            &::-webkit-input-placeholder {
+                                color: #9f8f68;
+                                font-size: 11px;
+                                .translateY(-15px);
+                            }
+                        }
+
+                    }
+                }
+
+                .password,
+                .reg-key {
+                    .username;
+                }
+
+                .function-tool {
+                    text-align: left;
+                    margin-bottom: 50px;
+                    .item {
+                        color: #878787;
+                        font-size: 14px;
+                        .out-line;
+                        .ease(.3s);
+                        &:hover {
+                            color: #9f8f68;
+                        }
+                    }
+
+                    .forget,
+                    .letter {
+                        margin-left: 20px;
+                    }
+                }
+                .btn-style {
+                    background: none;
+                    border: 1px solid #878787;
+                    border-radius: 5px;
+                    color: #878787;
+                    cursor: pointer;
+                    padding: 10px 40px;
+                    .out-line;
+                    .ease(.3s);
+                    &:hover {
+                        background: #9f8f68;
+                        color: #fff;
+                        border: 1px solid #9f8f68;
+                    }
+                }
+            }
+        }
+    }
+
+    .home-join {
+        .reg-key {
+            .key-num {
+                width: 100%;
+                color: #9f8f68;
+                padding: 7px 32px;
+                margin-bottom: 50px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+
+                & sub {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
