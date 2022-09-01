@@ -43,6 +43,10 @@
 }
 /* font size */
 /* fill width */
+/* bgColor width height default*/
+/*  width height default*/
+/*  h2 font style */
+/*  position fixed or absolute */
 /* scrollbar style */
 @media (max-width: 1366px) {
   body #wrapper .banner {
@@ -85,44 +89,14 @@
   body #wrapper .skill .skill_inner .skill_list {
     margin-left: 2rem;
   }
-  body #wrapper .skill .skill_inner .skill_list .communication_list {
+  body #wrapper .skill .skill_inner .skill_list .skill_list_style {
     font-size: 0.8rem;
   }
-  body #wrapper .skill .skill_inner .skill_list .communication_list > h2 {
+  body #wrapper .skill .skill_inner .skill_list .skill_list_style > h2 {
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
   }
-  body #wrapper .skill .skill_inner .skill_list .communication_list .skill_item {
-    margin-bottom: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .create_list {
-    font-size: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .create_list > h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .create_list .skill_item {
-    margin-bottom: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .technology_list {
-    font-size: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .technology_list > h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .technology_list .skill_item {
-    margin-bottom: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .tool_list {
-    font-size: 0.8rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .tool_list > h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-  body #wrapper .skill .skill_inner .skill_list .tool_list .skill_item {
+  body #wrapper .skill .skill_inner .skill_list .skill_list_style .skill_item {
     margin-bottom: 0.8rem;
   }
   body #wrapper .skill .skill_inner .skill_bg_right {
@@ -402,10 +376,7 @@
     margin: auto 4.5rem;
     order: 1;
   }
-  body #wrapper .skill .skill_inner .skill_list .communication_list,
-  body #wrapper .skill .skill_inner .skill_list .create_list,
-  body #wrapper .skill .skill_inner .skill_list .technology_list,
-  body #wrapper .skill .skill_inner .skill_list .tool_list {
+  body #wrapper .skill .skill_inner .skill_list .skill_list_style {
     margin: 0;
   }
   body #wrapper .skill .skill_inner .skill_bg_right {
@@ -567,10 +538,7 @@
     flex-wrap: wrap;
     margin: auto 2rem;
   }
-  body #wrapper .skill .skill_inner .skill_list .communication_list,
-  body #wrapper .skill .skill_inner .skill_list .create_list,
-  body #wrapper .skill .skill_inner .skill_list .technology_list,
-  body #wrapper .skill .skill_inner .skill_list .tool_list {
+  body #wrapper .skill .skill_inner .skill_list .skill_list_style {
     margin-right: 4rem;
   }
   body #wrapper .skill .skill_inner .skill_list .communication_list,
