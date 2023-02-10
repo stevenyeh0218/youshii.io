@@ -1,0 +1,70 @@
+.banner {
+    position: relative;
+    @include flexbox(row, center, flex-end);
+    @include wh(100%,82vh);
+
+    &_inner {
+        position: relative;
+        @include wh(70%,100%);
+
+
+        .youshiiDesignLoop {
+            @include flexbox(row, center, space-between);  
+            width: 100%;
+            @include position-style(absolute,auto,auto,20%,auto);
+            opacity: 0.2 !important;
+            @include scale(1.5);
+            @include hide();
+            @include linear(.3s);
+            z-index: 2;
+
+            &>img {
+                width: 100%;
+                animation: infinity_slide 30s linear infinite;
+
+                &:last-child {
+                    margin-left: 5rem;
+                }
+            }
+
+        }
+
+        .message {
+            width: auto;
+            font-size: $fontSize - 0.2;
+            letter-spacing: 1.17px;
+            line-height: 1.5em;                    
+            @include position-style(absolute,auto,-13rem,8.5%,auto);
+            z-index: 2;
+            @include hide();
+            @include translateX(-100%);
+            @include linear(.3s);
+
+            .message_line {
+                @include bgwh(var(--fontColor),56rem,0.1rem);
+                margin-bottom: 1rem;
+
+            }
+        }
+
+        .slideImg {
+            @include wh(100%,100%);
+            @include position-style(absolute,0,0,auto,auto);
+            overflow: hidden;
+            @include hide();
+            @include translateX(100%);
+            @include linear(.3s);
+
+            & img {
+                @include wh(100%,100%);
+                @include position-style(absolute,0,auto,auto,0);
+                @include hide();
+                animation: slide 10s infinite;
+
+                &:nth-child(2) {
+                    animation-delay: 5s;
+                }
+            }
+        }
+    }
+}

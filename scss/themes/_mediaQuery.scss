@@ -1,6 +1,3 @@
-// out: "../css/"
-@import './mixins/_allMixins.less';
-
 @media (max-width:1366px) {
     body {
         #wrapper {
@@ -171,9 +168,9 @@
 @media (max-width:768px) {
     body {
         .header {
-            .flexbox(column, baseline, flex-start);
+            @include flexbox(column, baseline, flex-start);
             padding-top: 10px;
-            .ease(.2s);
+            @include ease(.2s);
 
             &::before {
                 content: '';
@@ -184,7 +181,7 @@
                 width: 20%;
                 height: 100%;
                 background: var(--bgcolor);
-                .scaleX(0);
+                @include scaleX(0);
                 transition: 0.35s cubic-bezier(0.08, 0.92, 0.35, 1);
             }
 
@@ -197,7 +194,7 @@
                 width: 80.05%;
                 height: 100%;
                 background: var(--blue);
-                .scaleX(0);
+                @include scaleX(0);
                 transition: 0.5s cubic-bezier(0.79, 0.17, 0.15, 0.96);
             }
 
@@ -206,21 +203,21 @@
             }
 
             .menu {
-                .flexbox(column, baseline, flex-start);
+                @include flexbox(column, baseline, flex-start);
                 height: 100%;
                 margin-top: 5rem;
-                .translateX(-120%);
-                .ease(.3s);
+                @include translateX(-120%);
+                @include ease(.3s);
 
                 .menu_item {
-                    font-size: @fontSize * 2;
+                    font-size: $fontSize * 2;
                     font-weight: 200;
                     margin-left: 20px;
                 }
 
                 .menu_item_focus {
                     &:after {
-                        .transform(scaleX(1) translateY(-14px));
+                        @include transform(scaleX(1) translateY(-14px));
                     }
                 }
 
@@ -238,10 +235,10 @@
                 position: absolute;
                 bottom: 16%;
                 right: 15%;
-                .translateX(250%);
+                @include translateX(250%);
 
                 &::before {
-                    .hide;
+                    @include hide;
                 }
             }
 
@@ -258,32 +255,32 @@
                 right: -15px !important;
                 -webkit-transform-origin: top;
                 transform-origin: top;
-                .scaleX(1);
+                @include scaleX(1);
                 transition: 0.45s cubic-bezier(0.79, 0.17, 0.15, 0.96);
             }
 
             &::after {
                 -webkit-transform-origin: top;
                 transform-origin: top;
-                .scaleX(1);
+                @include scaleX(1);
                 transition: 0.5s cubic-bezier(0.08, 0.92, 0.35, 1);
             }
 
             .m_open_btn {
-                .transform(translateX(-50px) rotateY(360deg) scale(0));
+                @include transform(translateX(-50px) rotateY(360deg) scale(0));
             }
 
             .m_close_btn {
-                .transform(translateX(-50px)) !important;
+                @include transform(translateX(-50px) !important);
             }
 
             .menu {
-                .translateX(0);
+                @include translateX(0);
 
             }
 
             .sns {
-                .translateX(0);
+                @include translateX(0);
             }
         }
 
@@ -333,7 +330,7 @@
                     }
 
                     .skill_list {
-                        .flexbox(row, flex-start, space-between);
+                        @include flexbox(row, flex-start, space-between);
                         width: 100%;
                         margin: auto 4.5rem;
                         order: 1;
@@ -425,7 +422,7 @@
             .menu {
                 .menu_item_focus {
                     &:after {
-                        .transform(scaleX(1) translateY(-13px));
+                        @include transform(scaleX(1) translateY(-13px));
                     }
                 }
 
@@ -435,7 +432,7 @@
             }
 
             .sns {
-                font-size: @fontSize + 0.5;
+                font-size: $fontSize + 0.5;
                 margin-right: 0;
                 bottom: 5%;
             }
@@ -450,7 +447,7 @@
             padding-top: 6rem;
 
             .banner {
-                .flexbox(row, center, center);
+                @include flexbox(row, center, center);
                 height: 30vh;
 
                 .banner_inner {
@@ -504,7 +501,7 @@
                     }
 
                     .skill_list {
-                        .flexbox(row, flex-start, flex-start);
+                        @include flexbox(row, flex-start, flex-start);
                         flex-wrap: wrap;
                         margin: auto 2rem;
 
@@ -549,7 +546,7 @@
                         
                         .appProjectItem-cover{
                             &:hover{
-                                .scale(1.1);
+                                @include scale(1.1);
                             }
                         }
 
@@ -688,17 +685,20 @@
     body{        
         #loading{
             & > object{
-                .filter-invert(1);
+                @include filter-invert(1);
             }
         }
 
         .header{
             .logo{
-                .filter-invert(1);
+                @include filter-invert(1);
             }
             .sns{
                 .mode-select{
                     display: none;
+                }
+                & > a{
+                    display: block;
                 }
             }
         }
@@ -708,7 +708,7 @@
                 .banner_inner {
                     .youshiiDesignLoop{ 
                         & > img{
-                            .filter-invert(1);
+                            @include filter-invert(1);
                         }
                     }
                 }
@@ -719,7 +719,7 @@
                         .colophon_inner_top_left{
                             .colophon_inner_top_left_header{ 
                                 & > img{
-                                    .filter-invert(1);
+                                    @include filter-invert(1);
                                 }
                             }
                         }

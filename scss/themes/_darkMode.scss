@@ -1,9 +1,7 @@
-// out: "../css/"
-@import './mixins/_allMixins.less';
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /* dark mode */
-.dark{
+.dark{     
     --bgcolor: #333333;
     --fontColor: #ffffff;
     --black: #ffffff;
@@ -11,17 +9,17 @@
     --blue: #295768;
     
     /* color rgb */
-    --black-rgb: 255,255,255;
+    --black-rgb: 255, 255, 255;        
 
     #loading{
         & > object{
-            .filter-invert(1);
+            @include filter-invert(1);
         }
     }
 
     .header{
         .logo{
-            .filter-invert(1);
+            @include filter-invert(1);
         }
     }
 
@@ -30,7 +28,7 @@
             .banner_inner {
                 .youshiiDesignLoop{ 
                     & > img{
-                        .filter-invert(1);
+                        @include filter-invert(1);
                     }
                 }
             }
@@ -41,7 +39,7 @@
                     .colophon_inner_top_left{
                         .colophon_inner_top_left_header{ 
                             & > img{
-                                .filter-invert(1);
+                                @include filter-invert(1);
                             }
                         }
                     }

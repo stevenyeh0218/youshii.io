@@ -1,0 +1,62 @@
+.skill {
+    position: relative;
+    margin-top: 6rem;
+
+    &>h2 {
+        position: relative;
+        @include font-style(3rem,lighter,0.1em);
+        padding-left: 27%;
+
+        &:before {
+            display: block;
+            content: '';                
+            @include bgwh(var(--gray),1px,100px);
+            margin-top:0px;
+            @include position-style(absolute,8px,auto,auto,26%);
+        }
+    }
+
+    &_inner {
+        @include flexbox(row, flex-start, space-between);
+        padding-top: 6rem;
+
+        .skill_bg {
+            width: 18.5%;
+
+            & img {
+                @include wh(100%,100%);
+                object-fit: cover;
+            }
+        }
+
+        .skill_bg_right {
+            @extend .skill_bg;
+            width: 30%;
+            margin-left: 22rem;
+            margin-top: 20rem;
+        }
+
+        .skill_list {
+
+            margin-left: 13rem;
+
+            .skill_list_style{
+                font-size: 1rem;
+                margin-bottom: 4rem;
+
+                &>h2 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .skill_item {
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

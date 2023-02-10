@@ -1,0 +1,155 @@
+.header {
+    @include flexbox(row, center, space-between);
+    @include wh(100vw,120px);
+    @include position-style(fixed,0,auto,auto,0);
+    z-index: 100;
+
+    & .logo {
+        @include flexbox(row, center, center);
+        width: 120px;
+        margin-left: 50px;
+        @include link-default();
+
+        & img {
+            @include wh(100%,100%);
+        }
+    }
+
+    .menu {
+        @include flexbox(row, center, flex-end);
+        @include wh(100%,21px);
+        padding-right: 14px;
+
+        &_item {
+            position: relative;
+            color: var(--fontColor);
+            cursor: pointer;
+            @include hide();
+            @include scale(0);
+            @include ease(.3s);
+
+            &::after {
+                content: '';
+                position: absolute;
+                @include bgwh(var(--gray),100%,1px);                    
+                @include position-style(absolute,auto,auto,-5px,0);
+                @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
+                @include scaleX(0);
+                @include transform-origin(right);
+            }
+
+            &:hover {
+                &:after {
+                    @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                    @include scaleX(1);
+                    @include transform-origin(left);
+                }
+            }
+        }
+
+        &_item_focus {
+            &:after {
+                @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                @include transform(scaleX(1) translateY(-11px));
+                @include transform-origin(left);
+            }
+        }
+
+        .nav_line {
+            display: block;
+            @include bgwh(var(--black),10px,1px);
+            margin: 3px 14px 0 12px;
+            @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
+            @include transform-origin(left bottom);
+        }
+    }
+
+    .sns {
+        @include flexbox(row, center, center);
+        font-size: $fontSize + 0.2;
+        margin-right: 25px;
+        @include ease(.3s);
+
+        &::before {
+            content: '';
+            display: block;
+            position: relative;
+            @include bgwh(var(--black),30px,1px);
+            margin-right: 5px;
+            top: 1px;
+            @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
+            @include transform-origin(left);
+        }
+
+        .mode-select{
+            position: relative;
+            color: var(--fontColor);
+            cursor: pointer;
+            margin-left: 10px;
+            @include link-default();
+            @include hide();
+            @include scale(0);
+            @include ease(.3s);
+
+            &::after {
+                content: '';
+                @include bgwh(var(--gray),100%,1px);                       
+                @include position-style(absolute,auto,auto,-5px,0);
+                @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
+                @include scaleX(0);
+                @include transform-origin(right);
+            }
+
+            &:hover {
+                @include scale(1.1);
+
+                &:after {
+                    @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                    @include scaleX(1);
+                    @include transform-origin(left);
+                }
+            }
+        }
+
+        & > a {
+            @extend .mode-select;
+        }
+    }
+
+    .m_nav_switch {
+        display: none;
+        @include wh(65px,20px);               
+        @include position-style(absolute,50px,20px,auto,auto);
+        cursor: pointer;
+        z-index: 10;
+
+        &::before {
+            content: '';
+            display: block;
+            position: relative;
+            @include bgwh(var(--black),30px,1px);
+            top: 9px;
+            right: 30px;
+            @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
+            @include transform-origin(left);
+            @include ease(.5s);
+        }
+
+        .m_open_btn {
+            position: absolute;
+            color: var(--fontColor);
+            margin-left: 10px;
+            @include link-default();
+            @include ease(.5s);
+        }
+
+        .m_close_btn {
+            position: absolute;
+            color: var(--fontColor);
+            margin-left: 10px;
+            @include link-default();
+            @include transform(translateX(0) rotateY(360deg) scale(0));
+            @include ease(.5s);
+        }
+    }
+}

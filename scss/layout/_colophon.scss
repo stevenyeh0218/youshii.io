@@ -1,0 +1,134 @@
+.colophon {
+    margin-top: 6rem;
+
+    .colophon_inner {
+        @include flexbox(column, center, center);
+        position: relative;
+        padding: 1.5rem;
+
+        .colophon_inner_top {
+            @include flexbox(row, flex-start, space-between);
+            width: 100%;
+            border-top: 1px solid var(--gray);
+            padding: 1.5rem 0;
+
+            .colophon_inner_top_left {
+                width: 50%;
+                padding-right: 1.5rem;
+                border-right: 1px solid var(--gray);
+
+                .colophon_inner_top_left_header {
+                    width: 50%;
+
+                    & img {
+                        @include wh(100%,100%);
+                    }
+                }
+
+                .colophon_inner_top_left_menu {
+                    @include flexbox-wrap(row,center,flex-start,wrap);
+                    height: 100%;
+                    cursor: pointer;
+                    margin-top: 1.5rem;
+
+                    .menu_item {
+                        position: relative;
+                        color: var(--fontColor);
+                        cursor: pointer;
+                        margin: 0.5rem;
+
+                        &::after {
+                            content: '';
+                            @include bgwh(var(--gray),100%,1px);  
+                            @include position-style(absolute,auto,auto,-5px,0); 
+                            @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
+                            @include scaleX(0);
+                            @include transform-origin(right);
+                        }
+
+                        &:hover {
+                            &:after {
+                                @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                                @include scaleX(1);
+                                @include transform-origin(left);
+                            }
+                        }
+                    }
+
+                    .menu_item_focus {
+                        &:after {
+                            @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                            @include transform(scaleX(1) translateY(-11px));
+                            @include transform-origin(left);
+                        }
+                    }
+                }
+            }
+
+            .colophon_inner_top_right {
+                width: 50%;
+                padding-left: 1.5rem;
+
+                .colophon_inner_top_right_header {
+                    font-size: 2.5rem;
+                    color: var(--black);
+                }
+
+                .colophon_inner_top_right_contact {
+                    @include flexbox(row, baseline, flex-start);
+                    margin-top: 1.5rem;
+
+                    .colophon_inner_top_right_contact_item {
+                        @include flexbox(row, center, center);
+                        margin-right: 1.5rem;
+
+                        & i {
+                            margin-right: 1rem;
+                        }
+
+                        & a {
+                            position: relative;
+                            color: var(--fontColor);
+                            margin-right: 1rem;
+                            @include link-default();
+                            @include ease(.3s);
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                @include bgwh(var(--gray),100%,1px);
+                                @include position-style(absolute,auto,auto,-5px,0);
+                                @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
+                                @include scaleX(0);
+                                @include transform-origin(right);
+                            }
+
+                            &:hover {
+                                &:after {
+                                    @include transition(transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1));
+                                    @include scaleX(1);
+                                    @include transform-origin(left);
+                                }
+                            }
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .colophon_inner_bottom {
+            width: 100%;
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray);
+        }
+    }
+}

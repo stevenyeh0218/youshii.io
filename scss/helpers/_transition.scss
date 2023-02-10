@@ -1,0 +1,48 @@
+@mixin transition($default) {
+  -webkit-transition: $default;
+  -moz-transition: $default;
+  -o-transition: $default;
+  transition: $default;
+}
+
+@mixin linear($sec) {
+  -webkit-transition: all $sec linear;
+  -moz-transition: all $sec linear;
+  -o-transition: all $sec linear;
+  transition: all $sec linear;
+}
+
+@mixin ease($sec) {
+  -webkit-transition: all $sec ease;
+  -moz-transition: all $sec ease;
+  -o-transition: all $sec ease;
+  transition: all $sec ease;
+}
+
+@mixin ease-in($sec) {
+  -webkit-transition: all $sec ease-in;
+  -moz-transition: all $sec ease-in;
+  -o-transition: all $sec ease-in;
+  transition: all $sec ease-in;
+}
+
+@mixin ease-out($sec) {
+  -webkit-transition: all $sec ease-out;
+  -moz-transition: all $sec ease-out;
+  -o-transition: all $sec ease-out;
+  transition: all $sec ease-out;
+}
+
+@mixin ease-in-out($sec) {
+  -webkit-transition: all $sec ease-in-out;
+  -moz-transition: all $sec ease-in-out;
+  -o-transition: all $sec ease-in-out;
+  transition: all $sec ease-in-out;
+}
+
+@mixin transition($default) {
+  -webkit-transition: $default;
+  -moz-transition: $default;
+  -o-transition: $default;
+  transition: $default;
+}
