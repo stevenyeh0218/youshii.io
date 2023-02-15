@@ -1,8 +1,9 @@
 /* cursor effect */
 const cursor = document.querySelector(".cursor");
-var btn = $(".menu_item , .appProjectItem , .project_link , .design_item , .mode-select , a , #topbtn");
+var btn = $(".menu_item , .mode-select , a , #topbtn");
+var app = $(".appProjectItem , .project_link , .design_item");
 
-document.addEventListener("mousemove",(e) => {
+document.addEventListener("mousemove", (e) => {
     let x = e.pageX - 10;
     let y = e.pageY - 5;
 
@@ -10,10 +11,18 @@ document.addEventListener("mousemove",(e) => {
     cursor.style.left = x + "px";
 });
 
-btn.on('mouseover',function(){
+btn.on('mouseover', function () {
     cursor.classList.add('is-hover');
 });
 
-btn.on('mouseleave',function(){
+btn.on('mouseleave', function () {
     cursor.classList.remove('is-hover');
+});
+
+app.on('mouseover', function () {
+    cursor.classList.add('is-project');
+});
+
+app.on('mouseleave', function () {
+    cursor.classList.remove('is-project');
 });

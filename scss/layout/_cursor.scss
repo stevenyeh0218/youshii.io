@@ -10,6 +10,23 @@
 }
 
 .is-hover{
+    opacity: 0.2;
     @include scale(3);
-    opacity: 0.1;
+}
+
+.is-project{
+    @include flexbox(row,center,center);
+    background: transparent;
+    border: 1px solid var(--black);
+    @include scale(3);
+    &:after{
+        content:"";
+        position: absolute;
+        background: var(--black);
+        width: 10px;
+        height: 1px;
+        @include rotate(45deg);
+        right: -6px;
+        bottom: -3px;
+    }
 }

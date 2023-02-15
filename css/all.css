@@ -1973,11 +1973,54 @@ p {
 }
 
 .is-hover {
+  opacity: 0.2;
   -webkit-transform: scale(3);
   -moz-transform: scale(3);
   -o-transform: scale(3);
   transform: scale(3);
-  opacity: 0.1;
+}
+
+.is-project {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--black);
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+}
+
+.is-project:after {
+  content: "";
+  position: absolute;
+  background: var(--black);
+  width: 10px;
+  height: 1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right: -6px;
+  bottom: -3px;
 }
 
 /* dark mode */
