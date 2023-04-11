@@ -1630,11 +1630,11 @@ p {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: inherit;
+  -moz-justify-content: inherit;
+  -ms-justify-content: inherit;
+  -o-justify-content: inherit;
+  justify-content: inherit;
   flex-wrap: wrap;
   padding: 70px 0 0 0;
 }
