@@ -2159,6 +2159,9 @@ p {
   body #wrapper .design > h2:before, body #wrapper .design > h2:after {
     right: 6rem;
   }
+  body #wrapper .cursor {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
