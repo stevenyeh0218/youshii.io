@@ -2186,6 +2186,7 @@ p {
     -ms-justify-content: flex-start;
     -o-justify-content: flex-start;
     justify-content: flex-start;
+    height: 60px;
     padding-top: 10px;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -2223,6 +2224,8 @@ p {
     transition: 0.5s cubic-bezier(0.79, 0.17, 0.15, 0.96);
   }
   body .header .logo {
+    width: auto;
+    height: 50px;
     margin-left: 15px;
   }
   body .header .menu {
@@ -2291,6 +2294,7 @@ p {
   }
   body .header .m_nav_switch {
     display: flex;
+    top: 26px;
   }
   body .op-nav {
     height: 100vh;
@@ -2339,8 +2343,11 @@ p {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+  body #wrapper {
+    padding-top: 3.5rem;
+  }
   body #wrapper .banner {
-    height: 45vh;
+    height: 460px;
   }
   body #wrapper .banner .banner_inner .youshiiDesignLoop > img:last-child {
     margin-left: 2rem;
@@ -2466,7 +2473,7 @@ p {
     top: 35px;
   }
   body #wrapper {
-    padding-top: 6rem;
+    padding-top: 3.8rem;
   }
   body #wrapper .banner {
     display: -webkit-flex;

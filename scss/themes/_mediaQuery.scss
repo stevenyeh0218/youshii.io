@@ -172,6 +172,7 @@
     body {
         .header {
             @include flexbox(column, baseline, flex-start);
+            height: 60px;
             padding-top: 10px;
             @include ease(.2s);
 
@@ -202,6 +203,8 @@
             }
 
             .logo {
+                width: auto;
+                height: 50px;
                 margin-left: 15px;
             }
 
@@ -247,6 +250,7 @@
 
             .m_nav_switch {
                 display: flex;
+                top: 26px;
             }
         }
 
@@ -288,8 +292,9 @@
         }
 
         #wrapper {
+            padding-top: 3.5rem;
             .banner {
-                height: 45vh;
+                height: 460px;
 
                 .banner_inner {
                     .youshiiDesignLoop {
@@ -447,7 +452,7 @@
         }
 
         #wrapper {
-            padding-top: 6rem;
+            padding-top: 3.8rem;
 
             .banner {
                 @include flexbox(row, center, center);
