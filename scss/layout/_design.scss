@@ -30,7 +30,7 @@
     }
 
     .design_inner {
-        @include flexbox(row, center, inherit);
+        @include flexbox(row, center, center);
         flex-wrap: wrap;
         padding: 70px 0 0 0;
 
