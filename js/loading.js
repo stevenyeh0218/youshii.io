@@ -15,8 +15,7 @@ $(document).ready(function () { // 獲取最後更新時間戳
                 $('#loading').remove();
             }, 3500);
             setTimeout(function () {
-                $("html").css("overflow", "scroll"),
-                $("html").css("overflow-x", "hidden")
+                $('html, body').css('overflow-y', 'scroll');
             }, 4000);
             setTimeout(function () {
                 $(".menu").find(".menu_item").addClass("animate-scale"),
