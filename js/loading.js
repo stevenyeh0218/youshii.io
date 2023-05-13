@@ -5,17 +5,16 @@ $(document).ready(function () { // 獲取最後更新時間戳
         $('#loading').remove();
     } else { // 否則顯示 loading 頁面
         $('html, body').css('overflow', 'hidden');
-        $('#loading').addClass('scaleLoading');
+        setTimeout(function () {
+            $('#loading').addClass('scaleLoading');
+        }, 2000);
         // 等待所有內容載入完畢
         $(window).on('load', function () { // 3 秒後移除 loading 頁面
             setTimeout(function () {
                 $('#loading').remove();
             }, 3500);
             setTimeout(function () {
-                $('#loading').remove();
-            }, 3500);
-            setTimeout(function () {
-                $('html, body').css('overflow-y', 'scroll');
+                $('html, body').removeAttr("style");
             }, 4000);
             setTimeout(function () {
                 $(".menu").find(".menu_item").addClass("animate-scale"),
