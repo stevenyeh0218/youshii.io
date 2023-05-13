@@ -991,9 +991,9 @@ p {
   line-height: 1.5em;
   position: absolute;
   top: auto;
-  right: -13rem;
+  right: auto;
   bottom: 8.5%;
-  left: auto;
+  left: -13rem;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
