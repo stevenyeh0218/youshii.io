@@ -6,7 +6,7 @@
     --black: #303030;
     --yellow: #d8c7ac;
     --blue: #e6f2ff;
-    
+
     /* color rgb */
     --black-rgb: 48, 48, 48;
     --popwindow-bg: 48, 48, 48;
@@ -16,7 +16,7 @@
 $fontSize: 1rem;
 
 /* fill width */
-@mixin fill-available(){
+@mixin fill-available() {
     box-sizing: border-box;
     width: 100%;
     width: -moz-available;
@@ -25,27 +25,27 @@ $fontSize: 1rem;
 }
 
 /* bgColor width height default*/
-@mixin bgwh($bg,$w,$h){
+@mixin bgwh($bg, $w, $h) {
     background: $bg;
     width: $w;
     height: $h;
 }
 
 /*  width height default*/
-@mixin wh($w,$h){
+@mixin wh($w, $h) {
     width: $w;
     height: $h;
 }
 
 /*  h2 font style */
-@mixin font-style($size,$weight,$spacing){
+@mixin font-style($size, $weight, $spacing) {
     font-size: $size;
     font-weight: $weight;
     letter-spacing: $spacing;
 }
 
 /*  position fixed or absolute */
-@mixin position-style($position,$top,$right,$bottom,$left){
+@mixin position-style($position, $top, $right, $bottom, $left) {
     position: $position;
     top: $top;
     right: $right;
@@ -75,36 +75,46 @@ $fontSize: 1rem;
     }
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
-body{
-    @include bgwh(var(--bgcolor),100%,100vh);
+body {
+    @include bgwh(var(--bgcolor), 100%, 100vh);
     color: var(--fontColor);
     font-family: 'Noto Sans TC' !important;
+    overflow: hidden;
+    overflow-y: scroll;
     @include mac-scrollbar-style();
 }
 
-ol,ul,li{
+ol,
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-a{    
+a {
     color: var(--fontColor);
     cursor: pointer;
     text-decoration: none;
     outline: none;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
     font-weight: normal;
 }
@@ -118,7 +128,7 @@ p {
 #topbtn {
     cursor: pointer;
     font-size: $fontSize * 2 + 0.5;
-    @include position-style(fixed,auto,20px,20px,auto);
+    @include position-style(fixed, auto, 20px, 20px, auto);
     z-index: 1000;
     @include ease(.2s);
 
