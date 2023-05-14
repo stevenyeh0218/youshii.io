@@ -909,6 +909,7 @@ p {
 
 #wrapper {
   padding-top: 7.5rem;
+  overflow: hidden;
 }
 
 .banner {
