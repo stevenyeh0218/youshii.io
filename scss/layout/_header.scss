@@ -1,7 +1,7 @@
 .header {
     @include flexbox(row, center, space-between);
-    @include wh(100vw,120px);
-    @include position-style(fixed,0,auto,auto,0);
+    @include wh(100vw, 120px);
+    @include position-style(fixed, 0, auto, auto, 0);
     z-index: 100;
 
     & .logo {
@@ -11,28 +11,26 @@
         @include link-default();
 
         & img {
-            @include wh(100%,100%);
+            @include wh(100%, 100%);
         }
     }
 
     .menu {
         @include flexbox(row, center, flex-end);
-        @include wh(100%,21px);
+        @include wh(100%, 21px);
         padding-right: 14px;
 
         &_item {
             position: relative;
             color: var(--fontColor);
             cursor: pointer;
-            @include hide();
-            @include scale(0);
             @include ease(.3s);
 
             &::after {
                 content: '';
                 position: absolute;
-                @include bgwh(var(--gray),100%,1px);                    
-                @include position-style(absolute,auto,auto,-5px,0);
+                @include bgwh(var(--gray), 100%, 1px);
+                @include position-style(absolute, auto, auto, -5px, 0);
                 @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                 @include scaleX(0);
                 @include transform-origin(right);
@@ -57,7 +55,7 @@
 
         .nav_line {
             display: block;
-            @include bgwh(var(--black),10px,1px);
+            @include bgwh(var(--black), 10px, 1px);
             margin: 3px 14px 0 12px;
             @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
             @include transform-origin(left bottom);
@@ -74,14 +72,14 @@
             content: '';
             display: block;
             position: relative;
-            @include bgwh(var(--black),30px,1px);
+            @include bgwh(var(--black), 30px, 1px);
             margin-right: 5px;
             top: 1px;
             @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));
             @include transform-origin(left);
         }
 
-        .mode-select{
+        .mode-select {
             position: relative;
             color: var(--fontColor);
             cursor: pointer;
@@ -93,8 +91,8 @@
 
             &::after {
                 content: '';
-                @include bgwh(var(--gray),100%,1px);                       
-                @include position-style(absolute,auto,auto,-5px,0);
+                @include bgwh(var(--gray), 100%, 1px);
+                @include position-style(absolute, auto, auto, -5px, 0);
                 @include transition(transform 0.4s cubic-bezier(0.79, 0.17, 0.15, 0.96));
                 @include scaleX(0);
                 @include transform-origin(right);
@@ -111,15 +109,15 @@
             }
         }
 
-        & > a {
+        &>a {
             @extend .mode-select;
         }
     }
 
     .m_nav_switch {
         display: none;
-        @include wh(65px,20px);               
-        @include position-style(absolute,50px,20px,auto,auto);
+        @include wh(65px, 20px);
+        @include position-style(absolute, 50px, 20px, auto, auto);
         cursor: pointer;
         z-index: 10;
 
@@ -127,7 +125,7 @@
             content: '';
             display: block;
             position: relative;
-            @include bgwh(var(--black),30px,1px);
+            @include bgwh(var(--black), 30px, 1px);
             top: 9px;
             right: 30px;
             @include transition(transform 0.6s cubic-bezier(0.08, 0.92, 0.35, 1));

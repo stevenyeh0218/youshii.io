@@ -36,8 +36,6 @@
             line-height: 1.5em;
             @include position-style(absolute, auto, auto, 8.5%, -13rem);
             z-index: 2;
-            @include hide();
-            @include translateX(-100%);
             @include linear(.3s);
 
             .message_line {

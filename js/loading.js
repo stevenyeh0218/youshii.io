@@ -15,17 +15,9 @@ $(document).ready(function () { // 獲取最後更新時間戳
 			}, 3500);
 			setTimeout(function () {
 				$('html, body').removeAttr("style");
+				AOS.init();
+				$(".youshiiDesignLoop").addClass("animate-show")
 			}, 4000);
-			setTimeout(function () {
-				$(".menu").find(".menu_item").addClass("animate-scale"),
-				$(".sns a ,.mode-select").addClass("animate-scale")
-			}, 4250),
-			setTimeout(function () {
-				$(".slideImg").addClass("animate-translateX")
-			}, 4500),
-			setTimeout(function () {
-				$(".message").addClass("animate-translateX")
-			}, 4750),
 			setTimeout(function () {
 				$(".youshiiDesignLoop").addClass("animate-show")
 			}, 5000)

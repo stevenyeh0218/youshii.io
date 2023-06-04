@@ -2,40 +2,14 @@
 .scaleLoading {
     @include scale(3);
 }
+
 /* loading translate end */
-
-/* menu translate */
-.animate-translateX {
-    opacity: 1 !important;
-    visibility: visible !important;
-    -webkit-transform: translateX(0) !important;
-    -moz-transform: translateX(0) !important;
-    -o-transform: translateX(0) !important;
-    transform: translateX(0) !important;
-}
-
-.animate-translateY {
-    opacity: 1 !important;
-    visibility: visible !important;
-    -webkit-transform: translateY(0) !important;
-    -moz-transform: translateY(0) !important;
-    -o-transform: translateY(0) !important;
-    transform: translateY(0) !important;
-}
-
-.animate-scale { 
-    opacity: 1 !important;
-    visibility: visible !important;
-    -webkit-transform: scale(1) !important;
-    -moz-transform: scale(1) !important;
-    -o-transform: scale(1) !important;
-    transform: scale(1) !important;
-}
 
 .animate-show {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
 /* menu translate end */
 
 
