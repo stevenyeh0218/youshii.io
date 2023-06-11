@@ -85,8 +85,6 @@
             cursor: pointer;
             margin-left: 10px;
             @include link-default();
-            @include hide();
-            @include scale(0);
             @include ease(.3s);
 
             &::after {
