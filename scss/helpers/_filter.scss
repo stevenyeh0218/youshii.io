@@ -1,94 +1,55 @@
 @mixin filter($mix) {
     filter: $mix;
-    -moz-filter: $mix;
-    -webkit-filter: $mix;
-    -o-filter: $mix;
 }
 
 @mixin filter-yellow {
     filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1948%) hue-rotate(333deg) brightness(91%) contrast(90%);
-    -moz-filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1948%) hue-rotate(333deg) brightness(91%) contrast(90%);
-    -webkit-filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1948%) hue-rotate(333deg) brightness(91%) contrast(90%);
-    -o-filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1948%) hue-rotate(333deg) brightness(91%) contrast(90%);
 }
 
 @mixin filter-blue {
     filter: invert(34%) sepia(67%) saturate(409%) hue-rotate(159deg) brightness(95%) contrast(83%);
-    -moz-filter: invert(34%) sepia(67%) saturate(409%) hue-rotate(159deg) brightness(95%) contrast(83%);
-    -webkit-filter: invert(34%) sepia(67%) saturate(409%) hue-rotate(159deg) brightness(95%) contrast(83%);
-    -o-filter: invert(34%) sepia(67%) saturate(409%) hue-rotate(159deg) brightness(95%) contrast(83%);
 }
 
 @mixin filter-blur($blur) {
     filter: blur($blur);
-    -moz-filter: blur($blur);
-    -webkit-filter: blur($blur);
-    -o-filter: blur($blur);
 }
 
 @mixin filter-brightness($brightness) {
     filter: brightness($brightness);
-    -moz-filter: brightness($brightness);
-    -webkit-filter: brightness($brightness);
-    -o-filter: brightness($brightness);
 }
 
 @mixin filter-contrast($contrast) {
     filter: contrast($contrast);
-    -moz-filter: contrast($contrast);
-    -webkit-filter: contrast($contrast);
-    -o-filter: contrast($contrast);
 }
 
-@mixin filter-drop-shadow($x,$y,$b,$c) {
+@mixin filter-drop-shadow($x, $y, $b, $c) {
     filter: drop-shadow($x $y $b $c);
-    -moz-filter: drop-shadow($x $y $b $c);
-    -webkit-filter: drop-shadow($x $y $b $c);
-    -o-filter: drop-shadow($x $y $b $c);
 }
 
 @mixin filter-grayscale($grayscale) {
     filter: grayscale($grayscale);
-    -moz-filter: grayscale($grayscale);
-    -webkit-filter: grayscale($grayscale);
-    -o-filter: grayscale($grayscale);
 }
 
 @mixin filter-hue-rotate($hue-rotate) {
     filter: hue-rotate($hue-rotate);
-    -moz-filter: hue-rotate($hue-rotate);
-    -webkit-filter: hue-rotate($hue-rotate);
-    -o-filter: hue-rotate($hue-rotate);
 }
 
 @mixin filter-invert($invert) {
     filter: invert($invert);
-    -moz-filter: invert($invert);
-    -webkit-filter: invert($invert);
-    -o-filter: invert($invert);
 }
 
 @mixin filter-opacity($opacity) {
     filter: opacity($opacity);
-    -moz-filter: opacity($opacity);
-    -webkit-filter: opacity(2$opacity);
-    -o-filter: opacity($opacity);
 }
 
 @mixin filter-saturate($saturate) {
     filter: saturate($saturate);
-    -moz-filter: saturate($saturate);
-    -webkit-filter: saturate($saturate);
-    -o-filter: saturate($saturate);
-}
-@mixin filter-sepia($sepia) {
-    filter: sepia($sepia);
-    -moz-filter: sepia($sepia);
-    -webkit-filter: sepia($sepia);
-    -o-filter: sepia($sepia);
 }
 
-@mixin background-blur($blur){
+@mixin filter-sepia($sepia) {
+    filter: sepia($sepia);
+}
+
+@mixin background-blur($blur) {
     backdrop-filter: blur($blur);
-    -webkit-backdrop-filter: blur($blur);
 }
