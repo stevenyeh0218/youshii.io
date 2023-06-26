@@ -8,6 +8,9 @@ $(document).ready(function () { // 獲取最後更新時間戳
 		$('html, body').css('overflow', 'hidden');
 		setTimeout(function () {
 			$('.youshii-ci').removeClass('ci-blur');
+			$("html,body").animate({
+				scrollTop: 0
+			}, "medium");
 		}, 500);
 		// 等待所有內容載入完畢
 		$(window).on('load', function () { // 3 秒後data-loading=false

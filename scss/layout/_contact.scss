@@ -1,0 +1,67 @@
+.contact {
+    position: relative;
+    color: var(--black);
+    height: 100vh;
+    padding: 3.125rem;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        width: 1000px;
+        height: 1000px;
+        animation: circle-scale 1s linear infinite alternate;
+        @include filter-blur(50px);
+        @include ease(.2s);
+        z-index: -1;
+    }
+
+    &::before {
+        background: var(--light-brown);
+        left: -16rem;
+        top: -36rem;
+    }
+
+    &::after {
+        background: var(--dark-brown);
+        right: -16rem;
+        bottom: -36rem;
+    }
+
+    &>article {
+        position: absolute;
+        bottom: 6.25rem;
+
+        &>h1 {
+            font-size: 8rem;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        .mail {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+
+            &>i {}
+
+            .text {}
+        }
+
+        .colophon {
+            font-size: 0.875rem;
+        }
+    }
+
+    &>img {
+        position: absolute;
+        height: auto;
+        top: 11.25rem;
+        animation: slide 7s linear infinite;
+    }
+}
