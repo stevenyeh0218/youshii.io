@@ -1,0 +1,59 @@
+.about {
+    background: url('/image/other/about-bg.png') no-repeat center center transparent;
+    background-size: cover;
+    color: var(--black);
+    height: 100vh;
+    padding: 50px;
+
+    &>h1 {
+        font-size: 8rem;
+        font-weight: 300;
+        text-align: right;
+    }
+
+    &>article {
+        @include flexbox-gap(column, flex-start, flex-start, 6px);
+        padding: 24px 0;
+        border-top: 1px solid var(--black);
+        border-bottom: 1px solid var(--black);
+
+        &>h3 {
+            font-size: 2rem;
+        }
+
+        &>.text {
+            letter-spacing: 0.125rem;
+            line-height: 1.375rem;
+
+            &>.cell {}
+        }
+    }
+
+    .skill {
+        display: grid;
+        gap: 12px;
+        margin-top: 24px;
+
+        .item {
+            @include flexbox-gap-wrap(row, center, flex-start, 12px, wrap);
+
+            &>h4 {
+                background: var(--black);
+                border-radius: 5px;
+                color: var(--white);
+                font-size: 1.5rem;
+                font-weight: 300;
+                min-width: 195px;
+                padding: 6px;
+                text-align: center;
+            }
+
+            .tag {
+                @include flexbox-gap-wrap(row, center, flex-start, 12px, wrap);
+                font-size: 1.125rem;
+
+                &>.text {}
+            }
+        }
+    }
+}

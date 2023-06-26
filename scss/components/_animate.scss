@@ -8,7 +8,7 @@
     }
 }
 
-@-webkit-keyframes circle-rotate {
+@keyframes circle-rotate {
     0% {
         @include transform(rotate(0deg) scale(1));
     }

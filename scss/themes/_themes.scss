@@ -20,6 +20,10 @@ body {
         }
 
         .home {
+            background: var(--white);
+            position: fixed;
+            width: 100%;
+            z-index: 99;
 
             &:before,
             &::after {

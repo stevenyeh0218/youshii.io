@@ -363,7 +363,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--gray);
+  background-color: var(--dark-blue);
   border-radius: 16px;
   border: 2px solid transparent;
 }
@@ -377,6 +377,13 @@ body[data-loading="true"] .top-btn {
   filter: blur(10px);
   opacity: 0;
   visibility: hidden;
+}
+
+body[data-loading="true"] .home {
+  background: var(--white);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 body[data-loading="true"] .home:before, body[data-loading="true"] .home::after {
@@ -689,6 +696,76 @@ header nav {
   transition: all 0.2s ease;
 }
 
+.about {
+  background: url("/image/other/about-bg.png") no-repeat center center transparent;
+  background-size: cover;
+  color: var(--black);
+  height: 100vh;
+  padding: 50px;
+}
+
+.about > h1 {
+  font-size: 8rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.about > article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 24px 0;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.about > article > h3 {
+  font-size: 2rem;
+}
+
+.about > article > .text {
+  letter-spacing: 0.125rem;
+  line-height: 1.375rem;
+}
+
+.about .skill {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about .skill .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about .skill .item > h4 {
+  background: var(--black);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 300;
+  min-width: 195px;
+  padding: 6px;
+  text-align: center;
+}
+
+.about .skill .item .tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 1.125rem;
+}
+
 .youshii-btn {
   color: var(--black);
   transition: all 0.2s ease;
@@ -756,7 +833,7 @@ header nav {
   }
 }
 
-@-webkit-keyframes circle-rotate {
+@keyframes circle-rotate {
   0% {
     transform: rotate(0deg) scale(1);
   }

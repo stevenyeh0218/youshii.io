@@ -8,13 +8,13 @@ $(document).ready(function () { // 獲取最後更新時間戳
 		$('html, body').css('overflow', 'hidden');
 		setTimeout(function () {
 			$('.youshii-ci').removeClass('ci-blur');
-		}, 1000);
+		}, 500);
 		// 等待所有內容載入完畢
 		$(window).on('load', function () { // 3 秒後data-loading=false
 			setTimeout(function () {
 				$('html, body').removeAttr("style");
 				$('body').attr('data-loading', 'false');
-			}, 1500);
+			}, 1000);
 		});
 	}
 	// 更新最後更新時間戳
