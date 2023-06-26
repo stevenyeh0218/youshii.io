@@ -1,0 +1,8 @@
+/* fill width */
+@mixin fill-available() {
+    box-sizing: border-box;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+}

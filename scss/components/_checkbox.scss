@@ -1,0 +1,50 @@
+.youshii-mode-switch {
+    &>input {
+        display: none;
+
+        &:not(:checked) {
+            &+label {
+                &>span {
+                    color: var(--dark-blue);
+
+                    &:nth-child(2) {
+                        color: var(--white);
+                    }
+                }
+
+                &>span.circle {
+                    left: 1.563rem;
+                }
+            }
+        }
+    }
+
+    &>label {
+        @include flexbox-gap(row, center, center, 0.188rem);
+        position: relative;
+        border: 1px solid var(--dark-blue);
+        border-radius: 3.125rem;
+        cursor: pointer;
+
+        &>span {
+            color: var(--white);
+            padding: 0.188rem;
+            @include ease(.2s);
+
+            &:nth-child(2) {
+                color: var(--dark-blue);
+            }
+        }
+
+        &>span.circle {
+            position: absolute;
+            background: var(--dark-blue);
+            border-radius: 3.125rem;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            z-index: -1;
+            @include ease(.2s);
+        }
+    }
+}

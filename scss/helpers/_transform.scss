@@ -49,7 +49,3 @@
 @mixin translate3d($x, $y, $z) {
   transform: translate3d($x, $y, $z);
 }
-
-@mixin animation($name, $duration, $function) {
-  animation: $name $duration $function;
-}

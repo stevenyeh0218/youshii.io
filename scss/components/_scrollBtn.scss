@@ -1,0 +1,49 @@
+/* top button style */
+.top-btn {
+    position: fixed;
+    cursor: pointer;
+    color: var(--dark-blue);
+    font-size: 4rem;
+    padding: 0.25rem 0.438rem;
+    right: 1rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    @include rotate(-90deg);
+    @include ease(.2s);
+
+    &:hover {
+        color: var(--dark-brown);
+    }
+}
+
+/* scroll bottom */
+.scroll-bar {
+    position: absolute;
+    @include flexbox-gap(row, center, center, 0.188rem);
+    color: var(--dark-blue);
+    cursor: pointer;
+    font-size: 0.875rem;
+    writing-mode: tb;
+    right: 3.125rem;
+    top: 50%;
+    @include ease(.2s);
+
+    .line {
+        position: relative;
+        background: var(--light-blue);
+        border-radius: 3.125rem;
+        width: 0.125rem;
+        height: 6.25rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: var(--dark-blue);
+            border-radius: 3.125rem;
+            width: 0.125rem;
+            height: 1.25rem;
+            animation: scroll-bottom 1s ease forwards infinite;
+        }
+    }
+}

@@ -4,387 +4,101 @@
 <head>
     <meta charset="utf-8">
     <title>YOUSHII STUDIO</title>
-    <meta property="og:title" content="YOUSHII STUDIO">
+    <meta property="og:title" content="YOUSHII">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://stevenyeh0218.github.io/youshii.io">
-    <meta property="og:image" content="https://stevenyeh0218.github.io/youshii.io/image/applogo.png">
-    <meta property="og:site_name" content="YOUSHII STUDIO">
-    <meta property="og:description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設計、BANNER設計,圖片美化修圖">
+    <meta property="og:image" content="image/metaImage/applogo.png">
+    <meta property="og:site_name" content="YOUSHII">
+    <meta property="og:description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta itemprop="name" content="YOUSHII STUDIO">
-    <meta itemprop="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設計、BANNER設計,圖片美化修圖">
+    <meta itemprop="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設計、BANNER設計,圖片美化修圖">
-    <meta name="keywords" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設計、BANNER設計,圖片美化修圖">
-    <meta name="DC.Publisher" content="YOUSHII STUDIO">
-    <meta name="DC.Description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設計、BANNER設計,圖片美化修圖">
+    <meta name="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
+    <meta name="keywords" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
+    <meta name="DC.Publisher" content="YOUSHII">
+    <meta name="DC.Description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta name="DC.Type" content="blog">
-    <link rel="image_src" href="./image/applogo.png" type="image/jpeg">
-    <link rel="shortcut icon" href="./image/favicon.ico">
-    <link rel="apple-touch-icon" href="./image/applogo.png">
-    <!-- fontaewsom pro -->
-    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css">
-    <!-- reset css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <!-- lightgallery css -->
-    <link rel="stylesheet" href="./vendor/lightGallery/css/lightgallery.min.css">
-    <!-- customize css -->
-    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="image_src" href="image/metaImage/applogo.png" type="image/jpeg">
+    <link rel="shortcut icon" href="image/metaImage/favicon.ico">
+    <link rel="apple-touch-icon" href="image/metaImage/applogo.png">
+
+    <!-- iconmoon css -->
+    <link rel="stylesheet" href="vendor/icomoon/style.css">
     <!-- aos css -->
-    <link rel="stylesheet" href="./vendor/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="vendor/aos-master/dist/aos.css">
+    <!-- customize css -->
+    <link rel="stylesheet" href="css/all.css" />
 </head>
 
-<body>
-    <div id="loading">
-        <object type="image/svg+xml" data="./image/svg/loading_logo.svg"></object>
-    </div>
-    <header id="header" class="header" data-aos="fade-up">
-        <img src="./image/svg/logo.svg" class="logo">
-        <nav class="menu">
-            <div id="homebtn" class="menu_item">Home</div>
-            <span class="nav_line"></span>
-            <div id="aboutbtn" class="menu_item">About</div>
-            <span class="nav_line"></span>
-            <div id="skillbtn" class="menu_item">Skill</div>
-            <span class="nav_line"></span>
-            <div id="appProjectbtn" class="menu_item">App/Line@</div>
-            <span class="nav_line"></span>
-            <div id="projectbtn" class="menu_item">Web</div>
-            <span class="nav_line"></span>
-            <div id="designbtn" class="menu_item">Graphic</div>
-            <span class="nav_line"></span>
-            <div id="contactbtn" class="menu_item">Contact</div>
+<body data-loading="true">
+    <header>
+        <div class="mobile-nav-switch">
+            <div class="line"></div>
+        </div>
+        <nav>
+            <button type="button" class="youshii-btn home-btn">Home</button>
+            <button type="button" class="youshii-btn about-btn">About</button>
+            <button type="button" class="youshii-btn web-btn">Web</button>
+            <button type="button" class="youshii-btn app-btn">App</button>
+            <button type="button" class="youshii-btn contact-btn">Contact</button>
+            <a href="https://www.facebook.com/steven.yeh.716" target="_blank"
+                class="youshii-icon-facebook icon youshii-btn"></a>
+            <a href="https://www.instagram.com/szuwei0218/" target="_blank"
+                class="youshii-icon-instagram icon youshii-btn"></a>
+            <div class="youshii-mode-switch">
+                <input type="checkbox" id="toggle" checked>
+                <label for="toggle">
+                    <span class="youshii-icon-brightness icon"></span>
+                    <span class="youshii-icon-night icon"></span>
+                    <span class="circle"></span>
+                </label>
+            </div>
         </nav>
-        <div class="sns">
-            <div class="mode-select"><i class="fa-solid fa-moon"></i></div>
-            <a href="https://www.facebook.com/steven.yeh.716?ref=bookmarks" class="fa-brands fa-facebook-square"></a>
-            <a href="https://www.instagram.com/szuwei0218/" class="fa-brands fa-instagram"></a>
-        </div>
-        <div class="m_nav_switch">
-            <div class="m_open_btn">Menu</div>
-            <div class="m_close_btn">Close</div>
-        </div>
     </header>
-    <div id="wrapper">
-        <section class="banner">
-            <div class="banner_inner">
-                <div class="youshiiDesignLoop">
-                    <img src="./image/svg/youshii_design.svg">
-                    <img src="./image/svg/youshii_design.svg">
-                </div>
-                <div class="message" data-aos="fade-right">
-                    <div class="message_line"></div>
-                    <div class="msg_item">Travel Collection</div>
-                </div>
-                <div class="slideImg" data-aos="fade-up">
-                    <img src="./image/banner/banner_1.jpg">
-                    <img src="./image/banner/banner_2.jpg">
+    <section class="home">
+        <div class="slogan">Designs with Passion Impact with Style</div>
+        <div class="scroll-bar">
+            scroll
+            <div class="line"></div>
+        </div>
+        <div class="youshii-ci ci-blur">
+            <div class="youshii-ci-top">
+                <img src="image/ci/youshii.svg">
+                <div class="youshii-position">
+                    <div class="item">UI</div>
+                    <div class="item">UX</div>
                 </div>
             </div>
-        </section>
-        <section id="about" class="about" data-aos="fade-right">
-            <h2>About</h2>
-            <div class="about_inner">
-                <div>擅長領域包括大型專案管理，與不同部門及產業進行有效的溝通與合作，既能獨立完成多重專案，也能參與推動團隊合作。</div>
-                <div>經手過的 UIUX 專案包括：智慧局 WEB 、專利檢索系統 APP、公司 APP/WEB、電商 APP、公司官方網站等不同類型的大小專案。</div>
-                <div>主要負責前期方向研究、Persona、架構規劃、流程設計與介面設計。在UX分析研究、UI規劃、設計與人與人以及人與產品的互動，累積多年的設計資歷。</div>
-                <div>過往經歷使我能冷靜面對與客觀地解決問題，也能耐心地與不同產業的廠商配合。我享受與不同專業領域的人才共事，也重視長期的合作關係。</div>
-                <div>對於研究與規劃充滿熱情。針對專案需求而運用不同的研究方法去調查複雜多元的使用者習慣，並能進一步理解與洞見。在當今數位科技領先的時代，希望能結合自己專長和熱忱，為客戶與公司創造出雙贏的局面。
+            <div class="youshii-ci-bottom">
+                <div class="youshii-skill">
+                    <div class="item"><i class="youshii-icon-figma"></i></div>
+                    <div class="item">PS</div>
+                    <div class="item">AI</div>
                 </div>
-            </div>
-        </section>
-        <section id="skill" class="skill">
-            <h2 data-aos="fade-up">Skill</h2>
-            <div class="skill_inner">
-                <div class="skill_bg" data-aos="fade-right">
-                    <img src="./image/skill_bg_2.png">
-                </div>
-                <div class="skill_list" data-aos="fade-up">
-                    <div class="skill_list_style communication_list">
-                        <h2>Communication</h2>
-                        <div class="skill_item">— with RD & PM</div>
-                        <div class="skill_item">— with Person</div>
-                    </div>
-                    <div class="skill_list_style create_list">
-                        <h2>Create</h2>
-                        <div class="skill_item">— UI FLOW</div>
-                        <div class="skill_item">— Wireframe</div>
-                        <div class="skill_item">— Mockup</div>
-                        <div class="skill_item">— Persona</div>
-                    </div>
-                    <div class="skill_list_style technology_list">
-                        <h2>Technology</h2>
-                        <div class="skill_item">— HTML5</div>
-                        <div class="skill_item">— CSS3</div>
-                        <div class="skill_item">— LESS、SASS</div>
-                        <div class="skill_item">— Bootstrap</div>
-                        <div class="skill_item">— TailWindCSS</div>
-                        <div class="skill_item">— JS、Jquery</div>
-                    </div>
-                    <div class="skill_list_style tool_list">
-                        <h2>Tool</h2>
-                        <div class="skill_item">— Adobe PS、AI、XD</div>
-                        <div class="skill_item">— Sketch、Figma</div>
-                        <div class="skill_item">— Visual Studio Code</div>
-                        <div class="skill_item">— Sublime Text</div>
-                        <div class="skill_item">— Adobe Brackets</div>
-                        <div class="skill_item">— GIT</div>
-                        <div class="skill_item">— Invision / Axure</div>
-                    </div>
-                </div>
-                <div class="skill_bg_right" data-aos="fade-left">
-                    <img src="./image/skill_bg.jpg">
-                </div>
-            </div>
-        </section>
-        <section id="appProject" class="appProject">
-            <h2 data-aos="fade-right">App/Line@</h2>
-            <div class="appProjectList" data-aos="fade-right">
-                <div class="appProjectItem appAproject_app_3">
-                    <div class="appProjectItem-cover">
-                        <img src="./image/design/app/app_3.png">
-                    </div>
-                    <h3>YouDon APP</h3>
-                    <div class="guideline">— APP視覺設計</div>
-                </div>
-                <div class="appProjectItem appAproject_car">
-                    <div class="appProjectItem-cover">
-                        <img src="./image/design/line@/car_1.png">
-                    </div>
-                    <h3>派車</h3>
-                    <div class="guideline">— line@視覺設計</div>
-                </div>
-                <div class="appProjectItem appAproject_dealer">
-                    <div class="appProjectItem-cover">
-                        <img src="./image/design/line@/dealer.png">
-                    </div>
-                    <h3>快易訂</h3>
-                    <div class="guideline">— line@視覺設計</div>
-                </div>
-                <div class="appProjectItem appAproject_appointment">
-                    <div class="appProjectItem-cover">
-                        <img src="./image/design/line@/appointment.png">
-                    </div>
-                    <h3>預約系統</h3>
-                    <div class="guideline">— line@視覺設計</div>
-                </div>
-            </div>
-            <div class="appProject_info">
-                <div class="appProject_info_closeBtn">關閉</div>
-                <img src="./image/design/app/app_3_flow.png" class="appProject_info_app_3" />
-                <img src="./image/design/line@/car_flow.png" class="appProject_info_car" />
-                <img src="./image/design/line@/dealer_flow.png" class="appProject_info_dealer" />
-                <img src="./image/design/line@/appointment_flow.png" class="appProject_info_appointment" />
-            </div>
-        </section>
-        <section id="project" class="project" data-aos="fade-up">
-            <h2>Web</h2>
-            <div class="project_inner">
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="https://stevenyeh0218.github.io/blockfuture/" target="_blank">
-                            <img src="./image/design/web/web-1.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">區塊未來(Prototype)</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— banner設計</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="https://mimir.school/" target="_blank">
-                            <img src="./image/design/web/web-2.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">覓謎爾</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="http://www.lifeinmyan.com/zh-hant/" target="_blank">
-                            <img src="./image/design/web/web-6.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">緬萊生活科技</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— banner設計</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="https://pcm.tipo.gov.tw/PCM2010/pcm/" target="_blank">
-                            <img src="./image/design/web/web-3.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">經濟部智慧財產局</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="#">
-                            <img src="./image/design/web/web-9.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">文瞱鄉村(開發中)</div>
-                        <div class="project_des">— UI設計</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="http://34.81.51.75:7005/" target="_blank">
-                            <img src="./image/design/web/web-12.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">後台系統</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-                <div class="project_item">
-                    <div class="project_link">
-                        <a href="http://34.160.9.182/Erp/Home/Login" target="_blank">
-                            <img src="./image/design/web/web-11.png">
-                        </a>
-                    </div>
-                    <div class="project_info">
-                        <div class="project_title">後臺系統</div>
-                        <div class="project_des">— UI設計、切版</div>
-                        <div class="project_des">— RWD版型</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="design" class="design" data-aos="fade-up">
-            <h2>Graphic</h2>
-            <div class="design_inner">
-                <a href="./image/design/Ads-pictures/angel_1.png" class="design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/angel_1.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-                <a href="./image/design/Ads-pictures/game.png" class="design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/game.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-                <a href="./image/design/Ads-pictures/watch_1.png" class=" design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/watch_1.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-                <a href="./image/design/Ads-pictures/watch_2.png" class="design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/watch_2.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-                <a href="./image/design/Ads-pictures/watch_3.png" class="design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/watch_3.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-                <a href="./image/design/Ads-pictures/watch_4.png" class="design_item">
-                    <div class="design_img">
-                        <img src="./image/design/Ads-pictures/watch_4.png">
-                    </div>
-                    <div class="design_info">
-                        <div class="design_title">廣告圖設計</div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <div id="colophon" class="colophon">
-            <div class="colophon_inner">
-                <div class="colophon_inner_top">
-                    <div class="colophon_inner_top_left">
-                        <header class="colophon_inner_top_left_header">
-                            <img src="./image/svg/logo_footer.svg">
-                        </header>
-                        <nav class="colophon_inner_top_left_menu">
-                            <div id="homebtn_footer" class="menu_item">Home</div>
-                            <div id="aboutbtn_footer" class="menu_item">About</div>
-                            <div id="skillbtn_footer" class="menu_item">Skill</div>
-                            <div id="projectbtn_footer" class="menu_item">Web</div>
-                            <div id="appbtn_footer" class="menu_item">App/Line@</div>
-                            <div id="designbtn_footer" class="menu_item">Graphic</div>
-                            <div id="contactbtn_footer" class="menu_item">Contact</div>
-                        </nav>
-                    </div>
-                    <div class="colophon_inner_top_right">
-                        <h2 class="colophon_inner_top_right_header">Steven Yeh</h2>
-                        <div class="colophon_inner_top_right_contact">
-                            <div class="colophon_inner_top_right_contact_item">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div class="colophon_inner_top_right_contact_des">fallenyeh@gmail.com</div>
-                            </div>
-                            <div class="colophon_inner_top_right_contact_item">
-                                <a href="https://www.facebook.com/steven.yeh.716?ref=bookmarks"
-                                    class="fa-brands fa-facebook-square"></a>
-                                <a href="https://www.instagram.com/szuwei0218/" class="fa-brands fa-instagram"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="colophon_inner_bottom">
-                    © 2022 YOUSHII STUDIO all rights reserved.
-                </div>
+                <img src="image/ci/design.svg">
             </div>
         </div>
-        <div id="topbtn"><i class="fa fa-chevron-circle-up"></i></div>
-        <div class="cursor"></div>
+    </section>
+    <footer></footer>
+    <div class="cursor"></div>
+    <div class="top-btn">
+        <i class="youshii-icon-arrow"></i>
     </div>
 </body>
-<!-- 引用 jquery 3.6.0 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- 引用 lightgallery -->
-<script src="./vendor/lightGallery/js/lightgallery-all.min.js"></script>
-<!-- 引用 mousewheel -->
-<script src="./vendor/lightGallery/js/jquery.mousewheel.min.js"></script>
-<!-- 引用 aos -->
-<script src="./vendor/aos-master/dist/aos.js"></script>
 
+<!-- 引用 jquery 3.7.0 -->
+<script src="vendor/jquery-3.7.0.min.js"></script>
+<!-- 引用 aos -->
+<script src="vendor/aos-master/dist/aos.js"></script>
+<!-- 開場動畫 特效 -->
+<script src="js/loading.js"></script>
 <!-- cursor 特效 -->
-<script src="./js/cursor.js"></script>
-<!-- 使用 lightgallery js 套件 -->
-<script src="./js/lightbox.js"></script>
-<!-- 開場特效 -->
-<script src="./js/loading.js"></script>
+<script src="js/cursor.js"></script>
 <!-- mobile menu -->
-<script src="./js/menu.js"></script>
-<!-- 3d hover -->
-<script src="./js/3dHover.js"></script>
+<script src="js/menu.js"></script>
 <!-- 點擊至特效 -->
-<script src="./js/scrollTop.js"></script>
-<!-- App Info 特效 -->
-<script src="./js/appProjecInfo.js"></script>
+<script src="js/scrollTop.js"></script>
 <!-- 夜間模式 特效 -->
-<script src="./js/mode.js"></script>
+<script src="js/mode.js"></script>
 
 </html>

@@ -1,7 +1,7 @@
 /* cursor effect */
 const cursor = document.querySelector(".cursor");
-var btn = $(".menu_item , .mode-select , .sns > a , .colophon_inner_top_right_contact_item > a, #topbtn");
-var app = $(".appProjectItem , .project_link , .design_item");
+var btn = $(".youshii-btn , nav > a , .youshii-mode-switch,.mobile-nav-switch");
+var scrollBtn = $(".top-btn,.scroll-bar");
 
 document.addEventListener("mousemove", (e) => {
 	let x = e.pageX - 10;
@@ -24,10 +24,10 @@ btn.on('mouseleave', function () {
 	cursor.classList.remove('is-hover');
 });
 
-app.on('mouseover', function () {
-	cursor.classList.add('is-project');
+scrollBtn.on('mouseover', function () {
+	cursor.classList.add('is-topBtn');
 });
 
-app.on('mouseleave', function () {
-	cursor.classList.remove('is-project');
+scrollBtn.on('mouseleave', function () {
+	cursor.classList.remove('is-topBtn');
 });

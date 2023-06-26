@@ -1,0 +1,123 @@
+.home {
+    position: relative;
+    padding: 0 3.125rem;
+    height: 100vh;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        width: 1000px;
+        height: 1000px;
+        animation: circle-rotate 3s linear infinite alternate;
+        @include filter-blur(50px);
+        @include ease(.2s);
+        z-index: -1;
+    }
+
+    &::before {
+        background: var(--light-brown);
+        right: -16rem;
+        top: -36rem;
+    }
+
+    &::after {
+        background: var(--dark-brown);
+        left: -16rem;
+        bottom: -36rem;
+    }
+
+
+    .slogan {
+        position: absolute;
+        width: 20rem;
+        font-size: 2rem;
+        color: var(--dark-blue);
+        line-height: 2.5rem;
+        top: 10rem;
+        left: 10rem;
+        @include ease(.2s);
+    }
+
+    .youshii-ci {
+        @include flexbox-gap(column, center, center, 1.5rem);
+        position: absolute;
+        width: 55vw;
+        bottom: 6.25rem;
+        @include ease(.2s);
+
+        &-top,
+        &-bottom {
+            @include flexbox-gap(row, center, center, 3.125rem);
+            @include fill-available();
+            @include ease(.2s);
+        }
+
+        &-top {
+            position: relative;
+
+            .youshii-position {
+                @include flexbox-gap(row, center, center, 1.5rem);
+                @include ease(.2s);
+
+                .item {
+                    font-size: 1.5rem;
+                    border: 1px solid var(--dark-blue);
+                    border-radius: 5px;
+                    color: var(--dark-blue);
+                    padding: 9px;
+                }
+            }
+
+            &>img {
+                @include ease(.2s);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: var(--black);
+                width: 85vw;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                @include ease(.2s);
+            }
+        }
+
+        &-bottom {
+            position: relative;
+
+            .youshii-skill {
+                @include flexbox-gap(row, center, center, 1.5rem);
+                @include ease(.2s);
+
+                .item {
+                    font-size: 1.5rem;
+                    border: 1px solid var(--dark-blue);
+                    border-radius: 5px;
+                    color: var(--dark-blue);
+                    padding: 9px;
+                }
+            }
+
+            &>img {
+                @include ease(.2s);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: var(--black);
+                width: 85vw;
+                width: 145%;
+                height: 2px;
+                bottom: 0;
+                right: 0;
+                @include ease(.2s);
+            }
+        }
+    }
+}

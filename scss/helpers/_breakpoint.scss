@@ -1,23 +1,41 @@
 @mixin for-largedesktop {
-    @media (max-width: 1366px) { @content; }
+    @media (max-width: 1366px) {
+        @content;
+    }
 }
 
 @mixin for-desktop {
-    @media (max-width: 1200px) { @content; }
+    @media (max-width: 1200px) {
+        @content;
+    }
 }
 
 @mixin for-largepad {
-    @media (max-width: 991px) { @content; }
+    @media (max-width: 991px) {
+        @content;
+    }
 }
 
 @mixin for-pad {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 768px) {
+        @content;
+    }
 }
 
 @mixin for-phone {
-    @media (max-width: 480px) { @content; }
+    @media (max-width: 480px) {
+        @content;
+    }
 }
 
 @mixin for-landscape {
-    @media only screen and (max-width: 991px) and (orientation: landscape){ @content; }
+    @media only screen and (max-width: 991px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-dark-mode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
 }

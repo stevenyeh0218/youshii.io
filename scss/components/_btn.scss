@@ -1,0 +1,8 @@
+.youshii-btn {
+    color: var(--black);
+    @include ease(.2s);
+
+    &:hover {
+        color: var(--dark-blue);
+    }
+}

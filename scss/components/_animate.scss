@@ -1,39 +1,19 @@
-/* loading translate */
-.scaleLoading {
-    @include scale(3);
-}
-
-/* loading translate end */
-
-.animate-show {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* menu translate end */
-
-
-@keyframes slide {
-    25% {
-        @include show();
-    }
-
-    50% {
-        @include transform(rotate(-2.5deg) scale(1.1));
-    }
-
-    100% {
-        @include hide();
-    }
-}
-
-
-@keyframes infinity_slide {
+@keyframes scroll-bottom {
     0% {
-        transform: translate3d(0, 0, 0);
+        top: 0;
     }
 
     100% {
-        transform: translate3d(-1692px, 0, 0);
+        top: 100%;
+    }
+}
+
+@-webkit-keyframes circle-rotate {
+    0% {
+        @include transform(rotate(0deg) scale(1));
+    }
+
+    100% {
+        @include transform(rotate(360deg) scale(2));
     }
 }

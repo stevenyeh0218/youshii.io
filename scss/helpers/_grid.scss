@@ -1,4 +1,4 @@
-@mixin grid($direction,$columns, $rows, $place, $gap) {
+@mixin grid($direction, $columns, $rows, $place, $gap) {
     display: grid;
     grid-auto-flow: $direction;
     grid-template-columns: $columns;
@@ -10,17 +10,4 @@
 @mixin grid-child ($col-start, $col-end, $row-start, $row-end) {
     grid-column: #{$col-start}/#{$col-end};
     grid-row: #{$row-start}/#{$row-end};
-  }
-
-@mixin grid-center-gap($place,$gap){
-    display: grid;
-    place-content: $place;
-    gap: $gap;
-}
-
-@mixin grid-start-end($column-start,$column-end,$row-start,$row-end){
-    grid-column-start: $column-start;
-    grid-column-end: $column-end;
-    grid-row-start: $row-start;
-    grid-row-end: $row-end;
 }
