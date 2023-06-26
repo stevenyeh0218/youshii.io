@@ -1,0 +1,12 @@
+.web {
+    scroll-snap-align: start;
+    background: var(--light-brown);
+    color: var(--black);
+    padding: 3.125rem;
+
+    &>h1 {
+        border-bottom: 1px solid var(--black);
+    }
+
+    &>article {}
+}

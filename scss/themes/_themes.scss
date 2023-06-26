@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y proximity;
+}
+
 body {
     font-family: 'Noto Sans TC' !important;
     color: var(--dark-gray);
