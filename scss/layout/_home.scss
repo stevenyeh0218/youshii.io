@@ -1,8 +1,5 @@
 .home {
-    scroll-snap-align: start;
     position: relative;
-    padding: 0 3.125rem;
-    height: 100vh;
     overflow: hidden;
 
     &::before,

@@ -1,9 +1,5 @@
 .contact {
-    scroll-snap-align: start;
     position: relative;
-    color: var(--black);
-    height: 100vh;
-    padding: 3.125rem;
     overflow: hidden;
 
     &::before,

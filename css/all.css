@@ -568,10 +568,7 @@ header nav {
 }
 
 .home {
-  scroll-snap-align: start;
   position: relative;
-  padding: 0 3.125rem;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -710,12 +707,8 @@ header nav {
 }
 
 .about {
-  scroll-snap-align: start;
   background: url("/image/other/about-bg.png") no-repeat center center transparent;
   background-size: cover;
-  color: var(--black);
-  height: 100vh;
-  padding: 3.125rem;
 }
 
 .about > h1 {
@@ -777,22 +770,73 @@ header nav {
 }
 
 .web {
-  scroll-snap-align: start;
   background: var(--light-brown);
-  color: var(--black);
-  padding: 3.125rem;
 }
 
 .web > h1 {
   border-bottom: 1px solid var(--black);
 }
 
-.contact {
-  scroll-snap-align: start;
-  position: relative;
+.web > article {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(7, 680px);
+  grid-template-rows: auto;
+  place-items: inherit;
+  gap: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.web > article::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+}
+
+.web > article::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.web > article::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.web > article::-webkit-scrollbar-button {
+  display: none;
+}
+
+.web > article .item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: auto;
+  grid-template-rows: minmax(min-content, 1fr);
+  place-items: inherit;
+  gap: 0.75rem;
+  border-bottom: 0.063rem solid var(--black);
   color: var(--black);
-  height: 100vh;
-  padding: 3.125rem;
+  padding-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.web > article .item:hover {
+  border: 0.063rem solid var(--black);
+  border-top: 0;
+  padding: 0.75rem;
+}
+
+.web > article .item .tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.contact {
+  position: relative;
   overflow: hidden;
 }
 
@@ -848,6 +892,13 @@ header nav {
   top: 11.25rem;
   animation: slide 7s linear infinite;
   mix-blend-mode: screen;
+}
+
+.youshii-section {
+  color: var(--black);
+  height: 100vh;
+  padding: 3.125rem;
+  scroll-snap-align: start;
 }
 
 .youshii-btn {
@@ -984,6 +1035,26 @@ header nav {
 .is-topBtn {
   opacity: 0;
   transition: all 0.1s ease;
+}
+
+.is-project {
+  border: 0.063rem dashed rgba(var(--dark-blue-rgb), 0.5);
+  color: var(--dark-blue);
+  transform: scale(3);
+  transition: all 0.1s ease;
+}
+
+.is-project::after {
+  content: "\e900";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* top button style */

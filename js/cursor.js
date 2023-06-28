@@ -2,6 +2,7 @@
 const cursor = document.querySelector(".cursor");
 var btn = $(".youshii-btn , nav > a , .youshii-mode-switch,.mobile-nav-switch");
 var scrollBtn = $(".top-btn,.scroll-bar");
+var project = $(".web > article > .item");
 
 document.addEventListener("mousemove", (e) => {
 	let x = e.pageX - 10;
@@ -30,4 +31,12 @@ scrollBtn.on('mouseover', function () {
 
 scrollBtn.on('mouseleave', function () {
 	cursor.classList.remove('is-topBtn');
+});
+
+project.on('mouseover', function () {
+	cursor.classList.add('is-project');
+});
+
+project.on('mouseleave', function () {
+	cursor.classList.remove('is-project');
 });

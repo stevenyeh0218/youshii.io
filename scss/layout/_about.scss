@@ -1,10 +1,6 @@
 .about {
-    scroll-snap-align: start;
     background: url('/image/other/about-bg.png') no-repeat center center transparent;
     background-size: cover;
-    color: var(--black);
-    height: 100vh;
-    padding: 3.125rem;
 
     &>h1 {
         text-align: right;

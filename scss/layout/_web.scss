@@ -1,12 +1,54 @@
 .web {
-    scroll-snap-align: start;
     background: var(--light-brown);
-    color: var(--black);
-    padding: 3.125rem;
 
     &>h1 {
         border-bottom: 1px solid var(--black);
     }
 
-    &>article {}
+    &>article {
+        @include grid(column, repeat(7, 680px), auto, inherit, 1.5rem);
+        width: 100%;
+        overflow: hidden;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .item {
+            @include grid(row, auto, minmax(min-content, 1fr), inherit, 0.75rem);
+            border-bottom: 0.063rem solid var(--black);
+            color: var(--black);
+            padding-bottom: 0.75rem;
+            @include ease(.2s);
+
+            &:hover {
+                border: 0.063rem solid var(--black);
+                border-top: 0;
+                padding: 0.75rem;
+            }
+
+            .tag {
+                @include flexbox-gap(row, center, flex-start, 0.75rem);
+            }
+
+            &>h4 {}
+        }
+
+    }
 }
