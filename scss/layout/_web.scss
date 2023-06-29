@@ -9,7 +9,6 @@
         @include grid(column, repeat(7, 680px), auto, inherit, 1.5rem);
         width: 100%;
         overflow: hidden;
-        overflow-x: scroll;
 
         &::-webkit-scrollbar {
             background-color: transparent;

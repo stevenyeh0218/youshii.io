@@ -18,7 +18,8 @@
     @include ease(.1s);
 }
 
-.is-topBtn {
+.is-topBtn,
+.is-app {
     opacity: 0;
     @include ease(.1s);
 }

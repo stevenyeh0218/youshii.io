@@ -786,7 +786,6 @@ header nav {
   gap: 1.5rem;
   width: 100%;
   overflow: hidden;
-  overflow-x: scroll;
 }
 
 .web > article::-webkit-scrollbar {
@@ -833,6 +832,97 @@ header nav {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
+}
+
+.app {
+  background: var(--light-brown);
+}
+
+.app > h1 {
+  border-bottom: 1px solid var(--black);
+}
+
+.app > article {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, 100%);
+  place-items: inherit;
+  gap: 1.5rem;
+  width: 100%;
+  height: calc(100% - 133px);
+  overflow: hidden;
+}
+
+.app > article::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+}
+
+.app > article::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.app > article::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.app > article::-webkit-scrollbar-button {
+  display: none;
+}
+
+.app > article .item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: inherit;
+  place-items: inherit;
+  gap: inherit;
+}
+
+.app > article .item .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  border-left: 0.063rem solid var(--black);
+  padding: 0 1.5rem;
+}
+
+.app > article .item .info .tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.app > article .item .info > h4 {
+  font-size: 2rem;
+}
+
+.app > article .item .info .text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  white-space: pre-line;
+}
+
+.app > article .item .info > a {
+  font-size: 3.125rem;
+  color: var(--dark-blue);
+  border-radius: 50px;
+  border: 0.063rem solid var(--dark-blue);
+  width: max-content;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+}
+
+.app > article .item .info > a:hover {
+  background: var(--dark-blue);
+  color: var(--light-brown);
 }
 
 .contact {
@@ -898,7 +988,6 @@ header nav {
   color: var(--black);
   height: 100vh;
   padding: 3.125rem;
-  scroll-snap-align: start;
 }
 
 .youshii-btn {
@@ -1032,7 +1121,8 @@ header nav {
   transition: all 0.1s ease;
 }
 
-.is-topBtn {
+.is-topBtn,
+.is-app {
   opacity: 0;
   transition: all 0.1s ease;
 }

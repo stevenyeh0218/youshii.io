@@ -1,55 +1,48 @@
-/* Scroll Top */
+/* anchor */
+// function scrollToSection(sectionSelector) {
+// $('.youshii-section').css("scroll-snap-align", "unset");
+// $("html,body").animate({
+// scrollTop: $(sectionSelector).offset().top
+// }, "medium", function () {
+// $('.youshii-section').removeAttr('style');
+// });
+// }
+
+function scrollToSection(sectionSelector) {
+	$("html,body").animate({
+		scrollTop: $(sectionSelector).offset().top
+	}, "medium");
+}
+
 $(".top-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: 0
-	}, "medium")
+	scrollToSection(".home");
 });
 
-/* Scroll Next */
 $(".scroll-bar").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".about").offset().top
-	}, "medium")
+	scrollToSection(".about");
 });
 
-/* Scroll To Home */
 $(".home-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".home").offset().top
-	}, "medium")
+	scrollToSection(".home");
 });
 
-/* Scroll To About */
 $(".about-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".about").offset().top
-	}, "medium")
+	scrollToSection(".about");
 });
 
-/* Scroll To Web */
 $(".web-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".web").offset().top
-	}, "medium")
+	scrollToSection(".web");
 });
 
-
-/* Scroll To App */
 $(".app-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".app").offset().top
-	}, "medium")
+	scrollToSection(".app");
 });
 
-/* Scroll To Contact */
 $(".contact-btn").click(function () {
-	$("html,body").animate({
-		scrollTop: $(".contact").offset().top
-	}, "medium")
+	scrollToSection(".contact");
 });
 
-
-/* Section Scroll Animate */
+/* Section Animate */
 $(window).on("scroll", function () {
 	var scrollPosition = $(this).scrollTop();
 	var windowHeight = $(window).height();
@@ -75,14 +68,35 @@ $(window).on("scroll", function () {
 		var opacityValue = webPercentage / 100;
 
 		if (webPercentage <= 100) {
-			$(".web").css({
+			$(".web > h1 , .web > article ").css({
 				filter: "blur(" + blurValue.toFixed(1) + "px)",
 				opacity: opacityValue.toFixed(2)
 			});
 		}
 	} else if (scrollPosition < webVisiblePos) {
-		$(".web").css({filter: "blur(50px)", opacity: 0});
+		$(".web > h1 , .web > article").css({filter: "blur(50px)", opacity: 0});
 	} else {
-		$(".web").css({filter: "blur(0px)", opacity: 1});
+		$(".web > h1 , .web > article").css({filter: "blur(0px)", opacity: 1});
+	}
+
+	// App 效果
+	var appOffsetTop = $(".app").offset().top;
+	var appVisiblePos = appOffsetTop - windowHeight;
+
+	if (scrollPosition >= appVisiblePos && scrollPosition <= appOffsetTop) {
+		var appPercentage = (scrollPosition - appVisiblePos) / windowHeight * 100;
+		var blurValue = 50 * (1 - appPercentage / 100);
+		var opacityValue = appPercentage / 100;
+
+		if (appPercentage <= 100) {
+			$(".app > h1 , .app > article").css({
+				filter: "blur(" + blurValue.toFixed(1) + "px)",
+				opacity: opacityValue.toFixed(2)
+			});
+		}
+	} else if (scrollPosition < appVisiblePos) {
+		$(".app > h1 , .app > article").css({filter: "blur(50px)", opacity: 0});
+	} else {
+		$(".app > h1 , .app > article").css({filter: "blur(0px)", opacity: 1});
 	}
 });
