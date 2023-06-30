@@ -1,13 +1,4 @@
 /* anchor */
-// function scrollToSection(sectionSelector) {
-// $('.youshii-section').css("scroll-snap-align", "unset");
-// $("html,body").animate({
-// scrollTop: $(sectionSelector).offset().top
-// }, "medium", function () {
-// $('.youshii-section').removeAttr('style');
-// });
-// }
-
 function scrollToSection(sectionSelector) {
 	$("html,body").animate({
 		scrollTop: $(sectionSelector).offset().top
