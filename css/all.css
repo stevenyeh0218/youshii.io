@@ -788,25 +788,6 @@ header nav {
   overflow: hidden;
 }
 
-.web > article::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0;
-}
-
-.web > article::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.web > article::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-}
-
-.web > article::-webkit-scrollbar-button {
-  display: none;
-}
-
 .web > article .item {
   display: grid;
   grid-auto-flow: row;
@@ -852,25 +833,6 @@ header nav {
   width: 100%;
   height: calc(100% - 133px);
   overflow: hidden;
-}
-
-.app > article::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0;
-}
-
-.app > article::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.app > article::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-}
-
-.app > article::-webkit-scrollbar-button {
-  display: none;
 }
 
 .app > article .item {

@@ -17,6 +17,24 @@ $(document).ready(function () { // 獲取最後更新時間戳
 			setTimeout(function () {
 				$('html, body').removeAttr("style");
 				$('body').attr('data-loading', 'false');
+
+				// section.web 啟用 gsap scrollTrigger animation
+				gsap.registerPlugin(ScrollTrigger);
+
+				let sections = gsap.utils.toArray(".web article .item");
+
+				gsap.to(sections, {
+					xPercent: -100 * (sections.length - 1),
+					ease: "none",
+					scrollTrigger: {
+						trigger: ".web",
+						pin: true,
+						scrub: 1,
+						snap: 1 / (sections.length - 1),
+						end: () => "+=" + document.querySelector(".web").offsetWidth
+					}
+				});
+
 			}, 1000);
 		});
 	}
