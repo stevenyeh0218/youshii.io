@@ -36,6 +36,7 @@ $(document).ready(function () { // 獲取最後更新時間戳
 					}
 				});
 
+				// section.app 啟用 gsap scrollTrigger animation
 				gsap.to(verticalSections, {
 					yPercent: -100 * (verticalSections.length - 1),
 					ease: "none",
