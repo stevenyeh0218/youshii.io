@@ -1,5 +1,11 @@
 .youshii-section {
+    position: relative;
     color: var(--black);
     height: 100vh;
     padding: 3.125rem;
+    overflow: hidden;
+
+    @include for-desktop {
+        padding: 1.5rem;
+    }
 }

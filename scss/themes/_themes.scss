@@ -11,6 +11,7 @@ html {
 body {
     font-family: 'Noto Sans TC' !important;
     color: var(--dark-gray);
+    width: 100vw;
     overflow: hidden;
     overflow-y: scroll;
     @include mac-scrollbar-style();
@@ -42,17 +43,7 @@ body {
 
             .youshii-ci {
 
-                &-top {
-                    .youshii-position {
-                        @include filter-blur(10px);
-                        @include hide();
-                    }
-
-                    &::after {
-                        width: 0;
-                    }
-                }
-
+                &-top,
                 &-bottom {
                     .youshii-skill {
                         @include filter-blur(10px);
@@ -111,10 +102,22 @@ h5 {
 
 h1 {
     font-size: 8rem;
+
+    @include for-desktop {
+        font-size: 6rem;
+    }
+
+    @include for-phone {
+        font-size: 4rem;
+    }
 }
 
 h4 {
     font-size: 1.5rem;
+
+    @include for-desktop {
+        font-size: 1.125rem;
+    }
 }
 
 p {
@@ -124,6 +127,15 @@ p {
 
 .icon {
     font-size: 1.125rem;
+
+    @include for-desktop {
+        font-size: 1rem;
+    }
+
+    @include for-largepad {
+        font-size: 1.5rem;
+
+    }
 }
 
 :root {

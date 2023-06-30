@@ -11,4 +11,12 @@
     border: 0.063rem solid var(--black);
     border-radius: 0.313rem;
     padding: 0.375rem;
+
+    @include for-desktop {
+        font-size: 0.875rem;
+    }
+
+    @include for-phone {
+        padding: 0.25rem;
+    }
 }
