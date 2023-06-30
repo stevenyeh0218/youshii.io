@@ -358,7 +358,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  background-color: transparent;
+  background-color: var(--light-brown);
   width: 8px;
 }
 
