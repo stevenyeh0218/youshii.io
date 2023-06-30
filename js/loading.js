@@ -21,17 +21,30 @@ $(document).ready(function () { // 獲取最後更新時間戳
 				// section.web 啟用 gsap scrollTrigger animation
 				gsap.registerPlugin(ScrollTrigger);
 
-				let sections = gsap.utils.toArray(".web article .item");
+				let horizontalSections = gsap.utils.toArray(".web article .item");
+				let verticalSections = gsap.utils.toArray(".app article .item");
 
-				gsap.to(sections, {
-					xPercent: -100 * (sections.length - 1),
+				gsap.to(horizontalSections, {
+					xPercent: -100 * (horizontalSections.length - 1),
 					ease: "none",
 					scrollTrigger: {
 						trigger: ".web",
 						pin: true,
 						scrub: 1,
-						snap: 1 / (sections.length - 1),
+						snap: 1 / (horizontalSections.length - 1),
 						end: () => "+=" + document.querySelector(".web").offsetWidth
+					}
+				});
+
+				gsap.to(verticalSections, {
+					yPercent: -100 * (verticalSections.length - 1),
+					ease: "none",
+					scrollTrigger: {
+						trigger: ".app",
+						pin: true,
+						scrub: 1,
+						snap: 1 / (verticalSections.length - 1),
+						end: () => "+=" + document.querySelector(".app").offsetHeight
 					}
 				});
 
