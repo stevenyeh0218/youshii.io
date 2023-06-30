@@ -3,10 +3,6 @@
     background-size: cover;
     scroll-snap-align: start;
 
-    @include for-desktop {
-        scroll-snap-align: unset;
-    }
-
     @include for-phone {
         background-position: 23% center;
         height: auto !important;

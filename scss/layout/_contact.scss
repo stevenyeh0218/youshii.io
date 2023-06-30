@@ -1,14 +1,6 @@
 .contact {
     scroll-snap-align: start;
 
-    @include for-desktop {
-        scroll-snap-align: unset;
-    }
-
-    @include for-largepad {
-        height: 50vh !important;
-    }
-
     &::before,
     &::after {
         content: "";
@@ -59,11 +51,8 @@
         bottom: 6.25rem;
 
         @include for-largepad {
-            bottom: 4rem;
-        }
-
-        @include for-phone {
-            bottom: 3rem;
+            bottom: 12rem;
+            left: 3rem;
         }
 
         &>h1 {
@@ -106,11 +95,7 @@
         mix-blend-mode: screen;
 
         @include for-largepad {
-            top: 5rem;
-        }
-
-        @include for-phone {
-            top: 3rem;
+            top: 10rem;
         }
     }
 }

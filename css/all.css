@@ -668,12 +668,6 @@ header .close .line::after {
   scroll-snap-align: start;
 }
 
-@media (max-width: 1200px) {
-  .home {
-    scroll-snap-align: unset;
-  }
-}
-
 .home::before, .home::after {
   content: "";
   position: absolute;
@@ -897,12 +891,6 @@ header .close .line::after {
   scroll-snap-align: start;
 }
 
-@media (max-width: 1200px) {
-  .about {
-    scroll-snap-align: unset;
-  }
-}
-
 @media (max-width: 480px) {
   .about {
     background-position: 23% center;
@@ -1054,6 +1042,7 @@ header .close .line::after {
   border-bottom: 0.063rem solid var(--black);
   color: var(--black);
   padding-bottom: 0.75rem;
+  transition: all 0.2s ease;
 }
 
 .web > article .item .tag {
@@ -1203,18 +1192,6 @@ header .close .line::after {
   scroll-snap-align: start;
 }
 
-@media (max-width: 1200px) {
-  .contact {
-    scroll-snap-align: unset;
-  }
-}
-
-@media (max-width: 991px) {
-  .contact {
-    height: 50vh !important;
-  }
-}
-
 .contact::before, .contact::after {
   content: "";
   position: absolute;
@@ -1274,13 +1251,8 @@ header .close .line::after {
 
 @media (max-width: 991px) {
   .contact > article {
-    bottom: 4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact > article {
-    bottom: 3rem;
+    bottom: 12rem;
+    left: 3rem;
   }
 }
 
@@ -1330,13 +1302,7 @@ header .close .line::after {
 
 @media (max-width: 991px) {
   .contact > img {
-    top: 5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact > img {
-    top: 3rem;
+    top: 10rem;
   }
 }
 
