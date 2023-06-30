@@ -31,7 +31,7 @@ $(document).ready(function () { // 獲取最後更新時間戳
 						trigger: ".web",
 						pin: true,
 						scrub: 1,
-						snap: 1 / (horizontalSections.length - 1),
+						// snap: 1 / (horizontalSections.length - 1),
 						end: () => "+=" + document.querySelector(".web").offsetWidth
 					}
 				});
@@ -44,7 +44,7 @@ $(document).ready(function () { // 獲取最後更新時間戳
 						trigger: ".app",
 						pin: true,
 						scrub: 1,
-						snap: 1 / (verticalSections.length - 1),
+						// snap: 1 / (verticalSections.length - 1),
 						end: () => "+=" + document.querySelector(".app").offsetHeight
 					}
 				});

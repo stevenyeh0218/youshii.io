@@ -21,14 +21,23 @@
             padding-bottom: 0.75rem;
             @include ease(.2s);
 
-            &:hover {
-                border: 0.063rem solid var(--black);
-                border-top: 0;
-                padding: 0.75rem;
-            }
-
             .tag {
                 @include flexbox-gap(row, center, flex-start, 0.75rem);
+            }
+
+            .title {
+                @include flexbox-gap(row, center, flex-start, 0.75rem);
+
+                &>a {
+                    font-size: 2rem;
+                    color: var(--dark-blue);
+                    @include ease(.2s);
+
+                    &:hover {
+                        @include translateX(0.375rem);
+                    }
+                }
+
             }
 
             &>h4 {}

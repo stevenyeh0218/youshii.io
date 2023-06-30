@@ -46,20 +46,25 @@
                     @include flexbox-gap(row, center, flex-start, 0.75rem);
                 }
 
-                &>h4 {
-                    font-size: 2rem;
+                .title {
+                    @include flexbox-gap(row, center, flex-start, 0.75rem);
 
-                    @include for-desktop {
-                        font-size: 1.5rem;
+                    &>h4 {}
+
+                    &>a {
+                        font-size: 2rem;
+                        color: var(--dark-blue);
+                        @include ease(.2s);
+
+                        &:hover {
+                            @include translateX(0.375rem);
+                        }
                     }
 
-                    @include for-phone {
-                        font-size: 1.25rem;
-                    }
                 }
 
                 .text {
-                    font-size: 1.5rem;
+                    font-size: 1.125rem;
                     font-weight: 300;
                     white-space: pre-line;
 
@@ -70,25 +75,6 @@
                     @include for-phone {
                         font-size: 0.875rem;
                         text-align: justify;
-                    }
-                }
-
-                &>a {
-                    font-size: 3.125rem;
-                    color: var(--dark-blue);
-                    border-radius: 50px;
-                    border: 0.063rem solid var(--dark-blue);
-                    width: max-content;
-                    margin: 0 auto;
-                    @include ease(.2s);
-
-                    @include for-desktop {
-                        font-size: 2.5rem;
-                    }
-
-                    &:hover {
-                        background: var(--dark-blue);
-                        color: var(--light-brown);
                     }
                 }
             }
