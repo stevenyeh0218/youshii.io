@@ -14,6 +14,10 @@
             grid-template-columns: repeat(7, calc(100vh - 175px));
         }
 
+        @include for-phone {
+            grid-template-columns: repeat(7, 327px);
+        }
+
         .item {
             @include grid(row, auto, minmax(min-content, 1fr), inherit, 0.75rem);
             color: var(--black);

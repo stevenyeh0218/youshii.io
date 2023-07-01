@@ -1032,6 +1032,12 @@ header .close .line::after {
   }
 }
 
+@media (max-width: 480px) {
+  .web > article {
+    grid-template-columns: repeat(7, 327px);
+  }
+}
+
 .web > article .item {
   display: grid;
   grid-auto-flow: row;
