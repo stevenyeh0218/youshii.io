@@ -20,7 +20,7 @@
     }
 
     &:hover {
-        color: var(--dark-brown);
+        @include transform(rotate(-90deg) translateX(0.375rem));
     }
 }
 
