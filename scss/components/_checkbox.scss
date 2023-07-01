@@ -14,6 +14,10 @@
 
                 &>span.circle {
                     left: 1.563rem;
+
+                    @include for-largepad {
+                        left: 1.938rem;
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 @mixin mac-scrollbar-style() {
     &::-webkit-scrollbar {
-        background-color: var(--light-brown);
+        background-color: transparent;
         width: 8px;
     }
 
