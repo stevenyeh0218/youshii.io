@@ -1,8 +1,11 @@
 /* anchor */
 function scrollToSection(sectionSelector) {
+	$('.youshii-section').css("scroll-snap-align", "unset");
 	$("html,body").animate({
 		scrollTop: $(sectionSelector).offset().top
-	}, "medium");
+	}, "medium", function () {
+		$('.youshii-section').removeAttr('style');
+	});
 }
 
 $(".top-btn").click(function () {
