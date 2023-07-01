@@ -1021,7 +1021,7 @@ header .close .line::after {
   grid-template-columns: repeat(7, calc(100vh - 256px));
   grid-template-rows: auto;
   place-items: inherit;
-  gap: 1.5rem;
+  gap: inherit;
   width: 100%;
   overflow: hidden;
 }
@@ -1039,7 +1039,6 @@ header .close .line::after {
   grid-template-rows: minmax(min-content, 1fr);
   place-items: inherit;
   gap: 0.75rem;
-  border-bottom: 0.063rem solid var(--black);
   color: var(--black);
   padding-bottom: 0.75rem;
   transition: all 0.2s ease;
@@ -1085,7 +1084,7 @@ header .close .line::after {
   grid-template-columns: auto;
   grid-template-rows: repeat(4, 100%);
   place-items: inherit;
-  gap: 1.5rem;
+  gap: inherit;
   width: 100%;
   height: calc(100vh - 256px);
   overflow: hidden;
@@ -1120,7 +1119,6 @@ header .close .line::after {
   align-items: flex-start;
   justify-content: center;
   gap: 1.5rem;
-  border-left: 0.063rem solid var(--black);
   padding: 0 1.5rem;
 }
 
@@ -1128,12 +1126,6 @@ header .close .line::after {
   .app > article .item .info {
     gap: 0.75rem;
     padding: 0 0.75rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .app > article .item .info {
-    border-left: none;
   }
 }
 

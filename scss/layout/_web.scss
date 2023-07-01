@@ -6,7 +6,7 @@
     }
 
     &>article {
-        @include grid(column, repeat(7, calc(100vh - 256px)), auto, inherit, 1.5rem);
+        @include grid(column, repeat(7, calc(100vh - 256px)), auto, inherit, inherit);
         width: 100%;
         overflow: hidden;
 
@@ -16,7 +16,6 @@
 
         .item {
             @include grid(row, auto, minmax(min-content, 1fr), inherit, 0.75rem);
-            border-bottom: 0.063rem solid var(--black);
             color: var(--black);
             padding-bottom: 0.75rem;
             @include ease(.2s);
