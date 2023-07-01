@@ -680,7 +680,7 @@ header .close .line::after {
   z-index: -1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .home::before, .home::after {
     width: 760px;
     height: 760px;
@@ -1202,7 +1202,7 @@ header .close .line::after {
   z-index: -1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .contact::before, .contact::after {
     width: 760px;
     height: 760px;

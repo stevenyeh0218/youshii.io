@@ -13,7 +13,7 @@
         @include ease(.2s);
         z-index: -1;
 
-        @include for-largepad {
+        @include for-desktop {
             width: 760px;
             height: 760px;
         }
