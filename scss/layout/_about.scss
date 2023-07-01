@@ -4,7 +4,7 @@
     scroll-snap-align: start;
 
     @include for-phone {
-        background-position: 23% center;
+        background-position: 28% center;
         height: auto !important;
     }
 
@@ -84,6 +84,11 @@
 
                 @include for-desktop {
                     font-size: 1rem;
+                }
+
+                @include for-phone {
+                    flex-direction: column;
+                    align-items: flex-start;
                 }
 
                 &>.text {}

@@ -987,7 +987,7 @@ header .close .line::after {
 
 @media (max-width: 480px) {
   .about {
-    background-position: 23% center;
+    background-position: 28% center;
     height: auto !important;
   }
 }
@@ -1098,6 +1098,13 @@ header .close .line::after {
 @media (max-width: 1200px) {
   .about .skill .item .tag {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .skill .item .tag {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
