@@ -5,7 +5,6 @@
     &::after {
         content: "";
         position: absolute;
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         width: 880px;
         height: 880px;
         animation: circle-rotate 3s linear infinite alternate;

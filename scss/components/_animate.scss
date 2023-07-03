@@ -20,10 +20,12 @@
 
 @keyframes circle-rotate {
     0% {
+        border-radius: 50%;
         @include transform(rotate(0deg) scale(1));
     }
 
     100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         @include transform(rotate(360deg) scale(2));
     }
 }
