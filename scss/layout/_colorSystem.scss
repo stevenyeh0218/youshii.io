@@ -1,0 +1,46 @@
+.colorSystem {
+    @include flexbox-gap(column, center, center, 1.5rem);
+    padding: 3.125rem 0;
+
+    &>h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+    }
+
+    &>article {
+        @include flexbox-gap-wrap(row, center, center, 1.5rem, wrap);
+
+        .item {
+            @include flexbox(column, center, center);
+
+            .color {
+                border-radius: 0.313rem;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 0.75rem;
+            }
+
+            .text {
+                align-self: baseline;
+            }
+        }
+
+        .bc-ci {
+            .color {
+                background: var(--bc-green);
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--bc-yellow);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--bc-blue);
+                }
+            }
+        }
+    }
+}

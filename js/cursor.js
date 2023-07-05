@@ -2,7 +2,7 @@
 const cursor = document.querySelector(".cursor");
 var btn = $(".youshii-btn , nav > a , .youshii-mode-switch,.mobile-nav-switch");
 var scrollBtn = $(".top-btn,.scroll-bar");
-var web = $(".web > article > .item  > .title > a");
+var web = $(".web > article > .item  > .title > a,.information > a");
 var app = $(".app > article > .item > .info > .title > a");
 
 

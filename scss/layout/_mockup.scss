@@ -1,0 +1,24 @@
+.mockup {
+    background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+
+    &>h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &>article {
+        perspective: 1000px;
+        @include flexbox-gap-wrap(row, center, center, 1.5rem, wrap);
+        height: 100%;
+        transform-style: preserve-3d;
+        @include transform(rotate3d(360, 120, -90, 60deg) rotateZ(-30deg) translate3d(5%, -20%, 10px));
+        @include ease(.2s);
+
+        &>img {
+            width: 25%;
+            height: auto;
+            box-shadow: -15px 15px 20px #{'rgba(var(--black-rgb), 0.5)'};
+        }
+    }
+}

@@ -24,6 +24,17 @@
     --dark-brown-rgb: 232, 223, 202;
     --light-blue-rgb: 174, 189, 202;
     --dark-blue-rgb: 120, 149, 178;
+
+    /* blockchain ci hex*/
+    --bc-green: #1eac8d;
+    --bc-yellow: #f5e0ad;
+    --bc-blue: #94d9d4;
+
+    /* blockchain ci rgb*/
+    --bc-green-rgb: rgb(30, 172, 141);
+    --bc-yellow-rgb: rgb(245, 224, 173);
+    --bc-blue-rgb: rgb(148, 217, 212);
+
 }
 
 html {
@@ -100,7 +111,8 @@ body {
     &[data-loading="true"] {
 
         header,
-        .top-btn {
+        .top-btn,
+        .scroll-bar {
             @include filter-blur(10px);
             @include hide();
         }
@@ -116,8 +128,7 @@ body {
                 @include hide();
             }
 
-            .slogan,
-            .scroll-bar {
+            .slogan {
                 @include filter-blur(10px);
                 @include hide();
             }
@@ -135,6 +146,29 @@ body {
                         width: 0;
                     }
                 }
+            }
+
+            .ci-blur {
+                @include filter-blur(32px);
+                @include hide();
+            }
+        }
+
+        .intro {
+            .title {
+                .youshii-skill {
+                    @include filter-blur(10px);
+                    @include hide();
+                }
+
+                &::after {
+                    width: 0;
+                }
+            }
+
+            &>article {
+                @include filter-blur(10px);
+                @include hide();
             }
 
             .ci-blur {
