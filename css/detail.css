@@ -369,9 +369,23 @@ template {
   --bc-yellow: #f5e0ad;
   --bc-blue: #94d9d4;
   /* blockchain ci rgb*/
-  --bc-green-rgb: #1eac8d;
-  --bc-yellow-rgb: #f5e0ad;
-  --bc-blue-rgb: #94d9d4;
+  --bc-green-rgb: 30, 172, 141;
+  --bc-yellow-rgb: 245, 224, 173;
+  --bc-blue-rgb: 148, 217, 212;
+  /* mimir ci hex*/
+  --mimir-white: #f5f4ef;
+  --mimir-white-2: #f4f4f9;
+  --mimir-light-blue: #9fd7e3;
+  --mimir-logo-blue: #09a3ea;
+  --mimir-dark-blue: #72bdc7;
+  --mimir-dark-yellow: #e8861d;
+  /* mimir ci rgb*/
+  --mimir-white-rgb: 245, 244, 239;
+  --mimir-white-2-rgb: 244, 244, 249;
+  --mimir-light-blue-rgb: 159, 215, 227;
+  --mimir-logo-blue-rgb: 9, 163, 234;
+  --mimir-dark-blue-rgb: 114, 189, 199;
+  --mimir-dark-yellow-rgb: 232, 134, 29;
 }
 
 html {
@@ -934,6 +948,30 @@ header .close .line::after {
 
 .colorSystem > article .bc-ci:last-child .color {
   background: var(--bc-blue);
+}
+
+.colorSystem > article .mimir-ci .color {
+  background: var(--mimir-white);
+}
+
+.colorSystem > article .mimir-ci:nth-child(2) .color {
+  background: var(--mimir-white-2);
+}
+
+.colorSystem > article .mimir-ci:nth-child(3) .color {
+  background: var(--mimir-light-blue);
+}
+
+.colorSystem > article .mimir-ci:nth-child(4) .color {
+  background: var(--mimir-logo-blue);
+}
+
+.colorSystem > article .mimir-ci:nth-child(5) .color {
+  background: var(--mimir-dark-blue);
+}
+
+.colorSystem > article .mimir-ci:last-child .color {
+  background: var(--mimir-dark-yellow);
 }
 
 .mockup {

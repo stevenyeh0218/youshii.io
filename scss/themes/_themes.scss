@@ -31,9 +31,27 @@
     --bc-blue: #94d9d4;
 
     /* blockchain ci rgb*/
-    --bc-green-rgb: rgb(30, 172, 141);
-    --bc-yellow-rgb: rgb(245, 224, 173);
-    --bc-blue-rgb: rgb(148, 217, 212);
+    --bc-green-rgb: 30, 172, 141;
+    --bc-yellow-rgb: 245, 224, 173;
+    --bc-blue-rgb: 148, 217, 212;
+
+
+    /* mimir ci hex*/
+    --mimir-white: #f5f4ef;
+    --mimir-white-2: #f4f4f9;
+    --mimir-logo-blue: #09a3ea;
+    --mimir-light-blue: #9fd7e3;
+    --mimir-dark-blue: #72bdc7;
+    --mimir-dark-yellow: #e8861d;
+
+    /* mimir ci rgb*/
+    --mimir-white-rgb: 245, 244, 239;
+    --mimir-white-2-rgb: 244, 244, 249;
+    --mimir-light-blue-rgb: 159, 215, 227;
+    --mimir-logo-blue-rgb: 9, 163, 234;
+    --mimir-dark-blue-rgb: 114, 189, 199;
+    --mimir-dark-yellow-rgb: 232, 134, 29;
+
 
 }
 

@@ -42,5 +42,43 @@
                 }
             }
         }
+
+        .mimir-ci {
+            .color {
+                background: var(--mimir-white);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--mimir-white-2);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--mimir-light-blue);
+                }
+            }
+
+            &:nth-child(4) {
+                .color {
+                    background: var(--mimir-logo-blue);
+                }
+            }
+
+            &:nth-child(5) {
+                .color {
+                    background: var(--mimir-dark-blue);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--mimir-dark-yellow);
+                }
+            }
+        }
+
     }
 }
