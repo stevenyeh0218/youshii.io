@@ -35,11 +35,11 @@
     }
 
     &>article {
-        @include flexbox-gap(row, flex-start, center, 1.5rem);
+        @include flexbox-gap(row, center, center, 1.5rem);
         @include ease(.2s);
 
         &>img {
-            width: 700px;
+            width: 800px;
         }
 
         .information {

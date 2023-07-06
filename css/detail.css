@@ -396,6 +396,20 @@ template {
   --wtmec-green-rgb: 117, 163, 66;
   --wtmec-brown-rgb: 163, 83, 66;
   --wtmec-purple-rgb: 133, 87, 113;
+  /* lifeinmyan ci hex*/
+  --lifeinmyan-yellow: #F6AB00;
+  --lifeinmyan-pink: #ffbab5;
+  --lifeinmyan-red: #d82316;
+  --lifeinmyan-blue: #46d3cd;
+  --lifeinmyan-light-green: #6cbb5a;
+  --lifeinmyan-dark-green: #539b34;
+  /* lifeinmyan ci rgb*/
+  --lifeinmyan-yellow-rgb: 246, 171, 0;
+  --lifeinmyan-pink-rgb: 255, 186, 181;
+  --lifeinmyan-red-rgb: 216, 35, 22;
+  --lifeinmyan-blue-rgb: 70, 211, 205;
+  --lifeinmyan-light-green-rgb: 108, 187, 90;
+  --lifeinmyan-dark-green-rgb: 83, 155, 52;
 }
 
 html {
@@ -858,7 +872,7 @@ header .close .line::after {
 .intro > article {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 1.5rem;
   transition: all 0.2s ease;
@@ -998,6 +1012,30 @@ header .close .line::after {
 
 .colorSystem > article .wtmec-ci:last-child .color {
   background: var(--wtmec-purple);
+}
+
+.colorSystem > article .lifeinmyan-ci .color {
+  background: var(--lifeinmyan-yellow);
+}
+
+.colorSystem > article .lifeinmyan-ci:nth-child(2) .color {
+  background: var(--lifeinmyan-pink);
+}
+
+.colorSystem > article .lifeinmyan-ci:nth-child(3) .color {
+  background: var(--lifeinmyan-red);
+}
+
+.colorSystem > article .lifeinmyan-ci:nth-child(4) .color {
+  background: var(--lifeinmyan-blue);
+}
+
+.colorSystem > article .lifeinmyan-ci:nth-child(5) .color {
+  background: var(--lifeinmyan-light-green);
+}
+
+.colorSystem > article .lifeinmyan-ci:last-child .color {
+  background: var(--lifeinmyan-dark-green);
 }
 
 .mockup {
