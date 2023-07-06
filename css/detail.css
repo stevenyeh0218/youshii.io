@@ -375,8 +375,8 @@ template {
   /* mimir ci hex*/
   --mimir-white: #f5f4ef;
   --mimir-white-2: #f4f4f9;
-  --mimir-light-blue: #9fd7e3;
   --mimir-logo-blue: #09a3ea;
+  --mimir-light-blue: #9fd7e3;
   --mimir-dark-blue: #72bdc7;
   --mimir-dark-yellow: #e8861d;
   /* mimir ci rgb*/
@@ -386,6 +386,16 @@ template {
   --mimir-logo-blue-rgb: 9, 163, 234;
   --mimir-dark-blue-rgb: 114, 189, 199;
   --mimir-dark-yellow-rgb: 232, 134, 29;
+  /* wtmec ci hex*/
+  --wtmec-white: #F4F3EF;
+  --wtmec-green: #75A342;
+  --wtmec-brown: #A35342;
+  --wtmec-purple: #855771;
+  /* wtmec ci rgb*/
+  --wtmec-white-rgb: 244, 243, 239;
+  --wtmec-green-rgb: 117, 163, 66;
+  --wtmec-brown-rgb: 163, 83, 66;
+  --wtmec-purple-rgb: 133, 87, 113;
 }
 
 html {
@@ -972,6 +982,22 @@ header .close .line::after {
 
 .colorSystem > article .mimir-ci:last-child .color {
   background: var(--mimir-dark-yellow);
+}
+
+.colorSystem > article .wtmec-ci .color {
+  background: var(--wtmec-white);
+}
+
+.colorSystem > article .wtmec-ci:nth-child(2) .color {
+  background: var(--wtmec-green);
+}
+
+.colorSystem > article .wtmec-ci:nth-child(3) .color {
+  background: var(--wtmec-brown);
+}
+
+.colorSystem > article .wtmec-ci:last-child .color {
+  background: var(--wtmec-purple);
 }
 
 .mockup {

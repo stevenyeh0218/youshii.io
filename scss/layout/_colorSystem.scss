@@ -80,5 +80,30 @@
             }
         }
 
+        .wtmec-ci {
+            .color {
+                background: var(--wtmec-white);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--wtmec-green);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--wtmec-brown);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--wtmec-purple);
+                }
+            }
+        }
+
     }
 }
