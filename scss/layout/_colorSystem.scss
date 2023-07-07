@@ -180,5 +180,25 @@
             }
 
         }
+
+        .performance-ci {
+            .color {
+                background: var(--performance-green);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--performance-red);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--performance-gray);
+                }
+            }
+
+        }
     }
 }

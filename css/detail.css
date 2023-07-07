@@ -394,6 +394,10 @@ template {
   --tipo-light-blue: #26b3a4;
   --tipo-dark-blue: #4c66a3;
   --tipo-yellow: #f2b53e;
+  /* performance ci hex*/
+  --performance-green: #00BBB4;
+  --performance-red: #E16363;
+  --performance-gray: #72706D;
 }
 
 html {
@@ -1041,6 +1045,18 @@ header .close .line::after {
 
 .colorSystem > article .tipo-ci:last-child .color {
   background: var(--tipo-yellow);
+}
+
+.colorSystem > article .performance-ci .color {
+  background: var(--performance-green);
+}
+
+.colorSystem > article .performance-ci:nth-child(2) .color {
+  background: var(--performance-red);
+}
+
+.colorSystem > article .performance-ci:last-child .color {
+  background: var(--performance-gray);
 }
 
 .mockup {
