@@ -857,6 +857,15 @@ header .close .line::after {
   }
 }
 
+@media (max-width: 480px) {
+  .intro .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
 .intro .title::after {
   content: "";
   position: absolute;
@@ -877,6 +886,12 @@ header .close .line::after {
 @media (max-width: 991px) {
   .intro .title > h1 {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .title > h1 {
+    font-size: 3rem;
   }
 }
 
@@ -924,6 +939,12 @@ header .close .line::after {
   .intro > article {
     grid-template-rows: auto;
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro > article {
+    grid-template-columns: auto;
   }
 }
 
@@ -1003,7 +1024,13 @@ header .close .line::after {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 3.125rem 0;
+  padding: 3.125rem;
+}
+
+@media (max-width: 1200px) {
+  .colorSystem {
+    padding: 1.5rem;
+  }
 }
 
 .colorSystem > h3 {

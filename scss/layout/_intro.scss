@@ -16,6 +16,13 @@
             margin-bottom: 1rem;
         }
 
+        @include for-phone {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -34,6 +41,10 @@
 
             @include for-largepad {
                 font-size: 4rem;
+            }
+
+            @include for-phone {
+                font-size: 3rem;
             }
         }
 
@@ -67,6 +78,10 @@
         @include for-desktop {
             grid-template-rows: auto;
             gap: 0.75rem;
+        }
+
+        @include for-phone {
+            grid-template-columns: auto;
         }
 
         &>img {}

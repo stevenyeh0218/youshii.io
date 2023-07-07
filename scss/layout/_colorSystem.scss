@@ -1,6 +1,10 @@
 .colorSystem {
     @include flexbox-gap(column, center, center, 1.5rem);
-    padding: 3.125rem 0;
+    padding: 3.125rem;
+
+    @include for-desktop {
+        padding: 1.5rem;
+    }
 
     &>h3 {
         color: var(--dark-blue);
