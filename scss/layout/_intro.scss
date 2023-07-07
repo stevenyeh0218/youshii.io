@@ -16,7 +16,11 @@
             @include ease(.2s);
         }
 
-        &>h1 {}
+        &>h1 {
+            text-overflow: ellipsis;
+            word-break: keep-all;
+            white-space: nowrap;
+        }
 
         .youshii-skill {
             @include flexbox-gap(row, center, center, 1.5rem);

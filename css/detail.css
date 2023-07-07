@@ -850,6 +850,12 @@ header .close .line::after {
   transition: all 0.2s ease;
 }
 
+.intro .title > h1 {
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
 .intro .title .youshii-skill {
   display: flex;
   flex-direction: row;
