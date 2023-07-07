@@ -455,7 +455,8 @@ html[data-theme="dark"] .about .skill .item > h4 {
 }
 
 html[data-theme="dark"] .web,
-html[data-theme="dark"] .app {
+html[data-theme="dark"] .app,
+html[data-theme="dark"] .intro {
   background: #000;
 }
 

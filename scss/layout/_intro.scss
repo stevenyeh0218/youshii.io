@@ -1,4 +1,6 @@
 .intro {
+    background: var(--light-brown);
+
     .title {
         @include flexbox-gap(row, center, flex-start, 3.125rem);
         position: relative;

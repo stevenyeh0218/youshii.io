@@ -455,7 +455,8 @@ html[data-theme="dark"] .about .skill .item > h4 {
 }
 
 html[data-theme="dark"] .web,
-html[data-theme="dark"] .app {
+html[data-theme="dark"] .app,
+html[data-theme="dark"] .intro {
   background: #000;
 }
 
@@ -826,6 +827,10 @@ header .close .line::before {
 header .close .line::after {
   opacity: 0;
   visibility: hidden;
+}
+
+.intro {
+  background: var(--light-brown);
 }
 
 .intro .title {
