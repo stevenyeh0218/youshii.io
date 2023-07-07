@@ -1,11 +1,20 @@
 .intro {
     background: var(--light-brown);
 
+    @include for-desktop {
+        height: auto !important;
+    }
+
     .title {
         @include flexbox-gap(row, center, flex-start, 3.125rem);
         position: relative;
         margin-bottom: 1.5rem;
         @include ease(.2s);
+
+        @include for-desktop {
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
         &::after {
             content: "";
@@ -22,11 +31,19 @@
             text-overflow: ellipsis;
             word-break: keep-all;
             white-space: nowrap;
+
+            @include for-largepad {
+                font-size: 4rem;
+            }
         }
 
         .youshii-skill {
             @include flexbox-gap(row, center, center, 1.5rem);
             @include ease(.2s);
+
+            @include for-desktop {
+                gap: 0.75rem;
+            }
 
             .item {
                 border: 0.063rem solid var(--dark-blue);
@@ -34,6 +51,11 @@
                 color: var(--dark-blue);
                 font-size: 1.25rem;
                 padding: 0.563rem;
+
+                @include for-desktop {
+                    font-size: 0.875rem;
+                    padding: 0.375rem;
+                }
             }
         }
     }
@@ -42,6 +64,11 @@
         @include grid(row, repeat(2, 1fr), calc(100vh - 257px), center, 1.5rem);
         @include ease(.2s);
 
+        @include for-desktop {
+            grid-template-rows: auto;
+            gap: 0.75rem;
+        }
+
         &>img {}
 
         .information {
@@ -49,11 +76,19 @@
             display: grid;
             gap: 1.5rem;
 
+            @include for-desktop {
+                gap: 0.75rem;
+            }
+
             .item {
                 &>h3 {
                     color: var(--dark-blue);
                     font-size: 2rem;
                     margin-bottom: 0.75rem;
+
+                    @include for-desktop {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 .text {
@@ -62,6 +97,11 @@
                     line-height: 1.5rem;
                     letter-spacing: 0.125rem;
                     text-align: justify;
+
+                    @include for-desktop {
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                    }
                 }
             }
 
@@ -72,9 +112,18 @@
                 font-size: 2rem;
                 font-weight: 300;
 
+                @include for-desktop {
+                    font-size: 1.5rem;
+                }
+
                 &>i {
                     font-size: 2rem;
                     @include ease(.2s);
+
+                    @include for-desktop {
+                        font-size: 1.5rem;
+                    }
+
                 }
 
                 &:hover {

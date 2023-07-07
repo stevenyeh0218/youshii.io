@@ -1,10 +1,18 @@
 .mockup {
     background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
 
+    @include for-desktop {
+        height: auto !important;
+    }
+
     &>h3 {
         color: var(--dark-blue);
         font-size: 2rem;
         text-align: center;
+
+        @include for-desktop {
+            font-size: 1.5rem;
+        }
     }
 
     &>article {
@@ -15,10 +23,22 @@
         @include transform(rotate3d(360, 120, -90, 60deg) rotateZ(-30deg));
         @include ease(.2s);
 
+        @include for-desktop {
+            gap: 0.75rem;
+        }
+
+        @include for-largepad {
+            height: auto;
+        }
+
         &>img {
             width: 25%;
             height: auto;
             box-shadow: -15px 15px 20px #{'rgba(var(--black-rgb), 0.5)'};
+
+            @include for-desktop {
+                width: 30%;
+            }
         }
     }
 }
