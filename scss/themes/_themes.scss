@@ -64,6 +64,13 @@
     --performance-green: #00BBB4;
     --performance-red: #E16363;
     --performance-gray: #72706D;
+
+    /* physiotherapy ci hex*/
+    --physiotherapy-green: #00BBB4;
+    --physiotherapy-red: #EB284D;
+    --physiotherapy-blue: #3998EA;
+    --physiotherapy-purple: #6868AC;
+    --physiotherapy-yellow: #F2D6A6;
 }
 
 html {
@@ -124,6 +131,16 @@ html {
         .web,
         .app {
             background: #000;
+        }
+
+        .mockup {
+            background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+
+            &>article {
+                &>img {
+                    box-shadow: -15px 15px 20px #{'rgba(var(--white-rgb), 0.5)'};
+                }
+            }
         }
     }
 }

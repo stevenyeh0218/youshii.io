@@ -398,6 +398,12 @@ template {
   --performance-green: #00BBB4;
   --performance-red: #E16363;
   --performance-gray: #72706D;
+  /* physiotherapy ci hex*/
+  --physiotherapy-green: #00BBB4;
+  --physiotherapy-red: #EB284D;
+  --physiotherapy-blue: #3998EA;
+  --physiotherapy-purple: #6868AC;
+  --physiotherapy-yellow: #F2D6A6;
 }
 
 html {
@@ -451,6 +457,14 @@ html[data-theme="dark"] .about .skill .item > h4 {
 html[data-theme="dark"] .web,
 html[data-theme="dark"] .app {
   background: #000;
+}
+
+html[data-theme="dark"] .mockup {
+  background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+}
+
+html[data-theme="dark"] .mockup > article > img {
+  box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
 }
 
 body {
@@ -814,10 +828,6 @@ header .close .line::after {
   visibility: hidden;
 }
 
-.intro {
-  background: var(--light-brown);
-}
-
 .intro .title {
   display: flex;
   flex-direction: row;
@@ -1057,6 +1067,26 @@ header .close .line::after {
 
 .colorSystem > article .performance-ci:last-child .color {
   background: var(--performance-gray);
+}
+
+.colorSystem > article .physiotherapy-ci .color {
+  background: var(--physiotherapy-green);
+}
+
+.colorSystem > article .physiotherapy-ci:nth-child(2) .color {
+  background: var(--physiotherapy-red);
+}
+
+.colorSystem > article .physiotherapy-ci:nth-child(3) .color {
+  background: var(--physiotherapy-blue);
+}
+
+.colorSystem > article .physiotherapy-ci:nth-child(4) .color {
+  background: var(--physiotherapy-purple);
+}
+
+.colorSystem > article .physiotherapy-ci:last-child .color {
+  background: var(--physiotherapy-yellow);
 }
 
 .mockup {

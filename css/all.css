@@ -364,6 +364,46 @@ template {
   --dark-brown-rgb: 232, 223, 202;
   --light-blue-rgb: 174, 189, 202;
   --dark-blue-rgb: 120, 149, 178;
+  /* blockchain ci hex*/
+  --bc-green: #1eac8d;
+  --bc-yellow: #f5e0ad;
+  --bc-blue: #94d9d4;
+  /* mimir ci hex*/
+  --mimir-white: #f5f4ef;
+  --mimir-white-2: #f4f4f9;
+  --mimir-logo-blue: #09a3ea;
+  --mimir-light-blue: #9fd7e3;
+  --mimir-dark-blue: #72bdc7;
+  --mimir-dark-yellow: #e8861d;
+  /* wtmec ci hex*/
+  --wtmec-white: #F4F3EF;
+  --wtmec-green: #75A342;
+  --wtmec-brown: #A35342;
+  --wtmec-purple: #855771;
+  /* lifeinmyan ci hex*/
+  --lifeinmyan-yellow: #F6AB00;
+  --lifeinmyan-pink: #ffbab5;
+  --lifeinmyan-red: #d82316;
+  --lifeinmyan-blue: #46d3cd;
+  --lifeinmyan-light-green: #6cbb5a;
+  --lifeinmyan-dark-green: #539b34;
+  /* tipo ci hex*/
+  --tipo-orange: #ff680d;
+  --tipo-dark-orange: #cf3e28;
+  --tipo-light-red: #e42c27;
+  --tipo-light-blue: #26b3a4;
+  --tipo-dark-blue: #4c66a3;
+  --tipo-yellow: #f2b53e;
+  /* performance ci hex*/
+  --performance-green: #00BBB4;
+  --performance-red: #E16363;
+  --performance-gray: #72706D;
+  /* physiotherapy ci hex*/
+  --physiotherapy-green: #00BBB4;
+  --physiotherapy-red: #EB284D;
+  --physiotherapy-blue: #3998EA;
+  --physiotherapy-purple: #6868AC;
+  --physiotherapy-yellow: #F2D6A6;
 }
 
 html {
@@ -417,6 +457,14 @@ html[data-theme="dark"] .about .skill .item > h4 {
 html[data-theme="dark"] .web,
 html[data-theme="dark"] .app {
   background: #000;
+}
+
+html[data-theme="dark"] .mockup {
+  background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+}
+
+html[data-theme="dark"] .mockup > article > img {
+  box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
 }
 
 body {
@@ -484,6 +532,28 @@ body[data-loading="true"] .home .youshii-ci-top::after, body[data-loading="true"
 }
 
 body[data-loading="true"] .home .ci-blur {
+  filter: blur(32px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+body[data-loading="true"] .intro .title .youshii-skill {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+body[data-loading="true"] .intro .title::after {
+  width: 0;
+}
+
+body[data-loading="true"] .intro > article {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+body[data-loading="true"] .intro .ci-blur {
   filter: blur(32px);
   opacity: 0;
   visibility: hidden;

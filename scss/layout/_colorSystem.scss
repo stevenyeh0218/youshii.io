@@ -200,5 +200,37 @@
             }
 
         }
+
+        .physiotherapy-ci {
+            .color {
+                background: var(--physiotherapy-green);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--physiotherapy-red);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--physiotherapy-blue);
+                }
+            }
+
+            &:nth-child(4) {
+                .color {
+                    background: var(--physiotherapy-purple);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--physiotherapy-yellow);
+                }
+            }
+
+        }
     }
 }
