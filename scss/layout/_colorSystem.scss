@@ -142,5 +142,43 @@
             }
 
         }
+
+        .tipo-ci {
+            .color {
+                background: var(--tipo-orange);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--tipo-dark-orange);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--tipo-light-red);
+                }
+            }
+
+            &:nth-child(4) {
+                .color {
+                    background: var(--tipo-light-blue);
+                }
+            }
+
+            &:nth-child(5) {
+                .color {
+                    background: var(--tipo-dark-blue);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--tipo-yellow);
+                }
+            }
+
+        }
     }
 }

@@ -35,12 +35,10 @@
     }
 
     &>article {
-        @include flexbox-gap(row, center, center, 1.5rem);
+        @include grid(row, repeat(2, 1fr), calc(100vh - 257px), center, 1.5rem);
         @include ease(.2s);
 
-        &>img {
-            width: 800px;
-        }
+        &>img {}
 
         .information {
 

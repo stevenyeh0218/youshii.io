@@ -12,7 +12,7 @@
         @include flexbox-gap-wrap(row, center, center, 1.5rem, wrap);
         height: 100%;
         transform-style: preserve-3d;
-        @include transform(rotate3d(360, 120, -90, 60deg) rotateZ(-30deg) translate3d(5%, -20%, 10px));
+        @include transform(rotate3d(360, 120, -90, 60deg) rotateZ(-30deg));
         @include ease(.2s);
 
         &>img {
