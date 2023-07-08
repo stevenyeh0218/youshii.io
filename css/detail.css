@@ -404,6 +404,12 @@ template {
   --physiotherapy-blue: #3998EA;
   --physiotherapy-purple: #6868AC;
   --physiotherapy-yellow: #F2D6A6;
+  /* line@-car ci hex*/
+  --car-pink: #DDBCB7;
+  --car-light-brown: #DDCFC2;
+  --car-dark-brown: #CFC3BC;
+  --car-light-yellow: #EDDFC4;
+  --car-dark-yellow: #E7CAA8;
 }
 
 html {
@@ -1217,6 +1223,26 @@ header .close .line::after {
   background: var(--physiotherapy-yellow);
 }
 
+.colorSystem > article .car-ci .color {
+  background: var(--car-pink);
+}
+
+.colorSystem > article .car-ci:nth-child(2) .color {
+  background: var(--car-light-brown);
+}
+
+.colorSystem > article .car-ci:nth-child(3) .color {
+  background: var(--car-dark-brown);
+}
+
+.colorSystem > article .car-ci:nth-child(4) .color {
+  background: var(--car-light-yellow);
+}
+
+.colorSystem > article .car-ci:last-child .color {
+  background: var(--car-dark-yellow);
+}
+
 .mockup {
   background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
 }
@@ -1275,6 +1301,10 @@ header .close .line::after {
   .mockup > article > img {
     width: 30%;
   }
+}
+
+.mockup .app > img {
+  width: 15%;
 }
 
 .footer {

@@ -251,5 +251,37 @@
             }
 
         }
+
+        .car-ci {
+            .color {
+                background: var(--car-pink);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--car-light-brown);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--car-dark-brown);
+                }
+            }
+
+            &:nth-child(4) {
+                .color {
+                    background: var(--car-light-yellow);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--car-dark-yellow);
+                }
+            }
+
+        }
     }
 }
