@@ -410,6 +410,11 @@ template {
   --car-dark-brown: #CFC3BC;
   --car-light-yellow: #EDDFC4;
   --car-dark-yellow: #E7CAA8;
+  /* line@-easyreserve ci hex*/
+  --easyreserve-green: #D4E3DD;
+  --easyreserve-blue: #E3E7EA;
+  --easyreserve-pink: #F3D2C3;
+  --easyreserve-brown: #F4EBE4;
 }
 
 html {
@@ -1241,6 +1246,22 @@ header .close .line::after {
 
 .colorSystem > article .car-ci:last-child .color {
   background: var(--car-dark-yellow);
+}
+
+.colorSystem > article .easyreserve-ci .color {
+  background: var(--easyreserve-green);
+}
+
+.colorSystem > article .easyreserve-ci:nth-child(2) .color {
+  background: var(--easyreserve-blue);
+}
+
+.colorSystem > article .easyreserve-ci:nth-child(3) .color {
+  background: var(--easyreserve-pink);
+}
+
+.colorSystem > article .easyreserve-ci:last-child .color {
+  background: var(--easyreserve-brown);
 }
 
 .mockup {

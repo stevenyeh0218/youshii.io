@@ -283,5 +283,31 @@
             }
 
         }
+
+        .easyreserve-ci {
+            .color {
+                background: var(--easyreserve-green);
+
+            }
+
+            &:nth-child(2) {
+                .color {
+                    background: var(--easyreserve-blue);
+                }
+            }
+
+            &:nth-child(3) {
+                .color {
+                    background: var(--easyreserve-pink);
+                }
+            }
+
+            &:last-child {
+                .color {
+                    background: var(--easyreserve-brown);
+                }
+            }
+
+        }
     }
 }
