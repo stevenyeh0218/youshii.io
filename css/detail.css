@@ -415,6 +415,11 @@ template {
   --easyreserve-blue: #E3E7EA;
   --easyreserve-pink: #F3D2C3;
   --easyreserve-brown: #F4EBE4;
+  /* line@-bookfruit ci hex*/
+  --bookfruit-brown: #F1E2D6;
+  --bookfruit-blue: #AECEEA;
+  --bookfruit-green: #4BA703;
+  --bookfruit-red: #B63030;
 }
 
 html {
@@ -1096,7 +1101,7 @@ header .close .line::after {
   align-self: baseline;
 }
 
-.colorSystem > article .bc-ci .color {
+.colorSystem > article .bc-ci:nth-child(1) .color {
   background: var(--bc-green);
 }
 
@@ -1104,11 +1109,15 @@ header .close .line::after {
   background: var(--bc-yellow);
 }
 
+.colorSystem > article .bc-ci:nth-child(3) .color {
+  background: var(--bc-blue);
+}
+
 .colorSystem > article .bc-ci:last-child .color {
   background: var(--bc-blue);
 }
 
-.colorSystem > article .mimir-ci .color {
+.colorSystem > article .mimir-ci:nth-child(1) .color {
   background: var(--mimir-white);
 }
 
@@ -1128,11 +1137,15 @@ header .close .line::after {
   background: var(--mimir-dark-blue);
 }
 
+.colorSystem > article .mimir-ci:nth-child(6) .color {
+  background: var(--mimir-dark-yellow);
+}
+
 .colorSystem > article .mimir-ci:last-child .color {
   background: var(--mimir-dark-yellow);
 }
 
-.colorSystem > article .wtmec-ci .color {
+.colorSystem > article .wtmec-ci:nth-child(1) .color {
   background: var(--wtmec-white);
 }
 
@@ -1144,11 +1157,15 @@ header .close .line::after {
   background: var(--wtmec-brown);
 }
 
+.colorSystem > article .wtmec-ci:nth-child(4) .color {
+  background: var(--wtmec-purple);
+}
+
 .colorSystem > article .wtmec-ci:last-child .color {
   background: var(--wtmec-purple);
 }
 
-.colorSystem > article .lifeinmyan-ci .color {
+.colorSystem > article .lifeinmyan-ci:nth-child(1) .color {
   background: var(--lifeinmyan-yellow);
 }
 
@@ -1168,11 +1185,15 @@ header .close .line::after {
   background: var(--lifeinmyan-light-green);
 }
 
+.colorSystem > article .lifeinmyan-ci:nth-child(6) .color {
+  background: var(--lifeinmyan-dark-green);
+}
+
 .colorSystem > article .lifeinmyan-ci:last-child .color {
   background: var(--lifeinmyan-dark-green);
 }
 
-.colorSystem > article .tipo-ci .color {
+.colorSystem > article .tipo-ci:nth-child(1) .color {
   background: var(--tipo-orange);
 }
 
@@ -1192,11 +1213,15 @@ header .close .line::after {
   background: var(--tipo-dark-blue);
 }
 
+.colorSystem > article .tipo-ci:nth-child(6) .color {
+  background: var(--tipo-yellow);
+}
+
 .colorSystem > article .tipo-ci:last-child .color {
   background: var(--tipo-yellow);
 }
 
-.colorSystem > article .performance-ci .color {
+.colorSystem > article .performance-ci:nth-child(1) .color {
   background: var(--performance-green);
 }
 
@@ -1204,11 +1229,15 @@ header .close .line::after {
   background: var(--performance-red);
 }
 
+.colorSystem > article .performance-ci:nth-child(3) .color {
+  background: var(--performance-gray);
+}
+
 .colorSystem > article .performance-ci:last-child .color {
   background: var(--performance-gray);
 }
 
-.colorSystem > article .physiotherapy-ci .color {
+.colorSystem > article .physiotherapy-ci:nth-child(1) .color {
   background: var(--physiotherapy-green);
 }
 
@@ -1224,11 +1253,15 @@ header .close .line::after {
   background: var(--physiotherapy-purple);
 }
 
+.colorSystem > article .physiotherapy-ci:nth-child(5) .color {
+  background: var(--physiotherapy-yellow);
+}
+
 .colorSystem > article .physiotherapy-ci:last-child .color {
   background: var(--physiotherapy-yellow);
 }
 
-.colorSystem > article .car-ci .color {
+.colorSystem > article .car-ci:nth-child(1) .color {
   background: var(--car-pink);
 }
 
@@ -1244,11 +1277,15 @@ header .close .line::after {
   background: var(--car-light-yellow);
 }
 
+.colorSystem > article .car-ci:nth-child(5) .color {
+  background: var(--car-dark-yellow);
+}
+
 .colorSystem > article .car-ci:last-child .color {
   background: var(--car-dark-yellow);
 }
 
-.colorSystem > article .easyreserve-ci .color {
+.colorSystem > article .easyreserve-ci:nth-child(1) .color {
   background: var(--easyreserve-green);
 }
 
@@ -1260,8 +1297,32 @@ header .close .line::after {
   background: var(--easyreserve-pink);
 }
 
+.colorSystem > article .easyreserve-ci:nth-child(4) .color {
+  background: var(--easyreserve-brown);
+}
+
 .colorSystem > article .easyreserve-ci:last-child .color {
   background: var(--easyreserve-brown);
+}
+
+.colorSystem > article .bookfruit-ci:nth-child(1) .color {
+  background: var(--bookfruit-brown);
+}
+
+.colorSystem > article .bookfruit-ci:nth-child(2) .color {
+  background: var(--bookfruit-blue);
+}
+
+.colorSystem > article .bookfruit-ci:nth-child(3) .color {
+  background: var(--bookfruit-green);
+}
+
+.colorSystem > article .bookfruit-ci:nth-child(4) .color {
+  background: var(--bookfruit-red);
+}
+
+.colorSystem > article .bookfruit-ci:last-child .color {
+  background: var(--bookfruit-red);
 }
 
 .mockup {

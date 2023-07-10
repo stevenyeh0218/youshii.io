@@ -44,270 +44,73 @@
             }
         }
 
-        .bc-ci {
-            .color {
-                background: var(--bc-green);
-            }
+        $ci-data: ('.bc-ci': (var(--bc-green),
+                var(--bc-yellow),
+                var(--bc-blue)),
+            '.mimir-ci': (var(--mimir-white),
+                var(--mimir-white-2),
+                var(--mimir-light-blue),
+                var(--mimir-logo-blue),
+                var(--mimir-dark-blue),
+                var(--mimir-dark-yellow)),
+            '.wtmec-ci': (var(--wtmec-white),
+                var(--wtmec-green),
+                var(--wtmec-brown),
+                var(--wtmec-purple)),
+            '.lifeinmyan-ci': (var(--lifeinmyan-yellow),
+                var(--lifeinmyan-pink),
+                var(--lifeinmyan-red),
+                var(--lifeinmyan-blue),
+                var(--lifeinmyan-light-green),
+                var(--lifeinmyan-dark-green)),
+            '.tipo-ci': (var(--tipo-orange),
+                var(--tipo-dark-orange),
+                var(--tipo-light-red),
+                var(--tipo-light-blue),
+                var(--tipo-dark-blue),
+                var(--tipo-yellow)),
+            '.performance-ci': (var(--performance-green),
+                var(--performance-red),
+                var(--performance-gray)),
+            '.physiotherapy-ci': (var(--physiotherapy-green),
+                var(--physiotherapy-red),
+                var(--physiotherapy-blue),
+                var(--physiotherapy-purple),
+                var(--physiotherapy-yellow)),
+            '.car-ci': (var(--car-pink),
+                var(--car-light-brown),
+                var(--car-dark-brown),
+                var(--car-light-yellow),
+                var(--car-dark-yellow)),
+            '.easyreserve-ci': (var(--easyreserve-green),
+                var(--easyreserve-blue),
+                var(--easyreserve-pink),
+                var(--easyreserve-brown)),
+            '.bookfruit-ci': (var(--bookfruit-brown),
+                var(--bookfruit-blue),
+                var(--bookfruit-green),
+                var(--bookfruit-red)));
 
-            &:nth-child(2) {
-                .color {
-                    background: var(--bc-yellow);
+        @each $ci-selector,
+        $ci-colors in $ci-data {
+            #{$ci-selector} {
+                $length: length($ci-colors);
+
+                @for $i from 1 through $length {
+                    &:nth-child(#{$i}) {
+                        .color {
+                            background: nth($ci-colors, $i);
+                        }
+                    }
                 }
-            }
 
-            &:last-child {
-                .color {
-                    background: var(--bc-blue);
-                }
-            }
-        }
-
-        .mimir-ci {
-            .color {
-                background: var(--mimir-white);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--mimir-white-2);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--mimir-light-blue);
-                }
-            }
-
-            &:nth-child(4) {
-                .color {
-                    background: var(--mimir-logo-blue);
-                }
-            }
-
-            &:nth-child(5) {
-                .color {
-                    background: var(--mimir-dark-blue);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--mimir-dark-yellow);
-                }
-            }
-        }
-
-        .wtmec-ci {
-            .color {
-                background: var(--wtmec-white);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--wtmec-green);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--wtmec-brown);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--wtmec-purple);
+                &:last-child {
+                    .color {
+                        background: nth($ci-colors, $length);
+                    }
                 }
             }
         }
 
-        .lifeinmyan-ci {
-            .color {
-                background: var(--lifeinmyan-yellow);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--lifeinmyan-pink);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--lifeinmyan-red);
-                }
-            }
-
-            &:nth-child(4) {
-                .color {
-                    background: var(--lifeinmyan-blue);
-                }
-            }
-
-            &:nth-child(5) {
-                .color {
-                    background: var(--lifeinmyan-light-green);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--lifeinmyan-dark-green);
-                }
-            }
-
-        }
-
-        .tipo-ci {
-            .color {
-                background: var(--tipo-orange);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--tipo-dark-orange);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--tipo-light-red);
-                }
-            }
-
-            &:nth-child(4) {
-                .color {
-                    background: var(--tipo-light-blue);
-                }
-            }
-
-            &:nth-child(5) {
-                .color {
-                    background: var(--tipo-dark-blue);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--tipo-yellow);
-                }
-            }
-
-        }
-
-        .performance-ci {
-            .color {
-                background: var(--performance-green);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--performance-red);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--performance-gray);
-                }
-            }
-
-        }
-
-        .physiotherapy-ci {
-            .color {
-                background: var(--physiotherapy-green);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--physiotherapy-red);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--physiotherapy-blue);
-                }
-            }
-
-            &:nth-child(4) {
-                .color {
-                    background: var(--physiotherapy-purple);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--physiotherapy-yellow);
-                }
-            }
-
-        }
-
-        .car-ci {
-            .color {
-                background: var(--car-pink);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--car-light-brown);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--car-dark-brown);
-                }
-            }
-
-            &:nth-child(4) {
-                .color {
-                    background: var(--car-light-yellow);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--car-dark-yellow);
-                }
-            }
-
-        }
-
-        .easyreserve-ci {
-            .color {
-                background: var(--easyreserve-green);
-
-            }
-
-            &:nth-child(2) {
-                .color {
-                    background: var(--easyreserve-blue);
-                }
-            }
-
-            &:nth-child(3) {
-                .color {
-                    background: var(--easyreserve-pink);
-                }
-            }
-
-            &:last-child {
-                .color {
-                    background: var(--easyreserve-brown);
-                }
-            }
-
-        }
     }
 }
