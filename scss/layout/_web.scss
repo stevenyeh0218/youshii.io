@@ -24,6 +24,12 @@
             padding-bottom: 0.75rem;
             @include ease(.2s);
 
+            &>img{
+                @include for-largepad{
+                    height: auto;
+                }
+            }
+
             .tag {
                 @include flexbox-gap(row, center, flex-start, 0.75rem);
             }

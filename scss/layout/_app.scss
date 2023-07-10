@@ -23,6 +23,11 @@
                 grid-template-rows: repeat(2, 50%);
                 gap: 0.75rem;
             }
+            &>img{
+                @include for-largepad{
+                    height: auto;
+                }
+            }
 
             .info {
                 @include flexbox-gap(column, flex-start, center, 1.5rem);
