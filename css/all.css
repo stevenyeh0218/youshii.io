@@ -708,8 +708,15 @@ p {
     color: #fff;
   }
   .web,
-  .app {
+  .app,
+  .intro {
     background: #000;
+  }
+  .mockup {
+    background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+  }
+  .mockup > article > img {
+    box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
   }
 }
 
