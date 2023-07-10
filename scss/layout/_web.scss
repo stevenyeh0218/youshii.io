@@ -6,12 +6,16 @@
     }
 
     &>article {
-        @include grid(column,repeat(7, calc(100vh - 260px)), auto, inherit, inherit);
+        @include grid(column, repeat(7, calc(100vh - 260px)), auto, inherit, inherit);
         width: 100%;
         overflow: hidden;
 
-        @include for-phone{
+        @include for-phone {
             grid-template-columns: repeat(7, calc(100vh - 370px));
+        }
+
+        @include for-landscape {
+            grid-template-columns: repeat(7, calc(100vh - 76px));
         }
 
         .item {
@@ -20,8 +24,12 @@
             padding-bottom: 0.75rem;
             @include ease(.2s);
 
-            &>img{
+            &>img {
                 height: auto;
+
+                @include for-landscape {
+                    width: 50%;
+                }
             }
 
             .tag {

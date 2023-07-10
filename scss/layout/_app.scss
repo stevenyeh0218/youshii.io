@@ -15,6 +15,10 @@
             height: calc(100vh - 175px);
         }
 
+        @include for-landscape {
+            height: calc(100vh - 155px);
+        }
+
         .item {
             @include grid(row, repeat(2, 50%), inherit, inherit, inherit);
 
@@ -23,9 +27,19 @@
                 grid-template-rows: repeat(2, 50%);
                 gap: 0.75rem;
             }
-            &>img{
-                @include for-largepad{
+
+            @include for-landscape {
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: inherit;
+            }
+
+            &>img {
+                @include for-largepad {
                     height: auto;
+                }
+
+                @include for-landscape {
+                    height: 100%;
                 }
             }
 
@@ -39,6 +53,10 @@
                 }
 
                 @include for-phone {
+                    gap: 0.375rem;
+                }
+
+                @include for-landscape {
                     gap: 0.375rem;
                 }
 
@@ -74,6 +92,11 @@
                     }
 
                     @include for-phone {
+                        font-size: 0.875rem;
+                        text-align: justify;
+                    }
+
+                    @include for-landscape {
                         font-size: 0.875rem;
                         text-align: justify;
                     }

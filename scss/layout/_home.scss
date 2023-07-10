@@ -81,6 +81,13 @@
             font-size: 1.75rem;
             line-height: 2rem;
         }
+
+        @include for-landscape {
+            width: 20rem;
+            font-size: 1.75rem;
+            line-height: 2rem;
+            top: 5rem;
+        }
     }
 
     .youshii-ci {
@@ -88,6 +95,10 @@
         position: absolute;
         bottom: 6.25rem;
         @include ease(.2s);
+
+        @include for-landscape {
+            bottom: 1.5rem;
+        }
 
         &-top,
         &-bottom {
@@ -143,6 +154,10 @@
                 }
 
                 @include for-phone {
+                    height: 40px;
+                }
+
+                @include for-landscape {
                     height: 40px;
                 }
             }

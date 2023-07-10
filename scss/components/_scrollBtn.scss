@@ -44,6 +44,10 @@
         top: 40%;
     }
 
+    @include for-landscape {
+        top: 30%;
+    }
+
     .line {
         position: relative;
         background: var(--light-blue);

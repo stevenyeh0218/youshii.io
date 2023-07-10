@@ -831,6 +831,13 @@ header nav {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  header nav {
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+}
+
 header .open {
   transform-style: preserve-3d;
   transform-origin: 0 0;
@@ -1671,6 +1678,12 @@ header .close .line::after {
 @media (max-width: 480px) {
   .scroll-bar {
     top: 40%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .scroll-bar {
+    top: 30%;
   }
 }
 
