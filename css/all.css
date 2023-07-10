@@ -1468,27 +1468,27 @@ header .close .line::after {
 
 .contact::before {
   background: var(--light-brown);
-  left: -16rem;
-  top: -36rem;
+  left: -10rem;
+  top: -30rem;
 }
 
 @media (max-width: 480px) {
   .contact::before {
-    left: -13rem;
-    top: -13rem;
+    left: -8rem;
+    top: -12rem;
   }
 }
 
 .contact::after {
   background: var(--dark-brown);
-  right: -16rem;
-  bottom: -36rem;
+  right: -10rem;
+  bottom: -30rem;
 }
 
 @media (max-width: 480px) {
   .contact::after {
-    right: -13rem;
-    bottom: -13rem;
+    right: -8rem;
+    bottom: -12rem;
   }
 }
 
@@ -1499,7 +1499,6 @@ header .close .line::after {
 
 @media (max-width: 991px) {
   .contact > article {
-    bottom: 12rem;
     left: 3rem;
   }
 }

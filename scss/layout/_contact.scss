@@ -30,23 +30,23 @@
 
     &::before {
         background: var(--light-brown);
-        left: -16rem;
-        top: -36rem;
+        left: -10rem;
+        top: -30rem;
 
         @include for-phone {
-            left: -13rem;
-            top: -13rem;
+            left: -8rem;
+            top: -12rem;
         }
     }
 
     &::after {
         background: var(--dark-brown);
-        right: -16rem;
-        bottom: -36rem;
+        right: -10rem;
+        bottom: -30rem;
 
         @include for-phone {
-            right: -13rem;
-            bottom: -13rem;
+            right: -8rem;
+            bottom: -12rem;
         }
     }
 
@@ -55,7 +55,6 @@
         bottom: 6.25rem;
 
         @include for-largepad {
-            bottom: 12rem;
             left: 3rem;
         }
 
