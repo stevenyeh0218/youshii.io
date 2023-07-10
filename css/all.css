@@ -864,6 +864,12 @@ header .close .line::after {
   scroll-snap-align: start;
 }
 
+@media (max-width: 1200px) {
+  .home {
+    scroll-snap-align: unset;
+  }
+}
+
 .home::before, .home::after {
   content: "";
   position: absolute;
@@ -1106,6 +1112,12 @@ header .close .line::after {
   background: url("../image/other/about-bg.png") no-repeat center center transparent;
   background-size: cover;
   scroll-snap-align: start;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    scroll-snap-align: unset;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1467,6 +1479,12 @@ header .close .line::after {
 
 .contact {
   scroll-snap-align: start;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    scroll-snap-align: unset;
+  }
 }
 
 .contact::before, .contact::after {

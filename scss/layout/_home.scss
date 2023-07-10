@@ -1,6 +1,10 @@
 .home {
     scroll-snap-align: start;
 
+    @include for-desktop {
+        scroll-snap-align: unset;
+    }
+
     &::before,
     &::after {
         content: "";
