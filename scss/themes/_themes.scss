@@ -25,12 +25,12 @@
     --light-blue-rgb: 174, 189, 202;
     --dark-blue-rgb: 120, 149, 178;
 
-    /* blockchain ci hex*/
+    /* web-blockchain ci hex*/
     --bc-green: #1eac8d;
     --bc-yellow: #f5e0ad;
     --bc-blue: #94d9d4;
 
-    /* mimir ci hex*/
+    /* web-mimir ci hex*/
     --mimir-white: #f5f4ef;
     --mimir-white-2: #f4f4f9;
     --mimir-logo-blue: #09a3ea;
@@ -38,13 +38,13 @@
     --mimir-dark-blue: #72bdc7;
     --mimir-dark-yellow: #e8861d;
 
-    /* wtmec ci hex*/
+    /* web-wtmec ci hex*/
     --wtmec-white: #F4F3EF;
     --wtmec-green: #75A342;
     --wtmec-brown: #A35342;
     --wtmec-purple: #855771;
 
-    /* lifeinmyan ci hex*/
+    /* web-lifeinmyan ci hex*/
     --lifeinmyan-yellow: #F6AB00;
     --lifeinmyan-pink: #ffbab5;
     --lifeinmyan-red: #d82316;
@@ -52,7 +52,7 @@
     --lifeinmyan-light-green: #6cbb5a;
     --lifeinmyan-dark-green: #539b34;
 
-    /* tipo ci hex*/
+    /* web-tipo ci hex*/
     --tipo-orange: #ff680d;
     --tipo-dark-orange: #cf3e28;
     --tipo-light-red: #e42c27;
@@ -60,12 +60,12 @@
     --tipo-dark-blue: #4c66a3;
     --tipo-yellow: #f2b53e;
 
-    /* performance ci hex*/
+    /* web-performance ci hex*/
     --performance-green: #00BBB4;
     --performance-red: #E16363;
     --performance-gray: #72706D;
 
-    /* physiotherapy ci hex*/
+    /* web-physiotherapy ci hex*/
     --physiotherapy-green: #00BBB4;
     --physiotherapy-red: #EB284D;
     --physiotherapy-blue: #3998EA;
@@ -90,6 +90,15 @@
     --bookfruit-blue: #AECEEA;
     --bookfruit-green: #4BA703;
     --bookfruit-red: #B63030;
+
+    /* app-youdon ci hex*/
+    --youdon-green: #00BBB4;
+    --youdon-light-yellow: #FEC37D;
+    --youdon-dark-yellow: #FFB950;
+    --youdon-red: #FF2D55;
+    --youdon-dark-red: #EB284D;
+    --youdon-purple: #934995;
+    --youdon-blue: #3998EA;
 }
 
 html {

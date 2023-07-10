@@ -86,10 +86,17 @@
                 var(--easyreserve-blue),
                 var(--easyreserve-pink),
                 var(--easyreserve-brown)),
-            '.bookfruit-ci': (var(--bookfruit-brown),
+            '.bookfruit-ci': (var(--youdon-green),
                 var(--bookfruit-blue),
                 var(--bookfruit-green),
-                var(--bookfruit-red)));
+                var(--bookfruit-red)),
+            '.youdon-ci': (var(--youdon-green),
+                var(--youdon-light-yellow),
+                var(--youdon-dark-yellow),
+                var(--youdon-red),
+                var(--youdon-dark-red),
+                var(--youdon-purple),
+                var(--youdon-blue)));
 
         @each $ci-selector,
         $ci-colors in $ci-data {

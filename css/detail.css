@@ -364,41 +364,41 @@ template {
   --dark-brown-rgb: 232, 223, 202;
   --light-blue-rgb: 174, 189, 202;
   --dark-blue-rgb: 120, 149, 178;
-  /* blockchain ci hex*/
+  /* web-blockchain ci hex*/
   --bc-green: #1eac8d;
   --bc-yellow: #f5e0ad;
   --bc-blue: #94d9d4;
-  /* mimir ci hex*/
+  /* web-mimir ci hex*/
   --mimir-white: #f5f4ef;
   --mimir-white-2: #f4f4f9;
   --mimir-logo-blue: #09a3ea;
   --mimir-light-blue: #9fd7e3;
   --mimir-dark-blue: #72bdc7;
   --mimir-dark-yellow: #e8861d;
-  /* wtmec ci hex*/
+  /* web-wtmec ci hex*/
   --wtmec-white: #F4F3EF;
   --wtmec-green: #75A342;
   --wtmec-brown: #A35342;
   --wtmec-purple: #855771;
-  /* lifeinmyan ci hex*/
+  /* web-lifeinmyan ci hex*/
   --lifeinmyan-yellow: #F6AB00;
   --lifeinmyan-pink: #ffbab5;
   --lifeinmyan-red: #d82316;
   --lifeinmyan-blue: #46d3cd;
   --lifeinmyan-light-green: #6cbb5a;
   --lifeinmyan-dark-green: #539b34;
-  /* tipo ci hex*/
+  /* web-tipo ci hex*/
   --tipo-orange: #ff680d;
   --tipo-dark-orange: #cf3e28;
   --tipo-light-red: #e42c27;
   --tipo-light-blue: #26b3a4;
   --tipo-dark-blue: #4c66a3;
   --tipo-yellow: #f2b53e;
-  /* performance ci hex*/
+  /* web-performance ci hex*/
   --performance-green: #00BBB4;
   --performance-red: #E16363;
   --performance-gray: #72706D;
-  /* physiotherapy ci hex*/
+  /* web-physiotherapy ci hex*/
   --physiotherapy-green: #00BBB4;
   --physiotherapy-red: #EB284D;
   --physiotherapy-blue: #3998EA;
@@ -420,6 +420,14 @@ template {
   --bookfruit-blue: #AECEEA;
   --bookfruit-green: #4BA703;
   --bookfruit-red: #B63030;
+  /* app-youdon ci hex*/
+  --youdon-green: #00BBB4;
+  --youdon-light-yellow: #FEC37D;
+  --youdon-dark-yellow: #FFB950;
+  --youdon-red: #FF2D55;
+  --youdon-dark-red: #EB284D;
+  --youdon-purple: #934995;
+  --youdon-blue: #3998EA;
 }
 
 html {
@@ -1306,7 +1314,7 @@ header .close .line::after {
 }
 
 .colorSystem > article .bookfruit-ci:nth-child(1) .color {
-  background: var(--bookfruit-brown);
+  background: var(--youdon-green);
 }
 
 .colorSystem > article .bookfruit-ci:nth-child(2) .color {
@@ -1323,6 +1331,38 @@ header .close .line::after {
 
 .colorSystem > article .bookfruit-ci:last-child .color {
   background: var(--bookfruit-red);
+}
+
+.colorSystem > article .youdon-ci:nth-child(1) .color {
+  background: var(--youdon-green);
+}
+
+.colorSystem > article .youdon-ci:nth-child(2) .color {
+  background: var(--youdon-light-yellow);
+}
+
+.colorSystem > article .youdon-ci:nth-child(3) .color {
+  background: var(--youdon-dark-yellow);
+}
+
+.colorSystem > article .youdon-ci:nth-child(4) .color {
+  background: var(--youdon-red);
+}
+
+.colorSystem > article .youdon-ci:nth-child(5) .color {
+  background: var(--youdon-dark-red);
+}
+
+.colorSystem > article .youdon-ci:nth-child(6) .color {
+  background: var(--youdon-purple);
+}
+
+.colorSystem > article .youdon-ci:nth-child(7) .color {
+  background: var(--youdon-blue);
+}
+
+.colorSystem > article .youdon-ci:last-child .color {
+  background: var(--youdon-blue);
 }
 
 .mockup {
