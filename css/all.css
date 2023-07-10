@@ -884,27 +884,27 @@ header .close .line::after {
 
 .home::before {
   background: var(--light-brown);
-  right: -16rem;
-  top: -36rem;
+  right: -10rem;
+  top: -30rem;
 }
 
 @media (max-width: 480px) {
   .home::before {
-    right: -10rem;
-    top: -16rem;
+    right: -8rem;
+    top: -12rem;
   }
 }
 
 .home::after {
   background: var(--dark-brown);
   left: -10rem;
-  bottom: -20rem;
+  bottom: -30rem;
 }
 
 @media (max-width: 480px) {
   .home::after {
-    left: -10rem;
-    bottom: -20rem;
+    left: -8rem;
+    bottom: -12rem;
   }
 }
 
@@ -934,8 +934,10 @@ header .close .line::after {
     width: 30rem;
     font-size: 3rem;
     line-height: 3.25rem;
-    top: 14rem;
-    left: 9rem;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin: auto;
     font-weight: 300;
     text-align: center;
   }
@@ -946,8 +948,6 @@ header .close .line::after {
     width: 20rem;
     font-size: 1.75rem;
     line-height: 2rem;
-    top: 10rem;
-    left: 1.5rem;
   }
 }
 
@@ -1037,6 +1037,7 @@ header .close .line::after {
 
 @media (max-width: 1200px) {
   .home .youshii-ci-top > img, .home .youshii-ci-bottom > img {
+    width: auto;
     height: 100px;
   }
 }
@@ -1213,7 +1214,7 @@ header .close .line::after {
 .web > article {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(7, calc(100vh - 256px));
+  grid-template-columns: repeat(7, calc(100vh - 260px));
   grid-template-rows: auto;
   place-items: inherit;
   gap: inherit;
@@ -1221,15 +1222,9 @@ header .close .line::after {
   overflow: hidden;
 }
 
-@media (max-width: 1200px) {
-  .web > article {
-    grid-template-columns: repeat(7, calc(100vh - 175px));
-  }
-}
-
 @media (max-width: 480px) {
   .web > article {
-    grid-template-columns: repeat(7, 327px);
+    grid-template-columns: repeat(7, calc(100vh - 370px));
   }
 }
 
@@ -1245,10 +1240,8 @@ header .close .line::after {
   transition: all 0.2s ease;
 }
 
-@media (max-width: 991px) {
-  .web > article .item > img {
-    height: auto;
-  }
+.web > article .item > img {
+  height: auto;
 }
 
 .web > article .item .tag {

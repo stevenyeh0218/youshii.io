@@ -25,23 +25,23 @@
 
     &::before {
         background: var(--light-brown);
-        right: -16rem;
-        top: -36rem;
+        right: -10rem;
+        top: -30rem;
 
         @include for-phone {
-            right: -10rem;
-            top: -16rem;
+            right: -8rem;
+            top: -12rem;
         }
     }
 
     &::after {
         background: var(--dark-brown);
         left: -10rem;
-        bottom: -20rem;
+        bottom: -30rem;
 
         @include for-phone {
-            left: -10rem;
-            bottom: -20rem;
+            left: -8rem;
+            bottom: -12rem;
         }
     }
 
@@ -68,8 +68,10 @@
             width: 30rem;
             font-size: 3rem;
             line-height: 3.25rem;
-            top: 14rem;
-            left: 9rem;
+            top: 10rem;
+            left: 0;
+            right: 0;
+            margin: auto;
             font-weight: 300;
             text-align: center;
         }
@@ -78,8 +80,6 @@
             width: 20rem;
             font-size: 1.75rem;
             line-height: 2rem;
-            top: 10rem;
-            left: 1.5rem;
         }
     }
 
@@ -138,6 +138,7 @@
                 @include ease(.2s);
 
                 @include for-desktop {
+                    width: auto;
                     height: 100px;
                 }
 

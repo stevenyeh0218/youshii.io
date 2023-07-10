@@ -6,16 +6,12 @@
     }
 
     &>article {
-        @include grid(column, repeat(7, calc(100vh - 256px)), auto, inherit, inherit);
+        @include grid(column,repeat(7, calc(100vh - 260px)), auto, inherit, inherit);
         width: 100%;
         overflow: hidden;
 
-        @include for-desktop {
-            grid-template-columns: repeat(7, calc(100vh - 175px));
-        }
-
-        @include for-phone {
-            grid-template-columns: repeat(7, 327px);
+        @include for-phone{
+            grid-template-columns: repeat(7, calc(100vh - 370px));
         }
 
         .item {
@@ -25,9 +21,7 @@
             @include ease(.2s);
 
             &>img{
-                @include for-largepad{
-                    height: auto;
-                }
+                height: auto;
             }
 
             .tag {
