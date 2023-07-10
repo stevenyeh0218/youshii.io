@@ -2,7 +2,6 @@
 @import 'base/_normalize';
 @import 'helpers/_allMixins';
 @import 'themes/_themes';
-@import 'themes/_darkMode';
 @import 'layout/_header';
 @import 'layout/_intro';
 @import 'layout/_colorSystem';
@@ -13,3 +12,4 @@
 @import 'components/_checkbox';
 @import 'components/_cursor';
 @import 'components/_scrollBtn';
+@import 'themes/_darkMode';
