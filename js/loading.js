@@ -1,5 +1,4 @@
-$(document).ready(function () {
-	// 獲取最後更新時間戳
+$(document).ready(function () { // 獲取最後更新時間戳
 	var lastUpdated = sessionStorage.getItem('lastUpdated');
 
 	// 如果最後更新時間戳與頁面載入時間戳相同，則data-loading=false
@@ -21,8 +20,13 @@ $(document).ready(function () {
 
 // 在所有內容載入完畢後執行相關動畫設定
 $(window).on('load', function () {
-	// 3 秒後data-loading=false
 	setTimeout(function () {
+		if (window.innerWidth < 1200) { // 當瀏覽器或行動裝置寬度小於 1200 時，移除 GSAP 效果
+			$('html, body').removeAttr("style");
+			$('body').attr('data-loading', 'false');
+			return;
+		}
+
 		$('html, body').removeAttr("style");
 		$('body').attr('data-loading', 'false');
 
