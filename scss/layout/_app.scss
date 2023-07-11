@@ -1,6 +1,10 @@
 .app {
     background: var(--light-brown);
 
+    @include for-desktop {
+        height: auto !important;
+    }
+
     &>h1 {
         border-bottom: 1px solid var(--black);
     }
@@ -12,11 +16,8 @@
         overflow: hidden;
 
         @include for-desktop {
-            height: calc(100vh - 175px);
-        }
-
-        @include for-landscape {
-            height: calc(100vh - 155px);
+            grid-template-rows: auto;
+            height: auto;
         }
 
         .item {

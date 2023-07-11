@@ -1206,6 +1206,12 @@ header .close .line::after {
   background: var(--light-brown);
 }
 
+@media (max-width: 1200px) {
+  .web {
+    height: auto !important;
+  }
+}
+
 .web > h1 {
   border-bottom: 1px solid var(--black);
 }
@@ -1221,15 +1227,22 @@ header .close .line::after {
   overflow: hidden;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .web > article {
-    grid-template-columns: repeat(7, calc(100vh - 370px));
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 991px) {
+  .web > article {
+    grid-template-columns: auto;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .web > article {
-    grid-template-columns: repeat(7, calc(100vh - 76px));
+    grid-template-columns: repeat(2, auto);
   }
 }
 
@@ -1247,12 +1260,6 @@ header .close .line::after {
 
 .web > article .item > img {
   height: auto;
-}
-
-@media only screen and (max-width: 991px) and (orientation: landscape) {
-  .web > article .item > img {
-    width: 50%;
-  }
 }
 
 .web > article .item .tag {
@@ -1285,6 +1292,12 @@ header .close .line::after {
   background: var(--light-brown);
 }
 
+@media (max-width: 1200px) {
+  .app {
+    height: auto !important;
+  }
+}
+
 .app > h1 {
   border-bottom: 1px solid var(--black);
 }
@@ -1303,13 +1316,8 @@ header .close .line::after {
 
 @media (max-width: 1200px) {
   .app > article {
-    height: calc(100vh - 175px);
-  }
-}
-
-@media only screen and (max-width: 991px) and (orientation: landscape) {
-  .app > article {
-    height: calc(100vh - 155px);
+    grid-template-rows: auto;
+    height: auto;
   }
 }
 

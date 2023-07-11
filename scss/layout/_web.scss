@@ -1,6 +1,10 @@
 .web {
     background: var(--light-brown);
 
+    @include for-desktop {
+        height: auto !important;
+    }
+
     &>h1 {
         border-bottom: 1px solid var(--black);
     }
@@ -10,12 +14,17 @@
         width: 100%;
         overflow: hidden;
 
-        @include for-phone {
-            grid-template-columns: repeat(7, calc(100vh - 370px));
+        @include for-desktop {
+            grid-auto-flow: row;
+            grid-template-columns: repeat(2, auto);
+        }
+
+        @include for-largepad {
+            grid-template-columns: auto;
         }
 
         @include for-landscape {
-            grid-template-columns: repeat(7, calc(100vh - 76px));
+            grid-template-columns: repeat(2, auto);
         }
 
         .item {
@@ -26,10 +35,6 @@
 
             &>img {
                 height: auto;
-
-                @include for-landscape {
-                    width: 50%;
-                }
             }
 
             .tag {
