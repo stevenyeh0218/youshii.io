@@ -1324,7 +1324,7 @@ header .close .line::after {
 .app > article .item {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: inherit;
   place-items: inherit;
   gap: inherit;
@@ -1333,14 +1333,14 @@ header .close .line::after {
 @media (max-width: 991px) {
   .app > article .item {
     grid-template-columns: inherit;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
     gap: 0.75rem;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .app > article .item {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: inherit;
   }
 }

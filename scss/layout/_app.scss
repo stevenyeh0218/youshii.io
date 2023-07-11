@@ -21,16 +21,16 @@
         }
 
         .item {
-            @include grid(row, repeat(2, 50%), inherit, inherit, inherit);
+            @include grid(row, repeat(2, auto), inherit, inherit, inherit);
 
             @include for-largepad {
                 grid-template-columns: inherit;
-                grid-template-rows: repeat(2, 50%);
+                grid-template-rows: repeat(2, auto);
                 gap: 0.75rem;
             }
 
             @include for-landscape {
-                grid-template-columns: repeat(2, 50%);
+                grid-template-columns: repeat(2, auto);
                 grid-template-rows: inherit;
             }
 
