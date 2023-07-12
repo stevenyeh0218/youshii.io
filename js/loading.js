@@ -31,7 +31,7 @@ $(window).on('load', function () {
 		$('body').attr('data-loading', 'false');
 
 		// section.web 啟用 gsap scrollTrigger animation
-		gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(ScrollTrigger, Draggable);
 
 		let horizontalSections = gsap.utils.toArray(".web article .item");
 		let verticalSections = gsap.utils.toArray(".app article .item");
