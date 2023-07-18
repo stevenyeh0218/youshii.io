@@ -99,7 +99,7 @@
         position: absolute;
         height: auto;
         top: 11.25rem;
-        animation: slide 7s linear infinite;
+        animation: slide 10s linear infinite;
 
         @include for-largepad {
             top: 10rem;
