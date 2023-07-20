@@ -30,7 +30,6 @@
         .item {
             @include grid(row, auto, minmax(min-content, 1fr), inherit, 0.75rem);
             color: var(--black);
-            padding-bottom: 0.75rem;
             @include ease(.2s);
 
             &>img {
