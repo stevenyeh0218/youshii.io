@@ -667,6 +667,10 @@ p {
   }
 }
 
+.pin-spacer {
+  background: var(--light-brown);
+}
+
 header {
   position: fixed;
   top: 3.125rem;
