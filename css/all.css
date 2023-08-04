@@ -1016,6 +1016,13 @@ header .close .line::after {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .home .youshii-ci-top .youshii-skill .item, .home .youshii-ci-bottom .youshii-skill .item {
+    font-size: 0.875rem;
+    padding: 0.313rem;
+  }
+}
+
 .home .youshii-ci-top > img, .home .youshii-ci-bottom > img {
   transition: all 0.2s ease;
 }

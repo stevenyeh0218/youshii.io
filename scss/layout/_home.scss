@@ -146,6 +146,11 @@
                         font-size: 0.875rem;
                         padding: 0.25rem;
                     }
+
+                    @include for-landscape {
+                        font-size: 0.875rem;
+                        padding: 0.313rem;
+                    }
                 }
             }
 
