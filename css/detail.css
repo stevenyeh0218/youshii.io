@@ -461,7 +461,7 @@ html[data-theme="dark"] .home .youshii-ci-bottom > img {
 }
 
 html[data-theme="dark"] .scroll-bar .line::before {
-  background: #000;
+  background: var(--dark-brown);
 }
 
 html[data-theme="dark"] .about {
@@ -1661,6 +1661,12 @@ header .close .line::after {
   width: 0.125rem;
   height: 1.25rem;
   animation: scroll-bottom 1s ease forwards infinite;
+  transition: all 0.2s ease;
+}
+
+.scroll-bar:hover .line::before {
+  height: 100%;
+  animation: none;
 }
 
 /* dark mode */
@@ -1690,7 +1696,7 @@ header .close .line::after {
     filter: invert(1);
   }
   .scroll-bar .line::before {
-    background: #000;
+    background: var(--dark-brown);
   }
   .youshii-mode-switch {
     display: none;

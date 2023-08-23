@@ -30,12 +30,12 @@
     .scroll-bar {
         .line {
             &::before {
-                background: #000;
+                background: var(--dark-brown);
             }
         }
     }
 
-    .youshii-mode-switch{
+    .youshii-mode-switch {
         display: none;
     }
 

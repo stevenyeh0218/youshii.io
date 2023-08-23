@@ -64,6 +64,16 @@
             width: 0.125rem;
             height: 1.25rem;
             animation: scroll-bottom 1s ease forwards infinite;
+            @include ease(.2s);
+        }
+    }
+
+    &:hover {
+        .line {
+            &::before {
+                height: 100%;
+                animation: none;
+            }
         }
     }
 }

@@ -133,7 +133,7 @@ html {
         .scroll-bar {
             .line {
                 &::before {
-                    background: #000;
+                    background: var(--dark-brown);
                 }
             }
         }
