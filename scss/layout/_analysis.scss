@@ -1,0 +1,39 @@
+.analysis {
+    @include flexbox-gap(column, center, center, 1.5rem);
+    padding: 3.125rem;
+
+    @include for-desktop {
+        padding: 1.5rem;
+    }
+
+    &>h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+
+        @include for-desktop {
+            font-size: 1.5rem;
+        }
+    }
+&>article {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    gap: 1.5rem;
+
+    @include for-desktop {
+        font-size: 0.875rem;
+    }
+
+    @include for-largepad {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    @include for-phone {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    &>img {
+        border: 1px solid var(--black);
+    }
+
+}
+}
