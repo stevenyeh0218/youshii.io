@@ -57,6 +57,23 @@
         }
     }
 
+    .flow,
+    .wireframe {
+        &>article {
+            &>img {
+                background: #fff;
+            }
+        }
+    }
+
+    .designGuideline {
+        .component {
+            &>img {
+                background: #fff;
+            }
+        }
+    }
+
     .web,
     .app,
     .intro {

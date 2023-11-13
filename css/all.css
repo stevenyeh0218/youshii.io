@@ -478,6 +478,15 @@ html[data-theme="dark"] .about .skill .item > h4 {
   color: #fff;
 }
 
+html[data-theme="dark"] .flow > article > img,
+html[data-theme="dark"] .wireframe > article > img {
+  background: #fff;
+}
+
+html[data-theme="dark"] .designGuideline .component > img {
+  background: #fff;
+}
+
 html[data-theme="dark"] .web,
 html[data-theme="dark"] .app,
 html[data-theme="dark"] .intro {
@@ -1892,6 +1901,13 @@ header .close .line::after {
   .about .skill .item > h4 {
     background: #000;
     color: #fff;
+  }
+  .flow > article > img,
+  .wireframe > article > img {
+    background: #fff;
+  }
+  .designGuideline .component > img {
+    background: #fff;
   }
   .web,
   .app,
