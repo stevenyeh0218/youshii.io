@@ -1016,12 +1016,14 @@ header .close .line::after {
 }
 
 .analysis {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   padding: 3.125rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -1070,12 +1072,14 @@ header .close .line::after {
 }
 
 .wireframe {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   padding: 3.125rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -1101,12 +1105,14 @@ header .close .line::after {
 }
 
 .flowChart {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   padding: 3.125rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -1132,12 +1138,14 @@ header .close .line::after {
 }
 
 .designGuideline {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   padding: 3.125rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -1455,7 +1463,9 @@ header .close .line::after {
 }
 
 .mockup {
+  position: relative;
   background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -1477,6 +1487,7 @@ header .close .line::after {
 }
 
 .mockup > article {
+  position: relative;
   perspective: 1000px;
   display: flex;
   flex-direction: row;
@@ -1488,6 +1499,7 @@ header .close .line::after {
   transform-style: preserve-3d;
   transform: rotate3d(360, 120, -90, 60deg) rotateZ(-30deg);
   transition: all 0.2s ease;
+  z-index: 1;
 }
 
 @media (max-width: 1200px) {
