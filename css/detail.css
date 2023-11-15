@@ -544,7 +544,7 @@ body[data-loading="true"] .home {
   z-index: 99;
 }
 
-body[data-loading="true"] .home:before, body[data-loading="true"] .home::after {
+body[data-loading="true"] .home .doodle {
   opacity: 0;
   visibility: hidden;
 }
@@ -1526,7 +1526,7 @@ header .close .line::after {
   }
 }
 
-.mockup .app > img {
+.mockup .app_m > img {
   width: 15%;
 }
 

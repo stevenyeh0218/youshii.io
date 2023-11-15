@@ -544,7 +544,7 @@ body[data-loading="true"] .home {
   z-index: 99;
 }
 
-body[data-loading="true"] .home:before, body[data-loading="true"] .home::after {
+body[data-loading="true"] .home .doodle {
   opacity: 0;
   visibility: hidden;
 }
@@ -828,62 +828,13 @@ header .close .line::after {
 
 .home {
   scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .home {
     scroll-snap-align: unset;
-  }
-}
-
-.home::before, .home::after {
-  content: "";
-  position: absolute;
-  width: 880px;
-  height: 880px;
-  animation: circle-rotate 3s linear infinite alternate;
-  filter: blur(3.125rem);
-  transition: all 0.2s ease;
-  z-index: -1;
-}
-
-@media (max-width: 1200px) {
-  .home::before, .home::after {
-    width: 760px;
-    height: 760px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home::before, .home::after {
-    width: 360px;
-    height: 360px;
-  }
-}
-
-.home::before {
-  background: var(--light-brown);
-  right: -10rem;
-  top: -30rem;
-}
-
-@media (max-width: 480px) {
-  .home::before {
-    right: -8rem;
-    top: -12rem;
-  }
-}
-
-.home::after {
-  background: var(--dark-brown);
-  left: -10rem;
-  bottom: -30rem;
-}
-
-@media (max-width: 480px) {
-  .home::after {
-    left: -8rem;
-    bottom: -12rem;
   }
 }
 
@@ -1458,64 +1409,14 @@ header .close .line::after {
 }
 
 .contact {
+  position: relative;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .contact {
     scroll-snap-align: unset;
-  }
-}
-
-.contact::before, .contact::after {
-  content: "";
-  position: absolute;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  width: 880px;
-  height: 880px;
-  animation: circle-scale 1s linear infinite alternate;
-  filter: blur(3.125rem);
-  transition: all 0.2s ease;
-  z-index: -1;
-}
-
-@media (max-width: 1200px) {
-  .contact::before, .contact::after {
-    width: 760px;
-    height: 760px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact::before, .contact::after {
-    width: 360px;
-    height: 360px;
-  }
-}
-
-.contact::before {
-  background: var(--light-brown);
-  left: -10rem;
-  top: -30rem;
-}
-
-@media (max-width: 480px) {
-  .contact::before {
-    left: -8rem;
-    top: -12rem;
-  }
-}
-
-.contact::after {
-  background: var(--dark-brown);
-  right: -10rem;
-  bottom: -30rem;
-}
-
-@media (max-width: 480px) {
-  .contact::after {
-    right: -8rem;
-    bottom: -12rem;
   }
 }
 
@@ -1857,6 +1758,12 @@ header .close .line::after {
 .scroll-bar:hover .line::before {
   height: 100%;
   animation: none;
+}
+
+.doodle {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 /* dark mode */

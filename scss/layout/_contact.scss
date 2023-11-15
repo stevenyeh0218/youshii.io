@@ -1,53 +1,10 @@
 .contact {
+    position: relative;
     scroll-snap-align: start;
+    overflow: hidden;
 
     @include for-desktop {
         scroll-snap-align: unset;
-    }
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        width: 880px;
-        height: 880px;
-        animation: circle-scale 1s linear infinite alternate;
-        @include filter-blur(3.125rem);
-        @include ease(.2s);
-        z-index: -1;
-
-        @include for-desktop {
-            width: 760px;
-            height: 760px;
-        }
-
-        @include for-phone {
-            width: 360px;
-            height: 360px;
-        }
-    }
-
-    &::before {
-        background: var(--light-brown);
-        left: -10rem;
-        top: -30rem;
-
-        @include for-phone {
-            left: -8rem;
-            top: -12rem;
-        }
-    }
-
-    &::after {
-        background: var(--dark-brown);
-        right: -10rem;
-        bottom: -30rem;
-
-        @include for-phone {
-            right: -8rem;
-            bottom: -12rem;
-        }
     }
 
     &>article {

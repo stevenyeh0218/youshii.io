@@ -78,6 +78,61 @@
                 <img src="image/ci/design.svg">
             </div>
         </div>
+        <css-doodle class="doodle" grid="20">
+            :doodle {
+            @grid: 20 / 100vmax;
+            filter: blur(2em);
+            transform: scale(5);
+            }
+
+            @random {
+            filter: blur(1.5px);
+            }
+
+            @random {
+            animation: move 5s linear alternate infinite;
+            }
+
+            @random(0.1) {
+            animation: flicker 5s ease infinite;
+            }
+
+            @keyframes move {
+            0% {
+            transform: translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+            }
+
+            100% {
+            transform: translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+            }
+            }
+
+            @keyframes flicker {
+            0% {
+            opacity: 1;
+            }
+
+            50% {
+            opacity: 0;
+            }
+
+            100% {
+            opacity: 1;
+            }
+            }
+
+            border-radius: 50%;
+            background:rgb(var(--dark-brown-rgb), @rand(0.8));
+            transform: scale(@rand(.5, 1.2))
+            translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+
+        </css-doodle>
     </section>
     <!-- 關於 -->
     <section class="youshii-section about">
@@ -309,6 +364,61 @@
             <div class="colophon">© 2023 YOUSHII STUDIO all rights reserved.</div>
         </article>
         <img src="image/ci/youshii-design.svg">
+        <css-doodle class="doodle" grid="20">
+            :doodle {
+            @grid: 20 / 100vmax;
+            filter: blur(2em);
+            transform: scale(5);
+            }
+
+            @random {
+            filter: blur(1.5px);
+            }
+
+            @random {
+            animation: move 5s linear alternate infinite;
+            }
+
+            @random(0.1) {
+            animation: flicker 5s ease infinite;
+            }
+
+            @keyframes move {
+            0% {
+            transform: translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+            }
+
+            100% {
+            transform: translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+            }
+            }
+
+            @keyframes flicker {
+            0% {
+            opacity: 1;
+            }
+
+            50% {
+            opacity: 0;
+            }
+
+            100% {
+            opacity: 1;
+            }
+            }
+
+            border-radius: 50%;
+            background:rgb(var(--dark-brown-rgb), @rand(0.8));
+            transform: scale(@rand(.5, 1.2))
+            translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+            );
+
+        </css-doodle>
     </footer>
     <div class="cursor"></div>
     <button class="top-btn youshii-icon-arrow"></button>
@@ -316,6 +426,8 @@
 
 <!-- 引用 jquery 3.7.0 -->
 <script src="vendor/jquery-3.7.0.min.js"></script>
+<!-- 引用 css doodle -->
+<script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script>
 <!-- 開場動畫 特效 -->
 <script src="js/loading.js"></script>
 <!-- 引用 gsap -->

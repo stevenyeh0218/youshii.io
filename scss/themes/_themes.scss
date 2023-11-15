@@ -175,7 +175,7 @@ html {
 
         .web,
         .app,
-.intro {
+        .intro {
             background: #000;
         }
 
@@ -215,8 +215,7 @@ body {
             width: 100%;
             z-index: 99;
 
-            &:before,
-            &::after {
+            .doodle {
                 @include hide();
             }
 
