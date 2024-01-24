@@ -1239,7 +1239,15 @@ header .close .line::after {
 }
 
 .web > article .item:hover {
+  color: var(--dark-blue);
+}
+
+.web > article .item:hover > img {
   filter: grayscale(1);
+}
+
+.web > article .item:hover .tag .youshii-tag {
+  border-color: var(--dark-blue);
 }
 
 .app {
@@ -1302,8 +1310,16 @@ header .close .line::after {
   }
 }
 
-.app > article .item:hover {
+.app > article .item:hover > img {
   filter: grayscale(1);
+}
+
+.app > article .item:hover .info {
+  color: var(--dark-blue);
+}
+
+.app > article .item:hover .tag .youshii-tag {
+  border-color: var(--dark-blue);
 }
 
 @media (max-width: 991px) {

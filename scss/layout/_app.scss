@@ -38,7 +38,19 @@
             }
 
             &:hover {
-                @include filter-grayscale(1);
+                &>img {
+                    @include filter-grayscale(1);
+                }
+
+                .info {
+                    color: var(--dark-blue);
+                }
+
+                .tag {
+                    .youshii-tag {
+                        border-color: var(--dark-blue);
+                    }
+                }
             }
 
             &>img {

@@ -42,7 +42,17 @@
             }
 
             &:hover {
-                @include filter-grayscale(1);
+                color: var(--dark-blue);
+
+                &>img {
+                    @include filter-grayscale(1);
+                }
+
+                .tag {
+                    .youshii-tag {
+                        border-color: var(--dark-blue);
+                    }
+                }
             }
         }
     }
