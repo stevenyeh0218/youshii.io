@@ -1701,8 +1701,20 @@ header .close .line::after {
   transform: scale(3);
 }
 
+@media (max-width: 1200px) {
+  .is-hover {
+    display: none;
+  }
+}
+
 .is-topBtn {
   opacity: 0;
+}
+
+@media (max-width: 1200px) {
+  .is-topBtn {
+    display: none;
+  }
 }
 
 .is-project,
@@ -1716,6 +1728,14 @@ header .close .line::after {
   border: none;
   opacity: .8;
   transform: scale(5);
+}
+
+@media (max-width: 1200px) {
+  .is-project,
+  .is-app,
+  .is-link {
+    display: none;
+  }
 }
 
 .is-project::before,

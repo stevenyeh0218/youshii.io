@@ -16,10 +16,18 @@
 .is-hover {
     opacity: 0.2;
     @include scale(3);
+
+    @include for-desktop {
+        display: none;
+    }
 }
 
 .is-topBtn {
     opacity: 0;
+
+    @include for-desktop {
+        display: none;
+    }
 }
 
 .is-project,
@@ -30,6 +38,10 @@
     border: none;
     opacity: .8;
     @include scale(5);
+
+    @include for-desktop {
+        display: none;
+    }
 
     &::before {
         content: "\e907";
