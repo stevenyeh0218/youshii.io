@@ -23,7 +23,8 @@
 }
 
 .is-project,
-.is-app {
+.is-app,
+.is-link {
     @include flexbox(row, center, center);
     background: var(--dark-blue);
     border: none;

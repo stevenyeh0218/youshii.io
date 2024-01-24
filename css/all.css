@@ -1636,7 +1636,8 @@ header .close .line::after {
 }
 
 .is-project,
-.is-app {
+.is-app,
+.is-link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1648,7 +1649,8 @@ header .close .line::after {
 }
 
 .is-project::before,
-.is-app::before {
+.is-app::before,
+.is-link::before {
   content: "\e907";
   font-family: 'icomoon' !important;
   color: var(--white);

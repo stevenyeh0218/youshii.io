@@ -4,6 +4,7 @@ var btn = $(".youshii-btn , nav > a , .youshii-mode-switch,.mobile-nav-switch");
 var scrollBtn = $(".top-btn,.scroll-bar");
 var web = $(".web > article > .item ");
 var app = $(".app > article > .item ");
+var intro = $(".intro > article > .information > a ");
 
 function updateCursor(e) {
 	let x = e.pageX - 10;
@@ -54,4 +55,12 @@ app.on('mouseover', function () {
 
 app.on('mouseleave', function () {
 	cursor.classList.remove('is-app');
+});
+
+intro.on('mouseover', function () {
+	cursor.classList.add('is-link');
+});
+
+intro.on('mouseleave', function () {
+	cursor.classList.remove('is-link');
 });
