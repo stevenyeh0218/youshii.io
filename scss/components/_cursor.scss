@@ -6,6 +6,7 @@
     border: 0.063rem solid #{'rgba(var(--black-rgb), 0.5)'};
     pointer-events: none;
     z-index: 99;
+    @include ease(.1s);
 
     @include for-desktop {
         display: none;
@@ -15,18 +16,24 @@
 .is-hover {
     opacity: 0.2;
     @include scale(3);
-    @include ease(.1s);
 }
 
 .is-topBtn {
     opacity: 0;
-    @include ease(.1s);
 }
 
 .is-project,
 .is-app {
-    border: 0.063rem dashed #{'rgba(var(--dark-blue-rgb), 0.5)'};
-    @include scale(3);
-    @include ease(.1s);
+    @include flexbox(row, center, center);
+    background: var(--dark-blue);
+    border: none;
+    opacity: .8;
+    @include scale(5);
 
+    &::before {
+        content: "\e907";
+        font-family: 'icomoon' !important;
+        color: var(--white);
+        font-size: 0.875rem;
+    }
 }

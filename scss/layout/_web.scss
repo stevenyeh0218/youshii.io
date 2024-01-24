@@ -30,6 +30,7 @@
         .item {
             @include grid(row, auto, minmax(min-content, 1fr), inherit, 0.75rem);
             color: var(--black);
+            padding: 6px;
             @include ease(.2s);
 
             &>img {
@@ -40,23 +41,9 @@
                 @include flexbox-gap(row, center, flex-start, 0.75rem);
             }
 
-            .title {
-                @include flexbox-gap(row, center, flex-start, 0.75rem);
-
-                &>a {
-                    font-size: 2rem;
-                    color: var(--dark-blue);
-                    @include ease(.2s);
-
-                    &:hover {
-                        @include translateX(0.375rem);
-                    }
-                }
-
+            &:hover {
+                @include filter-blur(3px);
             }
-
-            &>h4 {}
         }
-
     }
 }

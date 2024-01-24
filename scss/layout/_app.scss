@@ -22,6 +22,9 @@
 
         .item {
             @include grid(row, repeat(2, auto), inherit, inherit, inherit);
+            color: var(--black);
+            padding: 6px;
+            @include ease(.2s);
 
             @include for-largepad {
                 grid-template-columns: inherit;
@@ -32,6 +35,10 @@
             @include for-landscape {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: inherit;
+            }
+
+            &:hover {
+                @include filter-blur(3px);
             }
 
             &>img {
@@ -63,23 +70,6 @@
 
                 .tag {
                     @include flexbox-gap(row, center, flex-start, 0.75rem);
-                }
-
-                .title {
-                    @include flexbox-gap(row, center, flex-start, 0.75rem);
-
-                    &>h4 {}
-
-                    &>a {
-                        font-size: 2rem;
-                        color: var(--dark-blue);
-                        @include ease(.2s);
-
-                        &:hover {
-                            @include translateX(0.375rem);
-                        }
-                    }
-
                 }
 
                 .text {

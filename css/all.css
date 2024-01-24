@@ -432,6 +432,95 @@ template {
 
 html {
   scroll-snap-type: y proximity;
+  background: var(--white);
+  font-family: 'Noto Sans TC' !important;
+  color: var(--dark-gray);
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  border-radius: 16px;
+  border: 2px solid transparent;
+}
+
+html::-webkit-scrollbar-button {
+  display: none;
+}
+
+html[data-loading="true"] header,
+html[data-loading="true"] .top-btn,
+html[data-loading="true"] .scroll-bar {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .home {
+  background: var(--white);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+html[data-loading="true"] .home .doodle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .home .slogan {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .home .youshii-ci-top .youshii-skill, html[data-loading="true"] .home .youshii-ci-bottom .youshii-skill {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .home .youshii-ci-top::after, html[data-loading="true"] .home .youshii-ci-bottom::after {
+  width: 0;
+}
+
+html[data-loading="true"] .home .ci-blur {
+  filter: blur(32px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .intro .title .youshii-skill {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .intro .title::after {
+  width: 0;
+}
+
+html[data-loading="true"] .intro > article {
+  filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-loading="true"] .intro .ci-blur {
+  filter: blur(32px);
+  opacity: 0;
+  visibility: hidden;
 }
 
 html[data-theme="dark"] {
@@ -499,98 +588,6 @@ html[data-theme="dark"] .mockup {
 
 html[data-theme="dark"] .mockup > article > img {
   box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
-}
-
-body {
-  background: var(--white);
-  font-family: 'Noto Sans TC' !important;
-  color: var(--dark-gray);
-  width: 100vw;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-  background-color: transparent;
-  width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--dark-blue);
-  border-radius: 16px;
-  border: 2px solid transparent;
-}
-
-body::-webkit-scrollbar-button {
-  display: none;
-}
-
-body[data-loading="true"] header,
-body[data-loading="true"] .top-btn,
-body[data-loading="true"] .scroll-bar {
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .home {
-  background: var(--white);
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-}
-
-body[data-loading="true"] .home .doodle {
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .home .slogan {
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .home .youshii-ci-top .youshii-skill, body[data-loading="true"] .home .youshii-ci-bottom .youshii-skill {
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .home .youshii-ci-top::after, body[data-loading="true"] .home .youshii-ci-bottom::after {
-  width: 0;
-}
-
-body[data-loading="true"] .home .ci-blur {
-  filter: blur(32px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .intro .title .youshii-skill {
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .intro .title::after {
-  width: 0;
-}
-
-body[data-loading="true"] .intro > article {
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-body[data-loading="true"] .intro .ci-blur {
-  filter: blur(32px);
-  opacity: 0;
-  visibility: hidden;
 }
 
 ol,
@@ -1225,6 +1222,7 @@ header .close .line::after {
   place-items: inherit;
   gap: 0.75rem;
   color: var(--black);
+  padding: 6px;
   transition: all 0.2s ease;
 }
 
@@ -1240,22 +1238,8 @@ header .close .line::after {
   gap: 0.75rem;
 }
 
-.web > article .item .title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.75rem;
-}
-
-.web > article .item .title > a {
-  font-size: 2rem;
-  color: var(--dark-blue);
-  transition: all 0.2s ease;
-}
-
-.web > article .item .title > a:hover {
-  transform: translateX(0.375rem);
+.web > article .item:hover {
+  filter: blur(3px);
 }
 
 .app {
@@ -1298,6 +1282,9 @@ header .close .line::after {
   grid-template-rows: inherit;
   place-items: inherit;
   gap: inherit;
+  color: var(--black);
+  padding: 6px;
+  transition: all 0.2s ease;
 }
 
 @media (max-width: 991px) {
@@ -1313,6 +1300,10 @@ header .close .line::after {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: inherit;
   }
+}
+
+.app > article .item:hover {
+  filter: blur(3px);
 }
 
 @media (max-width: 991px) {
@@ -1361,24 +1352,6 @@ header .close .line::after {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
-}
-
-.app > article .item .info .title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.75rem;
-}
-
-.app > article .item .info .title > a {
-  font-size: 2rem;
-  color: var(--dark-blue);
-  transition: all 0.2s ease;
-}
-
-.app > article .item .info .title > a:hover {
-  transform: translateX(0.375rem);
 }
 
 .app > article .item .info .text {
@@ -1644,6 +1617,7 @@ header .close .line::after {
   border: 0.063rem solid rgba(var(--black-rgb), 0.5);
   pointer-events: none;
   z-index: 99;
+  transition: all 0.1s ease;
 }
 
 @media (max-width: 1200px) {
@@ -1655,19 +1629,30 @@ header .close .line::after {
 .is-hover {
   opacity: 0.2;
   transform: scale(3);
-  transition: all 0.1s ease;
 }
 
 .is-topBtn {
   opacity: 0;
-  transition: all 0.1s ease;
 }
 
 .is-project,
 .is-app {
-  border: 0.063rem dashed rgba(var(--dark-blue-rgb), 0.5);
-  transform: scale(3);
-  transition: all 0.1s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-blue);
+  border: none;
+  opacity: .8;
+  transform: scale(5);
+}
+
+.is-project::before,
+.is-app::before {
+  content: "\e907";
+  font-family: 'icomoon' !important;
+  color: var(--white);
+  font-size: 0.875rem;
 }
 
 /* top button style */

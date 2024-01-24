@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?3sxiwb') format('truetype'),
-    url('fonts/icomoon.woff?3sxiwb') format('woff'),
-    url('fonts/icomoon.svg?3sxiwb#icomoon') format('svg');
+    url('fonts/icomoon.ttf?x0vjia') format('truetype'),
+    url('fonts/icomoon.woff?x0vjia') format('woff'),
+    url('fonts/icomoon.svg?x0vjia#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.youshii-icon-link:before {
+  content: "\e907";
+}
 .youshii-icon-arrow:before {
   content: "\e900";
 }
