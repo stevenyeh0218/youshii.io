@@ -42,7 +42,7 @@
             }
 
             &:hover {
-                @include filter-blur(3px);
+                @include filter-grayscale(1);
             }
         }
     }
