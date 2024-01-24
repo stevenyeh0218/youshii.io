@@ -30,7 +30,7 @@
             }
 
             @include for-landscape {
-                grid-template-columns: repeat(2, auto);
+                grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: inherit;
             }
 

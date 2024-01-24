@@ -1310,7 +1310,7 @@ header .close .line::after {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .app > article .item {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: inherit;
   }
 }
