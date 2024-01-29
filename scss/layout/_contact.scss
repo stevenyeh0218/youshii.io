@@ -51,19 +51,4 @@
             font-size: 0.875rem;
         }
     }
-
-    &>img {
-        position: absolute;
-        height: auto;
-        top: 11.25rem;
-        animation: slide 10s linear infinite;
-
-        @include for-largepad {
-            top: 10rem;
-        }
-
-        @include for-landscape {
-            top: 6rem;
-        }
-    }
 }

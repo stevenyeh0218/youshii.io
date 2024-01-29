@@ -1466,25 +1466,6 @@ header .close .line::after {
   font-size: 0.875rem;
 }
 
-.contact > img {
-  position: absolute;
-  height: auto;
-  top: 11.25rem;
-  animation: slide 10s linear infinite;
-}
-
-@media (max-width: 991px) {
-  .contact > img {
-    top: 10rem;
-  }
-}
-
-@media only screen and (max-width: 991px) and (orientation: landscape) {
-  .contact > img {
-    top: 6rem;
-  }
-}
-
 .youshii-section {
   position: relative;
   color: var(--black);
@@ -1616,15 +1597,6 @@ header .close .line::after {
   }
   100% {
     transform: scale(0.8);
-  }
-}
-
-@keyframes slide {
-  0% {
-    transform: scale(2) translateX(75%);
-  }
-  100% {
-    transform: scale(2) translateX(-75%);
   }
 }
 

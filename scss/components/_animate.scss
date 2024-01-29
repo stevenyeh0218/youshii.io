@@ -39,13 +39,3 @@
         @include transform(scale(.8));
     }
 }
-
-@keyframes slide {
-    0% {
-        @include transform(scale(2) translateX(75%));
-    }
-
-    100% {
-        @include transform(scale(2) translateX(-75%));
-    }
-}
