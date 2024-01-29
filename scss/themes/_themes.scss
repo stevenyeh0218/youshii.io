@@ -104,83 +104,6 @@
 html {
     scroll-snap-type: y proximity;
 
-    background: var(--white);
-    font-family: 'Noto Sans TC' !important;
-    color: var(--dark-gray);
-    width: 100vw;
-    overflow: hidden;
-    overflow-y: scroll;
-    @include mac-scrollbar-style();
-
-    &[data-loading="true"] {
-
-        header,
-        .top-btn,
-        .scroll-bar {
-            @include filter-blur(10px);
-            @include hide();
-        }
-
-        .home {
-            background: var(--white);
-            position: fixed;
-            width: 100%;
-            z-index: 99;
-
-            .doodle {
-                @include hide();
-            }
-
-            .slogan {
-                @include filter-blur(10px);
-                @include hide();
-            }
-
-            .youshii-ci {
-
-                &-top,
-                &-bottom {
-                    .youshii-skill {
-                        @include filter-blur(10px);
-                        @include hide();
-                    }
-
-                    &::after {
-                        width: 0;
-                    }
-                }
-            }
-
-            .ci-blur {
-                @include filter-blur(32px);
-                @include hide();
-            }
-        }
-
-        .intro {
-            .title {
-                .youshii-skill {
-                    @include filter-blur(10px);
-                    @include hide();
-                }
-
-                &::after {
-                    width: 0;
-                }
-            }
-
-            &>article {
-                @include filter-blur(10px);
-                @include hide();
-            }
-
-            .ci-blur {
-                @include filter-blur(32px);
-                @include hide();
-            }
-        }
-    }
-
     &[data-theme="dark"] {
         /* color HEX */
         --black: #ffffff;
@@ -263,6 +186,86 @@ html {
                 &>img {
                     box-shadow: -15px 15px 20px #{'rgba(var(--white-rgb), 0.5)'};
                 }
+            }
+        }
+    }
+}
+
+body {
+
+    background: var(--white);
+    font-family: 'Noto Sans TC' !important;
+    color: var(--dark-gray);
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    @include mac-scrollbar-style();
+
+    &[data-loading="true"] {
+
+        header,
+        .top-btn,
+        .scroll-bar {
+            @include filter-blur(10px);
+            @include hide();
+        }
+
+        .home {
+            background: var(--white);
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+
+            .doodle {
+                @include hide();
+            }
+
+            .slogan {
+                @include filter-blur(10px);
+                @include hide();
+            }
+
+            .youshii-ci {
+
+                &-top,
+                &-bottom {
+                    .youshii-skill {
+                        @include filter-blur(10px);
+                        @include hide();
+                    }
+
+                    &::after {
+                        width: 0;
+                    }
+                }
+            }
+
+            .ci-blur {
+                @include filter-blur(32px);
+                @include hide();
+            }
+        }
+
+        .intro {
+            .title {
+                .youshii-skill {
+                    @include filter-blur(10px);
+                    @include hide();
+                }
+
+                &::after {
+                    width: 0;
+                }
+            }
+
+            &>article {
+                @include filter-blur(10px);
+                @include hide();
+            }
+
+            .ci-blur {
+                @include filter-blur(32px);
+                @include hide();
             }
         }
     }
