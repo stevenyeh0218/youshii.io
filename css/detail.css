@@ -927,7 +927,7 @@ header .close .line::after {
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: calc(100vh - 257px);
-  place-items: inherit;
+  place-items: center;
   gap: 1.5rem;
   transition: all 0.2s ease;
 }
@@ -950,6 +950,7 @@ header .close .line::after {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: max-content;
   gap: 1.5rem;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
