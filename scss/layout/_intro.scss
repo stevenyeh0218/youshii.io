@@ -72,7 +72,7 @@
     }
 
     &>article {
-        @include grid(row, repeat(2, 1fr), calc(100vh - 257px), center, 1.5rem);
+        @include grid(row, repeat(2, 1fr), calc(100vh - 257px), inherit, 1.5rem);
         @include ease(.2s);
 
         @include for-desktop {
@@ -87,8 +87,9 @@
         &>img {}
 
         .information {
-
             display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: max-content;
             gap: 1.5rem;
 
             @include for-desktop {
@@ -96,6 +97,8 @@
             }
 
             .item {
+                counter-reset: text;
+
                 &>h3 {
                     color: var(--dark-blue);
                     font-size: 2rem;
@@ -112,6 +115,11 @@
                     line-height: 1.5rem;
                     letter-spacing: 0.125rem;
                     text-align: justify;
+
+                    &::before {
+                        counter-increment: text;
+                        content: counter(text) ".";
+                    }
 
                     @include for-desktop {
                         font-size: 1rem;

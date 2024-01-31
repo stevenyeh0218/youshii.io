@@ -927,7 +927,7 @@ header .close .line::after {
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: calc(100vh - 257px);
-  place-items: center;
+  place-items: inherit;
   gap: 1.5rem;
   transition: all 0.2s ease;
 }
@@ -947,6 +947,8 @@ header .close .line::after {
 
 .intro > article .information {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
   gap: 1.5rem;
 }
 
@@ -954,6 +956,10 @@ header .close .line::after {
   .intro > article .information {
     gap: 0.75rem;
   }
+}
+
+.intro > article .information .item {
+  counter-reset: text;
 }
 
 .intro > article .information .item > h3 {
@@ -974,6 +980,11 @@ header .close .line::after {
   line-height: 1.5rem;
   letter-spacing: 0.125rem;
   text-align: justify;
+}
+
+.intro > article .information .item .text::before {
+  counter-increment: text;
+  content: counter(text) ".";
 }
 
 @media (max-width: 1200px) {
