@@ -101,9 +101,14 @@
                 counter-reset: text;
 
                 &>h3 {
+                    display: grid;
                     color: var(--dark-blue);
                     font-size: 2rem;
                     margin-bottom: 0.75rem;
+
+                    &>sub {
+                        font-size: 0.875rem;
+                    }
 
                     @include for-desktop {
                         font-size: 1.5rem;

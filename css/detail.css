@@ -964,9 +964,14 @@ header .close .line::after {
 }
 
 .intro > article .information .item > h3 {
+  display: grid;
   color: var(--dark-blue);
   font-size: 2rem;
   margin-bottom: 0.75rem;
+}
+
+.intro > article .information .item > h3 > sub {
+  font-size: 0.875rem;
 }
 
 @media (max-width: 1200px) {
