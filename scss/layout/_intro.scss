@@ -104,10 +104,11 @@
                     display: grid;
                     color: var(--dark-blue);
                     font-size: 2rem;
-                    margin-bottom: 0.75rem;
+                    margin-bottom: 1.125rem;
 
                     &>sub {
                         font-size: 0.875rem;
+                        line-height: unset;
                     }
 
                     @include for-desktop {
