@@ -10,7 +10,7 @@
     }
 
     &>article {
-        @include grid(column, repeat(7, calc(100vh - 260px)), auto, inherit, inherit);
+        @include grid(column, repeat(6, calc(100vh - 260px)), auto, inherit, inherit);
         width: 100%;
         overflow: hidden;
 
