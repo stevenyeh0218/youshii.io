@@ -1,0 +1,51 @@
+.discover {
+    position: relative;
+    @include grid(rows, auto, auto, center, 1.5rem);
+    padding: 3.125rem;
+    overflow: hidden;
+
+    @include for-desktop {
+        padding: 1.5rem;
+    }
+
+    &>h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+
+        @include for-desktop {
+            font-size: 1.5rem;
+        }
+    }
+
+    &>article {
+        place-self: baseline;
+        font-size: 1.125rem;
+
+        &>h3 {
+            color: var(--dark-blue);
+            font-size: 1.375rem;
+        }
+
+        .text {
+            line-height: 1.675rem;
+            letter-spacing: 0.125rem;
+        }
+
+        .list {
+            color: var(--youdon-green);
+            margin-top: .375rem;
+            counter-reset: item;
+
+            .item {
+                line-height: 1.675rem;
+                letter-spacing: 0.125rem;
+
+                &::before {
+                    counter-increment: item;
+                    content: counter(item) ".";
+                }
+            }
+        }
+
+    }
+}

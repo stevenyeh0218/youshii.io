@@ -104,12 +104,7 @@
                     display: grid;
                     color: var(--dark-blue);
                     font-size: 2rem;
-                    margin-bottom: 1.125rem;
-
-                    &>sub {
-                        font-size: 0.875rem;
-                        line-height: unset;
-                    }
+                    margin-bottom: 1rem;
 
                     @include for-desktop {
                         font-size: 1.5rem;
@@ -119,14 +114,9 @@
                 .text {
                     color: var(--dark-gray);
                     font-size: 1.25rem;
-                    line-height: 1.5rem;
+                    line-height: 1.675rem;
                     letter-spacing: 0.125rem;
                     text-align: justify;
-
-                    &::before {
-                        counter-increment: text;
-                        content: counter(text) ".";
-                    }
 
                     @include for-desktop {
                         font-size: 1rem;

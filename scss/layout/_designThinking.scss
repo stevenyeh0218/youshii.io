@@ -1,0 +1,30 @@
+.designThinking {
+    position: relative;
+    @include flexbox-gap(column, center, center, 1.5rem);
+    padding: 3.125rem;
+    overflow: hidden;
+
+    @include for-desktop {
+        padding: 1.5rem;
+    }
+
+    &>h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+
+        @include for-desktop {
+            font-size: 1.5rem;
+        }
+    }
+
+    &>article {
+        @include grid(row, calc(100vw/3) 1fr, auto, center, 1.5rem);
+        width: 100%;
+        font-size: 1.125rem;
+
+        .text {
+            line-height: 1.675rem;
+            letter-spacing: 0.125rem;
+        }
+    }
+}

@@ -173,6 +173,18 @@ html {
             }
         }
 
+        .ideate {
+            &>article {
+                &:last-child {
+                    .list {
+                        &>img {
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
         .web,
         .app,
         .intro {
