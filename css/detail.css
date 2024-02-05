@@ -1234,6 +1234,10 @@ header .close .line::after {
   grid-column: 2/3;
 }
 
+.ideate > article.guideline {
+  grid-column: 1/3 !important;
+}
+
 .ideate > article > h3 {
   color: var(--dark-blue);
   font-size: 1.375rem;
