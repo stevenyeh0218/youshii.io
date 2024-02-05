@@ -2,8 +2,7 @@
     background: var(--light-brown);
 
     @include for-desktop {
-        height: auto !important;
-    }
+        height: auto !important;}
 
     &>h1 {
         border-bottom: 1px solid var(--black);

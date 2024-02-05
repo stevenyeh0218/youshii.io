@@ -1049,6 +1049,12 @@ header .close .line::after {
   font-size: 1.125rem;
 }
 
+@media (max-width: 480px) {
+  .designThinking > article {
+    grid-template-columns: auto;
+  }
+}
+
 .designThinking > article .text {
   line-height: 1.675rem;
   letter-spacing: 0.125rem;
@@ -1204,6 +1210,12 @@ header .close .line::after {
   }
 }
 
+@media (max-width: 480px) {
+  .ideate > h3 {
+    grid-column: unset;
+  }
+}
+
 .ideate > article {
   place-self: flex-start;
   font-size: 1.125rem;
@@ -1213,12 +1225,30 @@ header .close .line::after {
   grid-column: 1/2;
 }
 
+@media (max-width: 480px) {
+  .ideate > article:first-child {
+    grid-column: unset;
+  }
+}
+
 .ideate > article:last-child {
   grid-column: 2/3;
 }
 
+@media (max-width: 480px) {
+  .ideate > article:last-child {
+    grid-column: unset;
+  }
+}
+
 .ideate > article.guideline {
   grid-column: 1/3 !important;
+}
+
+@media (max-width: 480px) {
+  .ideate > article.guideline {
+    grid-column: unset !important;
+  }
 }
 
 .ideate > article > h3 {

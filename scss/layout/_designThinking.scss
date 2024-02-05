@@ -22,6 +22,11 @@
         width: 100%;
         font-size: 1.125rem;
 
+
+        @include for-phone {
+            grid-template-columns: auto;
+        }
+
         .text {
             line-height: 1.675rem;
             letter-spacing: 0.125rem;
