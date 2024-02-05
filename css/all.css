@@ -1177,7 +1177,7 @@ header .close .line::after {
 .web > article {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(6, calc(100vh - 260px));
+  grid-template-columns: repeat(5, calc(100vh - 260px));
   grid-template-rows: auto;
   place-items: inherit;
   gap: inherit;
