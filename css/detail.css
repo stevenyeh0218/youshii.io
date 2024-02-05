@@ -1239,7 +1239,7 @@ header .close .line::after {
   font-size: 1.375rem;
 }
 
-.ideate > article .text {
+.ideate > article > .text {
   line-height: 1.675rem;
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;

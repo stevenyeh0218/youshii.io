@@ -487,6 +487,10 @@ html[data-theme="dark"] .designGuideline .component > img {
   background: #fff;
 }
 
+html[data-theme="dark"] .ideate > article:last-child .list > img {
+  background: #fff;
+}
+
 html[data-theme="dark"] .web,
 html[data-theme="dark"] .app,
 html[data-theme="dark"] .intro {
@@ -1812,6 +1816,9 @@ header .close .line::after {
     background: #fff;
   }
   .designGuideline .component > img {
+    background: #fff;
+  }
+  .ideate > article:last-child .list > img {
     background: #fff;
   }
   .web,
