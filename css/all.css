@@ -478,15 +478,6 @@ html[data-theme="dark"] .about .skill .item > h4 {
   color: #fff;
 }
 
-html[data-theme="dark"] .flow > article > img,
-html[data-theme="dark"] .wireframe > article > img {
-  background: #fff;
-}
-
-html[data-theme="dark"] .designGuideline .component > img {
-  background: #fff;
-}
-
 html[data-theme="dark"] .ideate > article:last-child .list > img {
   background: #fff;
 }
@@ -495,14 +486,6 @@ html[data-theme="dark"] .web,
 html[data-theme="dark"] .app,
 html[data-theme="dark"] .intro {
   background: #000;
-}
-
-html[data-theme="dark"] .mockup {
-  background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
-}
-
-html[data-theme="dark"] .mockup > article > img {
-  box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
 }
 
 body {
@@ -1811,13 +1794,6 @@ header .close .line::after {
     background: #000;
     color: #fff;
   }
-  .flow > article > img,
-  .wireframe > article > img {
-    background: #fff;
-  }
-  .designGuideline .component > img {
-    background: #fff;
-  }
   .ideate > article:last-child .list > img {
     background: #fff;
   }
@@ -1825,12 +1801,6 @@ header .close .line::after {
   .app,
   .intro {
     background: #000;
-  }
-  .mockup {
-    background: linear-gradient(to bottom right, var(--white) 0%, var(--white) 50%, var(--light-brown) 50%, var(--light-brown) 100%);
-  }
-  .mockup > article > img {
-    box-shadow: -15px 15px 20px rgba(var(--white-rgb), 0.5);
   }
 }
 
