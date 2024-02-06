@@ -1,6 +1,6 @@
 .define {
     position: relative;
-    @include grid(rows, auto, auto, center, 1.5rem);
+    @include grid(row, auto, auto, center, 1.5rem);
     padding: 3.125rem;
     overflow: hidden;
 
@@ -29,21 +29,23 @@
         .text {
             line-height: 1.675rem;
             letter-spacing: 0.125rem;
-        }.list {
-    color: var(--youdon-green);
-    margin-top: .375rem;
-    counter-reset: item;
-
-    .item {
-        line-height: 1.675rem;
-        letter-spacing: 0.125rem;
-
-        &::before {
-            counter-increment: item;
-            content: counter(item) ".";
         }
-    }
-}
+
+        .list {
+            color: var(--youdon-green);
+            margin-top: .375rem;
+            counter-reset: item;
+
+            .item {
+                line-height: 1.675rem;
+                letter-spacing: 0.125rem;
+
+                &::before {
+                    counter-increment: item;
+                    content: counter(item) ".";
+                }
+            }
+        }
 
     }
 }

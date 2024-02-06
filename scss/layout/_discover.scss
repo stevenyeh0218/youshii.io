@@ -1,6 +1,6 @@
 .discover {
     position: relative;
-    @include grid(rows, auto, auto, center, 1.5rem);
+    @include grid(row, auto, auto, center, 1.5rem);
     padding: 3.125rem;
     overflow: hidden;
 
