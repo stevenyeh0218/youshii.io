@@ -1029,12 +1029,14 @@ header .close .line::after {
 
 .designThinking > h3 {
   color: var(--dark-blue);
-  font-size: 2rem;
+  font-size: 3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }
 
 @media (max-width: 1200px) {
   .designThinking > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -1080,12 +1082,14 @@ header .close .line::after {
 
 .discover > h3 {
   color: var(--dark-blue);
-  font-size: 2rem;
+  font-size: 3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }
 
 @media (max-width: 1200px) {
   .discover > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -1140,12 +1144,14 @@ header .close .line::after {
 
 .define > h3 {
   color: var(--dark-blue);
-  font-size: 2rem;
+  font-size: 3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }
 
 @media (max-width: 1200px) {
   .define > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -1200,13 +1206,15 @@ header .close .line::after {
 
 .ideate > h3 {
   color: var(--dark-blue);
-  font-size: 2rem;
+  font-size: 3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
   grid-column: 1/3;
 }
 
 @media (max-width: 1200px) {
   .ideate > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -1567,13 +1575,14 @@ header .close .line::after {
 
 .prototype > h3 {
   color: var(--dark-blue);
-  font-size: 2rem;
-  text-align: center;
+  font-size: 3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }
 
 @media (max-width: 1200px) {
   .prototype > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
