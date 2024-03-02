@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?x0vjia') format('truetype'),
-    url('fonts/icomoon.woff?x0vjia') format('woff'),
-    url('fonts/icomoon.svg?x0vjia#icomoon') format('svg');
+    url('fonts/icomoon.ttf?4zjmx6') format('truetype'),
+    url('fonts/icomoon.woff?4zjmx6') format('woff'),
+    url('fonts/icomoon.svg?4zjmx6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,99 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.youshii-icon-heart:before {
+  content: "\e91a";
+}
+.youshii-icon-sketch:before {
+  content: "\e904";
+}
+.youshii-icon-figma:before {
+  content: "\e919";
+}
+.youshii-icon-danboard .path1:before {
+  content: "\e908";
+  color: rgb(255, 255, 255);
+}
+.youshii-icon-danboard .path2:before {
+  content: "\e909";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path3:before {
+  content: "\e90a";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path4:before {
+  content: "\e90b";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path5:before {
+  content: "\e90c";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path6:before {
+  content: "\e90d";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path7:before {
+  content: "\e90e";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path8:before {
+  content: "\e90f";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path9:before {
+  content: "\e910";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path10:before {
+  content: "\e911";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path11:before {
+  content: "\e912";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path12:before {
+  content: "\e913";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path13:before {
+  content: "\e914";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path14:before {
+  content: "\e915";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path15:before {
+  content: "\e916";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path16:before {
+  content: "\e917";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
+.youshii-icon-danboard .path17:before {
+  content: "\e918";
+  margin-left: -1.5380859375em;
+  color: rgb(0, 0, 0);
+}
 .youshii-icon-link:before {
   content: "\e907";
 }
@@ -38,9 +131,6 @@
 }
 .youshii-icon-facebook:before {
   content: "\e903";
-}
-.youshii-icon-figma:before {
-  content: "\e904";
 }
 .youshii-icon-instagram:before {
   content: "\e905";
