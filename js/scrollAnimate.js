@@ -1,5 +1,5 @@
-$(document).ready(function () { // 檢查並設置元素的初始樣式
-	$(".web, .app").css({filter: "blur(50px)", opacity: 0});
+$(document).ready(function () {
+	$(".web, .app").css({filter: "blur(50px)", opacity: 0, transition: "all 0.5s ease"});
 
 	$(window).on("scroll", function () {
 		animateSection(".web");
@@ -28,7 +28,7 @@ $(document).ready(function () { // 檢查並設置元素的初始樣式
 						filter: "blur(" + blurValue.toFixed(1) + "px)",
 						opacity: opacityValue.toFixed(2)
 					});
-				}, 400); // 0.4秒後執行效果
+				}, 0); // 0秒後執行效果
 			}
 		} else if (scrollPosition < sectionVisiblePos) {
 			section.css({filter: "blur(50px)", opacity: 0});
