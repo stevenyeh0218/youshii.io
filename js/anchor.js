@@ -1,33 +1,30 @@
-/* anchor */
 function scrollToSection(sectionSelector) {
-	$('.youshii-section').css("scroll-snap-align", "unset");
-	$("html,body").animate({
+	$("html,body").stop().animate({
 		scrollTop: $(sectionSelector).offset().top
-	}, "medium", function () {
-		$('.youshii-section').removeAttr('style');
-	});
+	}, "fast", function () {});
 }
 
-$(".scroll-bar").click(function () {
-	scrollToSection(".about");
-});
-
-$(".home-btn").click(function () {
+$(".click-top").click(function () {
 	scrollToSection(".home");
 });
 
-$(".about-btn").click(function () {
-	scrollToSection(".about");
-});
-
-$(".web-btn").click(function () {
-	scrollToSection(".web");
-});
-
-$(".app-btn").click(function () {
+$(".app-design").click(function () {
 	scrollToSection(".app");
 });
 
-$(".contact-btn").click(function () {
-	scrollToSection(".contact");
+$(".web-design").click(function () {
+	scrollToSection(".web");
+});
+
+$(".top-btn").click(function () {
+	scrollToSection(".intro");
+});
+
+// 監聽滾動事件
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 100) {
+		$(".top-btn").removeClass('hide');
+	} else {
+		$(".top-btn").addClass('hide');
+	}
 });

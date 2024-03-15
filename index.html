@@ -12,7 +12,7 @@
     <meta property="og:description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta itemprop="name" content="YOUSHII STUDIO">
     <meta itemprop="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <meta name="description" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta name="keywords" content="UIUX，網頁設計、網頁規劃、網頁切版、APP設、BANNER設計">
     <meta name="DC.Publisher" content="YOUSHII">
@@ -29,126 +29,31 @@
 </head>
 
 <body data-loading="true">
-    <!-- 選單 -->
-    <header>
-        <div class="mobile-nav-switch">
-            <div class="line"></div>
-        </div>
-        <nav>
-            <button type="button" class="youshii-btn home-btn">Home</button>
-            <button type="button" class="youshii-btn about-btn">About</button>
-            <button type="button" class="youshii-btn web-btn">Web</button>
-            <button type="button" class="youshii-btn app-btn">App</button>
-            <button type="button" class="youshii-btn contact-btn">Contact</button>
-            <a href="https://www.facebook.com/steven.yeh.716" target="_blank"
-                class="youshii-icon-facebook icon youshii-btn"></a>
-            <a href="https://www.instagram.com/szuwei0218/" target="_blank"
-                class="youshii-icon-instagram icon youshii-btn"></a>
-            <div class="youshii-mode-switch">
-                <input type="checkbox" id="toggle" checked>
-                <label for="toggle">
-                    <span class="youshii-icon-brightness icon"></span>
-                    <span class="youshii-icon-night icon"></span>
-                    <span class="circle"></span>
-                </label>
-            </div>
-        </nav>
-    </header>
     <!-- 首頁 -->
-    <section class="youshii-section home">
-        <div class="slogan">Designs with Passion Impact with Style</div>
-        <div class="scroll-bar">
-            scroll
-            <div class="line"></div>
-        </div>
-        <div class="youshii-ci ci-blur">
-            <div class="youshii-ci-top">
-                <img src="image/ci/youshii.svg">
-                <div class="youshii-skill">
-                    <div class="item">UI</div>
-                    <div class="item">UX</div>
+    <section class="section home">
+        <article class="youshii bento">
+            <div class="item">
+                <h1>Hi, I'm Steven . Just a UXUI designer.</h1>
+                <div class="des">
+                    <div class="text">
+                        擅長領域包括大型專案管理，與不同部門及產業進行有效的溝通與合作，既能獨立完成多重專案，也能參與推動團隊合作。
+                        經手過的 UIUX 專案包括：智慧局 WEB 、專利檢索系統 APP、電商 APP、廣告及醫療公司 APP/WEB/line@等不同類型的大小專案。
+                        負責UX分析研究、Persona、架構規劃、流程設計、UI規劃設計，設計人與人以及人與產品的互動。
+                    </div>
                 </div>
-            </div>
-            <div class="youshii-ci-bottom">
-                <div class="youshii-skill">
-                    <div class="item"><i class="youshii-icon-figma"></i></div>
-                    <div class="item">PS</div>
-                    <div class="item">AI</div>
-                </div>
-                <img src="image/ci/design.svg">
-            </div>
-        </div>
-        <css-doodle class="doodle" grid="20">
-            :doodle {
-            @grid: 20 / 100vmax;
-            filter: blur(1.2em);
-            transform: scale(8);
-            }
-
-            @random {
-            filter: blur(1.5px);
-            }
-
-            @random {
-            animation: move 5s linear alternate infinite;
-            }
-
-            @random(0.1) {
-            animation: flicker 5s ease infinite;
-            }
-
-            @keyframes move {
-            0% {
-            transform: translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-            }
-
-            100% {
-            transform: translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-            }
-            }
-
-            @keyframes flicker {
-            0% {
-            opacity: 1;
-            }
-
-            50% {
-            opacity: 0;
-            }
-
-            100% {
-            opacity: 1;
-            }
-            }
-
-            border-radius: 50%;
-            background:rgb(var(--dark-brown-rgb), @rand(1.2));
-            transform: scale(@rand(.5, 1.2))
-            translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-
-        </css-doodle>
-    </section>
-    <!-- 關於 -->
-    <section class="youshii-section about">
-        <h1>About</h1>
-        <article>
-            <h3>Hi, I'm Steven . Just a UXUI designer.</h3>
-            <div class="text">
-                <div class="cell">擅長領域包括大型專案管理，與不同部門及產業進行有效的溝通與合作，既能獨立完成多重專案，也能參與推動團隊合作。</div>
-                <div class="cell">經手過的 UIUX 專案包括：智慧局 WEB 、專利檢索系統 APP、電商 APP、廣告及醫療公司 APP/WEB/line@等不同類型的大小專案。</div>
-                <div class="cell">負責UX分析研究、Persona、架構規劃、流程設計、UI規劃設計，設計人與人以及人與產品的互動。</div>
             </div>
         </article>
-        <div class="skill">
+        <article class="tools bento">
+            <div class="item"><i class="youshii-icon-figma"></i></div>
+            <div class="item"><i class="youshii-icon-sketch"></i></div>
+            <div class="item">XD</div>
+            <div class="item">PS</div>
+            <div class="item">AI</div>
+        </article>
+        <article class="soft-power bento">
             <div class="item">
-                <h4>Communication</h4>
-                <div class="tag">
+                <h2>Communication</h2>
+                <div class="des">
                     <div class="text">#User</div>
                     <div class="text">#leader</div>
                     <div class="text">#RD</div>
@@ -157,8 +62,8 @@
                 </div>
             </div>
             <div class="item">
-                <h4>Design thinking</h4>
-                <div class="tag">
+                <h2>Design thinking</h2>
+                <div class="des">
                     <div class="text">#Insightfulness</div>
                     <div class="text">#Persona</div>
                     <div class="text">#User Journey Map</div>
@@ -167,244 +72,158 @@
                 </div>
             </div>
             <div class="item">
-                <h4>Creative Tools</h4>
-                <div class="tag">
+                <h2>Creative Tools</h2>
+                <div class="des">
                     <div class="text">#Figma</div>
-                    <div class="text">#FigJam</div>
+                    <div class="text">#sketch</div>
+                    <div class="text">#XD</div>
                     <div class="text">#PS</div>
                     <div class="text">#AI</div>
-                    <div class="text">#IOS Guideline</div>
-                    <div class="text">#Material Guideline</div>
                 </div>
             </div>
             <div class="item">
-                <h4>Font-end Skill</h4>
-                <div class="tag">
+                <h2>Font-end Skill</h2>
+                <div class="des">
                     <div class="text">#HTML5</div>
                     <div class="text">#LESS</div>
                     <div class="text">#SCSS</div>
                     <div class="text">#Bootstrap</div>
                     <div class="text">#TailWindCSS</div>
-                    <div class="text">#JQuery plugin</div>
+                    <div class="text">#JQuery</div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- WEB -->
-    <section class="youshii-section web">
-        <h1>Web</h1>
-        <article>
-            <a href="web/physiotherapy.html" class="item">
-                <img src="image/web/physiotherapy/physiotherapy.svg">
-                <h4 class="title">物理治療後台</h4>
-                <div class="tag">
-                    <div class="youshii-tag">#UI設計</div>
-                    <div class="youshii-tag">#切版</div>
-                    <div class="youshii-tag">#RWD</div>
-                    <div class="youshii-tag">#2023</div>
-                </div>
-            </a>
-            <a href="web/performance.html" class="item">
-                <img src="image/web/performance/performance.svg">
-                <h4 class="title">業績後台</h4>
-                <div class="tag">
-                    <div class="youshii-tag">#UI設計</div>
-                    <div class="youshii-tag">#切版</div>
-                    <div class="youshii-tag">#RWD</div>
-                    <div class="youshii-tag">#2022</div>
-                </div>
-            </a>
-            <a href="web/wtmec.html" class="item">
-                <img src="image/web/wtmec/wtmec.svg">
-                <h4 class="title">文瞱鄉村</h4>
-                <div class="tag">
-                    <div class="youshii-tag">#UI設計</div>
-                    <div class="youshii-tag">#切版</div>
-                    <div class="youshii-tag">#RWD</div>
-                    <div class="youshii-tag">#2021</div>
-                </div>
-            </a>
-            <a href="web/lifeinmyan.html" class="item">
-                <img src="image/web/lifeinmyan/lifeinmyan.svg">
-                <h4 class="title">緬萊生活科技</h4>
-                <div class="tag">
-                    <div class="youshii-tag">#UI設計</div>
-                    <div class="youshii-tag">#切版</div>
-                    <div class="youshii-tag">#RWD</div>
-                    <div class="youshii-tag">#2020</div>
-                </div>
-            </a>
-            <a href="web/mimir.html" class="item">
-                <img src="image/web/mimir/mimir.svg">
-                <h4 class="title">覓謎爾</h4>
-                <div class="tag">
-                    <div class="youshii-tag">#UI設計</div>
-                    <div class="youshii-tag">#切版</div>
-                    <div class="youshii-tag">#RWD</div>
-                    <div class="youshii-tag">#2019</div>
-                </div>
-            </a>
         </article>
-    </section>
-    <!-- App -->
-    <section class="youshii-section app">
-        <h1>App</h1>
-        <article>
-            <a href="app/youdon.html" class="item">
-                <img src="image/app/youdon/youdon.svg">
-                <div class="info">
-                    <h4 class="title">Youdon App</h4>
-                    <div class="tag">
-                        <div class="youshii-tag">#UI設計</div>
-                        <div class="youshii-tag">#IOS</div>
-                        <div class="youshii-tag">#Android</div>
-                        <div class="youshii-tag">#2023</div>
-                    </div>
-                    <div class="text">
-                        一個基於物理治療專業，結合AI科技開發的一個服務，透過這個App做肌肉骨骼疼痛檢測，可以得到運動指導影片，照著這些影片做運動，可以有效舒緩疼痛。
-                        也提供治療所預約的功能，讓您可以隨時隨地都可以做，照顧您的肌肉骨骼健康。
-                    </div>
-                </div>
-            </a>
-            <a href="line@/easyreserve.html" class="item">
-                <img src="image/line@/easyreserve/easyreserve.svg">
-                <div class="info">
-                    <h4 class="title">快易訂 line@</h4>
-                    <div class="tag">
-                        <div class="youshii-tag">#UI設計</div>
-                        <div class="youshii-tag">#Line@</div>
-                        <div class="youshii-tag">#2022</div>
-                    </div>
-                    <div class="text">
-                        餐廳或小吃在進貨出貨時需要去市場或是其他地方現場看貨，如果已有特定的上游可以下單，可以利用此系統讓繁雜的生活多一些時間。
-                        官方能減少人工成本與紙本消耗、24小時都能接單、交接顧客需求不漏接、優化動線等等的隨時觀看方便管理。
-                    </div>
-                </div>
-            </a>
-            <a href="line@/car.html" class="item">
-                <img src="image/line@/car/car.svg">
-                <div class="info">
-                    <h4 class="title">派車 line@</h4>
-                    <div class="tag">
-                        <div class="youshii-tag">#UI設計</div>
-                        <div class="youshii-tag">#Line@</div>
-                        <div class="youshii-tag">#2022</div>
-                    </div>
-                    <div class="text">
-                        使用者加入官方line@後，能隨時隨地的叫車，並且觀看車子的路線以及時間地點等等。此外，可以通過line@預約，享受更專業的服務。
-                        官方的部分能減少人力紙本成本，優化訂單管理的問題，幫助財務成本狀況。
-                    </div>
-                </div>
-            </a>
-            <a href="line@/bookfruit.html" class="item">
-                <img src="image/line@/bookfruit/bookfruit.svg">
-                <div class="info">
-                    <h4 class="title">預約果 line@</h4>
-                    <div class="tag">
-                        <div class="youshii-tag">#UI設計</div>
-                        <div class="youshii-tag">#Line@</div>
-                        <div class="youshii-tag">#2022</div>
-                    </div>
-                    <div class="text">
-                        用line搞定開店大小事情，節省人事成本20%，給您24小時不漏單的全新體驗。
-                        預約、促銷、產品更新及時通知，是24小時預約系統也是會員系統，顧客消費習慣一手掌握，輕鬆預約。
-                        解決官方人工管理預約單、預約時間撞在一起、人工漏接預約電話、休息時不被電話打擾輕鬆管理訂單。
-                    </div>
-                </div>
-            </a>
-        </article>
-    </section>
-    <!-- 聯絡 -->
-    <footer class="youshii-section contact">
-        <article>
-            <h1>Contact</h1>
-            <div class="mail">
-                <i class="youshii-icon-email"></i>
-                <div class="text">fallenyeh@gmail.com</div>
+        <article class="app-design bento">
+            <div class="youshii-ci">
+                <img src="image/ci/danboard.svg">
+                <div class="text">APP</div>
+                <div class="text">DESIGN</div>
             </div>
-            <div class="colophon">© 2023 YOUSHII DESIGN all rights reserved.</div>
         </article>
-        <css-doodle class="doodle" grid="20">
-            :doodle {
-            @grid: 20 / 100vmax;
-            filter: blur(1.2em);
-            transform: scale(8);
-            }
-
-            @random {
-            filter: blur(1.5px);
-            }
-
-            @random {
-            animation: move 5s linear alternate infinite;
-            }
-
-            @random(0.1) {
-            animation: flicker 5s ease infinite;
-            }
-
-            @keyframes move {
-            0% {
-            transform: translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-            }
-
-            100% {
-            transform: translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-            }
-            }
-
-            @keyframes flicker {
-            0% {
-            opacity: 1;
-            }
-
-            50% {
-            opacity: 0;
-            }
-
-            100% {
-            opacity: 1;
-            }
-            }
-
-            border-radius: 50%;
-            background:rgb(var(--dark-brown-rgb), @rand(1.2));
-            transform: scale(@rand(.5, 1.2))
-            translate(
-            @rand(-50%, 50%), @rand(-50%, 50%)
-            );
-
-        </css-doodle>
-    </footer>
+        <article class="web-design bento">
+            <div class="youshii-ci">
+                <img src="image/ci/danboard.svg">
+                <div class="text">WEB</div>
+                <div class="text">DESIGN</div>
+            </div>
+        </article>
+        <article class="social bento">
+            <a href="https://www.facebook.com/steven.yeh.716" target="_blank" class="youshii-icon-facebook icon"></a>
+            <a href="https://www.instagram.com/szuwei0218/" target="_blank" class="youshii-icon-instagram icon"></a>
+        </article>
+        <article class="mode bento">
+            <div class="mode-switch">
+                <input type="checkbox" id="toggle" checked>
+                <label for="toggle">
+                    <span class="youshii-icon-brightness icon"></span>
+                    <span class="youshii-icon-night icon"></span>
+                    <span class="circle"></span>
+                </label>
+            </div>
+        </article>
+        <article class="contact bento">
+            <img src="image/ci/danboard.svg">
+            <div class="item">
+                <h2>Have project for me?</h2>
+                <div class="mail">
+                    <i class="youshii-icon-email"></i>
+                    <div class="text">fallenyeh@gmail.com</div>
+                </div>
+                <div class="colophon">© 2024 YOUSHII all rights reserved.</div>
+            </div>
+        </article>
+    </section>
+    <!-- WEB 設計 -->
+    <section class="section web">
+        <h2 class="title bento">
+            WEB DESIGN
+        </h2>
+        <a href="web/physiotherapy.html" class="physiotherapy bento">
+            <img src="image/web/physiotherapy/web-link-btn.svg">
+            <div class="des">
+                <h3>物理治療後台</h3>
+            </div>
+        </a>
+        <a href="web/lifeinmyan.html" class="lifeinmyan bento">
+            <img src="image/web/lifeinmyan/web-link-btn.svg">
+            <div class="des">
+                <h3>緬萊生活科技</h3>
+            </div>
+        </a>
+        <a href="web/wtmec.html" class="wtmec bento">
+            <img src="image/web/wtmec/web-link-btn.svg">
+            <div class="des">
+                <h3>文曄鄉村</h3>
+            </div>
+        </a>
+        <a href="web/performance.html" class="performance bento">
+            <img src="image/web/performance/web-link-btn.svg">
+            <div class="des">
+                <h3>業績後台</h3>
+            </div>
+        </a>
+        <a href="web/mimir.html" class="mimir bento">
+            <img src="image/web/mimir/web-link-btn.svg">
+            <div class="des">
+                <h3>覓謎爾</h3>
+            </div>
+        </a>
+        <button class="app-design bento">
+            <div class="text">APP</div>
+        </button>
+        <button class="click-top bento">
+            <div class="text">TOP</div>
+        </button>
+    </section>
+    <!-- APP 設計 -->
+    <section class="section app">
+        <h2 class="title bento">
+            APP DESIGN
+        </h2>
+        <a href="app/youdon.html" class="youdon bento">
+            <img src="image/app/youdon/app-link-btn.svg">
+            <div class="des">
+                <h3>優動APP</h3>
+            </div>
+        </a>
+        <a href="line@/easyreserve.html" class="easyreserve bento">
+            <img src="image/line@/easyreserve/app-link-btn.svg">
+            <div class="des">
+                <h3>快易訂Line@</h3>
+            </div>
+        </a>
+        <a href="line@/bookfruit.html" class="bookfruit bento">
+            <img src="image/line@/bookfruit/app-link-btn.svg">
+            <div class="des">
+                <h3>預約果Line@</h3>
+            </div>
+        </a>
+        <a href="line@/car.html" class="car bento">
+            <img src="image/line@/car/app-link-btn.svg">
+            <div class="des">
+                <h3>派車Line@</h3>
+            </div>
+        </a>
+        <button class="web-design bento">
+            <div class="text">WEB </div>
+        </button>
+        <button class="click-top bento">
+            <div class="text">TOP </div>
+        </button>
+    </section>
     <div class="cursor"></div>
-    <button class="top-btn youshii-icon-arrow"></button>
+    <!-- jquery-3.7.1 -->
+    <script src="vendor/jquery-3.7.1.min.js"></script>
+    <!-- loading 特效 -->
+    <script src="js/loading.js"></script>
+    <!-- 滑動 特效 -->
+    <script src="js/scrollAnimate.js"></script>
+    <!-- cursor 特效 -->
+    <script src="js/cursor.js"></script>
+    <!-- 錨點 -->
+    <script src="js/anchor.js"></script>
+    <!-- 夜間模式 特效 -->
+    <script src="js/darkMode.js"></script>
 </body>
-
-<!-- 引用 jquery 3.7.0 -->
-<script src="vendor/jquery-3.7.0.min.js"></script>
-<!-- 引用 css doodle -->
-<script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script>
-<!-- 開場動畫 特效 -->
-<script src="js/loading.js"></script>
-<!-- 引用 gsap -->
-<script src="vendor/gsap/gsap.min.js"></script>
-<script src="vendor/gsap/ScrollTrigger.min.js"></script>
-<script src="vendor/gsap/Draggable.min.js"></script>
-<!-- 滑動特效 -->
-<script src="js/scrollAnimate.js"></script>
-<!-- Nav for mobile 特效 -->
-<script src="js/mobileNav.js"></script>
-<!-- cursor 特效 -->
-<script src="js/cursor.js"></script>
-<!-- 夜間模式 特效 -->
-<script src="js/mode.js"></script>
-<!-- 錨點 -->
-<script src="js/anchor.js"></script>
-<!-- scrollTop -->
-<script src="js/scrollTop.js"></script>
 
 </html>

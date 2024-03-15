@@ -1,37 +1,18 @@
-.designThinking {
-    position: relative;
-    @include grid(row, auto, auto, center, 1.5rem);
-    padding: 3.125rem;
-    overflow: hidden;
+.design-thinking {
+    @include detail-container-style(50vh, 50vh);
 
-    @include for-desktop {
-        padding: 1.5rem;
+    .title {
+        @include detail-title-style();
+        @include grid-child(1, 13, 1, 2);
     }
 
-    &>h3 {
-        color: var(--dark-blue);
-        font-size: 3rem;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px;
+    .item {
+        @include grid-child(1, 6, 2, 7);
+        place-items: center;
+        @include detail-item-style();
 
-        @include for-desktop {
-            font-size: 2rem;
-        }
-    }
-
-    &>article {
-        @include grid(row, calc(100vw/3) 1fr, auto, center, 1.5rem);
-        width: 100%;
-        font-size: 1.125rem;
-
-
-        @include for-phone {
-            grid-template-columns: auto;
-        }
-
-        .text {
-            line-height: 1.675rem;
-            letter-spacing: 0.125rem;
+        &:last-child {
+            @include grid-child(6, 13, 2, 7);
         }
     }
 }

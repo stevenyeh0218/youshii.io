@@ -1,10 +1,14 @@
 /* cursor effect */
 const cursor = document.querySelector(".cursor");
-var btn = $(".youshii-btn , nav > a , .youshii-mode-switch,.mobile-nav-switch");
-var scrollBtn = $(".top-btn,.scroll-bar");
-var web = $(".web > article > .item ");
-var app = $(".app > article > .item ");
-var intro = $(".intro > article > .information > a ");
+var homeAnchor = $(".home > .web-design , .home > .app-design");
+var socialBtn = $(".home > .social > a");
+var switchBtn = $(".home > .mode  > .mode-switch");
+var appSmAnchor = $(".web > .app-design");
+var topAnchor = $(".web > .click-top , .app > .click-top");
+var webSmAnchor = $(".app > .web-design");
+var linkBtn = $(".web > a , .app > a");
+var returnBtn = $(".intro > .click-back");
+var topBtn = $(".top-btn");
 
 function updateCursor(e) {
 	let x = e.pageX - 10;
@@ -24,43 +28,74 @@ document.addEventListener("mousemove", (e) => {
 	});
 });
 
-
-btn.on('mouseover', function () {
-	cursor.classList.add('is-hover');
+homeAnchor.on('mouseover', function () {
+	cursor.classList.add('is-home-anchor');
 });
 
-btn.on('mouseleave', function () {
-	cursor.classList.remove('is-hover');
+homeAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-home-anchor');
 });
 
-scrollBtn.on('mouseover', function () {
-	cursor.classList.add('is-topBtn');
+socialBtn.on('mouseover', function () {
+	cursor.classList.add('is-social');
 });
 
-scrollBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-topBtn');
+socialBtn.on('mouseleave', function () {
+	cursor.classList.remove('is-social');
 });
 
-web.on('mouseover', function () {
-	cursor.classList.add('is-project');
+switchBtn.on('mouseover', function () {
+	cursor.classList.add('is-switch');
 });
 
-web.on('mouseleave', function () {
-	cursor.classList.remove('is-project');
+switchBtn.on('mouseleave', function () {
+	cursor.classList.remove('is-switch');
 });
 
-app.on('mouseover', function () {
-	cursor.classList.add('is-app');
+appSmAnchor.on('mouseover', function () {
+	cursor.classList.add('is-app-sm-anchor');
 });
 
-app.on('mouseleave', function () {
-	cursor.classList.remove('is-app');
+appSmAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-app-sm-anchor');
 });
 
-intro.on('mouseover', function () {
+topAnchor.on('mouseover', function () {
+	cursor.classList.add('is-top-anchor');
+});
+
+topAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-top-anchor');
+});
+
+webSmAnchor.on('mouseover', function () {
+	cursor.classList.add('is-web-sm-anchor');
+});
+
+webSmAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-web-sm-anchor');
+});
+
+linkBtn.on('mouseover', function () {
 	cursor.classList.add('is-link');
 });
 
-intro.on('mouseleave', function () {
+linkBtn.on('mouseleave', function () {
 	cursor.classList.remove('is-link');
+});
+
+returnBtn.on('mouseover', function () {
+	cursor.classList.add('is-return');
+});
+
+returnBtn.on('mouseleave', function () {
+	cursor.classList.remove('is-return');
+});
+
+topBtn.on('mouseover', function () {
+	cursor.classList.add('is-top-btn');
+});
+
+topBtn.on('mouseleave', function () {
+	cursor.classList.remove('is-top-btn');
 });

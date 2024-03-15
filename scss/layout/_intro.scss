@@ -1,155 +1,297 @@
 .intro {
-    background: var(--light-brown);
+    &>h1 {
+        @include flexbox(row, center, center);
+        @include grid-child(1, 6, 1, 2);
+        font-size: 3rem;
 
-    @include for-desktop {
-        height: auto !important;
-    }
+        @include for-ipad-air {
+            font-size: 2rem;
+        }
 
-    .title {
-        @include flexbox-gap(row, center, flex-start, 3.125rem);
-        position: relative;
-        margin-bottom: 1.5rem;
-        @include ease(.2s);
+        @include for-ipad-min {
+            @include grid-child(1, 5, 1, 2);
+        }
 
-        @include for-desktop {
-            gap: 1.5rem;
-            margin-bottom: 1rem;
+        @include for-ipad-min-landscape {
+            @include grid-child(1, 5, 1, 2);
         }
 
         @include for-phone {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding-bottom: 0.75rem;
+            @include grid-child(1, 13, 1, 2);
+            font-size: 1.5rem;
+        }
+    }
+
+    .profile {
+        @include grid(row, auto, auto, center, 0.375rem);
+        @include grid-child(1, 6, 2, 7);
+        background: transparent;
+
+        @include for-ipad-min {
+            @include grid-child(1, 5, 2, 7);
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            background: var(--black);
-            width: 100%;
-            height: 0.125rem;
-            bottom: 0;
-            left: 0;
-            @include ease(.2s);
+        @include for-ipad-min-landscape {
+            @include grid-child(1, 5, 2, 5);
         }
 
-        &>h1 {
-            text-overflow: ellipsis;
-            word-break: keep-all;
-            white-space: nowrap;
+        @include for-phone {
+            @include grid-child(1, 13, 2, 3);
+        }
 
-            @include for-largepad {
-                font-size: 4rem;
-            }
+        &>img {
+            width: auto;
+            height: 100%;
 
             @include for-phone {
-                font-size: 3rem;
-            }
-        }
-
-        .youshii-skill {
-            @include flexbox-gap(row, center, center, 1.5rem);
-            @include ease(.2s);
-
-            @include for-desktop {
-                gap: 0.75rem;
-            }
-
-            .item {
-                border: 0.063rem solid var(--dark-blue);
-                border-radius: 0.313rem;
-                color: var(--dark-blue);
-                font-size: 1.25rem;
-                padding: 0.563rem;
-
-                @include for-desktop {
-                    font-size: 0.875rem;
-                    padding: 0.375rem;
-                }
+                width: 100%;
             }
         }
     }
 
-    &>article {
-        @include grid(row, repeat(2, 1fr), calc(100vh - 257px), center, 1.5rem);
-        @include ease(.2s);
+    .purpose {
+        @include flexbox(column, inherit, center);
+        @include grid-child(6, 10, 1, 4);
+        place-items: center;
 
-        @include for-desktop {
-            grid-template-rows: auto;
-            gap: 0.75rem;
+        @include for-ipad-air {
+            @include grid-child(6, 10, 1, 3);
+        }
+
+        @include for-ipad-min {
+            @include grid-child(5, 9, 1, 3);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(5, 9, 3, 5);
         }
 
         @include for-phone {
-            grid-template-columns: auto;
+            @include grid-child(1, 13, 3, 5);
         }
 
-        &>img {}
+        &>h2 {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
 
-        .information {
+            @include for-ipad-air {
+                font-size: 1.375rem;
+            }
+        }
+
+        .des {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: max-content;
-            gap: 1.5rem;
+            gap: 0.375rem;
+            line-height: 1.5rem;
+            letter-spacing: 0.15rem;
+            font-size: 1.25rem;
+            border: 1px solid var(--dark-blue);
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+
+            @include for-ipad-air {
+                font-size: 0.875rem;
+                gap: 0.375rem;
+            }
+        }
+    }
+
+    .timeline {
+        @extend .purpose;
+        @include grid-child(10, 13, 1, 4);
+
+        @include for-ipad-air {
+            @include grid-child(10, 13, 1, 3);
+        }
+
+        @include for-ipad-min {
+            @include grid-child(9, 13, 1, 3);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(8, 13, 1, 3);
+        }
+
+        @include for-phone {
+            @include grid-child(1, 13, 5, 6);
+        }
+
+    }
+
+    .team {
+        @extend .purpose;
+        @include grid-child(6, 8, 4, 6);
+
+        @include for-ipad-air {
+            @include grid-child(6, 8, 3, 5);
+        }
+
+        @include for-ipad-min {
+            @include grid-child(5, 7, 3, 5);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(5, 8, 1, 3);
+        }
+
+        @include for-phone {
+            @include grid-child(1, 6, 6, 7);
+        }
+    }
+
+    .member {
+        @extend .purpose;
+        @include grid-child(8, 11, 4, 6);
+
+        @include for-ipad-air {
+            @include grid-child(8, 11, 3, 5);
+        }
+
+        @include for-ipad-min {
+            @include grid-child(7, 11, 3, 5);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(9, 13, 3, 5);
+        }
+
+        @include for-phone {
+            @include grid-child(6, 13, 6, 7);
+        }
+    }
+
+    .contact {
+        @extend .purpose;
+        @include grid-child(6, 9, 6, 7);
+        flex-direction: row;
+
+        @include for-ipad-air {
+            @include grid-child(6, 9, 5, 7);
+        }
+
+        @include for-ipad-min {
+            @include grid-child(5, 9, 5, 7);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(1, 7, 6, 7);
+        }
+
+        @include for-phone {
+            @include grid-child(1, 13, 8, 9);
+            height: 200px;
+        }
+
+        .item {
+            @include for-ipad-air {
+                font-size: 0.875rem;
+            }
+
+            &>h2 {
+                font-size: 1.5rem;
+                margin-bottom: 0.375rem;
+
+                @include for-ipad-air {
+                    font-size: 1.375rem;
+                }
+            }
+
+            .mail {
+                @include flexbox-gap(row, center, flex-start, 0.375rem);
+                margin-bottom: 0.375rem
+            }
+        }
+    }
+
+    .mode {
+        @extend .purpose;
+        @include grid-child(9, 11, 6, 7);
+
+        @include for-ipad-air {
+            @include grid-child(9, 13, 5, 6);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(7, 13, 5, 6);
+        }
+
+        @include for-phone {
+            @include grid-child(1, 7, 9, 10);
+        }
+    }
+
+    .tag {
+        @extend .purpose;
+        @include grid-child(11, 13, 4, 6);
+        border-radius: 0.75rem;
+
+        @include for-ipad-air {
+            @include grid-child(11, 13, 3, 5);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(1, 7, 5, 6);
+        }
+
+        @include for-phone {
+            @include grid-child(1, 13, 7, 8);
+        }
+
+        .des {
+            @include for-ipad-min-landscape {
+                grid-auto-flow: column;
+            }
+        }
+    }
+
+    //return click
+    .click-back {
+        @include flexbox(row, center, center);
+        background: url(../image/ci/danboard-100.svg) no-repeat center center var(--dark-brown);
+        background-size: auto;
+        @include grid-child(11, 13, 6, 7);
+
+        @include for-ipad-air {
+            @include grid-child(9, 13, 6, 7);
+        }
+
+        @include for-ipad-min-landscape {
+            @include grid-child(7, 13, 6, 7);
+        }
+
+        @include for-phone {
+            @include grid-child(7, 13, 9, 10);
+            height: 100px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: #{'rgba(var(--black-rgb), 0.2)'};
+            border-radius: 0.75rem;
             width: 100%;
+            height: 100%;
+            @include hide();
+            @include background-blur(0);
+        }
 
-            @include for-desktop {
-                gap: 0.75rem;
+        .text {
+            @include flexbox-gap(row, center, center, 0.375rem);
+            font-size: 2rem;
+            color: var(--black);
+            mix-blend-mode: overlay;
+            @include ease(.2s);
+        }
+
+        &:hover {
+            &::before {
+                @include show();
+                @include background-blur(10px);
             }
 
-            .item {
-                counter-reset: text;
-
-                &>h3 {
-                    display: grid;
-                    color: var(--dark-blue);
-                    font-size: 2rem;
-
-                    @include for-desktop {
-                        font-size: 1.5rem;
-                    }
-                }
-
-                .text {
-                    color: var(--dark-gray);
-                    font-size: 1.25rem;
-                    line-height: 1.675rem;
-                    letter-spacing: 0.125rem;
-                    text-align: justify;
-
-                    @include for-desktop {
-                        font-size: 1rem;
-                        line-height: 1.25rem;
-                    }
-                }
-            }
-
-            &>a {
-                @include flexbox(row, center, flex-start);
-                width: max-content;
-                color: var(--dark-blue);
-                font-size: 2rem;
-                font-weight: 300;
-
-                @include for-desktop {
-                    font-size: 1.5rem;
-                }
-
-                &>i {
-                    font-size: 2rem;
-                    @include ease(.2s);
-
-                    @include for-desktop {
-                        font-size: 1.5rem;
-                    }
-
-                }
-
-                &:hover {
-                    &>i {
-                        @include translateX(0.375rem);
-                    }
-                }
+            .text {
+                transition-delay: .1s;
+                color: var(--white);
             }
         }
     }

@@ -1,335 +1,109 @@
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
 :root {
     /* color HEX */
     --white: #ffffff;
     --black: #000000;
-    --light-gray: #CCCCCC;
-    --dark-gray: #666666;
+    --light-gray: #666666;
     --light-brown: #F5EFE6;
     --dark-brown: #E8DFCA;
-    --light-blue: #AEBDCA;
     --dark-blue: #7895B2;
+    --figma-black: #353535;
+    --sketch-yellow: #F5A800;
+    --xd-purple: #490A3A;
+    --ps-blue: #30A8FF;
+    --ai-orange: #FF9A00;
 
     /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
     --white-rgb: 255, 255, 255;
     --black-rgb: 0, 0, 0;
-    --light-gray-rgb: 204, 204, 204;
-    --dark-gray-rgb: 102, 102, 102;
+    --light-gray-rgb: 102, 102, 102;
     --light-brown-rgb: 245, 239, 230;
     --dark-brown-rgb: 232, 223, 202;
-    --light-blue-rgb: 174, 189, 202;
     --dark-blue-rgb: 120, 149, 178;
-
-    /* web-blockchain ci hex*/
-    --bc-green: #1eac8d;
-    --bc-yellow: #f5e0ad;
-    --bc-blue: #94d9d4;
-
-    /* web-mimir ci hex*/
-    --mimir-white: #f5f4ef;
-    --mimir-white-2: #f4f4f9;
-    --mimir-logo-blue: #09a3ea;
-    --mimir-light-blue: #9fd7e3;
-    --mimir-dark-blue: #72bdc7;
-    --mimir-dark-yellow: #e8861d;
-
-    /* web-wtmec ci hex*/
-    --wtmec-white: #F4F3EF;
-    --wtmec-green: #75A342;
-    --wtmec-brown: #A35342;
-    --wtmec-purple: #855771;
-
-    /* web-lifeinmyan ci hex*/
-    --lifeinmyan-yellow: #F6AB00;
-    --lifeinmyan-pink: #ffbab5;
-    --lifeinmyan-red: #d82316;
-    --lifeinmyan-blue: #46d3cd;
-    --lifeinmyan-light-green: #6cbb5a;
-    --lifeinmyan-dark-green: #539b34;
-
-    /* web-tipo ci hex*/
-    --tipo-orange: #ff680d;
-    --tipo-dark-orange: #cf3e28;
-    --tipo-light-red: #e42c27;
-    --tipo-light-blue: #26b3a4;
-    --tipo-dark-blue: #4c66a3;
-    --tipo-yellow: #f2b53e;
-
-    /* web-performance ci hex*/
-    --performance-green: #00BBB4;
-    --performance-red: #E16363;
-    --performance-gray: #72706D;
-
-    /* web-physiotherapy ci hex*/
-    --physiotherapy-green: #00BBB4;
-    --physiotherapy-red: #EB284D;
-    --physiotherapy-blue: #3998EA;
-    --physiotherapy-purple: #6868AC;
-    --physiotherapy-yellow: #F2D6A6;
-
-    /* line@-car ci hex*/
-    --car-pink: #DDBCB7;
-    --car-light-brown: #DDCFC2;
-    --car-dark-brown: #CFC3BC;
-    --car-light-yellow: #EDDFC4;
-    --car-dark-yellow: #E7CAA8;
-
-    /* line@-easyreserve ci hex*/
-    --easyreserve-green: #D4E3DD;
-    --easyreserve-blue: #E3E7EA;
-    --easyreserve-pink: #F3D2C3;
-    --easyreserve-brown: #F4EBE4;
-
-    /* line@-bookfruit ci hex*/
-    --bookfruit-brown: #F1E2D6;
-    --bookfruit-blue: #AECEEA;
-    --bookfruit-green: #4BA703;
-    --bookfruit-red: #B63030;
-
-    /* app-youdon ci hex*/
-    --youdon-green: #00BBB4;
-    --youdon-light-yellow: #FEC37D;
-    --youdon-dark-yellow: #FFB950;
-    --youdon-red: #FF2D55;
-    --youdon-dark-red: #EB284D;
-    --youdon-purple: #934995;
-    --youdon-blue: #3998EA;
+    --figma-black-rgb: 53, 53, 53;
+    --sketch-yellow-rgb: 245, 168, 0;
+    --xd-purple-rgb: 73, 10, 58;
+    --ps-blue-rgb: 48, 168, 255;
+    --ai-orange-rgb: 255, 154, 0;
 }
 
 html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 
-    &[data-theme="dark"] {
-        /* color HEX */
-        --black: #ffffff;
-        --white: #000000;
-        --light-gray: #ffffff;
-        --dark-gray: #ffffff;
-        --light-blue: #F5EFE6;
-        --dark-blue: #E8DFCA;
-        --light-brown: #AEBDCA;
-        --dark-brown: #7895B2;
-
-        /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
-        --black-rgb: 255, 255, 255;
-        --white-rgb: 0, 0, 0;
-        --light-gray-rgb: 255, 255, 255;
-        --dark-gray-rgb: 255, 255, 255;
-        --light-blue-rgb: 245, 239, 230;
-        --dark-blue-rgb: 232, 223, 202;
-        --light-brown-rgb: 174, 189, 202;
-        --dark-brown-rgb: 120, 149, 178;
-
-        .home .youshii-ci-top>img,
-        .home .youshii-ci-bottom>img {
-            filter: invert(1);
-        }
-
-        .scroll-bar {
-            .line {
-                &::before {
-                    background: var(--dark-brown);
-                }
-            }
-        }
-
-        .about {
-            filter: grayscale(1) invert(1) contrast(1);
-            color: #000;
-
-            &>article {
-                border-color: #000;
-            }
-
-            .skill {
-                .item {
-                    &>h4 {
-                        background: #000;
-                        color: #fff;
-                    }
-                }
-            }
-        }
-
-        .ideate {
-            &>article {
-                &:last-child {
-                    .list {
-                        &>img {
-                            background: #fff;
-                        }
-                    }
-                }
-            }
-        }
-
-        .web,
-        .app,
-        .intro {
-            background: #000;
-        }
+    @include for-phone {
+        scroll-snap-type: unset;
     }
 }
 
 body {
-
     background: var(--white);
     font-family: 'Noto Sans TC' !important;
-    color: var(--dark-gray);
+    color: var(--dark-blue);
     width: 100vw;
-    overflow: hidden;
+    height: 100vh;
+    overflow-x: hidden;
     overflow-y: scroll;
     @include mac-scrollbar-style();
 
     &[data-loading="true"] {
 
-        header,
-        .top-btn,
-        .scroll-bar {
-            @include filter-blur(10px);
-            @include hide();
+        .home,
+        .web,
+        .app,
+        .intro,
+        .design-thinking,
+        .discover,
+        .define,
+        .ideate,
+        .mockup {
+            display: none;
         }
+    }
 
-        .home {
-            background: var(--white);
-            position: fixed;
-            width: 100%;
-            z-index: 99;
+    &[data-loading="false"] {
 
-            .doodle {
-                @include hide();
-            }
-
-            .slogan {
-                @include filter-blur(10px);
-                @include hide();
-            }
-
-            .youshii-ci {
-
-                &-top,
-                &-bottom {
-                    .youshii-skill {
-                        @include filter-blur(10px);
-                        @include hide();
-                    }
-
-                    &::after {
-                        width: 0;
-                    }
-                }
-            }
-
-            .ci-blur {
-                @include filter-blur(32px);
-                @include hide();
-            }
-        }
-
+        .home,
         .intro {
-            .title {
-                .youshii-skill {
-                    @include filter-blur(10px);
-                    @include hide();
-                }
+            animation: 1s filter-blur-opacity ease forwards;
+        }
 
-                &::after {
-                    width: 0;
-                }
+        @keyframes filter-blur-opacity {
+            0% {
+                @include filter(blur(50px) opacity(0));
             }
 
-            &>article {
-                @include filter-blur(10px);
-                @include hide();
-            }
-
-            .ci-blur {
-                @include filter-blur(32px);
-                @include hide();
+            100% {
+                @include filter(blur(0) opacity(1));
             }
         }
     }
-}
 
-ol,
-ul,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    &[data-theme="dark"] {
+        /* color HEX */
+        --white: #000000;
+        --black: #ffffff;
+        --light-gray: #ffffff;
+        --light-brown: #000000;
+        --dark-brown: #444444;
+        --dark-blue: #ffffff;
 
-a {
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-}
+        /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
+        --white-rgb: 0, 0, 0;
+        --black-rgb: 255, 255, 255;
+        --light-gray-rgb: 255, 255, 255;
+        --light-brown-rgb: 0, 0, 0;
+        --dark-brown-rgb: 68, 68, 68;
+        --dark-blue-rgb: 255, 255, 255;
 
-button {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-}
+        .design-thinking,
+        .ideate {
+            img {
+                background: #fff;
+            }
+        }
 
-img {
-    width: 100%;
-    height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin: 0;
-    font-weight: 300;
-}
-
-h1 {
-    font-size: 8rem;
-
-    @include for-desktop {
-        font-size: 6rem;
+        .top-btn {
+            mix-blend-mode: difference;
+        }
     }
-
-    @include for-phone {
-        font-size: 4rem;
-    }
-}
-
-h4 {
-    font-size: 1.5rem;
-
-    @include for-desktop {
-        font-size: 1.125rem;
-    }
-}
-
-p {
-    margin: 0;
-    line-height: 1.5em;
-}
-
-.icon {
-    font-size: 1.125rem;
-
-    @include for-desktop {
-        font-size: 1rem;
-    }
-
-    @include for-largepad {
-        font-size: 1.5rem;
-
-    }
-}
-
-.pin-spacer {
-    background: var(--light-brown);
 }

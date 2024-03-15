@@ -1,58 +1,40 @@
-/* Section Animate */
-$(window).on("scroll", function () {
-	var scrollPosition = $(this).scrollTop();
-	var windowHeight = $(window).height();
+$(document).ready(function () {
+    // 檢查並設置元素的初始樣式
+    $(".web, .app").css({filter: "blur(50px)", opacity: 0});
 
-	// About 效果
-	var aboutOffsetTop = $(".about").offset().top;
-	var aboutVisiblePos = aboutOffsetTop - windowHeight;
-	if (scrollPosition >= aboutVisiblePos) {
-		var aboutPercentage = (scrollPosition - aboutVisiblePos) / windowHeight * 100;
-		var aboutClipPathValue = Math.max(100 - aboutPercentage, 0);
-		$(".about").css("clip-path", "inset(0% 0% 0% " + aboutClipPathValue.toFixed(2) + "%)");
-	} else {
-		$(".about").css("clip-path", "inset(0% 0% 0% 100%)");
-	}
+    $(window).on("scroll", function () {
+        animateSection(".web");
+        animateSection(".app");
+    });
 
-	// Web 效果
-	var webOffsetTop = $(".web").offset().top;
-	var webVisiblePos = webOffsetTop - windowHeight;
+    function animateSection(sectionSelector) {
+        var section = $(sectionSelector);
+        if (section.length === 0) {
+            return; // 如果元素不存在，則退出函數
+        }
 
-	if (scrollPosition >= webVisiblePos && scrollPosition <= webOffsetTop) {
-		var webPercentage = (scrollPosition - webVisiblePos) / windowHeight * 100;
-		var blurValue = 50 * (1 - webPercentage / 100);
-		var opacityValue = webPercentage / 100;
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var sectionOffsetTop = section.offset().top;
+        var sectionVisiblePos = sectionOffsetTop - windowHeight;
 
-		if (webPercentage <= 100) {
-			$(".web > h1 , .web > article ").css({
-				filter: "blur(" + blurValue.toFixed(1) + "px)",
-				opacity: opacityValue.toFixed(2)
-			});
-		}
-	} else if (scrollPosition < webVisiblePos) {
-		$(".web > h1 , .web > article").css({filter: "blur(50px)", opacity: 0});
-	} else {
-		$(".web > h1 , .web > article").css({filter: "blur(0px)", opacity: 1});
-	}
+        if (scrollPosition >= sectionVisiblePos && scrollPosition <= sectionOffsetTop) {
+            var percentage = (scrollPosition - sectionVisiblePos) / windowHeight * 100;
+            var blurValue = 50 * (1 - percentage / 100);
+            var opacityValue = percentage / 100;
 
-	// App 效果
-	var appOffsetTop = $(".app").offset().top;
-	var appVisiblePos = appOffsetTop - windowHeight;
-
-	if (scrollPosition >= appVisiblePos && scrollPosition <= appOffsetTop) {
-		var appPercentage = (scrollPosition - appVisiblePos) / windowHeight * 100;
-		var blurValue = 50 * (1 - appPercentage / 100);
-		var opacityValue = appPercentage / 100;
-
-		if (appPercentage <= 100) {
-			$(".app > h1 , .app > article").css({
-				filter: "blur(" + blurValue.toFixed(1) + "px)",
-				opacity: opacityValue.toFixed(2)
-			});
-		}
-	} else if (scrollPosition < appVisiblePos) {
-		$(".app > h1 , .app > article").css({filter: "blur(50px)", opacity: 0});
-	} else {
-		$(".app > h1 , .app > article").css({filter: "blur(0px)", opacity: 1});
-	}
+            if (percentage <= 100) {
+                setTimeout(function () {
+                    section.css({
+                        filter: "blur(" + blurValue.toFixed(1) + "px)",
+                        opacity: opacityValue.toFixed(2)
+                    });
+                }, 100); // 0.1秒後執行效果
+            }
+        } else if (scrollPosition < sectionVisiblePos) {
+            section.css({filter: "blur(50px)", opacity: 0});
+        } else {
+            section.css({filter: "blur(0px)", opacity: 1});
+        }
+    }
 });

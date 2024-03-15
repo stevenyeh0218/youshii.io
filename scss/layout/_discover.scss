@@ -1,53 +1,38 @@
 .discover {
-    position: relative;
-    @include grid(row, auto, auto, center, 1.5rem);
-    padding: 3.125rem;
-    overflow: hidden;
+    @include detail-container-style(70vh, 70vh);
 
-    @include for-desktop {
-        padding: 1.5rem;
-    }
-
-    &>h3 {
-        color: var(--dark-blue);
-        font-size: 3rem;
+    .title {
+        @include detail-title-style();
+        @include grid-child(1, 13, 1, 2);
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px;
+    }
 
-        @include for-desktop {
-            font-size: 2rem;
+    @layer base {
+        &>.item {
+            @include grid-child(1, 5, 2, 7);
+            @include detail-item-style();
+            flex-direction: column;
+
+            &:nth-child(3) {
+                @include grid-child(5, 9, 2, 7);
+
+                @include for-phone {
+                    grid-column: unset;
+                    grid-row: unset;
+                }
+            }
+
+            &:last-child {
+                @include grid-child(9, 13, 2, 7);
+            }
         }
     }
 
-    &>article {
-        place-self: baseline;
-        font-size: 1.125rem;
-
-        &>h3 {
-            color: var(--dark-blue);
-            font-size: 1.375rem;
+    @layer analysis {
+        .analysis {
+            @include grid-child(1, 13, 2, 7);
+            border-right: unset;
         }
-
-        .text {
-            line-height: 1.675rem;
-            letter-spacing: 0.125rem;
-        }
-
-        .list {
-            color: var(--youdon-green);
-            margin-top: .375rem;
-            counter-reset: item;
-
-            .item {
-                line-height: 1.675rem;
-                letter-spacing: 0.125rem;
-
-                &::before {
-                    counter-increment: item;
-                    content: counter(item) ".";
-                }
-            }
-        }
-
     }
 }
