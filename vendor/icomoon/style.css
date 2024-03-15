@@ -1,9 +1,15 @@
 @font-face {
   font-family: 'icomoon';
   src:
+<<<<<<< HEAD
     url('fonts/icomoon.ttf?4zjmx6') format('truetype'),
     url('fonts/icomoon.woff?4zjmx6') format('woff'),
     url('fonts/icomoon.svg?4zjmx6#icomoon') format('svg');
+=======
+    url('fonts/icomoon.ttf?mtcr56') format('truetype'),
+    url('fonts/icomoon.woff?mtcr56') format('woff'),
+    url('fonts/icomoon.svg?mtcr56#icomoon') format('svg');
+>>>>>>> cd9b5f3076956debfa1566ce71e08cc39ffc38e3
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,15 +30,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 .youshii-icon-heart:before {
   content: "\e91a";
 }
+=======
+>>>>>>> cd9b5f3076956debfa1566ce71e08cc39ffc38e3
 .youshii-icon-sketch:before {
   content: "\e904";
 }
 .youshii-icon-figma:before {
   content: "\e919";
 }
+<<<<<<< HEAD
 .youshii-icon-danboard .path1:before {
   content: "\e908";
   color: rgb(255, 255, 255);
@@ -117,6 +127,8 @@
   margin-left: -1.5380859375em;
   color: rgb(0, 0, 0);
 }
+=======
+>>>>>>> cd9b5f3076956debfa1566ce71e08cc39ffc38e3
 .youshii-icon-link:before {
   content: "\e907";
 }

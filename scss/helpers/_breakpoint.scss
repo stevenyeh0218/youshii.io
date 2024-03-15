@@ -1,22 +1,22 @@
-@mixin for-largedesktop {
+@mixin for-ipad-pro {
     @media (max-width: 1366px) {
         @content;
     }
 }
 
-@mixin for-desktop {
+@mixin for-ipad-air {
     @media (max-width: 1200px) {
         @content;
     }
 }
 
-@mixin for-largepad {
-    @media (max-width: 991px) {
+@mixin for-ipad-min {
+    @media (max-width: 1024px) {
         @content;
     }
 }
 
-@mixin for-pad {
+@mixin for-ipad-min-landscape {
     @media (max-width: 768px) {
         @content;
     }
@@ -28,7 +28,7 @@
     }
 }
 
-@mixin for-landscape {
+@mixin for-iphone-landscape {
     @media only screen and (max-width: 991px) and (orientation: landscape) {
         @content;
     }

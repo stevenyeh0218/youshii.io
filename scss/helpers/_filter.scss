@@ -2,14 +2,6 @@
     filter: $mix;
 }
 
-@mixin filter-yellow {
-    filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1948%) hue-rotate(333deg) brightness(91%) contrast(90%);
-}
-
-@mixin filter-blue {
-    filter: invert(34%) sepia(67%) saturate(409%) hue-rotate(159deg) brightness(95%) contrast(83%);
-}
-
 @mixin filter-blur($blur) {
     filter: blur($blur);
 }
@@ -52,4 +44,5 @@
 
 @mixin background-blur($blur) {
     backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
 }

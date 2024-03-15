@@ -8,45 +8,72 @@
     z-index: 99;
     @include ease(.1s);
 
-    @include for-desktop {
-        display: none;
+    @include for-ipad-pro {
+        display: none !important;
     }
 }
 
-.is-hover {
-    opacity: 0.2;
-    @include scale(3);
-
-    @include for-desktop {
-        display: none;
-    }
-}
-
-.is-topBtn {
-    opacity: 0;
-
-    @include for-desktop {
-        display: none;
-    }
-}
-
-.is-project,
-.is-app,
-.is-link {
+.is-home-anchor {
     @include flexbox(row, center, center);
     background: var(--dark-blue);
     border: none;
     opacity: .8;
     @include scale(5);
 
-    @include for-desktop {
-        display: none;
-    }
-
     &::before {
-        content: "\e907";
+        content: "\e900";
         font-family: 'icomoon' !important;
         color: var(--white);
         font-size: 0.875rem;
+        @include rotate(90deg);
     }
+}
+
+.is-app-sm-anchor {
+    @extend .is-home-anchor;
+}
+
+.is-top-anchor {
+    @extend .is-home-anchor;
+
+    &::before {
+        @include rotate(-90deg);
+    }
+}
+
+.is-web-sm-anchor {
+    @extend .is-top-anchor;
+}
+
+.is-social {
+    border-width: thin;
+    border-radius: 2px;
+    border-color: var(--white);
+    @include scale(5);
+}
+
+.is-switch {
+    opacity: 0;
+}
+
+
+.is-link {
+    @extend .is-home-anchor;
+
+    &::before {
+        content: "\e907";
+        @include rotate(0deg);
+    }
+}
+
+.is-return {
+    @extend .is-home-anchor;
+
+    &::before {
+        @include rotate(180deg);
+    }
+}
+
+.is-top-btn {
+    opacity: 0;
 }

@@ -1,166 +1,34 @@
 .ideate {
-    position: relative;
-    @include grid(row, auto, auto, center, 1.5rem);
-    padding: 3.125rem;
-    overflow: hidden;
+    @include detail-container-style(unset, unset);
 
-    @include for-desktop {
-        padding: 1.5rem;
-    }
-
-    &>h3 {
-        color: var(--dark-blue);
-        font-size: 3rem;
+    .title {
+        @include detail-title-style();
+        @include grid-child(1, 13, 1, 2);
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px;
-        grid-column: 1/3;
-
-        @include for-desktop {
-            font-size: 2rem;
-        }
-
-        @include for-phone {
-            grid-column: unset;
-        }
     }
 
+    @layer base {
+        .item {
+            @include grid-child(1, 7, 2, 7);
+            @include detail-item-style();
+            flex-direction: column;
 
-    &>article {
-        place-self: flex-start;
-        font-size: 1.125rem;
+            &:last-child {
+                @include grid-child(7, 13, 2, 7);
+            }
+        }
 
-        &:first-child {
-            grid-column: 1/2;
+    }
+
+    @layer uiflow {
+        .ui-flow {
+            @include grid-child(1, 13, 2, 7);
+            border-right: unset;
 
             @include for-phone {
                 grid-column: unset;
-            }
-        }
-
-        &:last-child {
-            grid-column: 2/3;
-
-            @include for-phone {
-                grid-column: unset;
-            }
-        }
-
-        &.guideline {
-            grid-column: 1/3 !important;
-
-            @include for-phone {
-                grid-column: unset !important;
-            }
-        }
-
-        &>h3 {
-            color: var(--dark-blue);
-            font-size: 1.375rem;
-        }
-
-        &>.text {
-            line-height: 1.675rem;
-            letter-spacing: 0.125rem;
-            margin-bottom: 1rem;
-        }
-
-        .list {
-            @include flexbox-gap-wrap(row, center, center, 1.5rem, wrap);
-
-            @include for-desktop {
-                font-size: 0.875rem;
-                gap: 0.75rem;
-            }
-
-            .item {
-                @include flexbox(column, center, center);
-
-                .color {
-                    border-radius: 0.313rem;
-                    width: 50px;
-                    height: 50px;
-                    margin-bottom: 0.75rem;
-                }
-
-                .text {
-                    align-self: baseline;
-                    font-size: .875rem;
-                }
-            }
-
-            $ci-data: ('.bc-ci': (var(--bc-green),
-                    var(--bc-yellow),
-                    var(--bc-blue)),
-                '.mimir-ci': (var(--mimir-white),
-                    var(--mimir-white-2),
-                    var(--mimir-light-blue),
-                    var(--mimir-logo-blue),
-                    var(--mimir-dark-blue),
-                    var(--mimir-dark-yellow)),
-                '.wtmec-ci': (var(--wtmec-white),
-                    var(--wtmec-green),
-                    var(--wtmec-brown),
-                    var(--wtmec-purple)),
-                '.lifeinmyan-ci': (var(--lifeinmyan-yellow),
-                    var(--lifeinmyan-pink),
-                    var(--lifeinmyan-red),
-                    var(--lifeinmyan-blue),
-                    var(--lifeinmyan-light-green),
-                    var(--lifeinmyan-dark-green)),
-                '.tipo-ci': (var(--tipo-orange),
-                    var(--tipo-dark-orange),
-                    var(--tipo-light-red),
-                    var(--tipo-light-blue),
-                    var(--tipo-dark-blue),
-                    var(--tipo-yellow)),
-                '.performance-ci': (var(--performance-green),
-                    var(--performance-red),
-                    var(--performance-gray)),
-                '.physiotherapy-ci': (var(--physiotherapy-green),
-                    var(--physiotherapy-red),
-                    var(--physiotherapy-blue),
-                    var(--physiotherapy-purple),
-                    var(--physiotherapy-yellow)),
-                '.car-ci': (var(--car-pink),
-                    var(--car-light-brown),
-                    var(--car-dark-brown),
-                    var(--car-light-yellow),
-                    var(--car-dark-yellow)),
-                '.easyreserve-ci': (var(--easyreserve-green),
-                    var(--easyreserve-blue),
-                    var(--easyreserve-pink),
-                    var(--easyreserve-brown)),
-                '.bookfruit-ci': (var(--youdon-green),
-                    var(--bookfruit-blue),
-                    var(--bookfruit-green),
-                    var(--bookfruit-red)),
-                '.youdon-ci': (var(--youdon-green),
-                    var(--youdon-light-yellow),
-                    var(--youdon-dark-yellow),
-                    var(--youdon-red),
-                    var(--youdon-dark-red),
-                    var(--youdon-purple),
-                    var(--youdon-blue)));
-
-            @each $ci-selector,
-            $ci-colors in $ci-data {
-                #{$ci-selector} {
-                    $length: length($ci-colors);
-
-                    @for $i from 1 through $length {
-                        &:nth-child(#{$i}) {
-                            .color {
-                                background: nth($ci-colors, $i);
-                            }
-                        }
-                    }
-
-                    &:last-child {
-                        .color {
-                            background: nth($ci-colors, $length);
-                        }
-                    }
-                }
+                grid-row: unset;
             }
         }
 
