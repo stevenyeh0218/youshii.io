@@ -800,6 +800,7 @@ body[data-theme="dark"] .top-btn {
   .home .tools {
     grid-column: unset;
     grid-row: unset;
+    height: 80px;
   }
 }
 
