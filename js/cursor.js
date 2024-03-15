@@ -2,7 +2,7 @@
 const cursor = document.querySelector(".cursor");
 var homeAnchor = $(".home > .web-design , .home > .app-design");
 var socialBtn = $(".home > .social > a");
-var switchBtn = $(".home > .mode  > .mode-switch");
+var switchBtn = $(".home > .mode  > .mode-switch , .intro > .mode  > .mode-switch ");
 var appSmAnchor = $(".web > .app-design");
 var topAnchor = $(".web > .click-top , .app > .click-top");
 var webSmAnchor = $(".app > .web-design");
