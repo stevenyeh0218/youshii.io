@@ -64,7 +64,7 @@ body {
 
         .home,
         .intro {
-            animation: 1s filter-blur-opacity ease forwards;
+            animation: 0.4s filter-blur-opacity ease forwards;
         }
 
         @keyframes filter-blur-opacity {

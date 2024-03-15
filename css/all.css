@@ -461,7 +461,7 @@ body[data-loading="true"] .mockup {
 
 body[data-loading="false"] .home,
 body[data-loading="false"] .intro {
-  animation: 1s filter-blur-opacity ease forwards;
+  animation: 0.4s filter-blur-opacity ease forwards;
 }
 
 @keyframes filter-blur-opacity {
