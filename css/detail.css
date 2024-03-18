@@ -1664,7 +1664,6 @@ body[data-theme="dark"] .top-btn {
 
 .mockup .img-group > img {
   height: auto;
-  box-shadow: 0 7px 7px rgba(var(--black-rgb), 0.5);
 }
 
 .mockup .w-19 {
