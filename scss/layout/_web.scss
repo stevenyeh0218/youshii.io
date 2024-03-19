@@ -11,7 +11,7 @@
             font-size: 1.875rem;
         }
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -23,7 +23,7 @@
         @include grid-child(1, 7, 2, 5);
         padding-bottom: 0;
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -33,37 +33,7 @@
             height: 100%;
         }
 
-        .des {
-            @include flexbox(row, center, center);
-            background: #{'rgba(var(--white-rgb), 0.2)'};
-            position: absolute;
-            font-size: 2rem;
-            color: var(--black);
-            padding: 0 0.75rem;
-            border-radius: 0.75rem;
-            top: 1.5rem;
-            right: 1.5rem;
-            left: 1.5rem;
-            bottom: 1.5rem;
-            margin: auto;
-            @include background-blur(10px);
-            @include scale(4);
-            @include filter-blur(10px);
-            @include hide();
-            @include ease(.2s);
-
-            @include for-ipad-air {
-                font-size: 1.375rem;
-            }
-        }
-
-        &:hover {
-            .des {
-                @include scale(1);
-                @include filter-blur(0);
-                @include show();
-            }
-        }
+        @include bento-des-style();
     }
 
     //緬萊生活科技
@@ -71,7 +41,7 @@
         @extend .physiotherapy;
         @include grid-child(7, 13, 2, 4);
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -84,7 +54,7 @@
         @include grid-child(1, 5, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -97,7 +67,7 @@
         @include grid-child(5, 9, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -110,7 +80,7 @@
         @include grid-child(9, 13, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }
@@ -125,7 +95,7 @@
         cursor: pointer;
         @include grid-child(7, 10, 4, 5);
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
             height: 100px;
@@ -176,7 +146,7 @@
         cursor: pointer;
         @include grid-child(10, 13, 4, 5);
 
-        @include for-iphone{
+        @include for-iphone {
             grid-column: unset;
             grid-row: unset;
         }

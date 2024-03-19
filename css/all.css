@@ -1209,6 +1209,14 @@ body[data-theme="dark"] .top-btn {
 @media (max-width: 1200px) {
   .web .physiotherapy .des, .web .lifeinmyan .des, .web .wtmec .des, .web .performance .des, .web .mimir .des {
     font-size: 1.375rem;
+    width: max-content;
+    height: max-content;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -1420,6 +1428,14 @@ body[data-theme="dark"] .top-btn {
 @media (max-width: 1200px) {
   .app .youdon .des, .app .easyreserve .des, .app .bookfruit .des, .app .car .des {
     font-size: 1.375rem;
+    width: max-content;
+    height: max-content;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
