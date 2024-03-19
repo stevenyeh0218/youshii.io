@@ -46,6 +46,10 @@
                 font-size: 3rem;
             }
 
+            @include for-iphone-landscape {
+                font-size: 1.125rem;
+            }
+
             &:nth-child(2) {
                 color: var(--dark-blue);
             }

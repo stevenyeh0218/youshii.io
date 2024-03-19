@@ -606,6 +606,12 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .mode-switch > label > span {
+    font-size: 1.125rem;
+  }
+}
+
 .mode-switch > label > span:nth-child(2) {
   color: var(--dark-blue);
 }
