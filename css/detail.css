@@ -863,7 +863,7 @@ body[data-theme="dark"] .top-btn {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .purpose, .intro .timeline, .intro .team, .intro .member, .intro .contact, .intro .mode, .intro .tag {
-    grid-column: 3/6;
+    grid-column: 3/8;
     grid-row: 1/4;
   }
 }
@@ -909,6 +909,7 @@ body[data-theme="dark"] .top-btn {
     font-size: 0.75rem;
     gap: 0.375px;
     line-height: 1rem;
+    padding: 0.375px;
   }
 }
 
@@ -947,7 +948,7 @@ body[data-theme="dark"] .top-btn {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .timeline {
-    grid-column: 6/10;
+    grid-column: 8/11;
     grid-row: 1/4;
   }
 }
@@ -987,8 +988,8 @@ body[data-theme="dark"] .top-btn {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .team {
-    grid-column: 10/13;
-    grid-row: 4/6;
+    grid-column: 11/13;
+    grid-row: 1/4;
   }
 }
 
@@ -1027,8 +1028,8 @@ body[data-theme="dark"] .top-btn {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .member {
-    grid-column: 10/13;
-    grid-row: 1/4;
+    grid-column: 7/10;
+    grid-row: 4/7;
   }
 }
 
@@ -1174,8 +1175,8 @@ body[data-theme="dark"] .top-btn {
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .tag {
-    grid-column: 7/10;
-    grid-row: 4/7;
+    grid-column: 10/13;
+    grid-row: 4/6;
   }
 }
 
