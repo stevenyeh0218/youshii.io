@@ -9,7 +9,7 @@
         writing-mode: vertical-lr;
         border-right: 1px solid var(--black);
 
-        @include for-phone {
+        @include for-iphone{
             writing-mode: unset;
             border: 0;
         }

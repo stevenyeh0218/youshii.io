@@ -1158,6 +1158,13 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .design-thinking {
+    min-height: unset;
+    max-height: unset;
+  }
+}
+
 .design-thinking .title {
   display: flex;
   flex-direction: row;
@@ -1262,6 +1269,13 @@ body[data-theme="dark"] .top-btn {
 }
 
 @media (max-width: 480px) {
+  .discover {
+    min-height: unset;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .discover {
     min-height: unset;
     max-height: unset;
@@ -1389,6 +1403,13 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .define {
+    min-height: unset;
+    max-height: unset;
+  }
+}
+
 .define .title {
   display: flex;
   flex-direction: row;
@@ -1500,6 +1521,13 @@ body[data-theme="dark"] .top-btn {
 }
 
 @media (max-width: 480px) {
+  .ideate {
+    min-height: unset;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .ideate {
     min-height: unset;
     max-height: unset;

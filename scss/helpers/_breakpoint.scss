@@ -22,7 +22,7 @@
     }
 }
 
-@mixin for-phone {
+@mixin for-iphone{
     @media (max-width: 480px) {
         @content;
     }

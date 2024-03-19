@@ -17,7 +17,7 @@
             &:nth-child(3) {
                 @include grid-child(5, 9, 2, 7);
 
-                @include for-phone {
+                @include for-iphone{
                     grid-column: unset;
                     grid-row: unset;
                 }

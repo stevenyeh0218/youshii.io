@@ -11,7 +11,7 @@
             font-size: 1.875rem;
         }
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -23,7 +23,7 @@
         @include grid-child(1, 7, 2, 5);
         padding-bottom: 0;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -71,7 +71,7 @@
         @extend .physiotherapy;
         @include grid-child(7, 13, 2, 4);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -84,7 +84,7 @@
         @include grid-child(1, 5, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -97,7 +97,7 @@
         @include grid-child(5, 9, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -110,7 +110,7 @@
         @include grid-child(9, 13, 5, 7);
         padding-bottom: 0.75rem;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -125,7 +125,7 @@
         cursor: pointer;
         @include grid-child(7, 10, 4, 5);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
             height: 100px;
@@ -176,7 +176,7 @@
         cursor: pointer;
         @include grid-child(10, 13, 4, 5);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }

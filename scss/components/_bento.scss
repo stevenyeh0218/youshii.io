@@ -4,7 +4,7 @@
     height: inherit;
     padding: 1.5rem;
 
-    @include for-phone {
+    @include for-iphone{
         grid-template-columns: auto;
         grid-template-rows: auto;
         height: auto;
@@ -52,7 +52,12 @@
     min-height: $minh;
     max-height: $maxh;
 
-    @include for-phone {
+    @include for-iphone{
+        min-height: unset;
+        max-height: unset;
+    }
+
+    @include for-iphone-landscape{
         min-height: unset;
         max-height: unset;
     }
@@ -68,7 +73,7 @@
         font-size: 1.375rem;
     }
 
-    @include for-phone {
+    @include for-iphone{
         grid-column: unset;
         grid-row: unset;
     }
@@ -84,7 +89,7 @@
         gap: 0.375rem;
     }
 
-    @include for-phone {
+    @include for-iphone{
         grid-column: unset;
         grid-row: unset;
         border: 0;
@@ -124,7 +129,7 @@
     &:last-child {
         border-right: unset;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset !important;
             grid-row: unset !important;
         }

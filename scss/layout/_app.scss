@@ -9,7 +9,7 @@
             font-size: 1.875rem;
         }
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -19,7 +19,7 @@
     .youdon {
         @include grid-child(1, 5, 1, 6);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -67,7 +67,7 @@
         @include grid-child(5, 13, 1, 3);
         padding-bottom: 0;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -78,7 +78,7 @@
         @extend .youdon;
         @include grid-child(5, 9, 4, 7);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -90,7 +90,7 @@
         @include grid-child(9, 13, 3, 7);
         padding: 0;
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
         }
@@ -107,7 +107,7 @@
         background-size: contain;
         @include grid-child(1, 3, 6, 7);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
             height: 100px;
@@ -156,7 +156,7 @@
         background-size: auto;
         @include grid-child(3, 5, 6, 7);
 
-        @include for-phone {
+        @include for-iphone{
             grid-column: unset;
             grid-row: unset;
             height: 100px;

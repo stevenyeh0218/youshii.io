@@ -16,7 +16,7 @@
             @include grid-child(1, 5, 1, 2);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 1, 2);
             font-size: 1.5rem;
         }
@@ -35,7 +35,7 @@
             @include grid-child(1, 5, 2, 5);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 2, 3);
         }
 
@@ -43,7 +43,7 @@
             width: auto;
             height: 100%;
 
-            @include for-phone {
+            @include for-iphone{
                 width: 100%;
             }
         }
@@ -66,7 +66,7 @@
             @include grid-child(5, 9, 3, 5);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 3, 5);
         }
 
@@ -112,7 +112,7 @@
             @include grid-child(8, 13, 1, 3);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 5, 6);
         }
 
@@ -134,7 +134,7 @@
             @include grid-child(5, 8, 1, 3);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 6, 6, 7);
         }
     }
@@ -155,7 +155,7 @@
             @include grid-child(9, 13, 3, 5);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(6, 13, 6, 7);
         }
     }
@@ -177,7 +177,7 @@
             @include grid-child(1, 7, 6, 7);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 8, 9);
             height: 200px;
         }
@@ -215,7 +215,7 @@
             @include grid-child(7, 13, 5, 6);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 7, 9, 10);
         }
     }
@@ -233,7 +233,7 @@
             @include grid-child(1, 7, 5, 6);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(1, 13, 7, 8);
         }
 
@@ -259,7 +259,7 @@
             @include grid-child(7, 13, 6, 7);
         }
 
-        @include for-phone {
+        @include for-iphone{
             @include grid-child(7, 13, 9, 10);
             height: 100px;
         }
