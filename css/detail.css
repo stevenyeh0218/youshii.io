@@ -1257,9 +1257,9 @@ body[data-theme="dark"] .top-btn {
   transition: all 0.2s ease;
 }
 
-@media only screen and (max-width: 991px) and (orientation: landscape) {
+@media (max-width: 1200px) {
   .intro .click-back .text {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
   }
 }
 
