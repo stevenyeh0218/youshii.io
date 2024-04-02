@@ -30,7 +30,11 @@ html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 
-    @include for-iphone{
+    @include for-iphone {
+        scroll-snap-type: unset;
+    }
+
+    @include for-iphone-landscape {
         scroll-snap-type: unset;
     }
 }

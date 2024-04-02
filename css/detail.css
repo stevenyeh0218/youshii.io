@@ -516,12 +516,16 @@ body[data-theme="dark"] .top-btn {
     grid-template-columns: auto;
     grid-template-rows: auto;
     height: auto;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .section {
     height: auto;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
 

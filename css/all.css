@@ -418,6 +418,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  html {
+    scroll-snap-type: unset;
+  }
+}
+
 body {
   background: var(--white);
   font-family: 'Noto Sans TC' !important;
@@ -516,12 +522,16 @@ body[data-theme="dark"] .top-btn {
     grid-template-columns: auto;
     grid-template-rows: auto;
     height: auto;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .section {
     height: auto;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -747,6 +757,15 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .home .youshii .item {
+    background: rgba(var(--white-rgb), 0.7);
+    padding: 0.375rem;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+  }
+}
+
 .home .youshii .item > h1 {
   font-size: 3rem;
   margin-bottom: 0.75rem;
@@ -765,12 +784,25 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .home .youshii .item > h1 {
+    font-size: 1.125rem;
+    margin-bottom: 0.375rem;
+  }
+}
+
 .home .youshii .item .des {
   line-height: 1.5rem;
   letter-spacing: 0.15rem;
 }
 
 @media (max-width: 1200px) {
+  .home .youshii .item .des {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .home .youshii .item .des {
     font-size: 0.875rem;
   }

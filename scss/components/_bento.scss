@@ -8,10 +8,14 @@
         grid-template-columns: auto;
         grid-template-rows: auto;
         height: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
 
     @include for-iphone-landscape {
         height: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
 }
 
