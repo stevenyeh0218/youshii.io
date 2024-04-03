@@ -1224,45 +1224,69 @@ body[data-theme="dark"] .top-btn {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: rgba(var(--white-rgb), 0.2);
+  background: rgba(var(--white-rgb), 0.4);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--black);
-  padding: 0 0.75rem;
-  border-radius: 0.75rem;
-  top: 1.5rem;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
   right: 1.5rem;
   left: 1.5rem;
-  bottom: 1.5rem;
-  margin: auto;
+  bottom: -3rem;
+  box-shadow: 0px 4px 10px -10px var(--black);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transform: scale(4);
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 1366px) {
+  .web .physiotherapy .des, .web .lifeinmyan .des, .web .wtmec .des, .web .performance .des, .web .mimir .des {
+    bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 1200px) {
   .web .physiotherapy .des, .web .lifeinmyan .des, .web .wtmec .des, .web .performance .des, .web .mimir .des {
     font-size: 1.375rem;
-    width: max-content;
-    height: max-content;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transform: scale(1);
-    filter: blur(0);
-    opacity: 1;
-    visibility: visible;
+  }
+}
+
+.web .physiotherapy:hover, .web .lifeinmyan:hover, .web .wtmec:hover, .web .performance:hover, .web .mimir:hover {
+  animation: .5s card-overflow ease-in forwards;
+}
+
+@media (max-width: 1366px) {
+  .web .physiotherapy:hover, .web .lifeinmyan:hover, .web .wtmec:hover, .web .performance:hover, .web .mimir:hover {
+    animation: unset;
   }
 }
 
 .web .physiotherapy:hover .des, .web .lifeinmyan:hover .des, .web .wtmec:hover .des, .web .performance:hover .des, .web .mimir:hover .des {
-  transform: scale(1);
-  filter: blur(0);
-  opacity: 1;
-  visibility: visible;
+  animation: .5s card-slide ease-in forwards;
+}
+
+@media (max-width: 1366px) {
+  .web .physiotherapy:hover, .web .lifeinmyan:hover, .web .wtmec:hover, .web .performance:hover, .web .mimir:hover {
+    animation: unset;
+  }
+}
+
+@keyframes card-slide {
+  0% {
+    bottom: -3rem;
+  }
+  50% {
+    bottom: 0.5rem;
+  }
+  100% {
+    bottom: -0.5rem;
+  }
+}
+
+@keyframes card-overflow {
+  100% {
+    overflow: visible;
+  }
 }
 
 .web .lifeinmyan {
@@ -1443,45 +1467,69 @@ body[data-theme="dark"] .top-btn {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: rgba(var(--white-rgb), 0.2);
+  background: rgba(var(--white-rgb), 0.4);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--black);
-  padding: 0 0.75rem;
-  border-radius: 0.75rem;
-  top: 1.5rem;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
   right: 1.5rem;
   left: 1.5rem;
-  bottom: 1.5rem;
-  margin: auto;
+  bottom: -3rem;
+  box-shadow: 0px 4px 10px -10px var(--black);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transform: scale(4);
-  filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 1366px) {
+  .app .youdon .des, .app .easyreserve .des, .app .bookfruit .des, .app .car .des {
+    bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 1200px) {
   .app .youdon .des, .app .easyreserve .des, .app .bookfruit .des, .app .car .des {
     font-size: 1.375rem;
-    width: max-content;
-    height: max-content;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transform: scale(1);
-    filter: blur(0);
-    opacity: 1;
-    visibility: visible;
+  }
+}
+
+.app .youdon:hover, .app .easyreserve:hover, .app .bookfruit:hover, .app .car:hover {
+  animation: .5s card-overflow ease-in forwards;
+}
+
+@media (max-width: 1366px) {
+  .app .youdon:hover, .app .easyreserve:hover, .app .bookfruit:hover, .app .car:hover {
+    animation: unset;
   }
 }
 
 .app .youdon:hover .des, .app .easyreserve:hover .des, .app .bookfruit:hover .des, .app .car:hover .des {
-  transform: scale(1);
-  filter: blur(0);
-  opacity: 1;
-  visibility: visible;
+  animation: .5s card-slide ease-in forwards;
+}
+
+@media (max-width: 1366px) {
+  .app .youdon:hover, .app .easyreserve:hover, .app .bookfruit:hover, .app .car:hover {
+    animation: unset;
+  }
+}
+
+@keyframes card-slide {
+  0% {
+    bottom: -3rem;
+  }
+  50% {
+    bottom: 0.5rem;
+  }
+  100% {
+    bottom: -0.5rem;
+  }
+}
+
+@keyframes card-overflow {
+  100% {
+    overflow: visible;
+  }
 }
 
 .app .easyreserve {

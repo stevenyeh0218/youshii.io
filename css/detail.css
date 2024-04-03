@@ -418,6 +418,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  html {
+    scroll-snap-type: unset;
+  }
+}
+
 body {
   background: var(--white);
   font-family: 'Noto Sans TC' !important;
