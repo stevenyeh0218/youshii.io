@@ -51,6 +51,9 @@
 
 //web bento des mixins
 @mixin bento-des-style() {
+
+    animation: .5s card-overflow-revert ease-in forwards;
+
     .des {
         @include flexbox(row, center, center);
         background: #{'rgba(var(--white-rgb), 0.4)'};
@@ -61,13 +64,14 @@
         border-radius: 0.375rem;
         right: 1.5rem;
         left: 1.5rem;
-        bottom: -3rem;
         @include box-shadow(0px, 4px, 10px, -10px, var(--black));
         @include background-blur(10px);
         @include ease(.2s);
+        animation: .5s card-slide-revert ease-in forwards;
 
         @include for-ipad-pro {
             bottom: 0.5rem;
+            animation: unset;
         }
 
         @include for-ipad-air {
@@ -84,10 +88,10 @@
 
         .des {
             animation: .5s card-slide ease-in forwards;
-        }
 
-        @include for-ipad-pro {
-            animation: unset;
+            @include for-ipad-pro {
+                animation: unset;
+            }
         }
     }
 
@@ -105,9 +109,34 @@
         }
     }
 
+    @keyframes card-slide-revert {
+        0% {
+            bottom: -0.5rem
+        }
+
+        50% {
+            bottom: 0.5rem;
+        }
+
+        100% {
+            bottom: -3rem;
+        }
+    }
+
     @keyframes card-overflow {
         100% {
             overflow: visible;
+        }
+
+    }
+
+    @keyframes card-overflow-revert {
+        0% {
+            overflow: visible;
+        }
+
+        100% {
+            overflow: hidden;
         }
 
     }
