@@ -1,11 +1,12 @@
 /* cursor effect */
 const cursor = document.querySelector(".cursor");
-var homeAnchor = $(".home > .web-design , .home > .app-design");
-var socialBtn = $(".home > .social > a");
+var homeAnchor = $(".home > .web-design , .home > .app-design, .home > .visual-design");
+
 var switchBtn = $(".home > .mode  > .mode-switch , .intro > .mode  > .mode-switch ");
 var appSmAnchor = $(".web > .app-design");
-var topAnchor = $(".web > .click-top , .app > .click-top");
+var topAnchor = $(".web > .click-top , .app > .click-top ,.visual > .click-top , .visual > .web-design , .visual > .app-design");
 var webSmAnchor = $(".app > .web-design");
+var visualSmAnchor = $(".web > .visual-design, .app > .visual-design");
 var linkBtn = $(".web > a , .app > a");
 var returnBtn = $(".intro > .click-back");
 var topBtn = $(".top-btn");
@@ -34,14 +35,6 @@ homeAnchor.on('mouseover', function () {
 
 homeAnchor.on('mouseleave', function () {
 	cursor.classList.remove('is-home-anchor');
-});
-
-socialBtn.on('mouseover', function () {
-	cursor.classList.add('is-social');
-});
-
-socialBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-social');
 });
 
 switchBtn.on('mouseover', function () {
@@ -74,6 +67,14 @@ webSmAnchor.on('mouseover', function () {
 
 webSmAnchor.on('mouseleave', function () {
 	cursor.classList.remove('is-web-sm-anchor');
+});
+
+visualSmAnchor.on('mouseover', function () {
+	cursor.classList.add('is-visual-sm-anchor');
+});
+
+visualSmAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-visual-sm-anchor');
 });
 
 linkBtn.on('mouseover', function () {

@@ -45,11 +45,8 @@
     @extend .is-top-anchor;
 }
 
-.is-social {
-    border-width: thin;
-    border-radius: 2px;
-    border-color: var(--white);
-    @include scale(5);
+.is-visual-sm-anchor {
+    @extend .is-home-anchor;
 }
 
 .is-switch {

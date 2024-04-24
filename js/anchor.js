@@ -16,6 +16,10 @@ $(".web-design").click(function () {
 	scrollToSection(".web");
 });
 
+$(".visual-design").click(function () {
+	scrollToSection(".visual");
+});
+
 $(".top-btn").click(function () {
 	scrollToSection(".intro");
 });

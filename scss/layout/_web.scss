@@ -93,7 +93,7 @@
         background: url(../image/app/app-sm-btn.svg) no-repeat center center var(--dark-brown);
         background-size: cover;
         cursor: pointer;
-        @include grid-child(7, 10, 4, 5);
+        @include grid-child(7, 9, 4, 5);
 
         @include for-iphone {
             grid-column: unset;
@@ -104,13 +104,30 @@
         @include bento-anchor-text-style();
     }
 
+    //visual on click
+    .visual-design {
+        @include grid(column, auto, auto, center, 0);
+        @include grid-child(9, 11, 4, 5);
+        cursor: pointer;
+
+        @include for-iphone {
+            grid-column: unset;
+            grid-row: unset;
+        }
+
+        &:hover {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+    }
+
     //on top click
     .click-top {
         @extend .app-design;
         background: url(../image/ci/danboard.svg) no-repeat center center var(--dark-brown);
         background-size: auto;
         cursor: pointer;
-        @include grid-child(10, 13, 4, 5);
+        @include grid-child(11, 13, 4, 5);
 
         @include for-iphone {
             grid-column: unset;

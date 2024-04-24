@@ -456,6 +456,7 @@ body::-webkit-scrollbar-button {
 body[data-loading="true"] .home,
 body[data-loading="true"] .web,
 body[data-loading="true"] .app,
+body[data-loading="true"] .visual,
 body[data-loading="true"] .intro,
 body[data-loading="true"] .design-thinking,
 body[data-loading="true"] .discover,
@@ -675,7 +676,7 @@ body[data-theme="dark"] .top-btn {
   }
 }
 
-.is-home-anchor, .is-app-sm-anchor, .is-top-anchor, .is-web-sm-anchor, .is-link, .is-return {
+.is-home-anchor, .is-app-sm-anchor, .is-top-anchor, .is-web-sm-anchor, .is-visual-sm-anchor, .is-link, .is-return {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -686,7 +687,7 @@ body[data-theme="dark"] .top-btn {
   transform: scale(5);
 }
 
-.is-home-anchor::before, .is-app-sm-anchor::before, .is-top-anchor::before, .is-web-sm-anchor::before, .is-link::before, .is-return::before {
+.is-home-anchor::before, .is-app-sm-anchor::before, .is-top-anchor::before, .is-web-sm-anchor::before, .is-visual-sm-anchor::before, .is-link::before, .is-return::before {
   content: "\e900";
   font-family: 'icomoon' !important;
   color: var(--white);
@@ -696,13 +697,6 @@ body[data-theme="dark"] .top-btn {
 
 .is-top-anchor::before, .is-web-sm-anchor::before {
   transform: rotate(-90deg);
-}
-
-.is-social {
-  border-width: thin;
-  border-radius: 2px;
-  border-color: var(--white);
-  transform: scale(5);
 }
 
 .is-switch {

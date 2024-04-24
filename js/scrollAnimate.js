@@ -1,9 +1,10 @@
 $(document).ready(function () {
-	$(".web, .app").css({filter: "blur(50px)", opacity: 0, transition: "all 0.5s ease"});
+	$(".web, .app , .visual").css({filter: "blur(50px)", opacity: 0, transition: "all 0.5s ease"});
 
 	$(window).on("scroll", function () {
 		animateSection(".web");
 		animateSection(".app");
+		animateSection(".visual");
 	});
 
 	function animateSection(sectionSelector) {
