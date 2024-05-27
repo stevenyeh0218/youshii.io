@@ -1,0 +1,28 @@
+.data {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+
+    .about {
+
+        h2 {
+            @include subheading();
+        }
+
+        .text {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            letter-spacing: .1rem;
+            color: var(--dark-blue);
+        }
+    }
+
+    .role {
+        display: grid;
+        gap: .75rem;
+
+        .item {
+            @extend .about;
+        }
+    }
+}

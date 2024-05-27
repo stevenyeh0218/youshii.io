@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap);
 @import 'base/_normalize';
 @import 'base/_base';
 @import 'helpers/_allMixins';
@@ -6,7 +7,9 @@
 @import 'components/_bento';
 @import 'components/_btn';
 @import 'components/_cursor';
-@import 'layout/_home';
+@import 'components/_progress';
+@import 'components/_keyframe';
+@import 'layout/_portfolio';
 @import 'layout/_web';
 @import 'layout/_app';
 @import 'layout/_visual';

@@ -1,144 +1,38 @@
 .web {
+    @include flexbox-gap(column, center, center, .75rem);
+    @include ease(.2s);
 
-    //標題
-    .title {
-        @include flexbox(row, center, center);
-        @include grid-child(1, 13, 1, 2);
-        background: transparent;
-        font-size: 2rem;
-
-        @include for-ipad-air {
-            font-size: 1.875rem;
-        }
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
+    h1 {
+        position: sticky;
+        top: 0;
+        font-family: 'Ojuju';
+        font-size: 15vw;
+        color: var(--black);
     }
 
-    //物理治療後台
-    .physiotherapy {
-        @include grid-child(1, 7, 2, 5);
-        padding-bottom: 0;
+    .list {
+        display: grid;
+        padding: 1.5rem;
 
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
+        .item {
+            position: sticky;
+            top: 1.5rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            @include ease(.2s);
 
-
-        &>img {
-            height: 100%;
-        }
-
-        @include bento-des-style();
-    }
-
-    //緬萊生活科技
-    .lifeinmyan {
-        @extend .physiotherapy;
-        @include grid-child(7, 13, 2, 4);
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-    }
-
-    //文曄
-    .wtmec {
-        @extend .physiotherapy;
-        @include grid-child(1, 5, 5, 7);
-        padding-bottom: 0.75rem;
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-    }
-
-    //業績後台
-    .performance {
-        @extend .physiotherapy;
-        @include grid-child(5, 9, 5, 7);
-        padding-bottom: 0.75rem;
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-    }
-
-    //覓謎爾
-    .mimir {
-        @extend .physiotherapy;
-        @include grid-child(9, 13, 5, 7);
-        padding-bottom: 0.75rem;
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-    }
-
-    //app on click
-    .app-design {
-        @include flexbox(row, center, center);
-        background: url(../image/app/app-sm-btn.svg) no-repeat center center var(--dark-brown);
-        background-size: cover;
-        cursor: pointer;
-        @include grid-child(7, 9, 4, 5);
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-            height: 100px;
-        }
-
-        @include bento-anchor-text-style();
-    }
-
-    //visual on click
-    .visual-design {
-        @include grid(column, auto, auto, center, 0);
-        @include grid-child(9, 11, 4, 5);
-        cursor: pointer;
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-        &:hover {
-            color: var(--white);
-            font-size: 1.5rem;
-        }
-    }
-
-    //on top click
-    .click-top {
-        @extend .app-design;
-        background: url(../image/ci/danboard.svg) no-repeat center center var(--dark-brown);
-        background-size: auto;
-        cursor: pointer;
-        @include grid-child(11, 13, 4, 5);
-
-        @include for-iphone {
-            grid-column: unset;
-            grid-row: unset;
-        }
-
-
-        .text {
-            .icon {
-                @include rotate(-90deg);
+            h2 {
+                position: absolute;
+                font-size: 5vw;
+                font-weight: 400;
+                color: #000;
+                top: 1.5rem;
+                left: 1.5rem;
             }
         }
     }
+}
+
+.dark-brown-bg {
+    animation: .8s dark-brown-bg ease-in forwards;
 }

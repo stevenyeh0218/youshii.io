@@ -4,7 +4,7 @@
     --black: #000000;
     --light-gray: #666666;
     --light-brown: #F5EFE6;
-    --dark-brown: #E8DFCA;
+    --dark-brown: #CCB28C;
     --dark-blue: #7895B2;
     --figma-black: #353535;
     --sketch-yellow: #F5A800;
@@ -17,7 +17,7 @@
     --black-rgb: 0, 0, 0;
     --light-gray-rgb: 102, 102, 102;
     --light-brown-rgb: 245, 239, 230;
-    --dark-brown-rgb: 232, 223, 202;
+    --dark-brown-rgb: 204, 178, 140;
     --dark-blue-rgb: 120, 149, 178;
     --figma-black-rgb: 53, 53, 53;
     --sketch-yellow-rgb: 245, 168, 0;
@@ -26,60 +26,87 @@
     --ai-orange-rgb: 255, 154, 0;
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-
-    @include for-iphone {
-        scroll-snap-type: unset;
-    }
-
-    @include for-iphone-landscape {
-        scroll-snap-type: unset;
-    }
-}
 
 body {
-    background: var(--white);
-    font-family: 'Noto Sans TC' !important;
-    color: var(--dark-blue);
+    background: var(--light-brown);
+    font-family: 'Noto Sans TC';
+    color: var(--light-gray);
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     @include mac-scrollbar-style();
 
     &[data-loading="true"] {
 
-        .home,
+        .portfolio {
+
+            .navigation,
+            .contact,
+            .experience,
+            .hand-project,
+            .clients,
+            .information,
+            .skill,
+            .project,
+            .about {
+                display: none;
+            }
+
+            .sticker {
+                img {
+                    display: none;
+                }
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
         .web,
         .app,
         .visual,
         .intro,
-        .design-thinking,
-        .discover,
-        .define,
-        .ideate,
-        .mockup {
+        .detail,
+        .cursor {
             display: none;
         }
     }
 
     &[data-loading="false"] {
 
-        .home,
-        .intro {
-            animation: 0.5s filter-blur-opacity ease forwards;
+        .portfolio {
+
+            .contact,
+            .experience,
+            .hand-project,
+            .clients,
+            .project {
+                animation: .5s clip-right-to-left ease-in forwards;
+            }
+
+            .navigation,
+            .information,
+            .skill,
+            .about {
+                animation: .5s clip-left-to-right ease-in forwards;
+            }
+
+            .sticker {
+                img {
+                    animation: .5s clip-path-youshii-revert ease-in forwards;
+                }
+
+                &::before {
+                    animation: .5s loading-opacity-revert ease-in forwards;
+                }
+            }
         }
 
-        @keyframes filter-blur-opacity {
-            0% {
-                @include filter(blur(50px) opacity(0));
-            }
-
-            100% {
-                @include filter(blur(0) opacity(1));
-            }
+        .intro {
+            animation: .5s clip-path-youshii-revert ease-in forwards;
         }
     }
 
@@ -89,7 +116,7 @@ body {
         --black: #ffffff;
         --light-gray: #ffffff;
         --light-brown: #000000;
-        --dark-brown: #444444;
+        --dark-brown: #000000;
         --dark-blue: #ffffff;
 
         /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
@@ -97,7 +124,7 @@ body {
         --black-rgb: 255, 255, 255;
         --light-gray-rgb: 255, 255, 255;
         --light-brown-rgb: 0, 0, 0;
-        --dark-brown-rgb: 68, 68, 68;
+        --dark-brown-rgb: 0, 0, 0;
         --dark-blue-rgb: 255, 255, 255;
 
         .design-thinking,

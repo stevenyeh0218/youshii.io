@@ -1,0 +1,7 @@
+.design-guideline {
+    .card {
+        h2 {
+            @include subheading();
+        }
+    }
+}

@@ -1,13 +1,11 @@
 // 日夜模式按鈕
 .mode-switch {
-    width: 100%;
-
-    &>input {
+    input {
         display: none;
 
         &:not(:checked) {
             &+label {
-                &>span {
+                span {
                     color: var(--dark-blue);
 
                     &:nth-child(2) {
@@ -15,14 +13,14 @@
                     }
                 }
 
-                &>span.circle {
+                span.circle {
                     left: calc(100% / 2);
                 }
             }
         }
     }
 
-    &>label {
+    label {
         @include grid(column, auto, auto, center, inherit);
         cursor: pointer;
         position: relative;
@@ -31,60 +29,32 @@
         cursor: pointer;
 
         &:hover {
-            &>span.circle {
+            span.circle {
                 box-shadow: 3px 3px 12px 0px var(--light-gray);
             }
         }
 
-        &>span {
+        span {
             color: var(--white);
+            font-size: 1.25rem;
             padding: 0.188rem;
             z-index: 1;
             @include ease(.2s);
-
-            @include for-ipad-air {
-                font-size: 3rem;
-            }
-
-            @include for-iphone-landscape {
-                font-size: 1.125rem;
-            }
 
             &:nth-child(2) {
                 color: var(--dark-blue);
             }
         }
 
-        &>span.circle {
+        span.circle {
             position: absolute;
             background: var(--dark-blue);
             border-radius: 3.125rem;
-            width: 50%;
             height: 100%;
-            min-width: 66px;
+            min-width: 25px;
             left: 0;
             z-index: unset;
             @include ease(.2s);
         }
     }
-}
-
-//topbtn
-.top-btn {
-    position: fixed;
-    cursor: pointer;
-    font-size: 4rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 99;
-    @include rotate(-90deg);
-    @include ease(.2s);
-
-    &:hover {
-        bottom: 2rem;
-    }
-}
-
-.hide {
-    @include hide();
 }

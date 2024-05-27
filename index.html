@@ -29,87 +29,14 @@
 </head>
 
 <body data-loading="true">
-    <!-- 首頁 -->
-    <section class="section home">
-        <article class="youshii bento">
-            <div class="item">
-                <h1>Hi, I'm Steven . Just a UXUI designer.</h1>
-                <div class="des">
-                    <div class="text">
-                        擅長領域包括大型專案管理，與不同部門及產業進行有效的溝通與合作，既能獨立完成多重專案，也能參與推動團隊合作。
-                        經手過的 UIUX 專案包括：智慧局 WEB 、專利檢索系統 APP、電商 APP、廣告及醫療公司 APP/WEB/line@等不同類型的大小專案。
-                        負責UX分析研究、Persona、架構規劃、流程設計、UI規劃設計，設計人與人以及人與產品的互動。
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article class="tools bento">
-            <div class="item"><i class="youshii-icon-figma"></i></div>
-            <div class="item"><i class="youshii-icon-sketch"></i></div>
-            <div class="item">XD</div>
-            <div class="item">PS</div>
-            <div class="item">AI</div>
-        </article>
-        <article class="soft-power bento">
-            <div class="item">
-                <h2>Communication</h2>
-                <div class="des">
-                    <div class="text">#User</div>
-                    <div class="text">#leader</div>
-                    <div class="text">#RD</div>
-                    <div class="text">#PM</div>
-                    <div class="text">#Interdepartmental</div>
-                </div>
-            </div>
-            <div class="item">
-                <h2>Design thinking</h2>
-                <div class="des">
-                    <div class="text">#Insightfulness</div>
-                    <div class="text">#Persona</div>
-                    <div class="text">#User Journey Map</div>
-                    <div class="text">#UI Flow</div>
-                    <div class="text">#Wireframe</div>
-                </div>
-            </div>
-            <div class="item">
-                <h2>Creative Tools</h2>
-                <div class="des">
-                    <div class="text">#Figma</div>
-                    <div class="text">#sketch</div>
-                    <div class="text">#XD</div>
-                    <div class="text">#PS</div>
-                    <div class="text">#AI</div>
-                </div>
-            </div>
-            <div class="item">
-                <h2>Font-end Skill</h2>
-                <div class="des">
-                    <div class="text">#HTML5</div>
-                    <div class="text">#LESS</div>
-                    <div class="text">#SCSS</div>
-                    <div class="text">#Bootstrap</div>
-                    <div class="text">#TailWindCSS</div>
-                    <div class="text">#JQuery</div>
-                </div>
-            </div>
-        </article>
-        <article class="app-design bento">
-            <div class="youshii-ci">
-                <img src="image/ci/danboard.svg">
-                <div class="text">APP</div>
-                <div class="text">DESIGN</div>
-            </div>
-        </article>
-        <article class="web-design bento">
-            <div class="youshii-ci">
-                <img src="image/ci/danboard.svg">
-                <div class="text">WEB</div>
-                <div class="text">DESIGN</div>
-            </div>
-        </article>
-        <article class="visual-design bento">VISUAL DESIGN</article>
-        <article class="mode bento">
-            <div class="mode-switch">
+    <!-- portfolio -->
+    <section class="bento portfolio">
+        <nav class="card navigation">
+            <button class="item top-btn hide">TOP</button>
+            <button class="item web-btn">WEB</button>
+            <button class="item app-btn">APP</button>
+            <button class="item visual-btn">VISUAL</button>
+            <div class="item mode-switch">
                 <input type="checkbox" id="toggle" checked>
                 <label for="toggle">
                     <span class="youshii-icon-brightness icon"></span>
@@ -117,141 +44,173 @@
                     <span class="circle"></span>
                 </label>
             </div>
-        </article>
-        <article class="contact bento">
-            <img src="image/ci/danboard.svg">
-            <div class="item">
-                <h2>Have project for me?</h2>
-                <div class="mail">
-                    <i class="youshii-icon-email"></i>
+        </nav>
+        <div class="card contact">
+            <h1>Hi, I'm Youshii. UXUI designer.</h1>
+            <img src="image/ci/youshii-design.png">
+            <div class="colophon">
+                <div class="email">
+                    <i class="icon youshii-icon-email"></i>
                     <div class="text">fallenyeh@gmail.com</div>
                 </div>
-                <div class="colophon">© 2024 YOUSHII all rights reserved.</div>
+                <div class="">© 2024 YOUSHII STUDIO all rights reserved.</div>
             </div>
-        </article>
+        </div>
+        <div class="card experience">
+            <div class="num">6+</div>
+            <div class="text">Years Experience</div>
+        </div>
+        <div class="card hand-project">
+            <div class="num">30+</div>
+            <div class="text">Handed Project</div>
+        </div>
+        <div class="card clients">
+            <div class="num">15+</div>
+            <div class="text">Clients</div>
+        </div>
+        <div class="card sticker">
+            <img src="image/ci/sticker.png">
+        </div>
+        <div class="card information">
+            <label class="name">
+                Name：
+                <div class="text">Steven Yeh</div>
+            </label>
+            <label class="base">
+                Base In：
+                <div class="text">Taoyuan Zhongli</div>
+            </label>
+        </div>
+        <div class="card skill">
+            <h2>Skill</h2>
+            <div class="design-tools">
+                <div class="progress-bar-container figma">
+                    <div class="progress-bar ">
+                        <progress id="figma" min="0" max="100" value="90"></progress>
+                    </div>
+                    <label for="figma">Figma</label>
+                </div>
+                <div class="progress-bar-container ps">
+                    <div class="progress-bar">
+                        <progress id="ps" min="0" max="100" value="80"></progress>
+                    </div>
+                    <label for="ps">PS</label>
+                </div>
+                <div class="progress-bar-container ai">
+                    <div class="progress-bar">
+                        <progress id="ai" min="0" max="100" value="80"></progress>
+                    </div>
+                    <label for="ai">AI</label>
+                </div>
+            </div>
+            <div class="skill-tags">
+                <div class="item">#Html5</div>
+                <div class="item">#SCSS</div>
+                <div class="item">#LESS</div>
+                <div class="item">#JQuery</div>
+                <div class="item">#GIT</div>
+                <div class="item">#Axure</div>
+                <div class="item">#Notion</div>
+                <div class="item">#Persona</div>
+                <div class="item">#UJM</div>
+                <div class="item">#FlowChart</div>
+                <div class="item">#Wireframe</div>
+            </div>
+        </div>
+        <div class="card project">
+            <h2>UIUX Portfolio</h2>
+            <div class="list">
+                <a href="web/physiotherapy.html" class="item web-link">
+                    <img src="image/other/web-profile.png">
+                    <div class="text">物理治療後台</div>
+                </a>
+                <a href="app/youdon.html" class="item app-link">
+                    <img src="image/other/app-profile.png">
+                    <div class="text">Youdon App</div>
+                </a>
+                <button class="item visual-link">
+                    <img src="image/other/visual-profile.png">
+                    <div class="text">視覺設計</div>
+                </button>
+            </div>
+        </div>
+        <div class="card about">
+            <h2>About</h2>
+            <div class="list">
+                <div class="text">
+                    專注於大型專案管理，善於跨部門及跨產業協作，能夠獨立完成多重專案並推動團隊合作。
+                </div>
+                <div class="text">
+                    擁有豐富的項目經驗，涵蓋智慧局、專利檢索系統 、電商，以及多個廣告和醫療公司的 APP/WEB/line@專案
+                </div>
+                <div class="text">
+                    負責 UX 分析研究、Persona 創建、架構規劃、流程設計、UI 設計及人機互動設計，致力於優化用戶體驗，為產品創造最大價值。
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- WEB 設計 -->
-    <section class="section web">
-        <h2 class="title bento">
-            WEB DESIGN
-        </h2>
-        <a href="web/physiotherapy.html" class="physiotherapy bento">
-            <img src="image/web/physiotherapy/web-link-btn.svg">
-            <div class="des">
-                <h3>物理治療後台</h3>
-            </div>
-        </a>
-        <a href="web/lifeinmyan.html" class="lifeinmyan bento">
-            <img src="image/web/lifeinmyan/web-link-btn.svg">
-            <div class="des">
-                <h3>緬萊生活科技</h3>
-            </div>
-        </a>
-        <a href="web/wtmec.html" class="wtmec bento">
-            <img src="image/web/wtmec/web-link-btn.svg">
-            <div class="des">
-                <h3>文曄鄉村</h3>
-            </div>
-        </a>
-        <a href="web/performance.html" class="performance bento">
-            <img src="image/web/performance/web-link-btn.svg">
-            <div class="des">
-                <h3>業績後台</h3>
-            </div>
-        </a>
-        <a href="web/mimir.html" class="mimir bento">
-            <img src="image/web/mimir/web-link-btn.svg">
-            <div class="des">
-                <h3>覓謎爾</h3>
-            </div>
-        </a>
-        <button class="app-design bento">
-            <div class="text">APP</div>
-        </button>
-        <article class="visual-design bento">VISUAL DESIGN</article>
-        <button class="click-top bento">
-            <div class="text">TOP</div>
-        </button>
+    <!-- Web Design -->
+    <section class="web">
+        <h1>WEB DESIGN</h1>
+        <div class="list">
+            <a href="web/physiotherapy.html" class="item">
+                <h2>物理治療後台</h2>
+                <img src="image/web/physiotherapy/physiotherapy.png">
+            </a>
+            <a href="web/performance.html" class="item">
+                <h2>業績後台</h2>
+                <img src="image/web/performance/performance.png">
+            </a>
+            <a href="web/lifeinmyan.html" class="item">
+                <h2>緬萊生活科技</h2>
+                <img src="image/web/lifeinmyan/lifeinmyan.png">
+            </a>
+            <a href="web/mimir.html" class="item">
+                <h2>覓謎爾機器人</h2>
+                <img src="image/web/mimir/mimir.png">
+            </a>
+            <a href="web/wtmec.html" class="item">
+                <h2>文瞱鄉村</h2>
+                <img src="image/web/wtmec/wtmec.png">
+            </a>
+        </div>
     </section>
-    <!-- APP 設計 -->
-    <section class="section app">
-        <h2 class="title bento">
-            APP DESIGN
-        </h2>
-        <a href="app/youdon.html" class="youdon bento">
-            <img src="image/app/youdon/app-link-btn.svg">
-            <div class="des">
-                <h3>優動APP</h3>
-            </div>
-        </a>
-        <a href="line@/easyreserve.html" class="easyreserve bento">
-            <img src="image/line@/easyreserve/app-link-btn.svg">
-            <div class="des">
-                <h3>快易訂Line@</h3>
-            </div>
-        </a>
-        <a href="line@/bookfruit.html" class="bookfruit bento">
-            <img src="image/line@/bookfruit/app-link-btn.svg">
-            <div class="des">
-                <h3>預約果Line@</h3>
-            </div>
-        </a>
-        <a href="line@/car.html" class="car bento">
-            <img src="image/line@/car/app-link-btn.svg">
-            <div class="des">
-                <h3>派車Line@</h3>
-            </div>
-        </a>
-        <button class="web-design bento">
-            <div class="text">WEB </div>
-        </button>
-        <article class="visual-design bento">VISUAL DESIGN</article>
-        <button class="click-top bento">
-            <div class="text">TOP </div>
-        </button>
+    <!-- App Design -->
+    <section class="app">
+        <h1>APP DESIGN</h1>
+        <div class="list">
+            <a href="app/youdon.html" class="item">
+                <img src="image/app/youdon/youdon.png">
+            </a>
+            <a href="line@/easyreserve.html" class="item">
+                <img src="image/line@/easyreserve/easyreserve.png">
+            </a>
+            <a href="line@/car.html" class="item">
+                <img src="image/line@/car/car.png">
+            </a>
+            <a href="line@/bookfruit.html" class="item">
+                <img src="image/line@/bookfruit/bookfruit.png">
+            </a>
+        </div>
     </section>
-    <!-- 視覺 設計 -->
-    <section class="section visual">
-        <h2 class="title bento">
-            VISUAL DESIGN
-        </h2>
-        <div class="visual-ad bento">
-            <img src="visual/angel.png">
+    <!-- Visual Design -->
+    <section class="visual">
+        <h1>VISUAL DESIGN</h1>
+        <div class="list">
+            <img src="image/visual/angel.png" class="item">
+            <img src="image/visual/game.png" class="item">
+            <img src="image/visual/watch_1.png" class="item">
+            <img src="image/visual/watch_2.png" class="item">
+            <img src="image/visual/dm_1.jpg" class="item">
+            <img src="image/visual/dm_2.jpg" class="item">
+            <img src="image/visual/banner.png" class="item">
+            <img src="image/visual/sign.png" class="item">
+            <img src="image/visual/menu.png" class="item">
+            <img src="image/visual/card_1.png" class="item">
+            <img src="image/visual/card_2.png" class="item">
         </div>
-        <div class="visual-ad bento">
-            <img src="visual/game.png">
-        </div>
-        <div class="visual-ad bento">
-            <img src="visual/watch_1.png">
-            <img src="visual/watch_2.png">
-        </div>
-        <div class="visual-dm bento">
-            <img src="visual/dm_1.jpg">
-            <img src="visual/dm_2.jpg">
-        </div>
-        <div class="visual-banner bento">
-            <img src="visual/banner.png">
-        </div>
-        <div class="visual-card bento">
-            <img src="visual/card_1.png">
-            <img src="visual/card_2.png">
-        </div>
-        <div class="visual-sign bento">
-            <img src="visual/sign.png">
-        </div>
-        <div class="visual-menu bento">
-            <img src="visual/menu.png">
-        </div>
-        <button class="app-design bento">
-            <div class="text">APP</div>
-        </button>
-        <button class="web-design bento">
-            <div class="text">WEB </div>
-        </button>
-        <button class="click-top bento">
-            <div class="text">TOP </div>
-        </button>
     </section>
+    <!-- cursor -->
     <div class="cursor"></div>
     <!-- jquery-3.7.1 -->
     <script src="vendor/jquery-3.7.1.min.js"></script>
@@ -259,6 +218,9 @@
     <script src="js/loading.js"></script>
     <!-- 滑動 特效 -->
     <script src="js/scrollAnimate.js"></script>
+    <!-- masonry 特效 -->
+    <script src="vendor/masonry.pkgd.min.js"></script>
+    <script src="js/masonry.js"></script>
     <!-- cursor 特效 -->
     <script src="js/cursor.js"></script>
     <!-- 錨點 -->

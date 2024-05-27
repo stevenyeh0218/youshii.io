@@ -1,0 +1,165 @@
+@keyframes fix-nav {
+    0% {
+        position: fixed;
+        border: 0;
+        top: -1.5rem;
+        right: 1.5rem;
+    }
+
+    50% {
+        position: fixed;
+        border: 0;
+        top: 32px;
+        right: 1.5rem;
+    }
+
+    100% {
+        position: fixed;
+        border: 0;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@keyframes text-slide {
+    0% {
+        bottom: -3rem;
+    }
+
+    50% {
+        bottom: 0.5rem;
+    }
+
+    100% {
+        bottom: 0rem
+    }
+}
+
+@keyframes text-slide-revert {
+    0% {
+        bottom: 0rem;
+    }
+
+    50% {
+        bottom: 0.5rem;
+    }
+
+    100% {
+        bottom: -3rem
+    }
+}
+
+@keyframes dark-brown-bg {
+    0% {
+        background: var(--light-brown);
+    }
+
+    100% {
+        background: var(--dark-brown);
+    }
+}
+
+@keyframes black-bg {
+    0% {
+        background: var(--light-brown);
+    }
+
+    100% {
+        background: var(--black);
+    }
+}
+
+@keyframes white-bg {
+    0% {
+        background: var(--light-brown);
+    }
+
+    100% {
+        background: var(--white);
+    }
+}
+
+@keyframes figma-progress {
+    to {
+        --progress-value: 90;
+    }
+}
+
+
+@keyframes ps-progress {
+    to {
+        --progress-value: 80;
+    }
+}
+
+
+@keyframes ai-progress {
+    to {
+        --progress-value: 80;
+    }
+}
+
+@keyframes clip-path-youshii {
+
+    0% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+    }
+
+    100% {
+        clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 100%);
+    }
+}
+
+@keyframes clip-path-youshii-revert {
+
+    0% {
+        clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+    }
+}
+
+@keyframes loading-opacity-revert {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes clip-left-to-right {
+
+    0% {
+        clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes clip-right-to-left {
+
+    0% {
+        clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        top: -100%
+    }
+
+    100% {
+        top: 100%
+    }
+}

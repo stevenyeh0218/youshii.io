@@ -1,34 +1,31 @@
 function scrollToSection(sectionSelector) {
 	$("html,body").stop().animate({
 		scrollTop: $(sectionSelector).offset().top
-	}, "fast", function () {});
+	}, "slow", function () {});
 }
 
-$(".click-top").click(function () {
-	scrollToSection(".home");
+function scrollToTop() {
+	$("html, body").stop().animate({
+		scrollTop: 0
+	}, "slow");
+}
+
+$(".top-btn").click(function () {
+	scrollToTop();
 });
 
-$(".app-design").click(function () {
-	scrollToSection(".app");
-});
-
-$(".web-design").click(function () {
+$(".web-btn").click(function () {
 	scrollToSection(".web");
 });
 
-$(".visual-design").click(function () {
+$(".app-btn").click(function () {
+	scrollToSection(".app");
+});
+
+$(".visual-btn,.visual-link").click(function () {
 	scrollToSection(".visual");
 });
 
-$(".top-btn").click(function () {
-	scrollToSection(".intro");
-});
-
-// 監聽滾動事件
-$(window).scroll(function () {
-	if ($(this).scrollTop() > 100) {
-		$(".top-btn").removeClass('hide');
-	} else {
-		$(".top-btn").addClass('hide');
-	}
+$(".next-btn").click(function () {
+	scrollToSection(".detail");
 });

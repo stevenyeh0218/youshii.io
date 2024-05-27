@@ -1,15 +1,8 @@
 /* cursor effect */
 const cursor = document.querySelector(".cursor");
-var homeAnchor = $(".home > .web-design , .home > .app-design, .home > .visual-design");
-
-var switchBtn = $(".home > .mode  > .mode-switch , .intro > .mode  > .mode-switch ");
-var appSmAnchor = $(".web > .app-design");
-var topAnchor = $(".web > .click-top , .app > .click-top ,.visual > .click-top , .visual > .web-design , .visual > .app-design");
-var webSmAnchor = $(".app > .web-design");
-var visualSmAnchor = $(".web > .visual-design, .app > .visual-design");
-var linkBtn = $(".web > a , .app > a");
-var returnBtn = $(".intro > .click-back");
-var topBtn = $(".top-btn");
+var navAnchor = $(".navigation > .item");
+var visualAnchor = $(".visual-link");
+var linkAnchor = $(".web-link, .app-link, .web > .list > .item , .app > .list > .item");
 
 function updateCursor(e) {
 	let x = e.pageX - 10;
@@ -29,74 +22,26 @@ document.addEventListener("mousemove", (e) => {
 	});
 });
 
-homeAnchor.on('mouseover', function () {
-	cursor.classList.add('is-home-anchor');
+navAnchor.on('mouseover', function () {
+	cursor.classList.add('is-nav-anchor');
 });
 
-homeAnchor.on('mouseleave', function () {
-	cursor.classList.remove('is-home-anchor');
+navAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-nav-anchor');
 });
 
-switchBtn.on('mouseover', function () {
-	cursor.classList.add('is-switch');
+linkAnchor.on('mouseover', function () {
+	cursor.classList.add('is-link-anchor');
 });
 
-switchBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-switch');
+linkAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-link-anchor');
 });
 
-appSmAnchor.on('mouseover', function () {
-	cursor.classList.add('is-app-sm-anchor');
+visualAnchor.on('mouseover', function () {
+	cursor.classList.add('is-visual-anchor');
 });
 
-appSmAnchor.on('mouseleave', function () {
-	cursor.classList.remove('is-app-sm-anchor');
-});
-
-topAnchor.on('mouseover', function () {
-	cursor.classList.add('is-top-anchor');
-});
-
-topAnchor.on('mouseleave', function () {
-	cursor.classList.remove('is-top-anchor');
-});
-
-webSmAnchor.on('mouseover', function () {
-	cursor.classList.add('is-web-sm-anchor');
-});
-
-webSmAnchor.on('mouseleave', function () {
-	cursor.classList.remove('is-web-sm-anchor');
-});
-
-visualSmAnchor.on('mouseover', function () {
-	cursor.classList.add('is-visual-sm-anchor');
-});
-
-visualSmAnchor.on('mouseleave', function () {
-	cursor.classList.remove('is-visual-sm-anchor');
-});
-
-linkBtn.on('mouseover', function () {
-	cursor.classList.add('is-link');
-});
-
-linkBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-link');
-});
-
-returnBtn.on('mouseover', function () {
-	cursor.classList.add('is-return');
-});
-
-returnBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-return');
-});
-
-topBtn.on('mouseover', function () {
-	cursor.classList.add('is-top-btn');
-});
-
-topBtn.on('mouseleave', function () {
-	cursor.classList.remove('is-top-btn');
+visualAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-visual-anchor');
 });

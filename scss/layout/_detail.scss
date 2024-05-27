@@ -1,0 +1,10 @@
+.detail {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    @include ease(.2s);
+}
+
+.white-bg {
+    animation: .8s white-bg ease-in forwards;
+}

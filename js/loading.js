@@ -5,7 +5,6 @@ $(document).ready(function () { // 獲取最後更新時間戳
 	if (lastUpdated === performance.timeOrigin.toString()) {
 		$('body').attr('data-loading', 'false');
 	} else { // 否則顯示 loading 頁面
-		$('html').css('scroll-snap-type', 'unset');
 		$('body').css('overflow', 'hidden');
 		setTimeout(function () {
 			$("html,body").animate({
@@ -23,6 +22,10 @@ $(window).on('load', function () {
 	setTimeout(function () {
 		$('html,body').removeAttr("style");
 		$('body').attr('data-loading', 'false');
+
+		setTimeout(function () {
+			$('body').removeAttr('data-loading');
+		}, 1000);
 
 	}, 1000);
 });

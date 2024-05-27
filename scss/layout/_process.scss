@@ -1,0 +1,128 @@
+.process {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    align-items: start;
+
+    .step {
+        position: sticky;
+        top: 24px;
+        padding: .75rem;
+
+        h2 {
+            @include subheading();
+        }
+
+        .list {
+            display: grid;
+            gap: .75rem;
+            place-items: center;
+
+            .item {
+                width: 100%;
+                border: 1px solid var(--dark-blue);
+                border-radius: .75rem;
+                color: var(--dark-blue);
+                cursor: pointer;
+                text-align: center;
+                padding: .75rem;
+                @include ease(.2s);
+
+                &:hover {
+                    background: var(--dark-blue);
+                    color: var(--white);
+                }
+
+            }
+
+            .active {
+                background: var(--dark-blue);
+                color: var(--white);
+            }
+        }
+    }
+
+    .content {
+        display: grid;
+        gap: 1.5rem;
+        border-left: 1px solid var(--dark-blue);
+        padding: .75rem;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            height: 100vh;
+
+            h2 {
+                @include subheading();
+                display: grid;
+                margin: 0;
+
+                sub {
+                    color: var(--dark-blue);
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    letter-spacing: .1rem;
+                    bottom: 0;
+                }
+            }
+
+            .des {
+                counter-reset: num;
+                display: grid;
+                gap: 4px;
+                line-height: 1.25rem;
+                letter-spacing: .1rem;
+                color: var(--light-gray);
+
+                h3 {
+                    font-weight: normal;
+                }
+
+                .dot {
+                    &::before {
+                        counter-increment: num;
+                        content: counter(num) ".";
+                    }
+                }
+            }
+        }
+
+        .interview {
+            background: url(/image/other/interview.png) no-repeat right bottom transparent;
+            background-size: 64%;
+
+        }
+
+        .analysis {
+            background: url(/image/other/swot.png) no-repeat right bottom transparent;
+            background-size: 50%;
+        }
+
+        .dataanalysis {
+            background: url(/image/other//analysis.png) no-repeat right bottom transparent;
+            background-size: 50%;
+        }
+
+        .usermap {
+            background: url(/image/other/user-story.png) no-repeat right bottom transparent;
+            background-size: 75%;
+        }
+
+        .wireframe {
+            background: url(/image/other/wireframe.png) no-repeat right bottom transparent;
+            background-size: 50%;
+
+            img {
+                width: 80%;
+            }
+        }
+
+        .flow {
+            img {
+                width: 80%;
+            }
+        }
+    }
+}

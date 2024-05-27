@@ -1,0 +1,255 @@
+.portfolio {
+
+    //導覽
+    .navigation {
+        @include grid-child(7, 13, 1, 2);
+        @include flexbox-gap(row, center, flex-end, .75rem);
+        font-size: 1.25rem;
+        border: 0;
+        border-bottom: 1px solid var(--dark-blue);
+        border-radius: 0;
+
+        .item {
+            color: var(--black);
+            font-weight: 600;
+            z-index: 1;
+            @include ease(.2s);
+
+            &:hover {
+                color: var(--dark-blue);
+            }
+        }
+
+        .hide {
+            @include hide();
+        }
+    }
+
+    .fix {
+        animation: .5s fix-nav ease-in forwards !important;
+        z-index: 1;
+    }
+
+    //聯絡
+    .contact {
+        @include grid-child(1, 7, 1, 4);
+        @include flexbox(column, start, space-between);
+        color: var(--black);
+
+        h1 {
+            font-size: 5.6vw;
+            font-weight: 400;
+        }
+
+        img {
+            width: 32px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 12px;
+        }
+
+        .colophon {
+            .email {
+                @include flexbox-gap(row, center, start, .75rem);
+                font-size: 1.25rem;
+
+                .icon {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    //經驗
+    .experience {
+        @include flexbox(column, center, center);
+        @include grid-child(1, 3, 4, 5);
+
+        .num {
+            color: var(--dark-blue);
+            font-size: 3rem;
+        }
+    }
+
+    //經手專案
+    .hand-project {
+        @extend .experience;
+        @include grid-child(3, 5, 4, 5);
+    }
+
+    //客戶
+    .clients {
+        @extend .experience;
+        @include grid-child(5, 7, 4, 5);
+    }
+
+    //頭貼
+    .sticker {
+        @include grid-child(7, 10, 1, 5);
+        border: 0;
+        padding: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border: 1px solid var(--dark-blue);
+            border-radius: 175px;
+            width: 100%;
+            height: 75%;
+            left: 0;
+            z-index: -1;
+            bottom: 0;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    //基本資料
+    .information {
+        @include grid-child(10, 13, 2, 3);
+        @include flexbox-gap(column, start, center, .75rem);
+
+        label {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--black);
+
+            .text {
+                font-weight: normal;
+                color: var(--dark-blue);
+            }
+        }
+    }
+
+    //技能
+    .skill {
+        @include grid-child(10, 13, 3, 5);
+        @include card-title();
+
+        .design-tools {
+            @include flexbox-gap(row, center, center, .75rem);
+
+            .progress-bar-container {
+                display: grid;
+                place-items: center;
+
+                .progress-bar {
+                    @include flexbox(row, center, center);
+                    width: 5vw;
+                    height: 5vw;
+                    border-radius: 50%;
+
+                    &::before {
+                        counter-reset: percentage var(--progress-value);
+                        content: counter(percentage) '%';
+                        color: var(--white);
+                        font-size: .8vw;
+                        z-index: 1;
+                    }
+
+                    progress {
+                        visibility: hidden;
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+
+            .figma {
+                @include progress-bar-common(var(--figma-black), figma-progress);
+            }
+
+            .ps {
+                @include progress-bar-common(var(--ps-blue), ps-progress);
+            }
+
+            .ai {
+                @include progress-bar-common(var(--ai-orange), ai-progress);
+            }
+        }
+
+        &-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            font-size: .875rem;
+        }
+    }
+
+    //最近作品
+    .project {
+        @include grid-child(1, 8, 5, 7);
+        @include card-title();
+
+        .list {
+            @include grid(column, repeat(3, 1fr), auto, inherit, .75rem);
+            width: 100%;
+            height: calc(100% - 36px);
+
+            .item {
+                position: relative;
+                height: 100%;
+                border: 1px solid var(--dark-blue);
+                border-radius: 0.75rem;
+                overflow: hidden;
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
+
+                .text {
+                    background: #{'rgba(var(--white-rgb), 0.5)'};
+                    @include background-blur(10px);
+                    position: absolute;
+                    font-size: 1.25rem;
+                    color: var(--black);
+                    border-radius: 6px;
+                    text-align: center;
+                    padding: 6px;
+                    box-shadow: 0px 4px 10px -10px var(--black);
+                    right: 1.5rem;
+                    left: 1.5rem;
+                    animation: .5s text-slide-revert ease-in forwards;
+                }
+
+                &:hover {
+                    .text {
+                        animation: .5s text-slide ease-in forwards;
+                    }
+                }
+            }
+
+            .web-link {
+                img {
+                    object-position: right;
+                }
+            }
+
+            .app-link {
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    //關於我
+    .about {
+        @include grid-child(8, 13, 5, 7);
+        @include card-title();
+
+        .list {
+            @include flexbox-gap(column, start, start, .75rem);
+            line-height: 1.5rem;
+            letter-spacing: .01rem;
+        }
+    }
+}
