@@ -512,13 +512,32 @@ body[data-theme="dark"] {
   --dark-blue-rgb: 255, 255, 255;
 }
 
-body[data-theme="dark"] .design-thinking img,
-body[data-theme="dark"] .ideate img {
-  background: #fff;
+body[data-theme="dark"] .intro .navigation .top-btn {
+  color: #ffffff;
 }
 
-body[data-theme="dark"] .top-btn {
-  mix-blend-mode: difference;
+body[data-theme="dark"] .intro .navigation .top-btn:hover {
+  color: #7895B2;
+}
+
+body[data-theme="dark"] .intro .scroll-bar {
+  background: #ffffff;
+}
+
+body[data-theme="dark"] .intro .scroll-bar::after {
+  background: #000000;
+}
+
+body[data-theme="dark"] .intro .next-btn {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .process .content .item img {
+  background: #ffffff;
+}
+
+body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mockup .card img {
+  background: #ffffff;
 }
 
 .bento {
@@ -869,6 +888,7 @@ body[data-theme="dark"] .top-btn {
 }
 
 .intro .image-sticker img {
+  width: auto;
   height: 480px;
 }
 

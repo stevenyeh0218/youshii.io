@@ -127,15 +127,47 @@ body {
         --dark-brown-rgb: 0, 0, 0;
         --dark-blue-rgb: 255, 255, 255;
 
-        .design-thinking,
-        .ideate {
-            img {
-                background: #fff;
+        .intro {
+            .navigation {
+
+                .top-btn {
+                    color: #ffffff;
+
+                    &:hover {
+                        color: #7895B2;
+                    }
+                }
+            }
+
+            .scroll-bar {
+                background: #ffffff;
+
+                &::after {
+                    background: #000000;
+                }
+            }
+
+            .next-btn {
+                color: #ffffff;
             }
         }
 
-        .top-btn {
-            mix-blend-mode: difference;
+        .process {
+            .content {
+                .item {
+                    img {
+                        background: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .design-guideline {
+            .card {
+                img {
+                    background: #ffffff;
+                }
+            }
         }
     }
 }

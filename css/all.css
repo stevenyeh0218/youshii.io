@@ -459,6 +459,8 @@ body[data-loading="true"] .portfolio .sticker::before {
 body[data-loading="true"] .web,
 body[data-loading="true"] .app,
 body[data-loading="true"] .visual,
+body[data-loading="true"] .intro,
+body[data-loading="true"] .detail,
 body[data-loading="true"] .cursor {
   display: none;
 }
@@ -488,6 +490,10 @@ body[data-loading="false"] .portfolio .sticker::before {
   animation: .5s loading-opacity-revert ease-in forwards;
 }
 
+body[data-loading="false"] .intro {
+  animation: .5s clip-path-youshii-revert ease-in forwards;
+}
+
 body[data-theme="dark"] {
   /* color HEX */
   --white: #000000;
@@ -505,9 +511,12 @@ body[data-theme="dark"] {
   --dark-blue-rgb: 255, 255, 255;
 }
 
-body[data-theme="dark"] .design-thinking img,
-body[data-theme="dark"] .ideate img {
-  background: #fff;
+body[data-theme="dark"] .next-btn {
+  color: var(--black);
+}
+
+body[data-theme="dark"] .design-guideline > img {
+  background: var(--white);
 }
 
 body[data-theme="dark"] .top-btn {
@@ -718,6 +727,15 @@ body[data-theme="dark"] .top-btn {
   }
   100% {
     background: var(--black);
+  }
+}
+
+@keyframes white-bg {
+  0% {
+    background: var(--light-brown);
+  }
+  100% {
+    background: var(--white);
   }
 }
 
