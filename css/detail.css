@@ -512,6 +512,11 @@ body[data-theme="dark"] {
   --dark-blue-rgb: 255, 255, 255;
 }
 
+body[data-theme="dark"] .dark-brown-bg,
+body[data-theme="dark"] .black-bg {
+  animation: unset;
+}
+
 body[data-theme="dark"] .intro .navigation .top-btn {
   color: #ffffff;
 }

@@ -511,16 +511,37 @@ body[data-theme="dark"] {
   --dark-blue-rgb: 255, 255, 255;
 }
 
-body[data-theme="dark"] .next-btn {
-  color: var(--black);
+body[data-theme="dark"] .dark-brown-bg,
+body[data-theme="dark"] .black-bg {
+  animation: unset;
 }
 
-body[data-theme="dark"] .design-guideline > img {
-  background: var(--white);
+body[data-theme="dark"] .intro .navigation .top-btn {
+  color: #ffffff;
 }
 
-body[data-theme="dark"] .top-btn {
-  mix-blend-mode: difference;
+body[data-theme="dark"] .intro .navigation .top-btn:hover {
+  color: #7895B2;
+}
+
+body[data-theme="dark"] .intro .scroll-bar {
+  background: #ffffff;
+}
+
+body[data-theme="dark"] .intro .scroll-bar::after {
+  background: #000000;
+}
+
+body[data-theme="dark"] .intro .next-btn {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .process .content .item img {
+  background: #ffffff;
+}
+
+body[data-theme="dark"] .design-guideline .card img {
+  background: #ffffff;
 }
 
 .bento {
