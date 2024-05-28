@@ -625,6 +625,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   transition: all 0.2s ease;
 }
 
+@media (max-width: 1200px) {
+  .mode-switch label span {
+    font-size: 1.125rem;
+  }
+}
+
 .mode-switch label span:nth-child(2) {
   color: var(--dark-blue);
 }

@@ -9,6 +9,11 @@
         border-bottom: 1px solid var(--dark-blue);
         border-radius: 0;
 
+        @include for-ipad-air {
+            gap: .375rem;
+            font-size: 1.125rem;
+        }
+
         .item {
             color: var(--black);
             font-weight: 600;
@@ -55,8 +60,16 @@
                 @include flexbox-gap(row, center, start, .75rem);
                 font-size: 1.25rem;
 
+                @include for-ipad-air {
+                    font-size: 1.125rem;
+                }
+
                 .icon {
                     font-size: 2.5rem;
+
+                    @include for-ipad-air {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -70,6 +83,10 @@
         .num {
             color: var(--dark-blue);
             font-size: 3rem;
+
+            @include for-ipad-air {
+                font-size: 2.5rem;
+            }
         }
     }
 
@@ -114,12 +131,20 @@
         @include grid-child(10, 13, 2, 3);
         @include flexbox-gap(column, start, center, .75rem);
 
+        @include for-ipad-air {
+            gap: .375rem;
+        }
+
         label {
             display: flex;
             align-items: center;
             font-weight: 600;
             font-size: 1.25rem;
             color: var(--black);
+
+            @include for-ipad-air {
+                font-size: 1.125rem;
+            }
 
             .text {
                 font-weight: normal;
@@ -135,6 +160,10 @@
 
         .design-tools {
             @include flexbox-gap(row, center, center, .75rem);
+
+            @include for-ipad-air {
+                gap: .375rem;
+            }
 
             .progress-bar-container {
                 display: grid;
@@ -193,6 +222,10 @@
             width: 100%;
             height: calc(100% - 36px);
 
+            @include for-ipad-air {
+                gap: .375rem;
+            }
+
             .item {
                 position: relative;
                 height: 100%;
@@ -218,6 +251,10 @@
                     right: 1.5rem;
                     left: 1.5rem;
                     animation: .5s text-slide-revert ease-in forwards;
+
+                    @include for-ipad-air {
+                        font-size: 1.125rem;
+                    }
                 }
 
                 &:hover {
@@ -250,6 +287,10 @@
             @include flexbox-gap(column, start, start, .75rem);
             line-height: 1.5rem;
             letter-spacing: .01rem;
+
+            @include for-ipad-air {
+                gap: .375rem;
+            }
         }
     }
 }
