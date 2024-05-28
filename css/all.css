@@ -863,7 +863,7 @@ body[data-theme="dark"] .design-guideline .card img {
 }
 
 .portfolio .fix {
-  animation: .5s fix-nav ease-in forwards !important;
+  animation: .5s fix-nav ease-in forwards;
   z-index: 1;
 }
 
@@ -1034,12 +1034,12 @@ body[data-theme="dark"] .design-guideline .card img {
 
 .portfolio .skill .design-tools .figma .progress-bar {
   background: radial-gradient(closest-side, var(--light-brown) 79%, transparent 80% 100%), conic-gradient(var(--figma-black) calc(var(--progress-value) * 1%), var(--light-brown) 0);
-  animation: figma-progress 3.5s 1 forwards;
+  animation: figma-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .figma .progress-bar::before {
   animation-delay: 1s;
-  animation: figma-progress 3.5s 1 forwards;
+  animation: figma-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .figma .progress-bar::after {
@@ -1057,12 +1057,12 @@ body[data-theme="dark"] .design-guideline .card img {
 
 .portfolio .skill .design-tools .ps .progress-bar {
   background: radial-gradient(closest-side, var(--light-brown) 79%, transparent 80% 100%), conic-gradient(var(--ps-blue) calc(var(--progress-value) * 1%), var(--light-brown) 0);
-  animation: ps-progress 3.5s 1 forwards;
+  animation: ps-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .ps .progress-bar::before {
   animation-delay: 1s;
-  animation: ps-progress 3.5s 1 forwards;
+  animation: ps-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .ps .progress-bar::after {
@@ -1080,12 +1080,12 @@ body[data-theme="dark"] .design-guideline .card img {
 
 .portfolio .skill .design-tools .ai .progress-bar {
   background: radial-gradient(closest-side, var(--light-brown) 79%, transparent 80% 100%), conic-gradient(var(--ai-orange) calc(var(--progress-value) * 1%), var(--light-brown) 0);
-  animation: ai-progress 3.5s 1 forwards;
+  animation: ai-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .ai .progress-bar::before {
   animation-delay: 1s;
-  animation: ai-progress 3.5s 1 forwards;
+  animation: ai-progress 3.5s ease forwards;
 }
 
 .portfolio .skill .design-tools .ai .progress-bar::after {

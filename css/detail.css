@@ -683,12 +683,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   transform: rotate(0deg);
 }
 
-@property --progress-value {
-  syntax: '<integer>';
-  inherits: false;
-  initial-value: 0;
-}
-
 @keyframes fix-nav {
   0% {
     position: fixed;

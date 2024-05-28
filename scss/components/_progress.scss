@@ -11,11 +11,11 @@
         background:
             radial-gradient(closest-side, var(--light-brown) 79%, transparent 80% 100%),
             conic-gradient($color calc(var(--progress-value) * 1%), var(--light-brown) 0);
-        animation: $animation 3.5s 1 forwards;
+        animation: $animation 3.5s ease forwards;
 
         &::before {
             animation-delay: 1s;
-            animation: $animation 3.5s 1 forwards;
+            animation: $animation 3.5s ease forwards;
         }
 
         &::after {
