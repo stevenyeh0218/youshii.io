@@ -7,6 +7,10 @@
     pointer-events: none;
     z-index: 99;
     @include ease(.1s);
+
+    @include for-ipad-air {
+        display: none;
+    }
 }
 
 .is-nav-anchor {

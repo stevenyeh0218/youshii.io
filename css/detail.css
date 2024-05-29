@@ -657,6 +657,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   transition: all 0.1s ease;
 }
 
+@media (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+}
+
 .is-nav-anchor {
   transform: scale(1.5);
   border-radius: 0;

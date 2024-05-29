@@ -656,6 +656,12 @@ body[data-theme="dark"] .design-guideline .card img {
   transition: all 0.1s ease;
 }
 
+@media (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+}
+
 .is-nav-anchor {
   transform: scale(1.5);
   border-radius: 0;
@@ -870,14 +876,90 @@ body[data-theme="dark"] .design-guideline .card img {
   color: var(--dark-blue);
 }
 
+.portfolio .navigation .switch-btn {
+  display: none;
+  position: relative;
+  border-top: 2px solid var(--black);
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portfolio .navigation .switch-btn::before {
+  content: "";
+  position: absolute;
+  background: var(--black);
+  width: 12px;
+  height: 2px;
+  top: 5px;
+  right: 0;
+  transition: all 0.2s ease;
+}
+
+.portfolio .navigation .switch-btn::after {
+  content: "";
+  position: absolute;
+  background: var(--black);
+  width: 6px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  transition: all 0.2s ease;
+}
+
+.portfolio .navigation .switch-btn:hover {
+  border-top: 2px solid var(--dark-blue);
+}
+
+.portfolio .navigation .switch-btn:hover::before, .portfolio .navigation .switch-btn:hover::after {
+  background: var(--dark-blue);
+}
+
+.portfolio .navigation .open {
+  border: 0;
+}
+
+.portfolio .navigation .open:hover {
+  border-top: unset;
+}
+
+.portfolio .navigation .open::before {
+  width: 24px;
+  transform: rotate(45deg);
+}
+
+.portfolio .navigation .open::after {
+  width: 24px;
+  bottom: 9px;
+  transform: rotate(-45deg);
+}
+
 .portfolio .navigation .hide {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .portfolio .fix {
   animation: .5s fix-nav ease-in forwards;
   z-index: 1;
+}
+
+.portfolio .open-nav {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  flex-direction: column;
+  align-items: end;
+  grid-column: unset;
+  grid-row: unset;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  border: 0;
+  border-radius: 5px;
+  z-index: 2;
+  padding-top: 48px;
+  animation: unset;
+  box-shadow: 0px 4px 10px -10px var(--black);
 }
 
 .portfolio .contact {
