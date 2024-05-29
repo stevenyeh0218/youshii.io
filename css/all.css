@@ -1174,6 +1174,18 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
+@media (max-width: 480px) {
+  .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .portfolio .experience .text, .portfolio .hand-project .text, .portfolio .clients .text {
     text-align: center;
@@ -1848,6 +1860,22 @@ body[data-theme="dark"] .design-guideline .card img {
 @media (max-width: 1200px) {
   .portfolio .project .list .item .text {
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio .project .list .item .text {
+    bottom: 0;
+    font-size: .875rem;
+    animation: unset;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .portfolio .project .list .item .text {
+    bottom: 0;
+    font-size: .875rem;
+    animation: unset;
   }
 }
 

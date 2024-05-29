@@ -568,6 +568,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .bento {
+    grid-template-rows: repeat(3, 1fr);
     height: auto;
     gap: 1rem;
     padding: 1rem;
@@ -861,6 +862,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   z-index: 1;
 }
 
+@media (max-width: 1200px) {
+  .intro .back-btn {
+    font-size: 1.125rem;
+  }
+}
+
 .intro .back-btn .icon {
   transform: rotate(180deg);
 }
@@ -881,6 +888,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   top: 1.5rem;
   right: 1.5rem;
   z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .intro .navigation {
+    font-size: 1.125rem;
+  }
 }
 
 .intro .navigation .top-btn {
@@ -966,7 +979,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--black);
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 2.25rem;
+  }
 }
 
 .data .about .text, .data .role .item .text {
@@ -976,9 +994,21 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--dark-blue);
 }
 
+@media (max-width: 1200px) {
+  .data .about .text, .data .role .item .text {
+    font-size: 1.25rem;
+  }
+}
+
 .data .role {
   display: grid;
   gap: .75rem;
+}
+
+@media (max-width: 1200px) {
+  .data .role {
+    gap: .375rem;
+  }
 }
 
 .process {
@@ -998,7 +1028,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--black);
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) {
+  .process .step h2 {
+    font-size: 2.25rem;
+  }
 }
 
 .process .step .list {
@@ -1046,9 +1081,14 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--black);
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 4px;
   display: grid;
   margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .process .content .item h2 {
+    font-size: 2.25rem;
+  }
 }
 
 .process .content .item h2 sub {
@@ -1057,6 +1097,13 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   line-height: 2rem;
   letter-spacing: .1rem;
   bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .process .content .item h2 sub {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 .process .content .item .des {
@@ -1087,6 +1134,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   background-size: 50%;
 }
 
+@media (max-width: 1200px) {
+  .process .content .analysis {
+    background-size: 74%;
+  }
+}
+
 .process .content .dataanalysis {
   background: url(/image/other//analysis.png) no-repeat right bottom transparent;
   background-size: 50%;
@@ -1102,8 +1155,20 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   background-size: 50%;
 }
 
+@media (max-width: 1200px) {
+  .process .content .wireframe {
+    background-size: 74%;
+  }
+}
+
 .process .content .wireframe img {
   width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .process .content .wireframe img {
+    width: 100%;
+  }
 }
 
 .process .content .flow img {
@@ -1114,5 +1179,10 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--black);
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 2.25rem;
+  }
 }

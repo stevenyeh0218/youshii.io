@@ -262,6 +262,14 @@
             @include for-ipad-air {
                 font-size: 2rem;
             }
+
+            @include for-iphone {
+                font-size: 1.5rem;
+            }
+
+            @include for-iphone-landscape {
+                font-size: 1.5rem;
+            }
         }
 
         .text {
@@ -595,6 +603,18 @@
 
                     @include for-ipad-air {
                         font-size: 1.125rem;
+                    }
+
+                    @include for-iphone {
+                        bottom: 0;
+                        font-size: .875rem;
+                        animation: unset;
+                    }
+
+                    @include for-iphone-landscape {
+                        bottom: 0;
+                        font-size: .875rem;
+                        animation: unset;
                     }
                 }
 

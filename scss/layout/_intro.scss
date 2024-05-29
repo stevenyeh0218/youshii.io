@@ -18,6 +18,10 @@
         @include ease(.2s);
         z-index: 1;
 
+        @include for-ipad-air {
+            font-size: 1.125rem;
+        }
+
         .icon {
             @include rotate(180deg);
         }
@@ -35,6 +39,10 @@
         top: 1.5rem;
         right: 1.5rem;
         z-index: 1;
+
+        @include for-ipad-air {
+            font-size: 1.125rem;
+        }
 
         .top-btn {
             font-weight: 600;

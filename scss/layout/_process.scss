@@ -65,6 +65,11 @@
                     line-height: 2rem;
                     letter-spacing: .1rem;
                     bottom: 0;
+
+                    @include for-ipad-air {
+                        font-size: 1.25rem;
+                        line-height: 1.75rem;
+                    }
                 }
             }
 
@@ -98,6 +103,10 @@
         .analysis {
             background: url(/image/other/swot.png) no-repeat right bottom transparent;
             background-size: 50%;
+
+            @include for-ipad-air {
+                background-size: 74%;
+            }
         }
 
         .dataanalysis {
@@ -114,8 +123,16 @@
             background: url(/image/other/wireframe.png) no-repeat right bottom transparent;
             background-size: 50%;
 
+            @include for-ipad-air {
+                background-size: 74%;
+            }
+
             img {
                 width: 80%;
+
+                @include for-ipad-air {
+                    width: 100%;
+                }
             }
         }
 
