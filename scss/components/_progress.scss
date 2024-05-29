@@ -25,6 +25,37 @@
             width: 3vw;
             height: 3vw;
             border-radius: 50%;
+
+            @include for-ipad-air {
+                width: 4vw;
+                height: 4vw;
+            }
+
+            @include for-ipad-min {
+                width: 4vw;
+                height: 4vw;
+            }
+
+            @include for-ipad-air-portrait {
+                width: 5vw;
+                height: 5vw;
+            }
+
+            @include for-ipad-min-portrait {
+                width: 5vw;
+                height: 5vw;
+            }
+
+
+            @include for-iphone {
+                width: 6vw;
+                height: 6vw;
+            }
+
+            @include for-iphone-landscape {
+                width: 6vw;
+                height: 6vw;
+            }
         }
     }
 }

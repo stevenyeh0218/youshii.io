@@ -14,6 +14,39 @@
             font-size: 1.125rem;
         }
 
+        @include for-ipad-air-portrait {
+            flex-direction: column;
+            align-items: end;
+            grid-column: unset;
+            grid-row: unset;
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            border: 0;
+            border-radius: 5px;
+            z-index: 2 !important;
+            animation: unset !important;
+        }
+
+        @include for-ipad-min {
+            font-size: 1rem;
+        }
+
+        @include for-iphone-landscape {
+            flex-direction: column;
+            align-items: end;
+            grid-column: unset;
+            grid-row: unset;
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            border: 0;
+            border-radius: 5px;
+            z-index: 2 !important;
+            animation: unset !important;
+        }
+
+
         .item {
             color: var(--black);
             font-weight: 600;
@@ -22,6 +55,16 @@
 
             &:hover {
                 color: var(--dark-blue);
+            }
+
+            @include for-ipad-air-portrait {
+                @include transform-origin(top);
+                @include scale(0);
+            }
+
+            @include for-iphone-landscape {
+                @include transform-origin(top);
+                @include scale(0);
             }
         }
 
@@ -64,6 +107,14 @@
                     background: var(--dark-blue);
                 }
             }
+
+            @include for-ipad-air-portrait {
+                display: unset;
+            }
+
+            @include for-iphone-landscape {
+                display: unset;
+            }
         }
 
         .open {
@@ -96,21 +147,13 @@
     }
 
     .open-nav {
-        background: rgba(255, 255, 255, .5);
+        background: #{'rgba(var(--white-rgb), 0.5)'};
         backdrop-filter: blur(12px);
-        flex-direction: column;
-        align-items: end;
-        grid-column: unset;
-        grid-row: unset;
-        position: fixed;
-        top: 24px;
-        right: 24px;
-        border: 0;
-        border-radius: 5px;
-        z-index: 2;
-        padding-top: 48px;
-        animation: unset;
         box-shadow: 0px 4px 10px -10px var(--black);
+
+        .item {
+            @include scale(1);
+        }
     }
 
     //聯絡
@@ -119,9 +162,30 @@
         @include flexbox(column, start, space-between);
         color: var(--black);
 
+        @include for-ipad-air-portrait {
+            @include grid-child(1, 8, 1, 3);
+        }
+
+        @include for-iphone {
+            @include grid-child(1, 9, 1, 3);
+            font-size: 0.613rem;
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(1, 9, 1, 3);
+        }
+
         h1 {
             font-size: 5.6vw;
             font-weight: 400;
+
+            @include for-iphone {
+                font-size: 7vw;
+            }
+
+            @include for-iphone-landscape {
+                font-size: 7vw;
+            }
         }
 
         img {
@@ -131,6 +195,18 @@
             top: 0;
             bottom: 0;
             right: 12px;
+
+            @include for-ipad-air-portrait {
+                width: 24px;
+            }
+
+            @include for-iphone {
+                width: 12px;
+            }
+
+            @include for-iphone-landscape {
+                width: 12px;
+            }
         }
 
         .colophon {
@@ -140,6 +216,11 @@
 
                 @include for-ipad-air {
                     font-size: 1.125rem;
+                    gap: .375rem;
+                }
+
+                @include for-iphone {
+                    font-size: 1rem;
                 }
 
                 .icon {
@@ -147,6 +228,10 @@
 
                     @include for-ipad-air {
                         font-size: 2rem;
+                    }
+
+                    @include for-iphone {
+                        font-size: 1rem;
                     }
                 }
             }
@@ -158,12 +243,30 @@
         @include flexbox(column, center, center);
         @include grid-child(1, 3, 4, 5);
 
+        @include for-ipad-air-portrait {
+            @include grid-child(1, 3, 3, 4);
+        }
+
+        @include for-iphone {
+            @include grid-child(1, 5, 3, 4);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(1, 3, 3, 4);
+        }
+
         .num {
             color: var(--dark-blue);
             font-size: 3rem;
 
             @include for-ipad-air {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+        }
+
+        .text {
+            @include for-ipad-air {
+                text-align: center;
             }
         }
     }
@@ -172,12 +275,36 @@
     .hand-project {
         @extend .experience;
         @include grid-child(3, 5, 4, 5);
+
+        @include for-ipad-air-portrait {
+            @include grid-child(3, 5, 3, 4);
+        }
+
+        @include for-iphone {
+            @include grid-child(5, 9, 3, 4);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(3, 5, 3, 4);
+        }
     }
 
     //客戶
     .clients {
         @extend .experience;
         @include grid-child(5, 7, 4, 5);
+
+        @include for-ipad-air-portrait {
+            @include grid-child(5, 7, 3, 4);
+        }
+
+        @include for-iphone {
+            @include grid-child(9, 13, 3, 4);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(5, 7, 3, 4);
+        }
     }
 
     //頭貼
@@ -185,6 +312,18 @@
         @include grid-child(7, 10, 1, 5);
         border: 0;
         padding: 0;
+
+        @include for-ipad-air-portrait {
+            @include grid-child(8, 13, 1, 3);
+        }
+
+        @include for-iphone {
+            background: var(--light-brown);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(9, 13, 1, 3);
+        }
 
         &::before {
             content: "";
@@ -201,6 +340,10 @@
         img {
             height: 100%;
             object-fit: cover;
+
+            @include for-ipad-air-portrait {
+                object-fit: contain;
+            }
         }
     }
 
@@ -213,6 +356,18 @@
             gap: .375rem;
         }
 
+        @include for-ipad-air-portrait {
+            @include grid-child(7, 13, 3, 4);
+        }
+
+        @include for-iphone {
+            @include grid-child(1, 13, 4, 5);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(7, 13, 3, 4);
+        }
+
         label {
             display: flex;
             align-items: center;
@@ -222,6 +377,10 @@
 
             @include for-ipad-air {
                 font-size: 1.125rem;
+            }
+
+            @include for-ipad-min {
+                font-size: 1rem;
             }
 
             .text {
@@ -236,57 +395,134 @@
         @include grid-child(10, 13, 3, 5);
         @include card-title();
 
-        .design-tools {
-            @include flexbox-gap(row, center, center, .75rem);
+        @include for-ipad-air-portrait {
+            @include grid-child(5, 13, 4, 5);
+        }
 
-            @include for-ipad-air {
-                gap: .375rem;
+        @include for-iphone {
+            @include grid-child(1, 13, 5, 6);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(6, 13, 4, 5);
+        }
+
+        .list {
+            display: grid;
+            place-items: baseline;
+            gap: .75rem;
+
+            @include for-ipad-air-portrait {
+                grid-auto-flow: column;
+                place-items: center;
             }
 
-            .progress-bar-container {
-                display: grid;
-                place-items: center;
+            .design-tools {
+                @include flexbox-gap(row, center, center, .75rem);
 
-                .progress-bar {
-                    @include flexbox(row, center, center);
-                    width: 5vw;
-                    height: 5vw;
-                    border-radius: 50%;
+                @include for-ipad-air {
+                    gap: .375rem;
+                }
 
-                    &::before {
-                        counter-reset: percentage var(--progress-value);
-                        content: counter(percentage) '%';
-                        color: var(--white);
-                        font-size: .8vw;
-                        z-index: 1;
+                .progress-bar-container {
+                    display: grid;
+                    place-items: center;
+
+                    .progress-bar {
+                        @include flexbox(row, center, center);
+                        width: 5vw;
+                        height: 5vw;
+                        border-radius: 50%;
+
+                        @include for-ipad-air {
+                            width: 6vw;
+                            height: 6vw;
+                        }
+
+                        @include for-ipad-min {
+                            width: 6vw;
+                            height: 6vw;
+                        }
+
+                        @include for-ipad-air-portrait {
+                            width: 8vw;
+                            height: 8vw;
+                        }
+
+                        @include for-ipad-min-portrait {
+                            width: 8vw;
+                            height: 8vw;
+                        }
+
+                        @include for-iphone {
+                            width: 10vw;
+                            height: 10vw;
+                        }
+
+                        @include for-iphone-landscape {
+                            width: 10vw;
+                            height: 10vw;
+                        }
+
+                        &::before {
+                            counter-reset: percentage var(--progress-value);
+                            content: counter(percentage) '%';
+                            color: var(--white);
+                            font-size: .8vw;
+                            z-index: 1;
+
+                            @include for-ipad-air {
+                                font-size: 1.3vw;
+                            }
+
+                            @include for-ipad-min {
+                                font-size: 1.3vw;
+                            }
+
+                            @include for-ipad-air-portrait {
+                                font-size: 1.3vw;
+                            }
+
+                            @include for-ipad-min-portrait {
+                                font-size: 1.3vw;
+                            }
+
+                            @include for-iphone {
+                                font-size: 2vw;
+                            }
+
+                            @include for-iphone-landscape {
+                                font-size: 2vw;
+                            }
+                        }
+
+                        progress {
+                            visibility: hidden;
+                            width: 0;
+                            height: 0;
+                        }
                     }
+                }
 
-                    progress {
-                        visibility: hidden;
-                        width: 0;
-                        height: 0;
-                    }
+                .figma {
+                    @include progress-bar-common(var(--figma-black), figma-progress);
+                }
+
+                .ps {
+                    @include progress-bar-common(var(--ps-blue), ps-progress);
+                }
+
+                .ai {
+                    @include progress-bar-common(var(--ai-orange), ai-progress);
                 }
             }
 
-            .figma {
-                @include progress-bar-common(var(--figma-black), figma-progress);
+            .skill-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                font-size: .875rem;
             }
-
-            .ps {
-                @include progress-bar-common(var(--ps-blue), ps-progress);
-            }
-
-            .ai {
-                @include progress-bar-common(var(--ai-orange), ai-progress);
-            }
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
-            font-size: .875rem;
         }
     }
 
@@ -295,6 +531,23 @@
         @include grid-child(1, 8, 5, 7);
         @include card-title();
 
+        @include for-ipad-min {
+            @include grid-child(1, 6, 5, 7);
+        }
+
+        @include for-ipad-air-portrait {
+            @include grid-child(1, 5, 4, 7);
+        }
+
+        @include for-iphone {
+            @include grid-child(1, 7, 6, 7);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(1, 6, 4, 7);
+        }
+
+
         .list {
             @include grid(column, repeat(3, 1fr), auto, inherit, .75rem);
             width: 100%;
@@ -302,6 +555,16 @@
 
             @include for-ipad-air {
                 gap: .375rem;
+            }
+
+            @include for-ipad-air-portrait {
+                grid-auto-flow: row;
+                grid-template-columns: auto;
+            }
+
+            @include for-iphone-landscape {
+                grid-auto-flow: row;
+                grid-template-columns: auto;
             }
 
             .item {
@@ -360,6 +623,22 @@
     .about {
         @include grid-child(8, 13, 5, 7);
         @include card-title();
+
+        @include for-ipad-min {
+            @include grid-child(6, 13, 5, 7);
+        }
+
+        @include for-ipad-air-portrait {
+            @include grid-child(5, 13, 5, 7);
+        }
+
+        @include for-iphone {
+            @include grid-child(7, 13, 6, 7);
+        }
+
+        @include for-iphone-landscape {
+            @include grid-child(6, 13, 5, 7);
+        }
 
         .list {
             @include flexbox-gap(column, start, start, .75rem);
