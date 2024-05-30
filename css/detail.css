@@ -660,7 +660,8 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 @media (max-width: 1200px) {
   .cursor {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -859,12 +860,24 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   top: 1.5rem;
   left: 1.5rem;
   transition: all 0.2s ease;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (max-width: 1200px) {
   .intro .back-btn {
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .back-btn {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .intro .back-btn {
+    font-size: 1rem;
   }
 }
 
@@ -887,12 +900,25 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--black);
   top: 1.5rem;
   right: 1.5rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (max-width: 1200px) {
   .intro .navigation {
     font-size: 1.125rem;
+    gap: .375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .navigation {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .intro .navigation {
+    font-size: 1rem;
   }
 }
 
@@ -916,9 +942,45 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   height: 480px;
 }
 
+@media (max-width: 768px) {
+  .intro .image-sticker img {
+    height: 447px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .image-sticker img {
+    height: 214px;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .intro .image-sticker img {
+    height: 180px;
+  }
+}
+
 .intro .image-sticker h1 {
   font-size: 2.6vw;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .intro .image-sticker h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .image-sticker h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .intro .image-sticker h1 {
+    font-size: 1.25rem;
+  }
 }
 
 .intro .next-btn {
@@ -931,6 +993,30 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   bottom: 1.5rem;
   transform: rotate(90deg);
   transition: all 0.2s ease;
+}
+
+@media (max-width: 1200px) {
+  .intro .next-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro .next-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .intro .next-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
 }
 
 .intro .next-btn:hover {
@@ -948,6 +1034,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+  .intro .scroll-bar {
+    height: 100px;
+  }
+}
+
 .intro .scroll-bar::after {
   content: '';
   position: absolute;
@@ -956,6 +1048,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   width: inherit;
   height: 1.5rem;
   animation: 2s scroll-down ease-in infinite;
+}
+
+@media (max-width: 1200px) {
+  .intro .scroll-bar::after {
+    height: 1rem;
+  }
 }
 
 .detail {
@@ -975,6 +1073,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   gap: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .data {
+    grid-auto-flow: row;
+  }
+}
+
 .data .about h2, .data .role .item h2 {
   color: var(--black);
   font-size: 2.5rem;
@@ -984,6 +1088,36 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .data .about h2, .data .role .item h2 {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .data .about h2, .data .role .item h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -997,6 +1131,27 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .data .about .text, .data .role .item .text {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .data .about .text, .data .role .item .text {
+    font-size: 1.125rem;
+    line-height: 1.55rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .data .about .text, .data .role .item .text {
+    font-size: 1.125rem;
+    line-height: 1.55rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .data .about .text, .data .role .item .text {
+    font-size: 1rem;
   }
 }
 
@@ -1024,6 +1179,18 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   padding: .75rem;
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .step {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .step {
+    display: none;
+  }
+}
+
 .process .step h2 {
   color: var(--black);
   font-size: 2.5rem;
@@ -1033,6 +1200,36 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .process .step h2 {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .step h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .step h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process .step h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .step h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .step h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -1070,11 +1267,55 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   padding: .75rem;
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content {
+    border: 0;
+    border-top: 1px solid var(--dark-blue);
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content {
+    border: 0;
+    border-top: 1px solid var(--dark-blue);
+  }
+}
+
 .process .content .item {
   display: flex;
   flex-direction: column;
   gap: .75rem;
   height: 100vh;
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .item {
+    position: sticky;
+    top: 48px;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content .item {
+    position: sticky;
+    top: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .item {
+    position: unset;
+    top: unset;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .item {
+    position: unset;
+    top: unset;
+    height: auto;
+  }
 }
 
 .process .content .item h2 {
@@ -1088,6 +1329,36 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .process .content .item h2 {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .item h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content .item h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process .content .item h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .item h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .item h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -1106,6 +1377,32 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   }
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .item h2 sub {
+    font-size: 1.125rem;
+    line-height: 1.55rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content .item h2 sub {
+    font-size: 1.125rem;
+    line-height: 1.55rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .item h2 sub {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .item h2 sub {
+    font-size: 1rem;
+  }
+}
+
 .process .content .item .des {
   counter-reset: num;
   display: grid;
@@ -1113,6 +1410,20 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   line-height: 1.25rem;
   letter-spacing: .1rem;
   color: var(--light-gray);
+}
+
+@media (max-width: 480px) {
+  .process .content .item .des {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .item .des {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 .process .content .item .des h3 {
@@ -1129,6 +1440,30 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   background-size: 64%;
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .interview {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content .interview {
+    background-size: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .interview {
+    background-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .interview {
+    background-size: 0%;
+  }
+}
+
 .process .content .analysis {
   background: url(/image/other/swot.png) no-repeat right bottom transparent;
   background-size: 50%;
@@ -1140,14 +1475,74 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   }
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .analysis {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .process .content .analysis {
+    background-size: 64%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .analysis {
+    background-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .analysis {
+    background-size: 0%;
+  }
+}
+
 .process .content .dataanalysis {
   background: url(/image/other//analysis.png) no-repeat right bottom transparent;
   background-size: 50%;
 }
 
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .dataanalysis {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .dataanalysis {
+    background-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .dataanalysis {
+    background-size: 0%;
+  }
+}
+
 .process .content .usermap {
   background: url(/image/other/user-story.png) no-repeat right bottom transparent;
   background-size: 75%;
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .usermap {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .usermap {
+    background-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .usermap {
+    background-size: 0%;
+  }
 }
 
 .process .content .wireframe {
@@ -1158,6 +1553,24 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .process .content .wireframe {
     background-size: 74%;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .process .content .wireframe {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process .content .wireframe {
+    background-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .process .content .wireframe {
+    background-size: 0%;
   }
 }
 
@@ -1184,5 +1597,35 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .design-guideline .card h2, .mockup .card h2 {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .design-guideline .card h2, .mockup .card h2 {
+    font-size: 1.5rem;
   }
 }

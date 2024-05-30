@@ -3,6 +3,10 @@
     grid-auto-flow: column;
     gap: 1.5rem;
 
+    @include for-iphone {
+        grid-auto-flow: row;
+    }
+
     .about {
 
         h2 {
@@ -17,6 +21,21 @@
 
             @include for-ipad-air {
                 font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            @include for-ipad-air-portrait {
+                font-size: 1.125rem;
+                line-height: 1.55rem;
+            }
+
+            @include for-ipad-min {
+                font-size: 1.125rem;
+                line-height: 1.55rem;
+            }
+
+            @include for-ipad-min-portrait {
+                font-size: 1rem;
             }
         }
     }

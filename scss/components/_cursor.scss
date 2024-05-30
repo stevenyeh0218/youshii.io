@@ -9,7 +9,7 @@
     @include ease(.1s);
 
     @include for-ipad-air {
-        display: none;
+        @include hide();
     }
 }
 

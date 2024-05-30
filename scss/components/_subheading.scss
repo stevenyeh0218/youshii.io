@@ -6,4 +6,24 @@
     @include for-ipad-air {
         font-size: 2.25rem;
     }
+
+    @include for-ipad-air-portrait {
+        font-size: 2rem;
+    }
+
+    @include for-ipad-min {
+        font-size: 2rem;
+    }
+
+    @include for-ipad-min-portrait {
+        font-size: 1.8rem;
+    }
+
+    @include for-iphone {
+        font-size: 1.5rem;
+    }
+
+    @include for-iphone-landscape {
+        font-size: 1.5rem;
+    }
 }

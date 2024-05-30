@@ -16,10 +16,18 @@
         top: 1.5rem;
         left: 1.5rem;
         @include ease(.2s);
-        z-index: 1;
+        z-index: 2;
 
         @include for-ipad-air {
             font-size: 1.125rem;
+        }
+
+        @include for-iphone {
+            font-size: 1rem;
+        }
+
+        @include for-iphone-landscape {
+            font-size: 1rem;
         }
 
         .icon {
@@ -38,10 +46,19 @@
         color: var(--black);
         top: 1.5rem;
         right: 1.5rem;
-        z-index: 1;
+        z-index: 2;
 
         @include for-ipad-air {
             font-size: 1.125rem;
+            gap: .375rem;
+        }
+
+        @include for-iphone {
+            font-size: 1rem;
+        }
+
+        @include for-iphone-landscape {
+            font-size: 1rem;
         }
 
         .top-btn {
@@ -62,11 +79,35 @@
         img {
             width: auto;
             height: 480px;
+
+            @include for-ipad-min-portrait {
+                height: 447px;
+            }
+
+            @include for-iphone {
+                height: 214px;
+            }
+
+            @include for-iphone-landscape {
+                height: 180px;
+            }
         }
 
         h1 {
             font-size: 2.6vw;
             font-weight: 400;
+
+            @include for-ipad-min-portrait {
+                font-size: 1.8rem;
+            }
+
+            @include for-iphone {
+                font-size: 1.5rem;
+            }
+
+            @include for-iphone-landscape {
+                font-size: 1.25rem;
+            }
         }
     }
 
@@ -80,6 +121,24 @@
         bottom: 1.5rem;
         @include rotate(90deg);
         @include ease(.2s);
+
+        @include for-ipad-air {
+            width: 60px;
+            height: 60px;
+            font-size: 2.5rem;
+        }
+
+        @include for-iphone {
+            width: 44px;
+            height: 44px;
+            font-size: 2rem;
+        }
+
+        @include for-iphone-landscape {
+            width: 44px;
+            height: 44px;
+            font-size: 2rem;
+        }
 
         &:hover {
             color: var(--dark-blue);
@@ -96,6 +155,10 @@
         right: 1.5rem;
         overflow: hidden;
 
+        @include for-ipad-air {
+            height: 100px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -104,6 +167,10 @@
             width: inherit;
             height: 1.5rem;
             animation: 2s scroll-down ease-in infinite;
+
+            @include for-ipad-air {
+                height: 1rem;
+            }
         }
     }
 }

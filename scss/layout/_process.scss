@@ -9,6 +9,14 @@
         top: 24px;
         padding: .75rem;
 
+        @include for-ipad-air-portrait {
+            display: none;
+        }
+
+        @include for-ipad-min {
+            display: none
+        }
+
         h2 {
             @include subheading();
         }
@@ -48,11 +56,43 @@
         border-left: 1px solid var(--dark-blue);
         padding: .75rem;
 
+        @include for-ipad-air-portrait {
+            border: 0;
+            border-top: 1px solid var(--dark-blue);
+        }
+
+        @include for-ipad-min {
+            border: 0;
+            border-top: 1px solid var(--dark-blue);
+        }
+
         .item {
             display: flex;
             flex-direction: column;
             gap: .75rem;
             height: 100vh;
+
+            @include for-ipad-air-portrait {
+                position: sticky;
+                top: 48px;
+            }
+
+            @include for-ipad-min {
+                position: sticky;
+                top: 48px;
+            }
+
+            @include for-iphone {
+                position: unset;
+                top: unset;
+                height: auto;
+            }
+
+            @include for-iphone-landscape {
+                position: unset;
+                top: unset;
+                height: auto;
+            }
 
             h2 {
                 @include subheading();
@@ -70,6 +110,24 @@
                         font-size: 1.25rem;
                         line-height: 1.75rem;
                     }
+
+                    @include for-ipad-air-portrait {
+                        font-size: 1.125rem;
+                        line-height: 1.55rem;
+                    }
+
+                    @include for-ipad-min {
+                        font-size: 1.125rem;
+                        line-height: 1.55rem;
+                    }
+
+                    @include for-iphone {
+                        font-size: 1rem;
+                    }
+
+                    @include for-iphone-landscape {
+                        font-size: 1rem;
+                    }
                 }
             }
 
@@ -80,6 +138,16 @@
                 line-height: 1.25rem;
                 letter-spacing: .1rem;
                 color: var(--light-gray);
+
+                @include for-iphone {
+                    font-size: 0.875rem;
+                    line-height: 1.125rem;
+                }
+
+                @include for-iphone-landscape {
+                    font-size: 0.875rem;
+                    line-height: 1.125rem;
+                }
 
                 h3 {
                     font-weight: normal;
@@ -98,6 +166,22 @@
             background: url(/image/other/interview.png) no-repeat right bottom transparent;
             background-size: 64%;
 
+            @include for-ipad-air-portrait {
+                background-size: 100%;
+            }
+
+            @include for-ipad-min {
+                background-size: 50%;
+            }
+
+            @include for-iphone {
+                background-size: 0%;
+            }
+
+            @include for-iphone-landscape {
+                background-size: 0%;
+            }
+
         }
 
         .analysis {
@@ -107,16 +191,56 @@
             @include for-ipad-air {
                 background-size: 74%;
             }
+
+            @include for-ipad-air-portrait {
+                background-size: 100%;
+            }
+
+            @include for-ipad-min {
+                background-size: 64%;
+            }
+
+            @include for-iphone {
+                background-size: 0%;
+            }
+
+            @include for-iphone-landscape {
+                background-size: 0%;
+            }
         }
 
         .dataanalysis {
             background: url(/image/other//analysis.png) no-repeat right bottom transparent;
             background-size: 50%;
+
+            @include for-ipad-air-portrait {
+                background-size: 100%;
+            }
+
+            @include for-iphone {
+                background-size: 0%;
+            }
+
+            @include for-iphone-landscape {
+                background-size: 0%;
+            }
         }
 
         .usermap {
             background: url(/image/other/user-story.png) no-repeat right bottom transparent;
             background-size: 75%;
+
+            @include for-ipad-air-portrait {
+                background-size: 100%;
+            }
+
+            @include for-iphone {
+                background-size: 0%;
+            }
+
+            @include for-iphone-landscape {
+                background-size: 0%;
+            }
         }
 
         .wireframe {
@@ -125,6 +249,18 @@
 
             @include for-ipad-air {
                 background-size: 74%;
+            }
+
+            @include for-ipad-air-portrait {
+                background-size: 100%;
+            }
+
+            @include for-iphone {
+                background-size: 0%;
+            }
+
+            @include for-iphone-landscape {
+                background-size: 0%;
             }
 
             img {

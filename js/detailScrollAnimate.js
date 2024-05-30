@@ -9,8 +9,6 @@ $(window).scroll(function () { // 獲取滾動的高度
 	if (scale > 3) 
 		scale = 3;
 	
-
-
 	// 設定圖像的縮放比例
 	$('.image-sticker img').css('transform', 'scale(' + scale + ')');
 });
