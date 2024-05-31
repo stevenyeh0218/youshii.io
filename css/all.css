@@ -672,7 +672,7 @@ body[data-theme="dark"] .design-guideline .card img {
   border-left: 0px;
 }
 
-.is-visual-anchor, .is-link-anchor {
+.is-visual-anchor, .is-link-anchor, .is-back-anchor {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -683,7 +683,7 @@ body[data-theme="dark"] .design-guideline .card img {
   transform: scale(5);
 }
 
-.is-visual-anchor::before, .is-link-anchor::before {
+.is-visual-anchor::before, .is-link-anchor::before, .is-back-anchor::before {
   content: "\e900";
   font-family: 'icomoon' !important;
   color: var(--white);
@@ -694,6 +694,15 @@ body[data-theme="dark"] .design-guideline .card img {
 .is-link-anchor::before {
   content: "\e907";
   transform: rotate(0deg);
+}
+
+.is-back-anchor::before {
+  transform: rotate(180deg);
+}
+
+.is-next-anchor {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @property --progress-value {

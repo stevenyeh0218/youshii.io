@@ -2,6 +2,8 @@
 const cursor = document.querySelector(".cursor");
 var navAnchor = $(".navigation > .item");
 var visualAnchor = $(".visual-link");
+var backAnchor = $(".back-btn");
+var nextAnchor = $(".next-btn");
 var linkAnchor = $(".web-link, .app-link, .web > .list > .item , .app > .list > .item");
 
 function updateCursor(e) {
@@ -44,4 +46,20 @@ visualAnchor.on('mouseover', function () {
 
 visualAnchor.on('mouseleave', function () {
 	cursor.classList.remove('is-visual-anchor');
+});
+
+backAnchor.on('mouseover', function () {
+	cursor.classList.add('is-back-anchor');
+});
+
+backAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-back-anchor');
+});
+
+nextAnchor.on('mouseover', function () {
+	cursor.classList.add('is-next-anchor');
+});
+
+nextAnchor.on('mouseleave', function () {
+	cursor.classList.remove('is-next-anchor');
 });
