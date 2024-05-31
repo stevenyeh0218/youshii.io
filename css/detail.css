@@ -924,6 +924,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 .intro .navigation .top-btn {
   font-weight: 600;
+  color: var(--black);
   transition: all 0.2s ease;
 }
 
@@ -984,44 +985,41 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 }
 
 .intro .next-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width: 80px;
-  height: 80px;
   font-size: 3rem;
-  border-radius: 50%;
-  border: 1px solid var(--black);
+  color: var(--black);
   bottom: 1.5rem;
-  transform: rotate(90deg);
   transition: all 0.2s ease;
 }
 
 @media (max-width: 1200px) {
   .intro .next-btn {
-    width: 60px;
-    height: 60px;
     font-size: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .intro .next-btn {
-    width: 44px;
-    height: 44px;
     font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .intro .next-btn {
-    width: 44px;
-    height: 44px;
     font-size: 2rem;
   }
 }
 
+.intro .next-btn::before {
+  transform: rotate(90deg);
+}
+
 .intro .next-btn:hover {
   color: var(--dark-blue);
-  border: 1px solid var(--dark-blue);
 }
 
 .detail {
