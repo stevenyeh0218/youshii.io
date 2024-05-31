@@ -846,15 +846,6 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
-@keyframes scroll-down {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
 .portfolio .navigation {
   grid-column: 7/13;
   grid-row: 1/2;
