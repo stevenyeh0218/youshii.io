@@ -145,32 +145,4 @@
             border: 1px solid var(--dark-blue);
         }
     }
-
-    .scroll-bar {
-        position: absolute;
-        background: var(--white);
-        border-radius: 10px;
-        width: 4px;
-        height: 150px;
-        right: 1.5rem;
-        overflow: hidden;
-
-        @include for-ipad-air {
-            height: 100px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            background: var(--dark-blue);
-            border-radius: 10px;
-            width: inherit;
-            height: 1.5rem;
-            animation: 2s scroll-down ease-in infinite;
-
-            @include for-ipad-air {
-                height: 1rem;
-            }
-        }
-    }
 }

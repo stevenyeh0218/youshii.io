@@ -841,15 +841,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   }
 }
 
-@keyframes scroll-down {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
 .intro {
   display: grid;
   place-items: center;
@@ -1031,38 +1022,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 .intro .next-btn:hover {
   color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
-}
-
-.intro .scroll-bar {
-  position: absolute;
-  background: var(--white);
-  border-radius: 10px;
-  width: 4px;
-  height: 150px;
-  right: 1.5rem;
-  overflow: hidden;
-}
-
-@media (max-width: 1200px) {
-  .intro .scroll-bar {
-    height: 100px;
-  }
-}
-
-.intro .scroll-bar::after {
-  content: '';
-  position: absolute;
-  background: var(--dark-blue);
-  border-radius: 10px;
-  width: inherit;
-  height: 1.5rem;
-  animation: 2s scroll-down ease-in infinite;
-}
-
-@media (max-width: 1200px) {
-  .intro .scroll-bar::after {
-    height: 1rem;
-  }
 }
 
 .detail {
