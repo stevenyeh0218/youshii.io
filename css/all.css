@@ -1025,6 +1025,10 @@ body[data-theme="dark"] .design-guideline .card img {
   box-shadow: 0px 4px 10px -10px var(--black);
 }
 
+.portfolio .open-nav .switch-btn {
+  margin-bottom: 1rem;
+}
+
 .portfolio .open-nav .item {
   transform: scale(1);
 }
