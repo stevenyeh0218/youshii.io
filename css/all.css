@@ -408,8 +408,6 @@ body {
   background: var(--light-brown);
   font-family: 'Noto Sans TC';
   color: var(--light-gray);
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -494,6 +492,11 @@ body[data-loading="false"] .intro {
   animation: .5s clip-path-youshii-revert ease-in forwards;
 }
 
+body[data-transform="true"] {
+  animation: .5s launch-screen ease-in forwards;
+  overflow: hidden;
+}
+
 body[data-theme="dark"] {
   /* color HEX */
   --white: #000000;
@@ -551,7 +554,7 @@ body[data-theme="dark"] .design-guideline .card img {
   grid-template-rows: repeat(6, 1fr);
   place-items: inherit;
   gap: 1.5rem;
-  height: inherit;
+  height: 100vh;
   padding: 1.5rem;
 }
 
@@ -842,6 +845,15 @@ body[data-theme="dark"] .design-guideline .card img {
   }
   100% {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes launch-screen {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 100%);
   }
 }
 

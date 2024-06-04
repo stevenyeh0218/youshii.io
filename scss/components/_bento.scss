@@ -1,6 +1,6 @@
 .bento {
     @include grid(row, repeat(12, 1fr), repeat(6, 1fr), inherit, 1.5rem);
-    height: inherit;
+    height: 100vh;
     padding: 1.5rem;
 
     @include for-iphone {

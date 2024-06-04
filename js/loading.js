@@ -29,3 +29,14 @@ $(window).on('load', function () {
 
 	}, 1000);
 });
+
+$('a').on('click', function (event) {
+	event.preventDefault(); // 阻止默认跳转行为
+	var newLocation = this.href; // 获取链接地址
+
+	$('body').attr('data-transform', 'true'); // 设置body的data-transform属性
+
+	setTimeout(function () {
+		window.location = newLocation; // 一秒钟后跳转页面
+	}, 600);
+});

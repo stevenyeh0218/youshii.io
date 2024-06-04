@@ -31,8 +31,6 @@ body {
     background: var(--light-brown);
     font-family: 'Noto Sans TC';
     color: var(--light-gray);
-    width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -108,6 +106,11 @@ body {
         .intro {
             animation: .5s clip-path-youshii-revert ease-in forwards;
         }
+    }
+
+    &[data-transform="true"] {
+        animation: .5s launch-screen ease-in forwards;
+        overflow: hidden;
     }
 
     &[data-theme="dark"] {
