@@ -56,5 +56,9 @@
 }
 
 .is-next-anchor {
-    @include hide();
+    @extend .is-visual-anchor;
+
+    &::before {
+        @include rotate(90deg);
+    }
 }

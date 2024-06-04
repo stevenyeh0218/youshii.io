@@ -672,7 +672,7 @@ body[data-theme="dark"] .design-guideline .card img {
   border-left: 0px;
 }
 
-.is-visual-anchor, .is-link-anchor, .is-back-anchor {
+.is-visual-anchor, .is-link-anchor, .is-back-anchor, .is-next-anchor {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -683,7 +683,7 @@ body[data-theme="dark"] .design-guideline .card img {
   transform: scale(5);
 }
 
-.is-visual-anchor::before, .is-link-anchor::before, .is-back-anchor::before {
+.is-visual-anchor::before, .is-link-anchor::before, .is-back-anchor::before, .is-next-anchor::before {
   content: "\e900";
   font-family: 'icomoon' !important;
   color: var(--white);
@@ -700,9 +700,8 @@ body[data-theme="dark"] .design-guideline .card img {
   transform: rotate(180deg);
 }
 
-.is-next-anchor {
-  opacity: 0;
-  visibility: hidden;
+.is-next-anchor::before {
+  transform: rotate(90deg);
 }
 
 @property --progress-value {
