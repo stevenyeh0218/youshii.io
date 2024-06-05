@@ -28,15 +28,16 @@ $(window).on('load', function () {
 		}, 1000);
 
 	}, 1000);
-});
+	
+	$('a').on('click', function (event) {
+		event.preventDefault();
+		var newLocation = this.href;
 
-$('a').on('click', function (event) {
-	event.preventDefault();
-	var newLocation = this.href;
+		$('body').attr('data-transform', 'true');
 
-	$('body').attr('data-transform', 'true');
-
-	setTimeout(function () {
-		window.location = newLocation;
-	}, 520);
+		setTimeout(function () {
+			window.location = newLocation;
+			$('body').removeAttr('data-transform');
+		}, 600);
+	});
 });
