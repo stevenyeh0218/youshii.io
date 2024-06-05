@@ -38,5 +38,5 @@ $('a').on('click', function (event) {
 
 	setTimeout(function () {
 		window.location = newLocation; // 一秒钟后跳转页面
-	}, 600);
+	}, 520);
 });
