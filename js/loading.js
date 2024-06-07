@@ -28,7 +28,7 @@ $(window).on('load', function () {
 		}, 1000);
 
 	}, 1000);
-	
+
 	$('a').on('click', function (event) {
 		event.preventDefault();
 		var newLocation = this.href;
@@ -37,7 +37,10 @@ $(window).on('load', function () {
 
 		setTimeout(function () {
 			window.location = newLocation;
-			$('body').removeAttr('data-transform');
 		}, 600);
+
+		setTimeout(function () {
+			$('body').removeAttr('data-transform');
+		}, 700);
 	});
 });
