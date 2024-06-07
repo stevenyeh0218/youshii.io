@@ -2058,7 +2058,7 @@ body[data-theme="dark"] .design-guideline .card img {
   position: absolute;
   font-family: 'Ojuju';
   font-size: 5vw;
-  color: var(--white);
+  color: #ffffff;
   mix-blend-mode: overlay;
   place-self: center;
   z-index: 1;
