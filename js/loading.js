@@ -36,6 +36,7 @@ $(window).on('load', function () {
 		$('body').attr('data-transform', 'true');
 
 		setTimeout(function () {
+			$('body').removeAttr('data-transform');
 			window.location = newLocation;
 		}, 600);
 	});
