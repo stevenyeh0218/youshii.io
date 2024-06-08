@@ -1,43 +1,45 @@
-$(document).ready(function () { // 獲取最後更新時間戳
-	var lastUpdated = sessionStorage.getItem('lastUpdated');
+$(document).ready(function () {
+	const lastUpdated = sessionStorage.getItem('lastUpdated');
+	const currentTime = performance.timeOrigin.toString();
 
-	// 如果最後更新時間戳與頁面載入時間戳相同，則data-loading=false
-	if (lastUpdated === performance.timeOrigin.toString()) {
-		$('body').attr('data-loading', 'false');
-		$('body').removeAttr('data-transform');
-	} else { // 否則顯示 loading 頁面
+	if (lastUpdated === currentTime) {
+		$('body').attr('data-loading', 'false').removeAttr('data-transform');
+	} else {
 		$('body').css('overflow', 'hidden');
-		setTimeout(function () {
-			$("html,body").animate({
+		setTimeout(() => {
+			$('html,body').animate({
 				scrollTop: 0
 			}, 0);
 		}, 0);
 	}
 
-	// 更新最後更新時間戳
-	sessionStorage.setItem('lastUpdated', performance.timeOrigin.toString());
+	sessionStorage.setItem('lastUpdated', currentTime);
 });
 
-// 在所有內容載入完畢後執行相關動畫設定
 $(window).on('load', function () {
-	setTimeout(function () {
+	setTimeout(() => {
 		$('html,body').removeAttr("style");
 		$('body').attr('data-loading', 'false');
 
-		setTimeout(function () {
+		setTimeout(() => {
 			$('body').removeAttr('data-loading');
 		}, 1000);
-
 	}, 1000);
 
 	$('a').on('click', function (event) {
 		event.preventDefault();
-		var newLocation = this.href;
+		const newLocation = this.href;
 
 		$('body').attr('data-transform', 'true');
 
-		setTimeout(function () {
+		setTimeout(() => {
 			window.location = newLocation;
 		}, 600);
 	});
+});
+
+window.addEventListener('pageshow', function (event) {
+	if (event.persisted || performance.navigation.type === 2) {
+		$('body').removeAttr('data-transform');
+	}
 });
