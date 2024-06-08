@@ -4,6 +4,7 @@ $(document).ready(function () { // 獲取最後更新時間戳
 	// 如果最後更新時間戳與頁面載入時間戳相同，則data-loading=false
 	if (lastUpdated === performance.timeOrigin.toString()) {
 		$('body').attr('data-loading', 'false');
+		$('body').removeAttr('data-transform');
 	} else { // 否則顯示 loading 頁面
 		$('body').css('overflow', 'hidden');
 		setTimeout(function () {
@@ -36,7 +37,6 @@ $(window).on('load', function () {
 		$('body').attr('data-transform', 'true');
 
 		setTimeout(function () {
-			$('body').removeAttr('data-transform');
 			window.location = newLocation;
 		}, 600);
 	});
