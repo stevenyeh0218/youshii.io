@@ -23,8 +23,9 @@ $(window).on('load', function () {
 
 		setTimeout(() => {
 			$('body').removeAttr('data-loading');
-		}, 1000);
-	}, 1000);
+		}, 700);
+
+	}, 600);
 
 	$('a').on('click', function (event) {
 		event.preventDefault();
