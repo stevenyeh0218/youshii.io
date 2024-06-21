@@ -713,6 +713,12 @@ body[data-theme="dark"] .design-guideline .card img {
   initial-value: 0;
 }
 
+@property --counter-value {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
 @keyframes fix-nav {
   0% {
     position: fixed;
@@ -800,6 +806,24 @@ body[data-theme="dark"] .design-guideline .card img {
 @keyframes ai-progress {
   to {
     --progress-value: 80;
+  }
+}
+
+@keyframes experience-counter {
+  to {
+    --counter-value: 6;
+  }
+}
+
+@keyframes project-counter {
+  to {
+    --counter-value: 30;
+  }
+}
+
+@keyframes clients-counter {
+  to {
+    --counter-value: 15;
   }
 }
 
@@ -1205,24 +1229,32 @@ body[data-theme="dark"] .design-guideline .card img {
 }
 
 .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+  position: relative;
+}
+
+.portfolio .experience .num::before, .portfolio .hand-project .num::before, .portfolio .clients .num::before {
+  counter-reset: number var(--counter-value);
+  content: counter(number) "+";
   color: var(--dark-blue);
   font-size: 3rem;
+  animation-delay: 1s;
+  animation: experience-counter 3.5s ease forwards;
 }
 
 @media (max-width: 1200px) {
-  .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+  .portfolio .experience .num::before, .portfolio .hand-project .num::before, .portfolio .clients .num::before {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+  .portfolio .experience .num::before, .portfolio .hand-project .num::before, .portfolio .clients .num::before {
     font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
-  .portfolio .experience .num, .portfolio .hand-project .num, .portfolio .clients .num {
+  .portfolio .experience .num::before, .portfolio .hand-project .num::before, .portfolio .clients .num::before {
     font-size: 1.5rem;
   }
 }
@@ -1259,6 +1291,15 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
+.portfolio .hand-project .num {
+  position: relative;
+}
+
+.portfolio .hand-project .num::before {
+  animation-delay: 1s;
+  animation: project-counter 3.5s ease forwards;
+}
+
 .portfolio .clients {
   grid-column: 5/7;
   grid-row: 4/5;
@@ -1283,6 +1324,15 @@ body[data-theme="dark"] .design-guideline .card img {
     grid-column: 5/7;
     grid-row: 3/4;
   }
+}
+
+.portfolio .clients .num {
+  position: relative;
+}
+
+.portfolio .clients .num::before {
+  animation-delay: 1s;
+  animation: clients-counter 3.5s ease forwards;
 }
 
 .portfolio .sticker {

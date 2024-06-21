@@ -276,19 +276,26 @@
         }
 
         .num {
-            color: var(--dark-blue);
-            font-size: 3rem;
+            position: relative;
 
-            @include for-ipad-air {
-                font-size: 2rem;
-            }
+            &::before {
+                counter-reset: number var(--counter-value);
+                content: counter(number) '+';
+                color: var(--dark-blue);
+                font-size: 3rem;
+                @include counter(experience-counter);
 
-            @include for-iphone {
-                font-size: 1.5rem;
-            }
+                @include for-ipad-air {
+                    font-size: 2rem;
+                }
 
-            @include for-iphone-landscape {
-                font-size: 1.5rem;
+                @include for-iphone {
+                    font-size: 1.5rem;
+                }
+
+                @include for-iphone-landscape {
+                    font-size: 1.5rem;
+                }
             }
         }
 
@@ -315,6 +322,14 @@
         @include for-iphone-landscape {
             @include grid-child(3, 5, 3, 4);
         }
+
+        .num {
+            position: relative;
+
+            &::before {
+                @include counter(project-counter);
+            }
+        }
     }
 
     //客戶
@@ -332,6 +347,14 @@
 
         @include for-iphone-landscape {
             @include grid-child(5, 7, 3, 4);
+        }
+
+        .num {
+            position: relative;
+
+            &::before {
+                @include counter(clients-counter);
+            }
         }
     }
 

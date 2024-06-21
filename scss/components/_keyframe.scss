@@ -97,6 +97,24 @@
     }
 }
 
+@keyframes experience-counter {
+    to {
+        --counter-value: 6;
+    }
+}
+
+@keyframes project-counter {
+    to {
+        --counter-value: 30;
+    }
+}
+
+@keyframes clients-counter {
+    to {
+        --counter-value: 15;
+    }
+}
+
 @keyframes clip-path-youshii {
 
     0% {

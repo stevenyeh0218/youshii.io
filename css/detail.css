@@ -798,6 +798,24 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   }
 }
 
+@keyframes experience-counter {
+  to {
+    --counter-value: 6;
+  }
+}
+
+@keyframes project-counter {
+  to {
+    --counter-value: 30;
+  }
+}
+
+@keyframes clients-counter {
+  to {
+    --counter-value: 15;
+  }
+}
+
 @keyframes clip-path-youshii {
   0% {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
