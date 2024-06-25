@@ -2220,7 +2220,14 @@ body[data-theme="dark"] .design-guideline .card img {
   text-align: center;
 }
 
-.visual .list .item {
-  width: 24%;
-  margin-bottom: 6px;
+.visual .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .visual .list {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
 }

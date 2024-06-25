@@ -1,6 +1,5 @@
 .visual {
     position: relative;
-
     padding: 1.5rem;
 
     h1 {
@@ -11,10 +10,12 @@
     }
 
     .list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+        gap: 1rem;
 
-        .item {
-            width: 24%;
-            margin-bottom: 6px;
+        @include for-iphone {
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         }
     }
 }
