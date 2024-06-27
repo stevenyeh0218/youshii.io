@@ -1118,35 +1118,35 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 .data .about .text, .data .role .item .text {
   font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: .1rem;
+  line-height: 1.5;
   color: var(--dark-blue);
 }
 
 @media (max-width: 1200px) {
   .data .about .text, .data .role .item .text {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.25;
   }
 }
 
 @media only screen and (max-width: 834px) and (orientation: portrait) {
   .data .about .text, .data .role .item .text {
     font-size: 1.125rem;
-    line-height: 1.55rem;
+    line-height: 1.125;
   }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .data .about .text, .data .role .item .text {
     font-size: 1.125rem;
-    line-height: 1.55rem;
+    line-height: 1.125;
   }
 }
 
 @media (max-width: 768px) {
   .data .about .text, .data .role .item .text {
     font-size: 1rem;
+    line-height: normal;
   }
 }
 
@@ -1318,6 +1318,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   font-size: 2.5rem;
   font-weight: 400;
   display: grid;
+  gap: 4px;
   margin: 0;
 }
 
@@ -1360,41 +1361,42 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 .process .content .item h2 sub {
   color: var(--dark-blue);
   font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: .1rem;
+  line-height: 1.5;
   bottom: 0;
 }
 
 @media (max-width: 1200px) {
   .process .content .item h2 sub {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.25;
   }
 }
 
 @media only screen and (max-width: 834px) and (orientation: portrait) {
   .process .content .item h2 sub {
     font-size: 1.125rem;
-    line-height: 1.55rem;
+    line-height: 1.125;
   }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .process .content .item h2 sub {
     font-size: 1.125rem;
-    line-height: 1.55rem;
+    line-height: 1.125;
   }
 }
 
 @media (max-width: 480px) {
   .process .content .item h2 sub {
     font-size: 1rem;
+    line-height: normal;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .process .content .item h2 sub {
     font-size: 1rem;
+    line-height: normal;
   }
 }
 
@@ -1402,22 +1404,21 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   counter-reset: num;
   display: grid;
   gap: 4px;
-  line-height: 1.25rem;
-  letter-spacing: .1rem;
+  line-height: normal;
   color: var(--light-gray);
 }
 
 @media (max-width: 480px) {
   .process .content .item .des {
     font-size: 0.875rem;
-    line-height: 1.125rem;
+    line-height: 0.875;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .process .content .item .des {
     font-size: 0.875rem;
-    line-height: 1.125rem;
+    line-height: 0.875;
   }
 }
 

@@ -707,8 +707,6 @@
 
         .list {
             @include flexbox-gap(column, start, start, .75rem);
-            line-height: 1.5rem;
-            letter-spacing: .01rem;
 
             @include for-ipad-air {
                 gap: .375rem;
