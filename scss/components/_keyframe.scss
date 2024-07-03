@@ -180,3 +180,15 @@
         clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 100%);
     }
 }
+
+@keyframes line {
+    50% {
+        border-right: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}

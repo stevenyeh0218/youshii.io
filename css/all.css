@@ -881,6 +881,18 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
+@keyframes line {
+  50% {
+    border-right: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
 .portfolio .navigation {
   grid-column: 7/13;
   grid-row: 1/2;
@@ -1116,21 +1128,34 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
-.portfolio .contact h1 {
+.portfolio .contact hgroup h1,
+.portfolio .contact hgroup h2 {
+  position: relative;
   font-size: 5.6vw;
   font-weight: 400;
 }
 
 @media (max-width: 480px) {
-  .portfolio .contact h1 {
+  .portfolio .contact hgroup h1,
+  .portfolio .contact hgroup h2 {
     font-size: 7vw;
   }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
-  .portfolio .contact h1 {
+  .portfolio .contact hgroup h1,
+  .portfolio .contact hgroup h2 {
     font-size: 7vw;
   }
+}
+
+.portfolio .contact hgroup h2 {
+  border-right: 0.4vw solid var(--black);
+  width: 100%;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(14), line 0.4s step-end infinite alternate;
 }
 
 .portfolio .contact img {
