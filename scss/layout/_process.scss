@@ -103,32 +103,27 @@
                 sub {
                     color: var(--dark-blue);
                     font-size: 1.5rem;
-                    line-height: 1.5;
+                    line-height: normal;
                     bottom: 0;
 
                     @include for-ipad-air {
                         font-size: 1.25rem;
-                        line-height: 1.25;
                     }
 
                     @include for-ipad-air-portrait {
                         font-size: 1.125rem;
-                        line-height: 1.125;
                     }
 
                     @include for-ipad-min {
                         font-size: 1.125rem;
-                        line-height: 1.125;
                     }
 
                     @include for-iphone {
                         font-size: 1rem;
-                        line-height: normal;
                     }
 
                     @include for-iphone-landscape {
                         font-size: 1rem;
-                        line-height: normal;
                     }
                 }
             }
@@ -142,12 +137,10 @@
 
                 @include for-iphone {
                     font-size: 0.875rem;
-                    line-height: 0.875;
                 }
 
                 @include for-iphone-landscape {
                     font-size: 0.875rem;
-                    line-height: 0.875;
                 }
 
                 h3 {

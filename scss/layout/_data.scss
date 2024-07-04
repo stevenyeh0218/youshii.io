@@ -15,27 +15,23 @@
 
         .text {
             font-size: 1.5rem;
-            line-height: 1.5;
+            line-height: normal;
             color: var(--dark-blue);
 
             @include for-ipad-air {
                 font-size: 1.25rem;
-                line-height: 1.25;
             }
 
             @include for-ipad-air-portrait {
                 font-size: 1.125rem;
-                line-height: 1.125;
             }
 
             @include for-ipad-min {
                 font-size: 1.125rem;
-                line-height: 1.125;
             }
 
             @include for-ipad-min-portrait {
                 font-size: 1rem;
-                line-height: normal;
             }
         }
     }
