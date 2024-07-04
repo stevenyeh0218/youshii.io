@@ -1370,6 +1370,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   color: var(--dark-blue);
   font-size: 1.5rem;
   bottom: 0;
+  line-height: normal;
 }
 
 @media (max-width: 1200px) {
