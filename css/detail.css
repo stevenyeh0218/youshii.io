@@ -340,6 +340,7 @@ template {
 *:before,
 *:after {
   box-sizing: border-box;
+  line-height: normal;
 }
 
 ol,
@@ -1130,7 +1131,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 .data .about .text, .data .role .item .text {
   font-size: 1.5rem;
-  line-height: normal;
   color: var(--dark-blue);
 }
 
@@ -1369,7 +1369,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 .process .content .item h2 sub {
   color: var(--dark-blue);
   font-size: 1.5rem;
-  line-height: normal;
   bottom: 0;
 }
 
@@ -1407,7 +1406,6 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   counter-reset: num;
   display: grid;
   gap: 4px;
-  line-height: normal;
   color: var(--light-gray);
 }
 

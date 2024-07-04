@@ -103,7 +103,6 @@
                 sub {
                     color: var(--dark-blue);
                     font-size: 1.5rem;
-                    line-height: normal;
                     bottom: 0;
 
                     @include for-ipad-air {
@@ -132,7 +131,6 @@
                 counter-reset: num;
                 display: grid;
                 gap: 4px;
-                line-height: normal;
                 color: var(--light-gray);
 
                 @include for-iphone {

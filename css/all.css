@@ -339,6 +339,7 @@ template {
 *:before,
 *:after {
   box-sizing: border-box;
+  line-height: normal;
 }
 
 ol,
@@ -1152,7 +1153,6 @@ body[data-theme="dark"] .design-guideline .card img {
 .portfolio .contact hgroup h2 {
   border-right: 0.4vw solid var(--black);
   width: 100%;
-  line-height: normal;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 2s steps(14), line 0.4s step-end infinite alternate;
