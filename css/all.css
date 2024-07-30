@@ -2269,3 +2269,9 @@ body[data-theme="dark"] .design-guideline .card img {
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
 }
+
+@media (max-width: 480px) {
+  .visual .list .item {
+    animation: unset;
+  }
+}
