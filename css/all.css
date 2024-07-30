@@ -894,6 +894,15 @@ body[data-theme="dark"] .design-guideline .card img {
   }
 }
 
+@keyframes clip-path-left-to-right {
+  from {
+    clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+  }
+  to {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+}
+
 .portfolio .navigation {
   grid-column: 7/13;
   grid-row: 1/2;
@@ -2253,4 +2262,10 @@ body[data-theme="dark"] .design-guideline .card img {
   .visual .list {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
+}
+
+.visual .list .item {
+  animation: clip-path-left-to-right 5s alternate forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }

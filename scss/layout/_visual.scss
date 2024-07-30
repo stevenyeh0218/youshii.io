@@ -17,5 +17,11 @@
         @include for-iphone {
             grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         }
+
+        .item {
+            animation: clip-path-left-to-right 5s alternate forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
+        }
     }
 }
