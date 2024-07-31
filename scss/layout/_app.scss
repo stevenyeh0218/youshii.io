@@ -109,6 +109,10 @@
                 z-index: 1;
                 @include hide();
                 @include ease(.2s);
+
+                @include for-ipad-pro {
+                    @include show();
+                }
             }
         }
     }

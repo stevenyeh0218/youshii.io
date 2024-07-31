@@ -2268,6 +2268,13 @@ body[data-theme="dark"] .design-guideline .card img {
   transition: all 0.2s ease;
 }
 
+@media (max-width: 1366px) {
+  .app .list .item h2 {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .black-bg {
   animation: .8s black-bg ease-in forwards;
 }
