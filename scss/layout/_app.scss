@@ -111,6 +111,7 @@
                 @include ease(.2s);
 
                 @include for-ipad-pro {
+                    font-size: 1.125rem;
                     @include show();
                 }
             }

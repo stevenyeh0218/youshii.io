@@ -2270,6 +2270,7 @@ body[data-theme="dark"] .design-guideline .card img {
 
 @media (max-width: 1366px) {
   .app .list .item h2 {
+    font-size: 1.125rem;
     opacity: 1;
     visibility: visible;
   }
