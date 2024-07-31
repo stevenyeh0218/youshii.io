@@ -2270,7 +2270,7 @@ body[data-theme="dark"] .design-guideline .card img {
   animation-range: entry 0% cover 20%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1366px) {
   .visual .list .item {
     animation: unset;
   }

@@ -23,7 +23,7 @@
             animation-timeline: view();
             animation-range: entry 0% cover 20%;
 
-            @include for-iphone {
+            @include for-ipad-pro {
                 animation: unset;
             }
         }
