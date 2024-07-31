@@ -32,14 +32,23 @@
         &:has(.item:hover) {
             .item {
                 opacity: .5;
+
+                h2 {
+                    @include hide();
+                }
             }
 
             .item:hover {
                 opacity: 1;
+
+                h2 {
+                    @include show();
+                }
             }
         }
 
         .item {
+            position: relative;
             @include ease(.2s);
 
             &:first-child {
@@ -80,6 +89,26 @@
 
             img {
                 height: 100%;
+            }
+
+            h2 {
+                background: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                position: absolute;
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #000;
+                border-radius: 6px;
+                text-align: center;
+                padding: 6px;
+                bottom: 50%;
+                top: 50%;
+                left: 1rem;
+                height: min-content;
+                z-index: 1;
+                @include hide();
+                @include ease(.2s);
             }
         }
     }
