@@ -148,6 +148,9 @@
     }
 
     .fix {
+        background: #{'rgba(var(--white-rgb), 0.5)'};
+        border-radius: 0.75rem;
+        @include background-blur(10px);
         animation: .5s fix-nav ease-in forwards;
         z-index: 1;
 
