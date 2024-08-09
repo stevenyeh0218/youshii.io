@@ -149,12 +149,14 @@
 
     .fix {
         background: #{'rgba(var(--white-rgb), 0.5)'};
-        border-radius: 0.75rem;
+        border-radius: 5px;
         @include background-blur(10px);
         animation: .5s fix-nav ease-in forwards;
         z-index: 1;
 
         @include for-ipad-air-portrait {
+            background: transparent;
+            @include background-blur(0px);
             animation: unset;
             z-index: 3;
         }
