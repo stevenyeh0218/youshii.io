@@ -1081,11 +1081,16 @@ body[data-theme="dark"] .design-guideline .card img {
   z-index: 1;
 }
 
-@media only screen and (max-width: 834px) and (orientation: portrait) {
+@media (max-width: 1366px) {
   .portfolio .fix {
     background: transparent;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .portfolio .fix {
     animation: unset;
     z-index: 3;
   }

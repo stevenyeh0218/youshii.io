@@ -154,9 +154,12 @@
         animation: .5s fix-nav ease-in forwards;
         z-index: 1;
 
-        @include for-ipad-air-portrait {
+        @include for-ipad-pro {
             background: transparent;
             @include background-blur(0px);
+        }
+
+        @include for-ipad-air-portrait {
             animation: unset;
             z-index: 3;
         }
