@@ -2305,9 +2305,8 @@ body[data-theme="dark"] .design-guideline .card img {
 }
 
 .visual .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
-  gap: 1rem;
+  columns: 4 300px;
+  column-gap: 6px;
 }
 
 @media (max-width: 480px) {
