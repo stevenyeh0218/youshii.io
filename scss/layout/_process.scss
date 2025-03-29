@@ -103,7 +103,8 @@
                 sub {
                     color: var(--dark-blue);
                     font-size: 1.5rem;
-                    bottom: 0;line-height: normal;
+                    bottom: 0;
+                    line-height: normal;
 
                     @include for-ipad-air {
                         font-size: 1.25rem;
