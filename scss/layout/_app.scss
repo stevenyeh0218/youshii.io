@@ -20,7 +20,7 @@
     }
 
     .list {
-        @include grid(row, repeat(4, 1fr), repeat(2, 1fr), inherit, inherit);
+        @include grid(row, 1fr, 1fr, inherit, inherit);
         border-radius: .75rem;
         overflow: hidden;
 
@@ -52,7 +52,6 @@
             @include ease(.2s);
 
             &:first-child {
-                @include grid-child(1, 3, 1, 3);
 
                 @include for-ipad-air-portrait {
                     grid-column: unset;
@@ -61,7 +60,6 @@
             }
 
             &:nth-child(2) {
-                @include grid-child(3, 5, 1, 2);
 
                 @include for-ipad-air-portrait {
                     grid-column: unset;
@@ -70,7 +68,6 @@
             }
 
             &:nth-child(3) {
-                @include grid-child(3, 4, 2, 3);
 
                 @include for-ipad-air-portrait {
                     grid-column: unset;
@@ -79,7 +76,6 @@
             }
 
             &:last-child {
-                @include grid-child(4, 5, 2, 3);
 
                 @include for-ipad-air-portrait {
                     grid-column: unset;
@@ -105,6 +101,8 @@
                 bottom: 50%;
                 top: 50%;
                 left: 1rem;
+                height: -webkit-min-content;
+                height: -moz-min-content;
                 height: min-content;
                 z-index: 1;
                 @include hide();
@@ -120,5 +118,6 @@
 }
 
 .black-bg {
+    -webkit-animation: .8s black-bg ease-in forwards;
     animation: .8s black-bg ease-in forwards;
 }
