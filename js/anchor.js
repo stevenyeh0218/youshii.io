@@ -12,7 +12,7 @@ function scrollToTop() {
 }
 
 // about和top按鈕滑動到指定區
-$(".top-btn,.about-btn").click(function () {
+$(".top-btn,.portfolio-btn").click(function () {
 	scrollToTop();
 });
 

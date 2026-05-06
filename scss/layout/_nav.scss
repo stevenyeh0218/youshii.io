@@ -9,9 +9,11 @@
         font-size: 1.125rem;
         font-weight: bold;
         color: var(--dark-brown);
+        cursor: pointer;
     }
 
     >.mode-switch {
+        margin-left: 1.25rem;
         padding: 0.375rem 0.5rem;
     }
 

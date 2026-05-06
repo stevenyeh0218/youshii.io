@@ -38,22 +38,9 @@
 </head>
 
 <body>
-    <!-- 藏起來的 SVG 濾鏡，這是效果的靈魂 -->
-    <svg width="0" height="0" style="position:absolute;left:-9999px;top:-9999px">
-        <defs>
-            <filter id="liquid_glass_filter">
-                <!-- 產生碎形雜訊 -->
-                <feTurbulence type="fractalNoise" baseFrequency="0.003" numOctaves="2" seed="7" result="noise" />
-                <!-- 將雜訊模糊化，讓它更平滑 -->
-                <feGaussianBlur in="noise" stdDeviation="1.2" result="map" />
-                <!-- 用模糊後的雜訊圖來扭曲我們的元素 -->
-                <feDisplacementMap in="SourceGraphic" in2="map" scale="110" xChannelSelector="R" yChannelSelector="G" />
-            </filter>
-        </defs>
-    </svg>
     <!-- nav -->
     <nav class="navigation">
-        <button class="item about-btn">About</button>
+        <button class="item portfolio-btn">About</button>
         <button class="item project-btn">Project</button>
         <button class="item exprience-btn">Exprience</button>
         <div class="item mode-switch">
@@ -181,8 +168,19 @@
             </div>
         </div>
     </section>
-    <!-- cursor -->
-    <div class="cursor"></div>
+    <!-- 藏起來的 SVG 濾鏡，這是效果的靈魂 -->
+    <svg width="0" height="0" style="position:absolute;left:-9999px;top:-9999px">
+        <defs>
+            <filter id="liquid_glass_filter">
+                <!-- 產生碎形雜訊 -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.003" numOctaves="2" seed="7" result="noise" />
+                <!-- 將雜訊模糊化，讓它更平滑 -->
+                <feGaussianBlur in="noise" stdDeviation="1.2" result="map" />
+                <!-- 用模糊後的雜訊圖來扭曲我們的元素 -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="110" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
     <!-- jquery-4.0 -->
     <script src="vendor/jquery-4.0.0.min.js"></script>
     <!-- lucide icon -->
