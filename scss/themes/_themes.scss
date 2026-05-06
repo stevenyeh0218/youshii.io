@@ -31,87 +31,11 @@ body {
     background: var(--light-brown);
     font-family: 'Noto Sans TC';
     color: var(--light-gray);
+    padding: 1.5rem;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
     @include mac-scrollbar-style();
-
-    &[data-loading="true"] {
-
-        .portfolio {
-
-            .navigation,
-            .contact,
-            .experience,
-            .hand-project,
-            .clients,
-            .information,
-            .skill,
-            .project,
-            .about {
-                display: none;
-            }
-
-            .sticker {
-                img {
-                    display: none;
-                }
-
-                &::before {
-                    display: none;
-                }
-            }
-        }
-
-        .web,
-        .app,
-        .visual,
-        .intro,
-        .detail,
-        .cursor {
-            display: none;
-        }
-    }
-
-    &[data-loading="false"] {
-
-        .portfolio {
-
-            .contact,
-            .experience,
-            .hand-project,
-            .clients,
-            .project {
-                animation: .5s clip-right-to-left ease-in forwards;
-            }
-
-            .navigation,
-            .information,
-            .skill,
-            .about {
-                animation: .5s clip-left-to-right ease-in forwards;
-            }
-
-            .sticker {
-                img {
-                    animation: .5s clip-path-youshii-revert ease-in forwards;
-                }
-
-                &::before {
-                    animation: .5s loading-opacity-revert ease-in forwards;
-                }
-            }
-        }
-
-        .intro {
-            animation: .5s clip-path-youshii-revert ease-in forwards;
-        }
-    }
-
-    &[data-transform="true"] {
-        animation: .5s launch-screen ease-in forwards;
-        overflow: hidden;
-    }
 
     &[data-theme="dark"] {
         /* color HEX */
@@ -119,7 +43,7 @@ body {
         --black: #ffffff;
         --light-gray: #ffffff;
         --light-brown: #000000;
-        --dark-brown: #000000;
+        --dark-brown: #ffffff;
         --dark-blue: #ffffff;
 
         /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
@@ -129,53 +53,5 @@ body {
         --light-brown-rgb: 0, 0, 0;
         --dark-brown-rgb: 0, 0, 0;
         --dark-blue-rgb: 255, 255, 255;
-
-        .dark-brown-bg,
-        .black-bg {
-            animation: unset;
-        }
-
-        .intro {
-            .navigation {
-
-                .top-btn {
-                    color: #ffffff;
-
-                    &:hover {
-                        color: #7895B2;
-                    }
-                }
-            }
-
-            .scroll-bar {
-                background: #ffffff;
-
-                &::after {
-                    background: #000000;
-                }
-            }
-
-            .next-btn {
-                color: #ffffff;
-            }
-        }
-
-        .process {
-            .content {
-                .item {
-                    img {
-                        background: #ffffff;
-                    }
-                }
-            }
-        }
-
-        .design-guideline {
-            .card {
-                img {
-                    background: #ffffff;
-                }
-            }
-        }
     }
 }

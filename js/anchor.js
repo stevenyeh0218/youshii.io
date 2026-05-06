@@ -1,3 +1,4 @@
+// 置頂
 function scrollToSection(sectionSelector) {
 	$("html,body").stop().animate({
 		scrollTop: $(sectionSelector).offset().top
@@ -10,22 +11,17 @@ function scrollToTop() {
 	}, "slow");
 }
 
-$(".top-btn").click(function () {
+// about和top按鈕滑動到指定區
+$(".top-btn,.about-btn").click(function () {
 	scrollToTop();
 });
 
-$(".web-btn").click(function () {
-	scrollToSection(".web");
+// project按鈕滑動到指定區
+$(".project-btn").click(function () {
+	scrollToSection(".project");
 });
 
-$(".app-btn").click(function () {
-	scrollToSection(".app");
-});
-
-$(".visual-btn,.visual-link").click(function () {
-	scrollToSection(".visual");
-});
-
-$(".next-btn").click(function () {
-	scrollToSection(".detail");
+// exprience按鈕滑動到指定區
+$(".exprience-btn").click(function () {
+	scrollToSection(".exprience");
 });

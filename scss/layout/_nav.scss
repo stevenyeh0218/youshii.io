@@ -1,0 +1,22 @@
+.navigation {
+    @include flexbox-gap(row, center, end, 1.5rem);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.5rem;
+
+    >.item {
+        @include liquid(3.125rem, 0.688rem 1rem);
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: var(--dark-brown);
+    }
+
+    >.mode-switch {
+        padding: 0.375rem 0.5rem;
+    }
+
+    >.top-btn {
+        padding: 8px;
+        width: 44px;
+    }
+}

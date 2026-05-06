@@ -4,11 +4,9 @@
 @import 'base/_base';
 @import 'helpers/_allMixins';
 @import 'themes/_themes';
-@import 'components/_bento';
-@import 'components/_btn';
-@import 'components/_cursor';
-@import 'components/_progress';
+@import 'components/commonStyle';
 @import 'components/_keyframe';
+@import 'layout/_nav';
 @import 'layout/_portfolio';
 @import 'layout/_web';
 @import 'layout/_app';
