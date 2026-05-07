@@ -1,6 +1,8 @@
-@mixin grid($direction, $place, $gap) {
+@mixin grid($direction, $column, $rows, $place, $gap) {
     display: grid;
     grid-auto-flow: $direction;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
     place-items: $place;
     gap: $gap;
 }

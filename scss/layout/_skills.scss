@@ -1,0 +1,65 @@
+.skills {
+    margin-top: 2.75rem;
+
+    &>h1 {
+        color: var(--dark-blue);
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .cardGroup {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+
+        .card {
+            @include liquid(1.25rem, 1rem);
+            @include flexbox-gap(column, start, start, 1rem);
+
+            &>ul {
+                font-size: 1.25rem;
+                font-weight: bold;
+
+                list-style-position: inside;
+
+                &>li {
+                    list-style: disc;
+                    list-style-position: inside;
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    padding-left: 0.5rem;
+                }
+            }
+
+            &:hover {
+                @include scale(1);
+            }
+        }
+
+        .tag {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+            gap: 1rem;
+            width: 100%;
+
+            .item {
+                @include flexbox-gap(column, center, center, 0.5rem);
+
+                .logo {
+                    @include liquid(1.25rem, 0.5rem);
+                    @include flexbox(row, center, center);
+                    max-width: 66px;
+
+                    &:hover {
+                        @include scale(1);
+                    }
+                }
+
+                &>h3 {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}

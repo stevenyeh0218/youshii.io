@@ -31,11 +31,15 @@ body {
     background: var(--light-brown);
     font-family: 'Noto Sans TC';
     color: var(--light-gray);
-    padding: 1.5rem;
+    padding: 1.5rem 6%;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
     @include mac-scrollbar-style();
+
+    @include for-ipad-pro {
+        padding: 1.5rem;
+    }
 
     &[data-theme="dark"] {
         /* color HEX */

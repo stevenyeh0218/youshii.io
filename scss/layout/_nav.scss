@@ -3,12 +3,13 @@
     position: -webkit-sticky;
     position: sticky;
     top: 1.5rem;
+    z-index: 1;
 
     >.item {
         @include liquid(3.125rem, 0.688rem 1rem);
         font-size: 1.125rem;
         font-weight: bold;
-        color: var(--dark-brown);
+        color: var(--black);
         cursor: pointer;
     }
 
