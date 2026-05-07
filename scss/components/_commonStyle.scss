@@ -34,7 +34,7 @@
         &:not(:checked) {
             &+label {
                 .icon {
-                    color: var(--dark-brown);
+                    color: var(--black);
 
                     &:nth-child(2) {
                         color: var(--white);
@@ -55,7 +55,7 @@
         cursor: pointer;
 
         .icon {
-            color: var(--light-brown);
+            color: var(--white);
             width: 30px;
             height: 30px;
             padding: 3px;
@@ -67,13 +67,13 @@
             }
 
             &:nth-child(2) {
-                color: var(--dark-brown);
+                color: var(--black);
             }
         }
 
         .circle {
             position: absolute;
-            background: var(--dark-brown);
+            background: var(--black);
             border-radius: 3.125rem;
             height: 100%;
             min-width: 30px;

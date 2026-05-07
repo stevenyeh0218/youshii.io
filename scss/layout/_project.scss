@@ -1,0 +1,72 @@
+.project {
+    margin-top: 2.75rem;
+
+    &>h1 {
+        color: var(--dark-blue);
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .cardGroup {
+        display: grid;
+        gap: 1.5rem;
+
+        .card {
+            @include liquid(1.25rem, 1rem);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 1.5rem;
+
+            &:hover {
+                @include scale(1);
+            }
+
+            &>img {
+                max-width: 400px;
+            }
+
+            &>article {
+                &>header {
+                    @include flexbox-gap(row, center, space-between, 1rem);
+                    margin-bottom: 1rem;
+
+                    &>h3 {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                    }
+
+                    &>a {
+                        @include liquid(3.125rem, 0.5rem 1rem);
+                        @include flexbox-gap(row, center, center, 0.5rem);
+                        background: #{'rgba(var(--dark-brown-rgb), 0.4)'};
+                        color: var(--white);
+                    }
+                }
+
+                .description {
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    margin-bottom: 2.75rem;
+                }
+
+                .tag {
+                    @include flexbox-gap-wrap(row, center, start, 1.5rem, wrap);
+
+                    .item {
+                        @include liquid(3.125rem, 0.5rem 1rem);
+                        @include flexbox-gap(row, center, center, 0.5rem);
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: var(--dark-brown);
+
+                        &:hover {
+                            @include scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
