@@ -916,18 +916,25 @@ body[data-theme="dark"] {
   transform: scale(1.1);
 }
 
-.skills .cardGroup .card > ul {
+.skills .cardGroup .card > article > h3 {
   font-size: 1.25rem;
   font-weight: bold;
-  list-style-position: inside;
+  margin-bottom: 0.5rem;
 }
 
-.skills .cardGroup .card > ul > li {
-  list-style: disc;
-  list-style-position: inside;
+.skills .cardGroup .card > article .item {
+  position: relative;
+  padding-left: 20px;
   font-size: 1.125rem;
   font-weight: 300;
-  padding-left: 0.5rem;
+}
+
+.skills .cardGroup .card > article .item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .skills .cardGroup .card:hover {
