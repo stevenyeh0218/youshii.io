@@ -1,6 +1,6 @@
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(503px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(503px, auto));
     gap: 2.75rem;
     margin-top: 2.75rem;
 
@@ -13,6 +13,10 @@
         @include grid(row, auto, auto, unset, 2.75rem);
 
         hgroup {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+
             h1 {
                 font-size: 4rem;
                 color: var(--black);
@@ -28,11 +32,10 @@
                     font-weight: bold;
                     border-right: .4vw solid var(--dark-blue);
                     width: 100%;
-                    max-width: 356px;
                     white-space: nowrap;
                     overflow: hidden;
-                    -webkit-animation: typing 2s steps(13), line .4s step-end infinite alternate;
-                    animation: typing 2s steps(13), line .4s step-end infinite alternate;
+                    -webkit-animation: typing 2s steps(14, end), line .4s step-end infinite alternate;
+                    animation: typing 2s steps(14, end), line .4s step-end infinite alternate;
 
                 }
             }
