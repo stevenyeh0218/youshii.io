@@ -41,7 +41,7 @@
                         @include liquid(3.125rem, 0.5rem 1rem);
                         @include flexbox-gap(row, center, center, 0.5rem);
                         background: #{'rgba(var(--dark-brown-rgb), 0.4)'};
-                        color: var(--white);
+                        color: var(--dark-brown);
                     }
                 }
 

@@ -56,9 +56,7 @@
         }
 
         .contact {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
+            @include flexbox-gap-wrap(row, center, unset, 1.5rem, wrap);
 
             .item {
                 @include flexbox-gap-wrap(row, center, center, 0.5rem, wrap);

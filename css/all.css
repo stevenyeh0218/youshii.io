@@ -813,8 +813,11 @@ body[data-theme="dark"] {
 }
 
 .portfolio .info .contact {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -1058,7 +1061,7 @@ body[data-theme="dark"] {
   justify-content: center;
   gap: 0.5rem;
   background: rgba(var(--dark-brown-rgb), 0.4);
-  color: var(--white);
+  color: var(--dark-brown);
 }
 
 .project .cardGroup .card > article > header > a:hover {
