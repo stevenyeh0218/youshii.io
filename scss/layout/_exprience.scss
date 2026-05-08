@@ -1,4 +1,4 @@
-.skills {
+.exprience {
     margin-top: 2.75rem;
 
     &>h1 {
@@ -9,15 +9,31 @@
     }
 
     .cardGroup {
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(366px, 1fr));
         gap: 1.5rem;
 
         .card {
-            @include liquid(1.25rem, 1rem);
-            @include flexbox-gap(column, start, start, 1rem);
+            @include grid(unset, repeat(2, auto) 1fr, unset, center, 1.5rem);
+
+            .date {
+                font-size: 1.125rem;
+                font-weight: bold;
+                color: var(--dark-blue);
+            }
+
+            .stone {
+                @include flexbox(row, center, center);
+                @include liquid(50%, 0.5rem);
+
+                &:hover {
+                    @include scale(1);
+                }
+            }
 
             &>article {
+                place-self: baseline;
+
                 &>h3 {
                     font-size: 1.25rem;
                     font-weight: bold;
@@ -38,36 +54,21 @@
                         font-size: 1.2rem;
                     }
                 }
-            }
 
-            &:hover {
-                @include scale(1);
+                .m-24 {
+                    margin-bottom: 1.5rem;
+                }
             }
         }
 
-        .tag {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
-            gap: 1rem;
-            width: 100%;
-
-            .item {
-                @include flexbox-gap(column, center, center, 0.5rem);
-
-                .logo {
-                    @include liquid(1.25rem, 0.5rem);
-                    @include flexbox(row, center, center);
-                    max-width: 66px;
-
-                    &:hover {
-                        @include scale(1);
-                    }
-                }
-
-                &>h3 {
-                    font-size: 0.875rem;
-                }
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            left: 194px;
+            z-index: -1;
+            @include liquid(0, 0);
         }
     }
 }
