@@ -15,7 +15,7 @@
         .card {
             @include liquid(1.25rem, 1rem);
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(400px, auto));
             align-items: center;
             gap: 1.5rem;
 
@@ -25,6 +25,10 @@
 
             &>img {
                 max-width: 400px;
+
+                @include for-ipad-min-portrait {
+                    place-self: center;
+                }
             }
 
             &>article {

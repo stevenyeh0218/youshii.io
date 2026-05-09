@@ -1245,7 +1245,7 @@ body > footer {
   padding: 1rem;
   transition: all 0.3s ease;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   align-items: center;
   gap: 1.5rem;
 }
@@ -1260,6 +1260,12 @@ body > footer {
 
 .project .cardGroup .card > img {
   max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .project .cardGroup .card > img {
+    place-self: center;
+  }
 }
 
 .project .cardGroup .card > article > header {
@@ -1374,10 +1380,23 @@ body > footer {
   gap: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .exprience .cardGroup .card {
+    gap: unset;
+  }
+}
+
 .exprience .cardGroup .card .date {
   font-size: 1.125rem;
   font-weight: bold;
   color: var(--dark-blue);
+}
+
+@media (max-width: 480px) {
+  .exprience .cardGroup .card .date {
+    grid-column: 2;
+    place-self: start;
+  }
 }
 
 .exprience .cardGroup .card .stone {
@@ -1397,10 +1416,17 @@ body > footer {
   border-radius: 50%;
   padding: 0.5rem;
   transition: all 0.3s ease;
+  color: var(--dark-brown);
 }
 
 .exprience .cardGroup .card .stone:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .exprience .cardGroup .card .stone {
+    grid-column: 1;
+  }
 }
 
 .exprience .cardGroup .card .stone:hover {
@@ -1459,4 +1485,10 @@ body > footer {
 
 .exprience .cardGroup::after:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .exprience .cardGroup::after {
+    left: 18px;
+  }
 }

@@ -16,15 +16,29 @@
         .card {
             @include grid(unset, repeat(2, auto) 1fr, unset, center, 1.5rem);
 
+            @include for-iphone {
+                gap: unset;
+            }
+
             .date {
                 font-size: 1.125rem;
                 font-weight: bold;
                 color: var(--dark-blue);
+
+                @include for-iphone {
+                    grid-column: 2;
+                    place-self: start;
+                }
             }
 
             .stone {
                 @include flexbox(row, center, center);
                 @include liquid(50%, 0.5rem);
+                color: var(--dark-brown);
+
+                @include for-iphone {
+                    grid-column: 1;
+                }
 
                 &:hover {
                     @include scale(1);
@@ -69,6 +83,10 @@
             left: 194px;
             z-index: -1;
             @include liquid(0, 0);
+
+            @include for-iphone {
+                left: 18px;
+            }
         }
     }
 }
