@@ -19,7 +19,13 @@
     }
 
     >.top-btn {
-        padding: 8px;
-        width: 44px;
+        display: flex;
+        padding: 9px;
+    }
+
+    .back-btn {
+        @extend .top-btn;
+        position: absolute;
+        left: 0;
     }
 }

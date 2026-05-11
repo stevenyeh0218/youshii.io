@@ -1,0 +1,47 @@
+.info {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2.75rem;
+
+    &>header {
+        display: grid;
+
+        &>h1 {
+            color: var(--dark-blue);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        &>sub {
+            font-size: 1.5rem;
+            font-weight: 300;
+            bottom: 0;
+            line-height: normal;
+        }
+
+    }
+
+    .tag {
+        @include flexbox-gap-wrap(row, center, start, 1.5rem, wrap);
+
+        .item {
+            @include liquid(3.125rem, 0.5rem 1rem);
+            @include flexbox-gap(row, center, center, 0.5rem);
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--dark-brown);
+
+            &:hover {
+                @include scale(1);
+            }
+        }
+    }
+
+    &>img {
+        @include liquid(1.25rem, 0);
+
+        &:hover {
+            @include scale(1);
+        }
+    }
+}
