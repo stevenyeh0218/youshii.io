@@ -892,8 +892,7 @@ body .m-24 {
   padding: 1rem;
   transition: all 0.3s ease;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, -webkit-max-content));
-  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   align-items: center;
   gap: 1.5rem;
 }
