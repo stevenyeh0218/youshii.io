@@ -467,6 +467,14 @@ body > footer {
   margin-top: 2.75rem;
 }
 
+body .m-16 {
+  margin-top: 1rem;
+}
+
+body .m-24 {
+  margin-bottom: 1.5rem;
+}
+
 .mode-switch input {
   display: none;
 }
@@ -1097,10 +1105,6 @@ body > footer {
   font-size: 1.2rem;
 }
 
-.exprience .cardGroup .card > article .m-24 {
-  margin-bottom: 1.5rem;
-}
-
 .exprience .cardGroup::after {
   content: "";
   position: absolute;
@@ -1235,6 +1239,10 @@ body > footer {
   font-size: 1.125rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
+}
+
+.designSystem > article .content > h4 {
+  margin-top: 1rem;
 }
 
 .designSystem > article .content .item {
