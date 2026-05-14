@@ -29,6 +29,7 @@
         @include for-iphone {
             position: absolute;
             top: 68px;
+            right: 0;
             flex-wrap: wrap;
             gap: 1rem;
             @include hide();
@@ -56,6 +57,10 @@
             @extend .top-btn;
             position: absolute;
             left: 0;
+
+            @include for-iphone {
+                position: unset;
+            }
         }
 
     }

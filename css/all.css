@@ -599,6 +599,7 @@ body .m-24 {
   .navigation .list {
     position: absolute;
     top: 68px;
+    right: 0;
     flex-wrap: wrap;
     gap: 1rem;
     opacity: 0;
@@ -642,6 +643,12 @@ body .m-24 {
 .navigation .list > .back-btn {
   position: absolute;
   left: 0;
+}
+
+@media (max-width: 480px) {
+  .navigation .list > .back-btn {
+    position: unset;
+  }
 }
 
 .navigation .open-list {
