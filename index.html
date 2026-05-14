@@ -38,20 +38,26 @@
 <body>
     <!-- nav -->
     <nav class="navigation">
-        <button class="item portfolio-btn">About</button>
-        <button class="item project-btn">Project</button>
-        <button class="item exprience-btn">Exprience</button>
-        <div class="item mode-switch">
-            <input type="checkbox" id="toggle" checked>
-            <label for="toggle">
-                <span class="icon" data-lucide="sun"></span>
-                <span class="icon" data-lucide="moon"></span>
-                <span class="circle"></span>
-            </label>
-        </div>
-        <button class="item top-btn">
-            <i data-lucide="move-up"></i>
+        <button class="item mobile-nav-btn">
+            <i data-lucide="menu" class="icon-menu"></i>
+            <i data-lucide="x" class="icon-close"></i>
         </button>
+        <div class="list">
+            <button class="item portfolio-btn">About</button>
+            <button class="item project-btn">Project</button>
+            <button class="item exprience-btn">Exprience</button>
+            <div class="item mode-switch">
+                <input type="checkbox" id="toggle" checked>
+                <label for="toggle">
+                    <span class="icon" data-lucide="sun"></span>
+                    <span class="icon" data-lucide="moon"></span>
+                    <span class="circle"></span>
+                </label>
+            </div>
+            <button class="item top-btn">
+                <i data-lucide="move-up"></i>
+            </button>
+        </div>
     </nav>
     <!-- portfolio -->
     <section class="portfolio">
@@ -560,6 +566,8 @@
     <script src="js/anchor.js"></script>
     <!-- 夜間模式 特效 -->
     <script src="js/darkMode.js"></script>
+    <!-- 手機版菜單 特效 -->
+    <script src="js/mobileNav.js"></script>
 </body>
 
 </html>

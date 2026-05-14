@@ -13,6 +13,10 @@
         grid-template-columns: repeat(auto-fit, minmax(366px, 1fr));
         gap: 1.5rem;
 
+        @include for-iphone {
+            grid-template-columns: auto;
+        }
+
         .card {
             @include liquid(1.25rem, 1rem);
             @include flexbox-gap(column, start, start, 1rem);

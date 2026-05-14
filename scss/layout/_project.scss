@@ -19,6 +19,10 @@
             align-items: center;
             gap: 1.5rem;
 
+            @include for-iphone {
+                grid-template-columns: auto;
+            }
+
             &:hover {
                 @include scale(1);
             }
