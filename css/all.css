@@ -467,11 +467,11 @@ body > footer {
   margin-top: 2.75rem;
 }
 
-body .m-16 {
-  margin-top: 1rem;
+body .mb-16 {
+  margin-bottom: 1em;
 }
 
-body .m-24 {
+body .mb-24 {
   margin-bottom: 1.5rem;
 }
 
@@ -1340,10 +1340,6 @@ body .m-24 {
   font-size: 1.125rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
-}
-
-.designSystem > article .content > h4 {
-  margin-top: 1rem;
 }
 
 .designSystem > article .content .item {
