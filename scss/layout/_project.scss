@@ -24,7 +24,7 @@
             }
 
             &:hover {
-                @include scale(1);
+                background: rgba(255, 255, 255, 0.4);
             }
 
             &>img {
@@ -70,7 +70,7 @@
                         color: var(--dark-brown);
 
                         &:hover {
-                            @include scale(1);
+                            background: rgba(255, 255, 255, 0.4);
                         }
                     }
                 }

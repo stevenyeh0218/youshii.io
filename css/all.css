@@ -627,7 +627,7 @@ body .mb-24 {
 }
 
 .navigation .list > .item:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .navigation .list > .mode-switch {
@@ -685,7 +685,7 @@ body .mb-24 {
 }
 
 .navigation > .mobile-nav-btn:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -802,7 +802,7 @@ body .mb-24 {
 }
 
 .portfolio .info .contact .item:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -829,11 +829,11 @@ body .mb-24 {
 }
 
 .portfolio .sticker:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .portfolio .sticker:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 480px) {
@@ -886,7 +886,7 @@ body .mb-24 {
 }
 
 .skills .cardGroup .card:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .skills .cardGroup .card > article > h3 {
@@ -911,7 +911,7 @@ body .mb-24 {
 }
 
 .skills .cardGroup .card:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .skills .cardGroup .tag {
@@ -950,11 +950,11 @@ body .mb-24 {
 }
 
 .skills .cardGroup .tag .item .logo:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .skills .cardGroup .tag .item .logo:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .skills .cardGroup .tag .item > h3 {
@@ -997,7 +997,7 @@ body .mb-24 {
 }
 
 .project .cardGroup .card:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -1007,7 +1007,7 @@ body .mb-24 {
 }
 
 .project .cardGroup .card:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .project .cardGroup .card > img {
@@ -1057,7 +1057,7 @@ body .mb-24 {
 }
 
 .project .cardGroup .card > article > header > a:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .project .cardGroup .card > article .description {
@@ -1099,11 +1099,11 @@ body .mb-24 {
 }
 
 .project .cardGroup .card > article .tag .item:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .project .cardGroup .card > article .tag .item:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .exprience {
@@ -1172,7 +1172,7 @@ body .mb-24 {
 }
 
 .exprience .cardGroup .card .stone:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -1182,7 +1182,7 @@ body .mb-24 {
 }
 
 .exprience .cardGroup .card .stone:hover {
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .exprience .cardGroup .card > article {
@@ -1232,7 +1232,7 @@ body .mb-24 {
 }
 
 .exprience .cardGroup::after:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -1297,7 +1297,7 @@ body .mb-24 {
 }
 
 .info .tag .item:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .info .tag .item:hover {
@@ -1320,7 +1320,7 @@ body .mb-24 {
 }
 
 .info > img:hover {
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .info > img:hover {

@@ -21,7 +21,7 @@
     @include ease(.3s);
 
     &:hover {
-        @include scale(1.1);
+        background: rgba(255, 255, 255, 0.8);
     }
 }
 
