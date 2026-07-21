@@ -78,13 +78,9 @@
 
 
     .sticker {
-        @include liquid(50%, 0);
+        @include glass(50%, 0);
         width: 400px;
         place-self: center;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
 
         @include for-iphone {
             width: 85%;

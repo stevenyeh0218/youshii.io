@@ -812,9 +812,6 @@ body .mb-24 {
 }
 
 .portfolio .sticker {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -823,17 +820,8 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   padding: 0;
-  transition: all 0.3s ease;
   width: 400px;
   place-self: center;
-}
-
-.portfolio .sticker:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .sticker:hover {
-  background: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 480px) {
