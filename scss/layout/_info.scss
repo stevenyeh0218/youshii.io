@@ -25,23 +25,15 @@
         @include flexbox-gap-wrap(row, center, start, 1.5rem, wrap);
 
         .item {
-            @include liquid(3.125rem, 0.5rem 1rem);
+            @include glass(3.125rem, 0.5rem 1rem);
             @include flexbox-gap(row, center, center, 0.5rem);
             font-size: 1rem;
             font-weight: bold;
             color: var(--dark-brown);
-
-            &:hover {
-                @include scale(1);
-            }
         }
     }
 
     &>img {
-        @include liquid(1.25rem, 0);
-
-        &:hover {
-            @include scale(1);
-        }
+        @include glass(1.25rem, 0);
     }
 }

@@ -18,7 +18,7 @@
         }
 
         .card {
-            @include liquid(1.25rem, 1rem);
+            @include glass(1.25rem, 1rem);
             @include flexbox-gap(column, start, start, 1rem);
 
             &>article {
@@ -43,10 +43,6 @@
                     }
                 }
             }
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.4);
-            }
         }
 
         .tag {
@@ -59,13 +55,9 @@
                 @include flexbox-gap(column, center, center, 0.5rem);
 
                 .logo {
-                    @include liquid(1.25rem, 0.5rem);
+                    @include glass(1.25rem, 0.5rem);
                     @include flexbox(row, center, center);
                     max-width: 66px;
-
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.4);
-                    }
                 }
 
                 &>h3 {

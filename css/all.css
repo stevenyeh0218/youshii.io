@@ -866,9 +866,6 @@ body .mb-24 {
 }
 
 .skills .cardGroup .card {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -877,16 +874,11 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
   padding: 1rem;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   gap: 1rem;
-}
-
-.skills .cardGroup .card:hover {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .skills .cardGroup .card > article > h3 {
@@ -910,10 +902,6 @@ body .mb-24 {
   font-size: 1.2rem;
 }
 
-.skills .cardGroup .card:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
 .skills .cardGroup .tag {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
@@ -930,9 +918,6 @@ body .mb-24 {
 }
 
 .skills .cardGroup .tag .item .logo {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -941,20 +926,11 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
   padding: 0.5rem;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   max-width: 66px;
-}
-
-.skills .cardGroup .tag .item .logo:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.skills .cardGroup .tag .item .logo:hover {
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .skills .cardGroup .tag .item > h3 {
@@ -978,9 +954,6 @@ body .mb-24 {
 }
 
 .project .cardGroup .card {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -989,25 +962,16 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
   padding: 1rem;
-  transition: all 0.3s ease;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   align-items: center;
   gap: 1.5rem;
 }
 
-.project .cardGroup .card:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 @media (max-width: 480px) {
   .project .cardGroup .card {
     grid-template-columns: auto;
   }
-}
-
-.project .cardGroup .card:hover {
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .project .cardGroup .card > img {
@@ -1076,9 +1040,6 @@ body .mb-24 {
 }
 
 .project .cardGroup .card > article .tag .item {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -1087,7 +1048,6 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 3.125rem;
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1096,14 +1056,6 @@ body .mb-24 {
   font-size: 1rem;
   font-weight: bold;
   color: var(--dark-brown);
-}
-
-.project .cardGroup .card > article .tag .item:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.project .cardGroup .card > article .tag .item:hover {
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .exprience {
@@ -1156,9 +1108,6 @@ body .mb-24 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -1167,22 +1116,13 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   padding: 0.5rem;
-  transition: all 0.3s ease;
   color: var(--dark-brown);
-}
-
-.exprience .cardGroup .card .stone:hover {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 480px) {
   .exprience .cardGroup .card .stone {
     grid-column: 1;
   }
-}
-
-.exprience .cardGroup .card .stone:hover {
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .exprience .cardGroup .card > article {
@@ -1215,7 +1155,7 @@ body .mb-24 {
   position: absolute;
   width: 8px;
   height: 100%;
-  left: 194px;
+  left: 195px;
   z-index: -1;
   /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
   -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
@@ -1274,9 +1214,6 @@ body .mb-24 {
 }
 
 .info .tag .item {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -1285,7 +1222,6 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 3.125rem;
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1296,18 +1232,7 @@ body .mb-24 {
   color: var(--dark-brown);
 }
 
-.info .tag .item:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.info .tag .item:hover {
-  transform: scale(1);
-}
-
 .info > img {
-  /* 真正的液態關鍵：先模糊背景，再套用 SVG 濾鏡扭曲 */
-  -webkit-backdrop-filter: blur(2px) url(#liquid_glass_filter);
-  backdrop-filter: blur(2px) url(#liquid_glass_filter);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
@@ -1316,15 +1241,6 @@ body .mb-24 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
   padding: 0;
-  transition: all 0.3s ease;
-}
-
-.info > img:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.info > img:hover {
-  transform: scale(1);
 }
 
 .designSystem {

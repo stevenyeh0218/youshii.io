@@ -33,15 +33,11 @@
 
             .stone {
                 @include flexbox(row, center, center);
-                @include liquid(50%, 0.5rem);
+                @include glass(50%, 0.5rem);
                 color: var(--dark-brown);
 
                 @include for-iphone {
                     grid-column: 1;
-                }
-
-                &:hover {
-                    background: rgba(255, 255, 255, 0.4);
                 }
             }
 
@@ -76,7 +72,7 @@
             position: absolute;
             width: 8px;
             height: 100%;
-            left: 194px;
+            left: 195px;
             z-index: -1;
             @include liquid(0, 0);
 
