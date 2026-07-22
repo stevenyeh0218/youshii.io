@@ -67,13 +67,25 @@
 
     .open-list {
         @include show();
+        @include liquid(3.125rem, 0.688rem 1rem);
+        width: 100%;
+        flex-direction: column;
+        -webkit-backdrop-filter: blur(10px) url(#liquid_glass_filter);
+        backdrop-filter: blur(10px) url(#liquid_glass_filter);
+
+        box-shadow:
+            inset 0 1px 1px rgba(255, 255, 255, 0.3),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.18),
+            inset 6px 6px 16px rgba(255, 255, 255, 0.12),
+            0 10px 28px rgba(0, 0, 0, 0.35);
 
         &>.item {
-            box-shadow:
-                inset 0 1px 1px rgba(255, 255, 255, 0.3),
-                inset 0 -1px 0 rgba(255, 255, 255, 0.18),
-                inset 6px 6px 16px rgba(255, 255, 255, 0.12),
-                0 10px 28px rgba(0, 0, 0, 0.35);
+            -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+            background: unset;
+            border: unset;
+            box-shadow: unset;
+            border-radius: unset;
         }
     }
 
