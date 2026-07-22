@@ -64,10 +64,16 @@
             .item {
                 @include flexbox-gap-wrap(row, center, center, 0.5rem, wrap);
                 @include liquid(3.125rem, 0.5rem 1rem);
+                background: #{'rgba(var(--dark-brown-rgb), 0.4)'};
                 color: var(--dark-brown);
                 cursor: pointer;
                 font-size: 1.125rem;
                 font-weight: bold;
+
+                &:hover {
+                    background: #{'rgba(var(--dark-brown-rgb), 1)'};
+                    color: var(--light-brown);
+                }
 
                 @include for-iphone {
                     width: 100%;

@@ -46,6 +46,11 @@
                         @include flexbox-gap(row, center, center, 0.5rem);
                         background: #{'rgba(var(--dark-brown-rgb), 0.4)'};
                         color: var(--dark-brown);
+
+                        &:hover {
+                            background: #{'rgba(var(--dark-brown-rgb), 1)'};
+                            color: var(--light-brown);
+                        }
                     }
                 }
 

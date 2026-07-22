@@ -795,6 +795,7 @@ body .mb-24 {
   border-radius: 3.125rem;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
+  background: rgba(var(--dark-brown-rgb), 0.4);
   color: var(--dark-brown);
   cursor: pointer;
   font-size: 1.125rem;
@@ -803,6 +804,11 @@ body .mb-24 {
 
 .portfolio .info .contact .item:hover {
   background: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio .info .contact .item:hover {
+  background: rgba(var(--dark-brown-rgb), 1);
+  color: var(--light-brown);
 }
 
 @media (max-width: 480px) {
@@ -1010,6 +1016,11 @@ body .mb-24 {
 
 .project .cardGroup .card > article > header > a:hover {
   background: rgba(255, 255, 255, 0.8);
+}
+
+.project .cardGroup .card > article > header > a:hover {
+  background: rgba(var(--dark-brown-rgb), 1);
+  color: var(--light-brown);
 }
 
 .project .cardGroup .card > article .description {
